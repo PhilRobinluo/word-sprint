@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="甜点好吃，还想再来一份"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF2F6"/>
+<ellipse cx="160" cy="214" rx="120" ry="9" fill="#F6D6E2"/>
+<g class="bob"><g transform="translate(110 0)"><path d="M-34 140 h68 l-12 60 h-44z" fill="#C9E8F7"/><circle cx="-14" cy="126" r="20" fill="#FFB3C7"/><circle cx="14" cy="126" r="20" fill="#FFF0B3"/><circle cx="0" cy="104" r="20" fill="#C79B6D"/><circle cx="0" cy="80" r="8" fill="#E5484D"/><path d="M0 72 q4 -12 10 -14" stroke="#3FAE5A" stroke-width="3" fill="none"/></g></g><g class="bob2"><g transform="translate(210 0)"><path d="M-34 140 h68 l-12 60 h-44z" fill="#C9E8F7"/><circle cx="-14" cy="126" r="20" fill="#FFB3C7"/><circle cx="14" cy="126" r="20" fill="#FFF0B3"/><circle cx="0" cy="104" r="20" fill="#C79B6D"/><circle cx="0" cy="80" r="8" fill="#E5484D"/><path d="M0 72 q4 -12 10 -14" stroke="#3FAE5A" stroke-width="3" fill="none"/></g></g>
+<g class="pulse" fill="#F2643A"><path d="M160 54 q-14 -16 -24 -4 q-8 12 24 30 q32 -18 24 -30 q-10 -12 -24 4z"/></g></svg>

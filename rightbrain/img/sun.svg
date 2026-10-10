@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="太阳一出来，乌云散开啦"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF8DC"/>
+<g class="spin"><g fill="#FFC93C"><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(0 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(30 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(60 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(90 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(120 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(150 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(180 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(210 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(240 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(270 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(300 161 120)"/><rect x="156" y="20" width="10" height="30" rx="5" transform="rotate(330 161 120)"/></g></g>
+<circle cx="161" cy="120" r="58" fill="#FFB020"/><circle cx="161" cy="120" r="50" fill="#FFC93C"/>
+<circle cx="142" cy="112" r="6" fill="#2B2B2B"/><circle cx="180" cy="112" r="6" fill="#2B2B2B"/><path d="M142 132 q19 18 38 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+<circle cx="130" cy="128" r="7" fill="#FF9A6A" opacity=".6"/><circle cx="192" cy="128" r="7" fill="#FF9A6A" opacity=".6"/>
+<g class="drift" opacity=".9"><g fill="#B8C4D6"><circle cx="40" cy="70" r="20"/><circle cx="64" cy="62" r="24"/><circle cx="88" cy="72" r="18"/><rect x="24" y="70" width="80" height="20" rx="10"/></g></g>
+<g style="animation:dr 4s ease-in-out infinite reverse" opacity=".9"><g fill="#B8C4D6" transform="translate(196 110)"><circle cx="40" cy="70" r="20"/><circle cx="64" cy="62" r="24"/><circle cx="88" cy="72" r="18"/><rect x="24" y="70" width="80" height="20" rx="10"/></g></g></svg>

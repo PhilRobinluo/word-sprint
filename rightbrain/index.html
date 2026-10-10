@@ -4,173 +4,223 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#FFF6E9">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23F2643A%22/%3E%3Ccircle cx=%2212%22 cy=%2216%22 r=%225%22 fill=%22none%22 stroke=%22white%22 stroke-width=%223%22/%3E%3Cpath d=%22M17 16h9M23 16v4%22 stroke=%22white%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
-<title>右脑记单词 · 今天 5 个词</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23F2643A%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial%22 font-weight=%22bold%22%3Ea%3C/text%3E%3C/svg%3E">
+<title>右脑记单词 · 字母小乐园</title>
 <style>
 :root{
   --bg:#FFF6E9; --paper:#FFFFFF; --ink:#2A2A3A; --muted:#7A7468;
-  --orange:#F2643A; --orange-d:#D94E25; --blue:#2F5DA8; --blue-l:#E6EEFB;
-  --yellow:#FFC93C; --green:#2EA868; --green-l:#E3F6EA; --red:#E5484D; --red-l:#FDE8E8;
+  --orange:#F2643A; --orange-d:#D94E25; --blue:#2F5DA8; --blue-l:#E6EEFB; --blue-d:#1E4589;
+  --yellow:#FFC93C; --green:#2EA868; --green-l:#E3F6EA; --red:#E5484D; --red-l:#FDE8E8; --pink:#FF8FB1;
   --line:#F0E4D2; --shadow:0 10px 30px rgba(140,90,30,.12),0 2px 6px rgba(140,90,30,.08);
   --r:28px;
-  --word-font: ui-rounded,"SF Pro Rounded","Arial Rounded MT Bold","Nunito","Varela Round","Noto Sans",system-ui,sans-serif;
-  --zh-font: "PingFang SC","HarmonyOS Sans SC","Noto Sans CJK SC","Microsoft YaHei",system-ui,sans-serif;
+  --word-font:"Fredoka","Baloo 2",ui-rounded,"SF Pro Rounded","Arial Rounded MT Bold","Nunito","Varela Round",system-ui,sans-serif;
+  --zh-font:"PingFang SC","HarmonyOS Sans SC","Noto Sans CJK SC","Microsoft YaHei",system-ui,sans-serif;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--zh-font);font-size:16px;line-height:1.55}
-body{background:
-  radial-gradient(600px 400px at 110% -10%, #FFE2C2 0, transparent 60%),
-  radial-gradient(500px 380px at -20% 110%, #DCEBFF 0, transparent 60%), var(--bg);background-attachment:fixed}
-button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--zh-font);font-size:16px;line-height:1.5}
+body{background:radial-gradient(600px 400px at 110% -10%,#FFE2C2 0,transparent 60%),radial-gradient(500px 380px at -20% 110%,#DCEBFF 0,transparent 60%),var(--bg);background-attachment:fixed;-webkit-user-select:none;user-select:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;touch-action:manipulation}
 button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 [tabindex="-1"]:focus{outline:none}
-.app{max-width:520px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom));min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
-.top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;margin-bottom:12px}
-.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px;letter-spacing:.5px}
-.brand .key{width:30px;height:30px;border-radius:10px;background:var(--orange);display:grid;place-items:center;box-shadow:0 3px 0 var(--orange-d)}
-.iconbtn{min-width:44px;height:44px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 12px;background:#fff;box-shadow:0 2px 0 var(--line);font-size:14px;color:var(--muted);font-weight:700}
-.dots{display:flex;gap:6px;align-items:center}
-.dots i{width:10px;height:10px;border-radius:50%;background:#EADBC5;transition:all .3s}
-.dots i.on{background:var(--orange);width:22px;border-radius:6px}
+.app{max-width:560px;margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom));min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;margin-bottom:10px}
+.pill{display:inline-flex;align-items:center;gap:6px;height:48px;padding:0 14px;border-radius:999px;background:#fff;box-shadow:0 3px 0 var(--line);font-weight:900;font-size:20px;font-family:var(--word-font)}
+.pill svg{width:26px;height:26px}
+.ib{width:52px;height:52px;border-radius:18px;background:#fff;box-shadow:0 3px 0 var(--line);display:grid;place-items:center;font-size:24px;flex:none;transition:transform .12s}
+.ib:active{transform:translateY(2px)}
+.ib.off{opacity:.55}
+.ib svg{width:26px;height:26px}
+.dots{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:center}
+.dots i{width:12px;height:12px;border-radius:50%;background:#EADBC5;transition:all .3s}
+.dots i.on{background:var(--orange);width:26px;border-radius:7px}
 .dots i.done{background:var(--yellow)}
 .screen{flex:1;display:flex;flex-direction:column;animation:enter .38s cubic-bezier(.2,.9,.3,1.2)}
 @keyframes enter{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
-.btn{min-height:60px;border-radius:20px;padding:0 24px;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;transition:transform .12s, box-shadow .12s, opacity .2s, background .2s}
+.btn{min-height:64px;border-radius:22px;padding:0 24px;font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;transition:transform .12s,box-shadow .12s,opacity .2s}
 .btn:active{transform:translateY(3px)}
-.btn.primary{background:var(--orange);color:#fff;box-shadow:0 5px 0 var(--orange-d)}
-.btn.primary:active{box-shadow:0 2px 0 var(--orange-d)}
-.btn.blue{background:var(--blue);color:#fff;box-shadow:0 5px 0 #1E4589}
-.btn.ghost{background:#fff;color:var(--ink);box-shadow:0 4px 0 var(--line)}
-.btn[disabled]{opacity:.45;pointer-events:none}
-.btn.pulse{animation:pulse 1.2s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.btn.primary{background:var(--orange);color:#fff;box-shadow:0 6px 0 var(--orange-d)}
+.btn.blue{background:var(--blue);color:#fff;box-shadow:0 6px 0 var(--blue-d)}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line)}
+.btn svg{width:30px;height:30px;flex:none}
+.btn.sm{min-height:48px;font-size:16px;border-radius:16px;padding:0 14px;width:auto}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.pulse{animation:pulse 1.1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 .small{font-size:14px;color:var(--muted)}
-h1{font-size:28px;line-height:1.25;margin:6px 0 6px;font-weight:900}
 h2{font-size:22px;margin:0 0 8px;font-weight:900}
+.hidden{display:none!important}
 
-/* home */
-.hero{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 20px 20px;position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:#FFE7CF}
-.hero > *{position:relative;z-index:1}
-.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 22px}
-.chip{background:#FFF8EE;border:2px solid var(--line);border-radius:999px;padding:5px 16px 5px 5px;display:flex;align-items:center;gap:8px;animation:bob 3s ease-in-out infinite}
-.chip:nth-child(2){animation-delay:-.6s}.chip:nth-child(3){animation-delay:-1.2s}.chip:nth-child(4){animation-delay:-1.8s}.chip:nth-child(5){animation-delay:-2.4s}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-.chip img{width:46px;height:46px;object-fit:cover;mix-blend-mode:multiply;border-radius:50%;background:#fff}
-.chip b{font-family:var(--word-font);font-size:18px;color:var(--blue);line-height:1.2}
-.chip.review{border-color:var(--yellow);background:#FFF5D6}
-.banner{border-radius:18px;padding:12px 14px;background:#FFF5D6;border:2px dashed var(--yellow);font-weight:700;margin-bottom:14px;font-size:15px}
-.steps{display:flex;gap:8px;margin:18px 2px 4px;justify-content:space-between}
-.steps div{flex:1;text-align:center;font-size:13px;color:var(--muted);font-weight:700}
-.steps b{display:grid;place-items:center;width:38px;height:38px;margin:0 auto 4px;border-radius:50%;background:#fff;box-shadow:0 3px 0 var(--line);font-size:18px}
-.goal{margin-top:16px;background:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:16px 18px;display:flex;align-items:center;gap:14px}
-.goal .gs{display:flex;gap:2px}.goal .gs svg{width:22px;height:22px}
-.goal p{margin:0;font-size:15px;font-weight:700;line-height:1.45}
-.homefoot{margin-top:auto;padding-top:22px;display:flex;justify-content:center}
+/* 首页：小路 */
+.hello{display:flex;align-items:center;gap:12px;margin:2px 0 10px}
+.mascot{width:76px;height:76px;flex:none;animation:bob 2.6s ease-in-out infinite}
+.say-bub{background:#fff;border-radius:22px;padding:12px 16px;font-weight:900;font-size:20px;box-shadow:var(--shadow);position:relative}
+.say-bub:before{content:"";position:absolute;left:-10px;top:24px;border:10px solid transparent;border-right-color:#fff;border-left:0}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.path{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:14px 14px 10px;display:flex;flex-direction:column;gap:0}
+.stop{display:flex;align-items:center;gap:14px;padding:10px 6px;position:relative}
+.stop + .stop:before{content:"";position:absolute;left:41px;top:-14px;height:24px;border-left:5px dotted #E8D6BC}
+.stop .ic{width:72px;height:72px;border-radius:24px;display:grid;place-items:center;font-size:36px;flex:none;background:#F6EEE2;box-shadow:0 4px 0 var(--line);font-family:var(--word-font);font-weight:700}
+.stop.now .ic{background:var(--yellow);box-shadow:0 4px 0 #E2A400;animation:bob 1.8s ease-in-out infinite}
+.stop.done .ic{background:var(--green-l);box-shadow:0 4px 0 #B7E2C7}
+.stop .nm{font-weight:900;font-size:20px}
+.stop .meta{flex:1;min-width:0}
+.prog{height:12px;border-radius:8px;background:#F3E7D6;margin-top:6px;overflow:hidden}
+.prog b{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--yellow),var(--orange));transition:width .8s}
+.stop .cnt{font-size:14px;color:var(--muted);font-weight:800;margin-top:2px}
+.stop .here{position:absolute;right:6px;top:6px;background:var(--orange);color:#fff;font-weight:900;font-size:13px;border-radius:999px;padding:2px 10px}
+.go{margin:18px auto 6px;width:156px;height:156px;border-radius:50%;background:var(--orange);color:#fff;box-shadow:0 8px 0 var(--orange-d),0 14px 30px rgba(242,100,58,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:24px;font-weight:900;gap:2px}
+.go svg{width:64px;height:64px}
+.go:active{transform:translateY(4px);box-shadow:0 4px 0 var(--orange-d)}
+.preview{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.preview span{min-width:52px;height:52px;border-radius:16px;background:#fff;box-shadow:0 3px 0 var(--line);display:grid;place-items:center;font-size:28px;padding:0 8px;font-family:var(--word-font);font-weight:700;color:var(--blue)}
+.shelf{margin-top:auto;padding-top:14px}
+.shelf .row{display:flex;gap:6px;overflow:hidden;align-items:center;font-size:26px;min-height:40px}
+.shelf .row em{font-style:normal;font-size:14px;color:var(--muted);font-weight:800;margin-right:4px;white-space:nowrap}
+.parentbtn{position:relative;overflow:hidden;font-size:14px;color:var(--muted);font-weight:800;width:auto;padding:0 12px}
+.parentbtn i{position:absolute;left:0;bottom:0;height:4px;background:var(--blue);width:0}
+.parentbtn.hold i{transition:width 1.2s linear;width:100%}
 
-/* card */
-.card{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 18px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
-.wordrow{display:flex;align-items:center;justify-content:center;gap:10px;width:100%}
-.bigword{font-family:var(--word-font);font-weight:900;color:var(--orange);letter-spacing:1px;line-height:1.05;margin:2px 0;white-space:nowrap}
-.ipa{font-size:15px;color:var(--muted);font-family:"Noto Sans","Lucida Sans Unicode",sans-serif;margin-top:-2px}
-.say{width:52px;height:52px;border-radius:50%;background:var(--blue-l);display:grid;place-items:center;flex:none;transition:transform .15s}
-.say:active{transform:scale(.92)}
-.say.playing{background:var(--blue);animation:ring 1s infinite}
-.say.playing svg path{fill:#fff;stroke:#fff}
-@keyframes ring{0%{box-shadow:0 0 0 0 rgba(47,93,168,.45)}100%{box-shadow:0 0 0 14px rgba(47,93,168,0)}}
-.scene{width:100%;max-width:330px;aspect-ratio:4/3;margin:10px auto 6px;border-radius:22px;background:#FFFCF6;display:grid;place-items:center;overflow:hidden}
+/* 学习卡 */
+.card{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 16px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.rv{transition:opacity .35s,transform .45s cubic-bezier(.2,.9,.3,1.4)}
+.card.sync .rv:not(.on){opacity:.12;transform:scale(.92)}
+.bigword{font-family:var(--word-font);font-weight:700;color:var(--orange);letter-spacing:1px;line-height:1.05;white-space:nowrap}
+.scene{width:100%;max-width:340px;aspect-ratio:4/3;margin:8px auto 4px;border-radius:22px;background:#FFFCF6;display:grid;place-items:center;overflow:hidden}
 .scene img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
 .scene.png img{width:86%;height:96%}
-.slogan{text-wrap:balance;font-size:23px;font-weight:900;color:var(--blue);line-height:1.3;margin:6px 4px 2px}
-.hook{text-wrap:pretty;font-size:14.5px;color:var(--muted);line-height:1.55;margin:4px 6px 0;max-width:420px}
-.meaning{font-size:34px;font-weight:900;color:var(--orange);margin:8px 0 0;letter-spacing:4px}
-.timer{position:absolute;left:0;top:0;height:6px;background:var(--yellow);width:0;border-radius:0 6px 6px 0}
-.timer.run{animation:fill var(--secs,10s) linear forwards}
-@keyframes fill{to{width:100%}}
-.below{margin-top:14px;display:flex;flex-direction:column;gap:10px;width:100%}
-.below:empty{display:none}
-.relink-tag{display:inline-flex;align-items:center;gap:6px;background:#FFF5D6;color:#8A5A00;font-weight:800;border-radius:999px;padding:6px 14px;margin-bottom:10px;font-size:15px}
+.scene .emo{font-size:130px;line-height:1}
+.slogan{text-wrap:balance;font-size:26px;font-weight:900;color:var(--blue);line-height:1.3;margin:6px 4px 0}
+.meaning{font-size:40px;font-weight:900;color:var(--orange);margin:4px 0 0;letter-spacing:4px}
+.ctrl{display:flex;gap:12px;align-items:center;justify-content:center;width:100%;margin-top:14px}
+.round{width:64px;height:64px;border-radius:50%;background:var(--blue-l);display:grid;place-items:center;flex:none;transition:transform .15s}
+.round svg{width:30px;height:30px}
+.round:active{transform:scale(.92)}
+.round.playing{background:var(--blue);animation:ring 1s infinite}
+.round.playing svg path{stroke:#fff}.round.playing svg path[fill="#2F5DA8"]{fill:#fff}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(47,93,168,.45)}100%{box-shadow:0 0 0 16px rgba(47,93,168,0)}}
+.vidbtn{height:64px;border-radius:22px;background:#FFF0E0;color:var(--orange-d);font-weight:900;font-size:19px;padding:0 16px;display:flex;align-items:center;gap:6px;box-shadow:0 4px 0 #F4D3B4}
+.vidbtn svg{width:26px;height:26px}
+.next{width:84px;height:84px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 6px 0 var(--orange-d);margin-left:auto;transition:opacity .3s,transform .12s}
+.next svg{width:42px;height:42px}
+.next[disabled]{opacity:.3;pointer-events:none}
+.relink{display:inline-flex;align-items:center;gap:6px;background:#FFF5D6;color:#8A5A00;font-weight:900;border-radius:999px;padding:6px 16px;margin-bottom:6px;font-size:17px}
+.letterbig{display:flex;align-items:flex-end;justify-content:center;gap:14px;font-family:var(--word-font);font-weight:700;line-height:1}
+.letterbig .lo{font-size:120px}
+.letterbig .up{font-size:64px;opacity:.65;margin-bottom:14px}
+.letterimg{width:100%;max-width:300px;aspect-ratio:4/3;margin:4px auto 0}
+.letterimg img{width:100%;height:100%;object-fit:contain}
+.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.badge{border-radius:20px;padding:6px 16px;font-weight:900;font-size:24px;background:var(--blue-l);color:var(--blue);display:flex;align-items:center;gap:6px}
+.badge.snd{background:#FFF0E0;color:var(--orange-d)}
+.badge .en{font-family:var(--word-font);font-weight:600}
+.tiles{display:flex;justify-content:center;gap:14px;margin:12px 0 4px;transition:gap .6s cubic-bezier(.2,.9,.3,1.3)}
+.tiles.merge{gap:0}
+.tile{width:84px;height:100px;border-radius:22px;background:#fff;box-shadow:0 5px 0 var(--line),0 0 0 3px var(--line) inset;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--word-font);font-weight:700;font-size:58px;line-height:1;color:var(--blue);transition:all .5s}
+.tile small{font-family:var(--zh-font);font-size:15px;color:var(--muted);font-weight:800;margin-top:4px}
+.tile.lit{background:var(--yellow);color:#fff;transform:translateY(-8px);box-shadow:0 5px 0 #E2A400}
+.tiles.merge .tile{border-radius:0;box-shadow:0 5px 0 var(--line);background:#FFF5D6;color:var(--orange)}
+.tiles.merge .tile:first-child{border-radius:22px 0 0 22px}.tiles.merge .tile:last-child{border-radius:0 22px 22px 0}
+.tiles.merge .tile small{opacity:0}
+.linkline{font-size:19px;font-weight:800;color:var(--blue);margin:4px 6px 0;text-wrap:balance}
 
-/* quiz */
-.qcard{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:30px 18px 26px;text-align:center;position:relative}
-.qlabel{font-size:15px;color:var(--muted);font-weight:700}
-.qword{font-family:var(--word-font);font-weight:900;color:var(--blue);margin:10px 0 6px;white-space:nowrap}
-.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-.opt{min-height:84px;border-radius:22px;background:#fff;font-size:26px;font-weight:900;box-shadow:0 5px 0 var(--line),0 0 0 2px var(--line) inset;transition:transform .12s, background .2s, box-shadow .2s;color:var(--ink)}
-.opt:active{transform:translateY(3px);box-shadow:0 2px 0 var(--line),0 0 0 2px var(--line) inset}
-.opt.right{background:var(--green-l);color:var(--green);box-shadow:0 5px 0 #B7E2C7,0 0 0 3px var(--green) inset;animation:yay .5s}
-.opt.wrong{background:var(--red-l);color:var(--red);box-shadow:0 5px 0 #F5C2C2,0 0 0 3px var(--red) inset;animation:shake .45s}
-.opt.dim{opacity:.45}
+/* 合上 */
+.closebox{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.closebox .big{font-size:120px;animation:bob 1.4s ease-in-out infinite}
+.closebox b{font-size:30px;font-weight:900}
+
+/* 测验 */
+.qcard{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 16px 18px;text-align:center;position:relative}
+.qtop{display:flex;align-items:center;justify-content:center;gap:16px}
+.qspk{width:96px;height:96px;border-radius:50%;background:var(--blue);display:grid;place-items:center;box-shadow:0 6px 0 var(--blue-d)}
+.qspk svg{width:48px;height:48px}
+.qspk svg path{fill:#fff;stroke:#fff}
+.qspk.playing{animation:ring 1s infinite}
+.qword{font-family:var(--word-font);font-weight:700;color:var(--blue);white-space:nowrap}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.opt{min-height:150px;border-radius:26px;background:#fff;box-shadow:0 6px 0 var(--line),0 0 0 3px var(--line) inset;transition:transform .12s,background .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 6px}
+.opt .pic{font-size:72px;line-height:1.05}
+.opt .lab{font-size:16px;font-weight:800;color:var(--muted)}
+.opt .let{font-family:var(--word-font);font-weight:700;font-size:96px;line-height:1}
+.opt:active{transform:translateY(3px)}
+.opt.right{background:var(--green-l);box-shadow:0 6px 0 #B7E2C7,0 0 0 4px var(--green) inset;animation:yay .5s}
+.opt.wrong{background:var(--red-l);box-shadow:0 6px 0 #F5C2C2,0 0 0 4px var(--red) inset;animation:shake .45s}
+.opt.dim{opacity:.35}
 @keyframes yay{40%{transform:scale(1.08)}}
 @keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
-.fb{min-height:34px;margin-top:16px;font-size:20px;font-weight:900}
+.fb{min-height:44px;margin-top:12px;font-size:28px;font-weight:900}
 .fb.ok{color:var(--green)}.fb.no{color:var(--red)}
+.flystar{position:fixed;z-index:60;width:54px;height:54px;pointer-events:none;transition:all .8s cubic-bezier(.5,-0.3,.6,1)}
 
-/* result */
-.score{font-family:var(--word-font);font-weight:900;font-size:84px;line-height:1;color:var(--orange);margin:8px 0 2px}
-.score small{font-size:40px;color:#E8B48F}
-.stars{display:flex;justify-content:center;gap:6px;margin:6px 0 10px}
-.stars svg{width:38px;height:38px;animation:starpop .5s backwards}
-.bar{position:relative;height:16px;border-radius:10px;background:#F3E7D6;margin:34px 4px 6px;overflow:visible}
-.bar .fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--yellow),var(--orange));transition:width 1s .3s cubic-bezier(.2,.9,.3,1)}
-.bar .mark{position:absolute;left:80%;top:-8px;bottom:-8px;width:3px;background:var(--blue);border-radius:2px}
-.bar .mark span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800;color:var(--blue);white-space:nowrap}
-.verdict{display:inline-block;margin-top:12px;padding:8px 16px;border-radius:999px;font-weight:900;font-size:17px}
-.verdict.pass{background:var(--green-l);color:var(--green)}.verdict.fail{background:#FFF0E0;color:#B8601E}
+/* 结果 */
+.result{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+.bigstars{display:flex;justify-content:center;gap:6px;margin:10px 0;flex-wrap:wrap}
+.bigstars svg{width:56px;height:56px;animation:starpop .5s backwards}
 @keyframes starpop{from{transform:scale(0) rotate(-40deg)}to{transform:none}}
-.wl{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:8px;text-align:left}
-.wl li{display:flex;align-items:center;gap:12px;background:#FFFBF4;border-radius:16px;padding:10px 14px}
-.wl .w{font-family:var(--word-font);font-weight:900;font-size:20px;color:var(--blue);flex:1}
-.wl .m{font-weight:700}
-.tag{font-size:13px;font-weight:800;border-radius:999px;padding:3px 10px}
-.tag.ok{background:var(--green-l);color:var(--green)}.tag.again{background:#FFF0E0;color:#B8601E}
+.stickers{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;margin:16px 0}
+.stk{width:84px;height:84px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px #fff,0 0 0 8px var(--yellow),0 8px 18px rgba(0,0,0,.12);display:grid;place-items:center;font-size:46px;animation:stick .6s backwards;font-family:var(--word-font);font-weight:700;color:var(--blue)}
+.stk.miss{filter:grayscale(1);opacity:.5;box-shadow:0 0 0 5px #fff,0 0 0 8px #E0D3C0}
+@keyframes stick{from{transform:scale(2) rotate(30deg);opacity:0}to{transform:none;opacity:1}}
+.rtitle{font-size:32px;font-weight:900;margin:8px 0 0}
 
-/* teacher */
-.panel{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}
-.list{display:flex;flex-direction:column;gap:12px}
-.row{display:flex;gap:10px;align-items:center}
-.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}
-.field input{height:52px;border-radius:16px;border:2px solid var(--line);padding:0 14px;font-size:18px;font-family:inherit;background:#FFFBF4}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.seg button{min-height:52px;border-radius:16px;background:#FFFBF4;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:17px}
+/* 视频弹窗 */
+.modal{position:fixed;inset:0;z-index:80;background:rgba(20,20,35,.82);display:flex;align-items:center;justify-content:center;padding:16px;animation:enter .25s}
+.modal video{max-width:100%;max-height:calc(100dvh - 120px);aspect-ratio:9/16;border-radius:24px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.modal .x{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;width:60px;height:60px;border-radius:50%;background:#fff;font-size:30px;font-weight:900;display:grid;place-items:center}
+.tapme{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--blue);color:#fff;font-weight:900;font-size:20px;border-radius:999px;padding:14px 22px;box-shadow:0 6px 0 var(--blue-d)}
+
+/* 家长/老师 */
+.panel{background:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px}
+.tabs button{flex:none;height:44px;border-radius:14px;padding:0 14px;background:#fff;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:15px}
+.tabs button.on{background:var(--blue);color:#fff;box-shadow:none}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg button{min-height:44px;border-radius:14px;padding:0 14px;background:#FFFBF4;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:15px}
 .seg button.on{background:var(--blue-l);box-shadow:0 0 0 3px var(--blue) inset;color:var(--blue)}
-.count{font-family:var(--word-font);font-weight:900;font-size:72px;color:var(--orange);line-height:1}
-.ctx{display:flex;flex-direction:column;gap:12px;margin-top:8px}
-.ctx article{border:2px solid var(--line);border-radius:18px;padding:12px 14px;background:#FFFCF7}
-.ctx h3{margin:0 0 4px;font-family:var(--word-font);font-size:22px;color:var(--blue);display:flex;align-items:center;gap:8px}
-.ctx p{margin:4px 0;font-size:14.5px}
+.pick{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pick button{min-height:44px;border-radius:14px;padding:0 12px;background:#FFFBF4;box-shadow:0 0 0 2px var(--line) inset;font-weight:700;font-size:15px;display:flex;align-items:center;gap:4px}
+.pick button b{font-family:var(--word-font);font-weight:600;font-size:17px;color:var(--blue)}
+.pick button.on{background:var(--green-l);box-shadow:0 0 0 3px var(--green) inset}
+.pick button.seen:after{content:"✓";color:var(--green);font-weight:900;margin-left:2px}
+.lst{display:flex;flex-direction:column;gap:10px}
+.lst article{border:2px solid var(--line);border-radius:16px;padding:10px 12px;background:#FFFCF7;font-size:14px}
+.lst h3{margin:0 0 4px;font-family:var(--word-font);font-weight:600;font-size:20px;color:var(--blue);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lst p{margin:3px 0}
 .st{font-family:var(--zh-font);font-size:12px;border-radius:999px;padding:2px 9px;font-weight:800}
-.st.ok{background:var(--green-l);color:var(--green)}.st.wait{background:#FFF0E0;color:#B8601E}
-.rec{font-size:14px;border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
-.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;z-index:50;animation:enter .3s}
+.st.ok{background:var(--green-l);color:var(--green)}.st.wait{background:#FFF0E0;color:#B8601E}.st.ph{background:#EEE;color:#666}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:15px}
+.field input{height:48px;border-radius:14px;border:2px solid var(--line);padding:0 12px;font-size:17px;font-family:inherit;background:#FFFBF4;width:100%}
+.count{font-family:var(--word-font);font-weight:700;font-size:64px;color:var(--orange);line-height:1}
+.timer{position:absolute;left:0;top:0;height:7px;background:var(--yellow);width:0}
+.timer.run{animation:fill var(--secs,10s) linear forwards}
+@keyframes fill{to{width:100%}}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;z-index:90;animation:enter .3s}
 canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
+.rec{font-size:14px;border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
 
 @media (min-width:900px){
-  .app{max-width:980px;padding-top:28px}
-  .screen.narrow{max-width:560px;margin:0 auto;width:100%}
-  .card.learn{display:grid;grid-template-columns:1.05fr 1fr;grid-template-areas:"word word" "scene text" "scene below";column-gap:32px;text-align:left;padding:28px 36px 30px;align-items:center}
-  .card.learn .wordrow{grid-area:word;justify-content:center}
-  .card.learn .scene{grid-area:scene;max-width:none;margin:8px 0}
-  .card.learn .txt{grid-area:text;align-self:end}
-  .card.learn .below{grid-area:below;align-self:start}
-  .card.learn .slogan{font-size:30px;margin:0}
-  .card.learn .meaning{font-size:44px}
-  .card.learn .hook{font-size:16px;margin:8px 0 0}
-  .qcard{max-width:620px;margin:0 auto;width:100%}
+  .app{max-width:980px;padding-top:24px}
+  .narrow{max-width:600px;margin:0 auto;width:100%}
+  .card.learn.word{display:grid;grid-template-columns:1.1fr 1fr;grid-template-areas:"w w" "s t" "s c";column-gap:30px;align-items:center;padding:24px 34px}
+  .card.learn.word .bigword{grid-area:w}
+  .card.learn.word .scene{grid-area:s;max-width:none}
+  .card.learn.word .txt{grid-area:t;align-self:end}
+  .card.learn.word .ctrl{grid-area:c;align-self:start}
+  .opts{grid-template-columns:repeat(4,1fr)}
 }
+@media (max-height:700px){.scene{max-width:270px}.letterimg{max-width:230px}.opt{min-height:120px}.opt .pic{font-size:58px}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <div class="app" id="app"><noscript>需要打开 JavaScript 才能使用。</noscript></div>
 <canvas id="confetti" hidden></canvas>
+<audio id="voice" preload="auto" playsinline></audio>
 
-<!-- 内容兜底副本：用 file:// 直接双击打开时浏览器不让读 content/words.json，就用这份。
-     以 content/words.json 为准；改完词库运行 `node tools/embed-content.mjs` 同步这里。 -->
+<!-- 内容兜底副本：file:// 直接打开时浏览器不让读 content/words.json，就用这份。
+     以 content/words.json 为准；改完运行 `node tools/embed-content.mjs` 同步这里。 -->
 <script type="application/json" id="fallback-content">
-/*CONTENT-START*/{"deck":"今日 5 词（小学三四年级起点）","version":"mvp-5-20261011","updated":"2026-10-11","note":"字段沿用项目 words.json 的写法（hook/cue/boundary/prereq/scene/method/basis/review_status）。status 只有两种：已认可＝在 Phil 的笔记或审稿台里有他本人通过的记录；待审＝还没有。slogan 是卡片上那一行短口号，从 hook 缩写而来，以 hook 原文为准。distractors 是测验里的 3 个干扰项。","words":[{"word":"bed","ipa":"/bed/","meaning":"床","topic":"家居","method":"字形联想","hook":"把 bed 的三个字母摆开：b 和 d 像床的两头栏杆，中间的 e 是躺下的人。","slogan":"b、d 是床头床尾，e 躺在中间","cue":"看两头那对字母，中间夹着什么？","boundary":"这只是字形线索；发音 /bed/ 要单独听词典。","prereq":"能分清小写 b 与 d 的朝向。","scene":"字母 b 和 d 当床的两头，e 躺在中间","basis":"原创字形线索；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/bed.md（hook/cue/boundary/scene 原文）；prereq 取自 project/lab/mnemonic-300-20261006/words.json","image":"img/bed.png","image_source":"project/lab/word-picture-trial-20261006/bed-v2.png（Codex 生成，未见 Phil 认可记录）","distractors":["桌子","椅子","雨伞"]},{"word":"eye","ipa":"/aɪ/","meaning":"眼睛","topic":"身体","method":"字形联想","hook":"把 eye 写大：左右两个 e 当眼睛，中间 y 当鼻子；看到 e-y-e，就在脑中补出一张有两只眼睛的脸。","slogan":"两个 e 是眼睛，y 是鼻子","cue":"两边相同，中间不同，像脸上的哪种排列？","boundary":"eye 的发音与字母形状无关，须单独听词典。","prereq":"认识小写 e、y；先听过整个词的正确发音。","scene":"e-y-e 排成一张脸：两只眼睛夹着一个鼻子","basis":"原创字形线索；不是词源（同一思路见沪江公开示例 https://m.hujiang.com/en/p1290671/）","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/eye.md（hook/cue/boundary 原文）；prereq 取自 project/lab/mnemonic-300-20261006/words.json；slogan 同 project/lab/微信示例-20261006/素材清单.json","image":"img/eye.png","image_source":"project/lab/word-picture-trial-20261006/eye.png（Codex 生成，未见 Phil 认可记录）","distractors":["鼻子","耳朵","牙刷"]},{"word":"ship","ipa":"/ʃɪp/","meaning":"大船","topic":"交通","method":"音形线索","hook":"ship 中间只有一个 i，把它当船上短短的桅杆；先听 /ʃɪp/，再想起桅杆下的大船，别拖成 sheep 的元音。","slogan":"中间的 i 是桅杆，下面是大船","cue":"看短短的 i，想起它下面承载的东西。","boundary":"ship 是单数一条船；别和 sheep（绵羊）的长元音混。","prereq":"已听过 /ɪ/ 与 /iː/ 的区别。","scene":"大船上竖着一根 i 形桅杆，s、h、p 站在甲板上","basis":"真实音形对比＋原创画面；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/ship.md（hook/cue/boundary 原文）；prereq 取自 project/lab/mnemonic-300-20261006/words.json；scene 为本次补写","image":"img/ship.svg","image_source":"本次手绘 SVG（i 当桅杆），待审","distractors":["绵羊","汽车","床"]},{"word":"umbrella","ipa":"/ʌmˈbrelə/","meaning":"雨伞","topic":"生活","method":"谐音","hook":"umbrella 读起来像「俺不来了」：下雨天躲在伞下朝朋友喊——头顶撑着的那把伞就是雨伞。","slogan":"俺不来了！","cue":"下雨天你躲在什么下面喊「俺不来了」？","boundary":"这是谐音联想，不是词源；谐音不代替英语发音，要听真实读音。","prereq":"俺、不、来、了 都是熟字（Phil 判定）。","scene":"下雨天躲在伞下朝朋友喊","basis":"谐音联想；不是词源","status":"已认可","review_status":"谐音锚点「俺不来了」由 Phil 2026-10-06 判为合格","source":"obsidian-notes/11-单词速记skill/SKILL.md「对照表（Phil 2026-10-06 亲自判的）」：umbrella →「俺不来了」✅ 合格；画面与扣回取自 11-单词速记skill/references/谐音法.md「验收过的样本」。hook 按 谐音法.md 固定句式拼成，cue 为本次补写（待审）","image":"img/umbrella.svg","image_source":"本次手绘 SVG（雨天伞下喊「俺不来了」），待审","distractors":["雨衣","帽子","眼睛"]},{"word":"toothbrush","ipa":"/ˈtuːθbrʌʃ/","meaning":"牙刷","topic":"生活","method":"真实合成","hook":"tooth 牙齿＋brush 刷子：想象小刷子排队给一颗颗牙齿洗澡；前半说刷哪里，后半说用什么。","slogan":"tooth 牙齿 ＋ brush 刷子","cue":"回想那把小刷子服务的部位。","boundary":"组合里用 tooth，不换成复数 teeth；本卡只教工具名。","prereq":"先认识 tooth（牙齿）、brush（刷子）","scene":"小刷子给一颗颗牙齿洗澡","basis":"真实构词；场景为原创助记","status":"已认可","review_status":"Phil 在审稿台点了 pass（2026-10-06 17:29 UTC+8，版本 87453c4fedea1f33）","source":"project/lab/mnemonic-review-20261006/feedback/live/state.json reviews.toothbrush = pass（对应 project/lab/mnemonic-300-20261006/words.json 中这条 hook+cue）；boundary/prereq 取自 obsidian-notes/10-单词速记库/words/toothbrush.md","image":"img/toothbrush.svg","image_source":"本次手绘 SVG（小刷子给牙齿洗澡），待审","distractors":["牙膏","毛巾","梳子"]}]}/*CONTENT-END*/
+/*CONTENT-START*/{"deck":"右脑记单词","version":"mvp-24-20261011","updated":"2026-10-11","note":"字段沿用项目 words.json 写法（hook/cue/boundary/prereq/scene/method/basis/review_status）。status：已认可＝Phil 本人有通过记录；待审＝没有。slogan＝卡片口号；narration＝播报脚本（en 段用 en-US-AnaNeural，zh 段用 zh-CN-XiaoxiaoNeural）；distractors＝测验里的 3 个干扰词（用它们的图）；emoji＝测验选项图。","groups":[{"id":"一年级","label":"一年级（默认）"},{"id":"三四年级","label":"三四年级"}],"day1":["bed","eye","ship","umbrella","toothbrush"],"words":[{"word":"bed","ipa":"/bed/","meaning":"床","emoji":"🛏️","group":"一年级","method":"字形联想","hook":"把 bed 的三个字母摆开：b 和 d 像床的两头栏杆，中间的 e 是躺下的人。","slogan":"b、d 是床头床尾，e 躺在中间","cue":"看两头那对字母，中间夹着什么？","boundary":"这只是字形线索；发音 /bed/ 要单独听词典。","prereq":"能分清小写 b 与 d 的朝向。","scene":"字母 b 和 d 当床的两头，e 躺在中间","basis":"原创字形线索；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/bed.md","image":"img/bed.png","distractors":["cake","ship","umbrella"],"narration":[["en","bed"],["zh","看！b 和 d，是床头和床尾。"],["zh","中间的 e 躺下来，呼——呼——睡大觉！"],["zh","睡觉的地方，就是床。"],["en","bed"],["zh","床。"]],"fx":"zzz","audio":"audio/narr/bed.mp3","audio_en":"audio/en/bed.mp3","video":"video/bed.mp4","cues":[[0.2,0.61,"en","bed"],[0.91,3.98,"zh","看！b 和 d，是床头和床尾。"],[4.28,7.32,"zh","中间的 e 躺下来，呼——呼——睡大觉！"],[7.62,9.42,"zh","睡觉的地方，就是床。"],[9.72,10.14,"en","bed"],[10.44,10.85,"zh","床。"]],"narration_sec":11.35},{"word":"eye","ipa":"/aɪ/","meaning":"眼睛","emoji":"👁️","group":"一年级","method":"字形联想","hook":"把 eye 写大：左右两个 e 当眼睛，中间 y 当鼻子；看到 e-y-e，就在脑中补出一张有两只眼睛的脸。","slogan":"两个 e 是眼睛，y 是鼻子","cue":"两边相同，中间不同，像脸上的哪种排列？","boundary":"eye 的发音与字母形状无关，须单独听词典。","prereq":"认识小写 e、y；先听过整个词的正确发音。","scene":"e-y-e 排成一张脸：两只眼睛夹着一个鼻子","basis":"原创字形线索；不是词源（同思路见沪江公开示例）","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/eye.md","image":"img/eye.png","distractors":["fish","sun","apple"],"narration":[["en","eye"],["zh","看！两个 e，是两只大眼睛；"],["zh","中间的 y，是鼻子！眨一眨，眨一眨。"],["zh","这就是眼睛。"],["en","eye"],["zh","眼睛。"]],"fx":"sparkle","audio":"audio/narr/eye.mp3","audio_en":"audio/en/eye.mp3","video":"video/eye.mp4","cues":[[0.2,0.62,"en","eye"],[0.92,3.75,"zh","看！两个 e，是两只大眼睛；"],[4.05,7.67,"zh","中间的 y，是鼻子！眨一眨，眨一眨。"],[7.97,8.98,"zh","这就是眼睛。"],[9.28,9.7,"en","eye"],[10,10.58,"zh","眼睛。"]],"narration_sec":11.08},{"word":"ship","ipa":"/ʃɪp/","meaning":"大船","emoji":"🚢","group":"一年级","method":"谐音","hook":"ship 听起来像「湿扑」：大船冲进大海，浪花「扑」地打上甲板，船上的人全身都湿啦！","slogan":"湿！扑！","cue":"浪花扑上来，把谁打湿了？他们站在什么上面？","boundary":"这是谐音联想，不是词源；谐音不代替英语发音，结尾 p 轻轻收住。","prereq":"湿、扑都是熟字；见过大海和船。","scene":"大浪扑上大船，船上两个小朋友被浇得湿漉漉","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审（替换原 i 当桅杆的版本）","source":"本次新写，候选见报告；原卡 obsidian-notes/10-单词速记库/words/ship.md 的「i 当桅杆」被 Phil 评为不够巧妙","image":"img/ship.svg","distractors":["bed","fish","cake"],"narration":[["en","ship"],["zh","听起来像，湿！扑！"],["zh","大船冲进大海，浪花扑——地打上来，船上的人全身都湿啦！"],["zh","在大海上航行的，就是大船。"],["en","ship"],["zh","大船。"]],"fx":"splash","audio":"audio/narr/ship.mp3","audio_en":"audio/en/ship.mp3","video":"video/ship.mp4","cues":[[0.2,0.63,"en","ship"],[0.93,3.16,"zh","听起来像，湿！扑！"],[3.46,8.15,"zh","大船冲进大海，浪花扑——地打上来，船上的人全身都湿啦！"],[8.45,10.82,"zh","在大海上航行的，就是大船。"],[11.12,11.54,"en","ship"],[11.84,12.46,"zh","大船。"]],"narration_sec":12.96},{"word":"umbrella","ipa":"/ʌmˈbrelə/","meaning":"雨伞","emoji":"☂️","group":"一年级","method":"谐音","hook":"umbrella 读起来像「俺不来了」：下雨天躲在伞下朝朋友喊——头顶撑着的那把伞就是雨伞。","slogan":"俺不来了！","cue":"下雨天你躲在什么下面喊「俺不来了」？","boundary":"这是谐音联想，不是词源；谐音不代替英语发音，要听真实读音。","prereq":"俺、不、来、了 都是熟字（Phil 判定）。","scene":"下雨天躲在伞下朝朋友喊","basis":"谐音联想；不是词源","status":"已认可","review_status":"谐音锚点由 Phil 2026-10-06 判为合格（cue 为补写）","source":"obsidian-notes/11-单词速记skill/SKILL.md「对照表（Phil 2026-10-06 亲自判的）」✅ 合格；画面/扣回取自 obsidian-notes/11-单词速记skill/references/谐音法.md","image":"img/umbrella.svg","distractors":["sun","cat","egg"],"narration":[["en","umbrella"],["zh","听起来像，俺不来了！"],["zh","下雨天，小明躲在伞下大喊：俺不来了！"],["zh","这把撑在头顶的，就是雨伞。"],["en","umbrella"],["zh","雨伞。"]],"fx":"rain","audio":"audio/narr/umbrella.mp3","audio_en":"audio/en/umbrella.mp3","video":"video/umbrella.mp4","cues":[[0.2,1.06,"en","umbrella"],[1.36,3.06,"zh","听起来像，俺不来了！"],[3.36,6.62,"zh","下雨天，小明躲在伞下大喊：俺不来了！"],[6.92,9.15,"zh","这把撑在头顶的，就是雨伞。"],[9.45,10.31,"en","umbrella"],[10.61,11.18,"zh","雨伞。"]],"narration_sec":11.68},{"word":"toothbrush","ipa":"/ˈtuːθbrʌʃ/","meaning":"牙刷","emoji":"🪥","group":"一年级","method":"真实合成","hook":"tooth 牙齿＋brush 刷子：想象小刷子排队给一颗颗牙齿洗澡；前半说刷哪里，后半说用什么。","slogan":"tooth 牙齿 ＋ brush 刷子","cue":"回想那把小刷子服务的部位。","boundary":"组合里用 tooth，不换成复数 teeth；本卡只教工具名。","prereq":"先认识 tooth（牙齿）、brush（刷子）","scene":"小刷子给一颗颗牙齿洗澡","basis":"真实构词；场景为原创助记","status":"已认可","review_status":"Phil 审稿台 pass（2026-10-06 17:29 UTC+8，版本 87453c4fedea1f33）","source":"project/lab/mnemonic-review-20261006/feedback/live/state.json reviews.toothbrush=pass（对应 project/lab/mnemonic-300-20261006/words.json 这条 hook+cue）","image":"img/toothbrush.svg","distractors":["apple","dog","bed"],"narration":[["en","toothbrush"],["zh","前面 tooth，是牙齿；后面 brush，是刷子。"],["zh","小刷子排着队，给牙齿洗澡，刷刷刷！"],["zh","刷牙齿的刷子，就是牙刷。"],["en","toothbrush"],["zh","牙刷。"]],"fx":"bubbles","audio":"audio/narr/toothbrush.mp3","audio_en":"audio/en/toothbrush.mp3","video":"video/toothbrush.mp4","cues":[[0.2,1.18,"en","toothbrush"],[1.48,4.99,"zh","前面 tooth，是牙齿；后面 brush，是刷子。"],[5.29,8.45,"zh","小刷子排着队，给牙齿洗澡，刷刷刷！"],[8.75,10.96,"zh","刷牙齿的刷子，就是牙刷。"],[11.26,12.24,"en","toothbrush"],[12.54,13.14,"zh","牙刷。"]],"narration_sec":13.64},{"word":"cat","ipa":"/kæt/","meaning":"小猫","emoji":"🐱","group":"一年级","method":"谐音","hook":"cat 听起来像「咔，它！」：小猫「咔」地一扑，按住了小老鼠——就是它，小猫！","slogan":"咔！它！","cue":"谁「咔」地一扑，按住了小老鼠？","boundary":"谐音联想，不是词源；cat 结尾 t 轻收。","prereq":"咔、它都是熟字；见过猫抓老鼠的画面。","scene":"小猫一扑按住小老鼠","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写（Phil 资料里 cat 只有画面联想，无谐音）","image":"img/cat.svg","distractors":["dog","tiger","panda"],"narration":[["en","cat"],["zh","听起来像，咔！它！"],["zh","小猫咔——地一扑，按住了小老鼠！"],["zh","抓老鼠的，就是小猫。"],["en","cat"],["zh","小猫。"]],"fx":"sparkle","audio":"audio/narr/cat.mp3","audio_en":"audio/en/cat.mp3","video":"video/cat.mp4","cues":[[0.2,0.63,"en","cat"],[0.93,3.03,"zh","听起来像，咔！它！"],[3.33,5.98,"zh","小猫咔——地一扑，按住了小老鼠！"],[6.28,8.07,"zh","抓老鼠的，就是小猫。"],[8.37,8.8,"en","cat"],[9.1,9.68,"zh","小猫。"]],"narration_sec":10.18},{"word":"dog","ipa":"/dɒɡ/","meaning":"小狗","emoji":"🐶","group":"一年级","method":"谐音","hook":"dog 听起来像「逗狗」：拿根骨头逗一逗，小狗摇着尾巴跳起来——它就是小狗！","slogan":"逗狗！","cue":"拿骨头逗一逗，谁跳起来了？","boundary":"谐音联想，不是词源。","prereq":"逗、狗都是熟字。","scene":"小朋友举着骨头逗小狗，小狗摇尾巴","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写","image":"img/dog.svg","distractors":["cat","panda","fish"],"narration":[["en","dog"],["zh","听起来像，逗狗！"],["zh","拿根骨头逗一逗，小狗摇着尾巴，跳起来啦！"],["zh","汪汪叫的，就是小狗。"],["en","dog"],["zh","小狗。"]],"fx":"sparkle","audio":"audio/narr/dog.mp3","audio_en":"audio/en/dog.mp3","video":"video/dog.mp4","cues":[[0.2,0.69,"en","dog"],[0.99,2.47,"zh","听起来像，逗狗！"],[2.77,6.1,"zh","拿根骨头逗一逗，小狗摇着尾巴，跳起来啦！"],[6.4,8.16,"zh","汪汪叫的，就是小狗。"],[8.46,8.95,"en","dog"],[9.25,9.85,"zh","小狗。"]],"narration_sec":10.35},{"word":"apple","ipa":"/ˈæpl/","meaning":"苹果","emoji":"🍎","group":"一年级","method":"谐音","hook":"apple 听起来像「阿婆」：阿婆笑眯眯地递给你一个又红又大的苹果。","slogan":"阿婆给的大苹果","cue":"阿婆递给你什么？","boundary":"谐音联想，不是词源；apple 重音在前。","prereq":"阿婆（奶奶/外婆）是熟人。","scene":"阿婆递来一个大红苹果","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写（07 试验里 apple 只有画面联想）","image":"img/apple.svg","distractors":["egg","cake","sun"],"narration":[["en","apple"],["zh","听起来像，阿婆！"],["zh","阿婆笑眯眯地，递给你一个又红又大的苹果。"],["zh","咬一口，咔嚓！这就是苹果。"],["en","apple"],["zh","苹果。"]],"fx":"sparkle","audio":"audio/narr/apple.mp3","audio_en":"audio/en/apple.mp3","video":"video/apple.mp4","cues":[[0.2,0.8,"en","apple"],[1.1,2.6,"zh","听起来像，阿婆！"],[2.9,6.24,"zh","阿婆笑眯眯地，递给你一个又红又大的苹果。"],[6.54,9.31,"zh","咬一口，咔嚓！这就是苹果。"],[9.61,10.21,"en","apple"],[10.51,11.13,"zh","苹果。"]],"narration_sec":11.63},{"word":"sun","ipa":"/sʌn/","meaning":"太阳","emoji":"☀️","group":"一年级","method":"谐音","hook":"sun 听起来像「散」：太阳一出来，乌云全都「散」开啦，到处亮堂堂！","slogan":"云散啦！","cue":"谁一出来，乌云就散开了？","boundary":"谐音联想，不是词源。","prereq":"散、云都是熟字。","scene":"笑眯眯的太阳把乌云推开","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写","image":"img/sun.svg","distractors":["egg","apple","umbrella"],"narration":[["en","sun"],["zh","听起来像，散！"],["zh","太阳一出来，乌云全都散开啦，到处亮堂堂！"],["zh","天上暖暖的，就是太阳。"],["en","sun"],["zh","太阳。"]],"fx":"rays","audio":"audio/narr/sun.mp3","audio_en":"audio/en/sun.mp3","video":"video/sun.mp4","cues":[[0.2,0.77,"en","sun"],[1.07,2.39,"zh","听起来像，散！"],[2.69,6.1,"zh","太阳一出来，乌云全都散开啦，到处亮堂堂！"],[6.4,8.45,"zh","天上暖暖的，就是太阳。"],[8.75,9.32,"en","sun"],[9.62,10.2,"zh","太阳。"]],"narration_sec":10.7},{"word":"fish","ipa":"/fɪʃ/","meaning":"鱼","emoji":"🐟","group":"一年级","method":"谐音","hook":"fish 听起来像「飞洗」：小鱼从水里飞起来，又扑通掉回去洗个澡！","slogan":"飞！洗！","cue":"谁飞出水面，又扑通掉回去洗澡？","boundary":"谐音联想，不是词源；fish 结尾是 sh 不是 s。","prereq":"飞、洗都是熟字。","scene":"小鱼跃出水面又落回水里","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写","image":"img/fish.svg","distractors":["ship","cat","egg"],"narration":[["en","fish"],["zh","听起来像，飞！洗！"],["zh","小鱼从水里飞起来，扑通！掉回去洗个澡！"],["zh","在水里游的，就是鱼。"],["en","fish"],["zh","鱼。"]],"fx":"bubbles","audio":"audio/narr/fish.mp3","audio_en":"audio/en/fish.mp3","video":"video/fish.mp4","cues":[[0.2,0.82,"en","fish"],[1.12,3.37,"zh","听起来像，飞！洗！"],[3.67,7.31,"zh","小鱼从水里飞起来，扑通！掉回去洗个澡！"],[7.61,9.36,"zh","在水里游的，就是鱼。"],[9.66,10.28,"en","fish"],[10.58,10.92,"zh","鱼。"]],"narration_sec":11.42},{"word":"egg","ipa":"/eɡ/","meaning":"鸡蛋","emoji":"🥚","group":"一年级","method":"谐音","hook":"egg 听起来像「饿哥」：哥哥饿坏啦，张大嘴一口吞下一个大鸡蛋！","slogan":"饿哥！","cue":"饿坏的哥哥一口吞下了什么？","boundary":"谐音联想，不是词源。","prereq":"饿、哥都是熟字。","scene":"饿坏的哥哥张大嘴对着一个大鸡蛋","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写（Phil 资料里 egg 是「两个 g 两颗蛋」字形法，需要拼写基础，不适合一年级）","image":"img/egg.svg","distractors":["apple","sun","cake"],"narration":[["en","egg"],["zh","听起来像，饿哥！"],["zh","哥哥饿坏啦，张大嘴，啊呜——一口吞下一个大鸡蛋！"],["zh","圆圆的，就是鸡蛋。"],["en","egg"],["zh","鸡蛋。"]],"fx":"sparkle","audio":"audio/narr/egg.mp3","audio_en":"audio/en/egg.mp3","video":"video/egg.mp4","cues":[[0.2,0.57,"en","egg"],[0.87,2.37,"zh","听起来像，饿哥！"],[2.67,6.81,"zh","哥哥饿坏啦，张大嘴，啊呜——一口吞下一个大鸡蛋！"],[7.11,8.77,"zh","圆圆的，就是鸡蛋。"],[9.07,9.44,"en","egg"],[9.74,10.28,"zh","鸡蛋。"]],"narration_sec":10.78},{"word":"cake","ipa":"/keɪk/","meaning":"蛋糕","emoji":"🎂","group":"一年级","method":"谐音","hook":"cake 听起来像「给客」：生日派对来了好多客人，妈妈把蛋糕切成一块一块，「给客」人吃。","slogan":"切蛋糕，给客人！","cue":"生日派对上切开分给客人的是什么？","boundary":"谐音联想，不是词源。","prereq":"给、客都是熟字；过过生日。","scene":"插着蜡烛的生日蛋糕和切下的一块","basis":"谐音联想；不是词源","status":"待审","review_status":"本次新写（2026-10-11）；待 Phil 审","source":"本次新写","image":"img/cake.svg","distractors":["apple","egg","bed"],"narration":[["en","cake"],["zh","听起来像，给客！"],["zh","生日派对来了好多客人，切一块，给客人；再切一块，给客人！"],["zh","甜甜的，就是蛋糕。"],["en","cake"],["zh","蛋糕。"]],"fx":"confetti","audio":"audio/narr/cake.mp3","audio_en":"audio/en/cake.mp3","video":"video/cake.mp4","cues":[[0.2,0.74,"en","cake"],[1.04,2.51,"zh","听起来像，给客！"],[2.81,7.93,"zh","生日派对来了好多客人，切一块，给客人；再切一块，给客人！"],[8.23,9.91,"zh","甜甜的，就是蛋糕。"],[10.21,10.75,"en","cake"],[11.05,11.59,"zh","蛋糕。"]],"narration_sec":12.09},{"word":"panda","ipa":"/ˈpændə/","meaning":"熊猫","emoji":"🐼","group":"一年级","method":"谐音","hook":"panda 读起来像「胖达」：动物园里那只圆滚滚、胖乎乎的家伙，名字就叫胖达——它正抱着竹子啃。","slogan":"胖达！","cue":"那只胖乎乎、抱着竹子啃的家伙叫什么？","boundary":"谐音联想，不是词源。","prereq":"胖、达都是熟字（skill 判据）。","scene":"圆滚滚的熊猫抱着竹子","basis":"谐音联想；不是词源","status":"待审","review_status":"skill 列为 ✅ 示例；未见 Phil 逐词通过记录","source":"obsidian-notes/11-单词速记skill/SKILL.md 路线 B 示例 + project/lab/word-learning-exploration-20261006/app.mjs（hook 原文）","image":"img/panda.svg","distractors":["tiger","cat","dog"],"narration":[["en","panda"],["zh","听起来像，胖达！"],["zh","动物园里，一只圆滚滚、胖乎乎的胖达，抱着竹子啃啊啃。"],["zh","黑白胖胖的，就是熊猫。"],["en","panda"],["zh","熊猫。"]],"fx":"sparkle","audio":"audio/narr/panda.mp3","audio_en":"audio/en/panda.mp3","video":"video/panda.mp4","cues":[[0.2,0.89,"en","panda"],[1.19,2.66,"zh","听起来像，胖达！"],[2.96,7.65,"zh","动物园里，一只圆滚滚、胖乎乎的胖达，抱着竹子啃啊啃。"],[7.95,9.93,"zh","黑白胖胖的，就是熊猫。"],[10.23,10.92,"en","panda"],[11.22,11.81,"zh","熊猫。"]],"narration_sec":12.31},{"word":"tiger","ipa":"/ˈtaɪɡə/","meaning":"老虎","emoji":"🐯","group":"一年级","method":"谐音","hook":"tiger 读起来像「太哥」：山里威风的大哥走过来，小动物让路——那位大哥就是老虎。","slogan":"太哥来啦！","cue":"山里那位威风的大哥是谁？","boundary":"谐音联想，不是词源。","prereq":"太、哥都是熟字（skill 判据）。","scene":"威风的老虎走来，小兔小熊让路","basis":"谐音联想；不是词源","status":"待审","review_status":"skill 列为验收样本；未见 Phil 逐词通过记录","source":"obsidian-notes/11-单词速记skill/references/谐音法.md「验收过的样本」（谐音/画面/扣回原文拼成）","image":"img/tiger.svg","distractors":["panda","cat","dog"],"narration":[["en","tiger"],["zh","听起来像，太哥！"],["zh","山里威风的太哥走过来，小兔子、小熊都赶紧让路！"],["zh","那位大哥，就是老虎。嗷呜！"],["en","tiger"],["zh","老虎。"]],"fx":"sparkle","audio":"audio/narr/tiger.mp3","audio_en":"audio/en/tiger.mp3","video":"video/tiger.mp4","cues":[[0.2,0.85,"en","tiger"],[1.15,2.65,"zh","听起来像，太哥！"],[2.95,7.27,"zh","山里威风的太哥走过来，小兔子、小熊都赶紧让路！"],[7.57,10.26,"zh","那位大哥，就是老虎。嗷呜！"],[10.56,11.21,"en","tiger"],[11.51,12.1,"zh","老虎。"]],"narration_sec":12.6},{"word":"clap","ipa":"/klæp/","meaning":"拍手","emoji":"👏","group":"一年级","method":"声音动作","hook":"先听 clap，再把两个手掌合到一起；让结尾 /p/ 和双手相碰那一下同时收住，看到 clap 就重放这一拍。","slogan":"双手一合——啪！","cue":"回想两个手掌相遇、声音停住的一下。","boundary":"仅作动作配对，不宣称 clap 是拟声词。","prereq":"会拍手。","scene":"两只小手一合，啪","basis":"声音动作配对；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/clap.md","image":"img/clap.svg","distractors":["catch","eye","cake"],"narration":[["en","clap"],["zh","伸出两只小手，跟我一起——"],["zh","啪！啪！拍一拍！clap 的最后，手掌合上，啪！"],["zh","这就是拍手。"],["en","clap"],["zh","拍手。"]],"fx":"confetti","audio":"audio/narr/clap.mp3","audio_en":"audio/en/clap.mp3","video":"video/clap.mp4","cues":[[0.2,0.69,"en","clap"],[0.99,3.11,"zh","伸出两只小手，跟我一起——"],[3.41,8.67,"zh","啪！啪！拍一拍！clap 的最后，手掌合上，啪！"],[8.97,9.99,"zh","这就是拍手。"],[10.29,10.78,"en","clap"],[11.08,11.67,"zh","拍手。"]],"narration_sec":12.17},{"word":"catch","ipa":"/kætʃ/","meaning":"抓住；接住","emoji":"🤲","group":"三四年级","method":"声音动作","hook":"读 catch，结尾那一下 tʃ 像双手“啪”地一合；看到它就想球飞来时手掌收拢的那个动作。","slogan":"球飞来，双手一合！","cue":"回想双手合拢的那一下。","boundary":"catch 是接住/抓住动作，不是“接住的东西”。","prereq":"会做接球动作。","scene":"球飞来，双手合拢接住","basis":"声音动作配对；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/catch.md","image":"img/catch.svg","distractors":["clap","strong","window"],"narration":[["en","catch"],["zh","球飞过来啦！"],["zh","双手一合，啪——接住！"],["zh","这就是抓住、接住。"],["en","catch"],["zh","接住。"]],"fx":"sparkle","audio":"audio/narr/catch.mp3","audio_en":"audio/en/catch.mp3","video":"video/catch.mp4","cues":[[0.2,0.85,"en","catch"],[1.15,2.12,"zh","球飞过来啦！"],[2.42,4.42,"zh","双手一合，啪——接住！"],[4.72,6.37,"zh","这就是抓住、接住。"],[6.67,7.32,"en","catch"],[7.62,8.15,"zh","接住。"]],"narration_sec":8.65},{"word":"window","ipa":"/ˈwɪndəʊ/","meaning":"窗户","emoji":"🪟","group":"三四年级","method":"真实合成","hook":"wind 风＋ow：想象风从墙上的方框吹进屋里——那个让风进来的方框就是 window。","slogan":"wind 风，从方框吹进来","cue":"想屋里那处让风进来的地方。","boundary":"这是帮助记忆的拆解，wind 与 window 并非严格构词关系。","prereq":"先认识 wind（风）。","scene":"风吹动窗帘，从窗口吹进屋","basis":"帮助记忆的拆解（卡片自注非严格构词）","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/window.md","image":"img/window.svg","distractors":["library","notebook","rainbow"],"narration":[["en","window"],["zh","前面 wind，是风。"],["zh","呼——风从墙上的方框吹进屋里，窗帘飘起来啦！"],["zh","让风进来的方框，就是窗户。"],["en","window"],["zh","窗户。"]],"fx":"wind","audio":"audio/narr/window.mp3","audio_en":"audio/en/window.mp3","video":"video/window.mp4","cues":[[0.2,0.9,"en","window"],[1.2,2.69,"zh","前面 wind，是风。"],[2.99,6.71,"zh","呼——风从墙上的方框吹进屋里，窗帘飘起来啦！"],[7.01,9.24,"zh","让风进来的方框，就是窗户。"],[9.54,10.24,"en","window"],[10.54,11.11,"zh","窗户。"]],"narration_sec":11.61},{"word":"rainbow","ipa":"/ˈreɪnbəʊ/","meaning":"彩虹","emoji":"🌈","group":"三四年级","method":"真实合成","hook":"rain 雨＋bow 弓形：刚下完雨，天空挂出一张弯弯的弓，那就是彩虹。","slogan":"rain 雨 ＋ bow 弯弓","cue":"想雨天之后天上那张弯弓。","boundary":"bow 在这里是“弓形”，不是“鞠躬”的读音。","prereq":"先认识 rain（雨）、bow（弓形）","scene":"雨后天空挂着弯弯的彩虹","basis":"真实构词；场景为原创助记","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/rainbow.md","image":"img/rainbow.svg","distractors":["raincoat","window","snowman"],"narration":[["en","rainbow"],["zh","前面 rain，是雨；后面 bow，是弯弯的弓。"],["zh","刚下完雨，天上挂出一张七种颜色的弯弓！"],["zh","这就是彩虹。"],["en","rainbow"],["zh","彩虹。"]],"fx":"rain","audio":"audio/narr/rainbow.mp3","audio_en":"audio/en/rainbow.mp3","video":"video/rainbow.mp4","cues":[[0.2,0.99,"en","rainbow"],[1.29,4.59,"zh","前面 rain，是雨；后面 bow，是弯弯的弓。"],[4.89,8.25,"zh","刚下完雨，天上挂出一张七种颜色的弯弓！"],[8.55,9.62,"zh","这就是彩虹。"],[9.92,10.71,"en","rainbow"],[11.01,11.61,"zh","彩虹。"]],"narration_sec":12.11},{"word":"raincoat","ipa":"/ˈreɪnkəʊt/","meaning":"雨衣","emoji":"🧥","group":"三四年级","method":"真实合成","hook":"rain 雨＋coat 外套：雨点扑向你，防水外套把它们送到地上；为了挡雨而穿的外套就是雨衣。","slogan":"rain 雨 ＋ coat 外套","cue":"外套正在挡住哪一种天气？","boundary":"普通外套遇雨不自动成为 raincoat；要记它的防雨用途。","prereq":"先认识 rain（雨）、coat（外套）","scene":"穿黄雨衣的小朋友站在雨里","basis":"真实构词；场景为原创助记","status":"已认可","review_status":"Phil 审稿台 pass（版本 f1cfc13f4a1b5f28）","source":"project/lab/mnemonic-review-20261006/feedback/live/state.json reviews.raincoat=pass（对应 project/lab/mnemonic-300-20261006/words.json 这条 hook+cue）","image":"img/raincoat.svg","distractors":["rainbow","snowman","notebook"],"narration":[["en","raincoat"],["zh","前面 rain，是雨；后面 coat，是外套。"],["zh","雨点扑过来，防水外套把它们都挡在外面！"],["zh","挡雨的外套，就是雨衣。"],["en","raincoat"],["zh","雨衣。"]],"fx":"rain","audio":"audio/narr/raincoat.mp3","audio_en":"audio/en/raincoat.mp3","video":"video/raincoat.mp4","cues":[[0.2,0.95,"en","raincoat"],[1.25,4.51,"zh","前面 rain，是雨；后面 coat，是外套。"],[4.81,8.12,"zh","雨点扑过来，防水外套把它们都挡在外面！"],[8.42,10.38,"zh","挡雨的外套，就是雨衣。"],[10.68,11.43,"en","raincoat"],[11.73,12.26,"zh","雨衣。"]],"narration_sec":12.76},{"word":"snowman","ipa":"/ˈsnəʊmæn/","meaning":"雪人","emoji":"⛄","group":"三四年级","method":"真实合成","hook":"snow 雪＋man 人：把两个雪球叠起来，加上胡萝卜鼻子，让雪站成一个人的样子；它就是雪人。","slogan":"snow 雪 ＋ man 人","cue":"雪这次被堆成了什么外形？","boundary":"这里是雪堆成的人形，不是活人；雪人造型不只这一种。","prereq":"先认识 snow（雪）、man（人）","scene":"两个雪球叠成的雪人，胡萝卜鼻子","basis":"真实构词；场景为原创助记","status":"已认可","review_status":"Phil 审稿台 pass（版本 8561cd1443a6128f）","source":"project/lab/mnemonic-review-20261006/feedback/live/state.json reviews.snowman=pass（对应 project/lab/mnemonic-300-20261006/words.json 这条 hook+cue）","image":"img/snowman.svg","distractors":["raincoat","rainbow","dessert"],"narration":[["en","snowman"],["zh","前面 snow，是雪；后面 man，是人。"],["zh","两个雪球叠起来，插上胡萝卜鼻子，雪站成了一个人！"],["zh","这就是雪人。"],["en","snowman"],["zh","雪人。"]],"fx":"snow","audio":"audio/narr/snowman.mp3","audio_en":"audio/en/snowman.mp3","video":"video/snowman.mp4","cues":[[0.2,1.13,"en","snowman"],[1.43,4.53,"zh","前面 snow，是雪；后面 man，是人。"],[4.83,8.83,"zh","两个雪球叠起来，插上胡萝卜鼻子，雪站成了一个人！"],[9.13,10.13,"zh","这就是雪人。"],[10.43,11.36,"en","snowman"],[11.66,12.27,"zh","雪人。"]],"narration_sec":12.77},{"word":"notebook","ipa":"/ˈnəʊtbʊk/","meaning":"笔记本","emoji":"📓","group":"三四年级","method":"真实合成","hook":"note 笔记＋book 本子：一个刚冒出来的想法，立刻被铅笔写进小本；专门收集笔记的本子就是它。","slogan":"note 笔记 ＋ book 本子","cue":"回想你把课堂要点写进哪里。","boundary":"本卡只记纸本义；notebook 也可以指笔记本电脑，遇语境再分辨。","prereq":"先认识 note（笔记）、book（本子、书）","scene":"灯泡亮起，铅笔把想法写进小本","basis":"真实构词；场景为原创助记","status":"已认可","review_status":"Phil 审稿台 pass（版本 33a16bcfd40c1de6）","source":"project/lab/mnemonic-review-20261006/feedback/live/state.json reviews.notebook=pass（对应 project/lab/mnemonic-300-20261006/words.json 这条 hook+cue）","image":"img/notebook.svg","distractors":["library","window","dessert"],"narration":[["en","notebook"],["zh","前面 note，是笔记；后面 book，是本子。"],["zh","叮！想到一个好主意，赶紧用铅笔写进小本子！"],["zh","记笔记的本子，就是笔记本。"],["en","notebook"],["zh","笔记本。"]],"fx":"sparkle","audio":"audio/narr/notebook.mp3","audio_en":"audio/en/notebook.mp3","video":"video/notebook.mp4","cues":[[0.2,1.01,"en","notebook"],[1.31,4.7,"zh","前面 note，是笔记；后面 book，是本子。"],[5,9.01,"zh","叮！想到一个好主意，赶紧用铅笔写进小本子！"],[9.31,11.57,"zh","记笔记的本子，就是笔记本。"],[11.87,12.68,"en","notebook"],[12.98,13.68,"zh","笔记本。"]],"narration_sec":14.18},{"word":"dessert","ipa":"/dɪˈzɜːt/","meaning":"甜点","emoji":"🍨","group":"三四年级","method":"易混对比","hook":"甜点好吃，想再来一份；两份甜点对应 dessert 的两个 s。先抓住双 s，再想起饭后那一小份甜食。","slogan":"真好吃，再来一份！","cue":"想起“还想再来一份”，再数 s。","boundary":"desert（沙漠/抛弃）只有一个 s，两个词意思完全不同。","prereq":"会数字母 s。","scene":"两份冰淇淋甜点","basis":"原创易混对比线索；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/dessert.md","image":"img/dessert.svg","distractors":["snowman","notebook","library"],"narration":[["en","dessert"],["zh","甜点太好吃啦，还想再来一份！"],["zh","两份甜点，就像 dessert 里的两个 s。"],["zh","饭后甜甜的，就是甜点。"],["en","dessert"],["zh","甜点。"]],"fx":"sparkle","audio":"audio/narr/dessert.mp3","audio_en":"audio/en/dessert.mp3","video":"video/dessert.mp4","cues":[[0.2,0.8,"en","dessert"],[1.1,3.46,"zh","甜点太好吃啦，还想再来一份！"],[3.76,6.56,"zh","两份甜点，就像 dessert 里的两个 s。"],[6.86,8.82,"zh","饭后甜甜的，就是甜点。"],[9.12,9.72,"en","dessert"],[10.02,10.63,"zh","甜点。"]],"narration_sec":11.13},{"word":"library","ipa":"/ˈlaɪbrəri/","meaning":"图书馆","emoji":"📚","group":"三四年级","method":"易混对比","hook":"图书馆里书排得整整齐齐，里面藏着一个 r（room 房间）；bookstore 反而没有 r 在后面。先把 library 中间那个 r 读出来。","slogan":"满屋子的书","cue":"先念出中间那个 r 的位置。","boundary":"library（图书馆）与 bookshop/bookstore（书店）不是一回事。","prereq":"知道图书馆是借书看书的地方。","scene":"一整面书架，书排得整整齐齐","basis":"原创易混对比线索；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认（此条一年级不适用）","source":"obsidian-notes/10-单词速记库/words/library.md","image":"img/library.svg","distractors":["notebook","window","dessert"],"narration":[["en","library"],["zh","一整面墙的书，排得整整齐齐。"],["zh","library 中间藏着一个 r，读出来：li-bra-ry。"],["zh","借书看书的地方，就是图书馆。"],["en","library"],["zh","图书馆。"]],"fx":"sparkle","audio":"audio/narr/library.mp3","audio_en":"audio/en/library.mp3","video":"video/library.mp4","cues":[[0.2,1.07,"en","library"],[1.37,3.92,"zh","一整面墙的书，排得整整齐齐。"],[4.22,7.75,"zh","library 中间藏着一个 r，读出来：li-bra-ry。"],[8.05,10.48,"zh","借书看书的地方，就是图书馆。"],[10.78,11.64,"en","library"],[11.94,12.71,"zh","图书馆。"]],"narration_sec":13.21},{"word":"strong","ipa":"/strɒŋ/","meaning":"强壮的","emoji":"💪","group":"三四年级","method":"声音动作","hook":"读 strong 时把胸口撑起来，像举起一件很重的东西；让“绷紧”的感觉和这个音一起打包。","slogan":"挺胸，举起来！","cue":"回想举起重物时胸口绷紧的那一下。","boundary":"strong 是形容词，形容人或东西有力气。","prereq":"会做举重动作。","scene":"小朋友挺胸举起大杠铃","basis":"声音动作配对；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/strong.md","image":"img/strong.svg","distractors":["catch","snowman","window"],"narration":[["en","strong"],["zh","挺起胸口，嘿——举起一个超级重的大杠铃！"],["zh","说 strong 的时候，浑身都绷紧！"],["zh","有力气，就是强壮的。"],["en","strong"],["zh","强壮的。"]],"fx":"sparkle","audio":"audio/narr/strong.mp3","audio_en":"audio/en/strong.mp3","video":"video/strong.mp4","cues":[[0.2,0.94,"en","strong"],[1.24,4.68,"zh","挺起胸口，嘿——举起一个超级重的大杠铃！"],[4.98,7.26,"zh","说 strong 的时候，浑身都绷紧！"],[7.56,9.37,"zh","有力气，就是强壮的。"],[9.67,10.41,"en","strong"],[10.71,11.46,"zh","强壮的。"]],"narration_sec":11.96}],"letters":[{"id":"L-s","letter":"s","upper":"S","name":"S","sound":"/s/","sound_zh":"嘶","shape":"一条弯弯的小蛇","story":"s 像一条弯弯扭扭的小蛇，嘶——嘶——嘶！","keyword":"snake","prop":"🐍","color":"#2EA868","group":1,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/s.svg","audio":"audio/letters/s.mp3","audio_en":"audio/en/L-s.mp3","video":"video/letters/s.mp4","narration":[["zh","这是字母"],["en","S."],["zh","s 像一条弯弯扭扭的小蛇，嘶——嘶——嘶！"],["zh","它常发的音是：嘶，就像"],["en","snake"],["zh","开头的声音。"],["en","S."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.88,"en","S."],[2.18,5.84,"zh","s 像一条弯弯扭扭的小蛇，嘶——嘶——嘶！"],[6.14,8.52,"zh","它常发的音是：嘶，就像"],[8.82,9.35,"en","snake"],[9.65,10.67,"zh","开头的声音。"],[10.97,11.5,"en","S."]],"narration_sec":12},{"id":"L-a","letter":"a","upper":"A","name":"A","sound":"/æ/","sound_zh":"哎","shape":"一个带小柄的苹果","story":"a 像一个圆圆的小苹果，旁边一根小柄。咬一口，哎！","keyword":"apple","prop":"🍎","color":"#E5484D","group":1,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/a.svg","audio":"audio/letters/a.mp3","audio_en":"audio/en/L-a.mp3","video":"video/letters/a.mp4","narration":[["zh","这是字母"],["en","A."],["zh","a 像一个圆圆的小苹果，旁边一根小柄。咬一口，哎！"],["zh","它常发的音是：哎，就像"],["en","apple"],["zh","开头的声音。"],["en","A."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.74,"en","A."],[2.04,6.64,"zh","a 像一个圆圆的小苹果，旁边一根小柄。咬一口，哎！"],[6.94,9.27,"zh","它常发的音是：哎，就像"],[9.57,10.17,"en","apple"],[10.47,11.49,"zh","开头的声音。"],[11.79,12.17,"en","A."]],"narration_sec":12.67},{"id":"L-t","letter":"t","upper":"T","name":"T","sound":"/t/","sound_zh":"特","shape":"一个小十字路标","story":"t 像一个小十字架，钟表嘀嗒嘀嗒：特、特、特！","keyword":"tick-tock","prop":"⏰","color":"#3A8DDE","group":1,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/t.svg","audio":"audio/letters/t.mp3","audio_en":"audio/en/L-t.mp3","video":"video/letters/t.mp4","narration":[["zh","这是字母"],["en","T."],["zh","t 像一个小十字架，钟表嘀嗒嘀嗒：特、特、特！"],["zh","它常发的音是：特，就像"],["en","tick-tock"],["zh","开头的声音。"],["en","T."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.8,"en","T."],[2.1,6.44,"zh","t 像一个小十字架，钟表嘀嗒嘀嗒：特、特、特！"],[6.74,9.07,"zh","它常发的音是：特，就像"],[9.37,10.04,"en","tick-tock"],[10.34,11.36,"zh","开头的声音。"],[11.66,12.11,"en","T."]],"narration_sec":12.61},{"id":"L-p","letter":"p","upper":"P","name":"P","sound":"/p/","sound_zh":"噗","shape":"一根吹泡泡的小棒","story":"p 像一根吹泡泡的小棒，对着它一吹：噗！噗！噗！","keyword":"pop","prop":"🫧","color":"#9C6ADE","group":1,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/p.svg","audio":"audio/letters/p.mp3","audio_en":"audio/en/L-p.mp3","video":"video/letters/p.mp4","narration":[["zh","这是字母"],["en","P."],["zh","p 像一根吹泡泡的小棒，对着它一吹：噗！噗！噗！"],["zh","它常发的音是：噗，就像"],["en","pop"],["zh","开头的声音。"],["en","P."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.78,"en","P."],[2.08,7.26,"zh","p 像一根吹泡泡的小棒，对着它一吹：噗！噗！噗！"],[7.56,9.86,"zh","它常发的音是：噗，就像"],[10.16,10.55,"en","pop"],[10.85,11.86,"zh","开头的声音。"],[12.16,12.59,"en","P."]],"narration_sec":13.09},{"id":"L-i","letter":"i","upper":"I","name":"I","sound":"/ɪ/","sound_zh":"咦","shape":"一个戴着圆点帽的小人","story":"i 像一个小人，头上顶着一个小圆点。小虫叮了他一下：咦！","keyword":"insect","prop":"🐛","color":"#FF8A3D","group":1,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/i.svg","audio":"audio/letters/i.mp3","audio_en":"audio/en/L-i.mp3","video":"video/letters/i.mp4","narration":[["zh","这是字母"],["en","I."],["zh","i 像一个小人，头上顶着一个小圆点。小虫叮了他一下：咦！"],["zh","它常发的音是：咦，就像"],["en","insect"],["zh","开头的声音。"],["en","I."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.77,"en","I."],[2.07,7.12,"zh","i 像一个小人，头上顶着一个小圆点。小虫叮了他一下：咦！"],[7.42,9.72,"zh","它常发的音是：咦，就像"],[10.02,10.89,"en","insect"],[11.19,12.21,"zh","开头的声音。"],[12.51,12.93,"en","I."]],"narration_sec":13.43},{"id":"L-n","letter":"n","upper":"N","name":"N","sound":"/n/","sound_zh":"嗯","shape":"一座小拱门","story":"n 像一座小拱门。小朋友摇摇头：嗯——嗯——不要不要！","keyword":"no","prop":"🚪","color":"#2F5DA8","group":1,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/n.svg","audio":"audio/letters/n.mp3","audio_en":"audio/en/L-n.mp3","video":"video/letters/n.mp4","narration":[["zh","这是字母"],["en","N."],["zh","n 像一座小拱门。小朋友摇摇头：嗯——嗯——不要不要！"],["zh","它常发的音是：嗯，就像"],["en","no"],["zh","开头的声音。"],["en","N."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.81,"en","N."],[2.11,6.89,"zh","n 像一座小拱门。小朋友摇摇头：嗯——嗯——不要不要！"],[7.19,9.46,"zh","它常发的音是：嗯，就像"],[9.76,10.25,"en","no"],[10.55,11.57,"zh","开头的声音。"],[11.87,12.33,"en","N."]],"narration_sec":12.83},{"id":"L-c","letter":"c","upper":"C","name":"C","sound":"/k/","sound_zh":"咳","shape":"一块被咬了一口的饼干","story":"c 像一块被咬掉一口的饼干，吃得太快，咳！咳！","keyword":"cookie","prop":"🍪","color":"#C98A4B","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/c.svg","audio":"audio/letters/c.mp3","audio_en":"audio/en/L-c.mp3","video":null,"narration":[["zh","这是字母"],["en","C."],["zh","c 像一块被咬掉一口的饼干，吃得太快，咳！咳！"],["zh","它常发的音是：咳，就像"],["en","cookie"],["zh","开头的声音。"],["en","C."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.86,"en","C."],[2.16,6.67,"zh","c 像一块被咬掉一口的饼干，吃得太快，咳！咳！"],[6.97,9.31,"zh","它常发的音是：咳，就像"],[9.61,10.21,"en","cookie"],[10.51,11.53,"zh","开头的声音。"],[11.83,12.34,"en","C."]],"narration_sec":12.84},{"id":"L-k","letter":"k","upper":"K","name":"K","sound":"/k/","sound_zh":"咳","shape":"一个踢腿的小人","story":"k 像一个小人伸出一条腿，踢球！踢的时候咳一声：咳！","keyword":"kick","prop":"⚽","color":"#F2643A","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/k.svg","audio":"audio/letters/k.mp3","audio_en":"audio/en/L-k.mp3","video":null,"narration":[["zh","这是字母"],["en","K."],["zh","k 像一个小人伸出一条腿，踢球！踢的时候咳一声：咳！"],["zh","它常发的音是：咳，就像"],["en","kick"],["zh","开头的声音。"],["en","K."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.8,"en","K."],[2.1,7.06,"zh","k 像一个小人伸出一条腿，踢球！踢的时候咳一声：咳！"],[7.36,9.7,"zh","它常发的音是：咳，就像"],[10,10.32,"en","kick"],[10.62,11.64,"zh","开头的声音。"],[11.94,12.39,"en","K."]],"narration_sec":12.89},{"id":"L-e","letter":"e","upper":"E","name":"E","sound":"/e/","sound_zh":"哎","shape":"一只侧着张开的小嘴","story":"e 像一只张开的小嘴巴，看见鸡蛋，哎！哎！","keyword":"egg","prop":"🥚","color":"#E0A400","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/e.svg","audio":"audio/letters/e.mp3","audio_en":"audio/en/L-e.mp3","video":null,"narration":[["zh","这是字母"],["en","E."],["zh","e 像一只张开的小嘴巴，看见鸡蛋，哎！哎！"],["zh","它常发的音是：哎，就像"],["en","egg"],["zh","开头的声音。"],["en","E."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.73,"en","E."],[2.03,6.14,"zh","e 像一只张开的小嘴巴，看见鸡蛋，哎！哎！"],[6.44,8.77,"zh","它常发的音是：哎，就像"],[9.07,9.44,"en","egg"],[9.74,10.76,"zh","开头的声音。"],[11.06,11.43,"en","E."]],"narration_sec":11.93},{"id":"L-h","letter":"h","upper":"H","name":"H","sound":"/h/","sound_zh":"哈","shape":"一把小椅子","story":"h 像一把高背小椅子。跑累了坐上去，哈——哈——喘口气。","keyword":"hat","prop":"🪑","color":"#2EA868","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/h.svg","audio":"audio/letters/h.mp3","audio_en":"audio/en/L-h.mp3","video":null,"narration":[["zh","这是字母"],["en","H."],["zh","h 像一把高背小椅子。跑累了坐上去，哈——哈——喘口气。"],["zh","它常发的音是：哈，就像"],["en","hat"],["zh","开头的声音。"],["en","H."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.96,"en","H."],[2.26,7.39,"zh","h 像一把高背小椅子。跑累了坐上去，哈——哈——喘口气。"],[7.69,9.98,"zh","它常发的音是：哈，就像"],[10.28,10.73,"en","hat"],[11.03,12.04,"zh","开头的声音。"],[12.34,12.95,"en","H."]],"narration_sec":13.45},{"id":"L-r","letter":"r","upper":"R","name":"R","sound":"/r/","sound_zh":"儿","shape":"一根翘起来的小树枝","story":"r 像一根翘起来的小树枝，小狗咬着它：rrr——","keyword":"run","prop":"🐶","color":"#E5484D","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/r.svg","audio":"audio/letters/r.mp3","audio_en":"audio/en/L-r.mp3","video":null,"narration":[["zh","这是字母"],["en","R."],["zh","r 像一根翘起来的小树枝，小狗咬着它：rrr——"],["zh","它常发的音是：儿，就像"],["en","run"],["zh","开头的声音。"],["en","R."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.8,"en","R."],[2.1,6.12,"zh","r 像一根翘起来的小树枝，小狗咬着它：rrr——"],[6.42,8.24,"zh","它常发的音是：儿，就像"],[8.54,9.04,"en","run"],[9.34,10.35,"zh","开头的声音。"],[10.65,11.1,"en","R."]],"narration_sec":11.6},{"id":"L-m","letter":"m","upper":"M","name":"M","sound":"/m/","sound_zh":"嗯","shape":"两座小山","story":"m 像两座小山。山上有好吃的冰淇淋，嗯——好吃！","keyword":"mmm","prop":"🍦","color":"#FF8FB1","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/m.svg","audio":"audio/letters/m.mp3","audio_en":"audio/en/L-m.mp3","video":null,"narration":[["zh","这是字母"],["en","M."],["zh","m 像两座小山。山上有好吃的冰淇淋，嗯——好吃！"],["zh","它常发的音是：嗯，就像"],["en","mmm"],["zh","开头的声音。"],["en","M."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.82,"en","M."],[2.12,6.77,"zh","m 像两座小山。山上有好吃的冰淇淋，嗯——好吃！"],[7.07,9.35,"zh","它常发的音是：嗯，就像"],[9.65,10.45,"en","mmm"],[10.75,11.77,"zh","开头的声音。"],[12.07,12.53,"en","M."]],"narration_sec":13.03},{"id":"L-d","letter":"d","upper":"D","name":"D","sound":"/d/","sound_zh":"得","shape":"一面带鼓槌的小鼓","story":"d 像一面小鼓，竖着一根鼓槌：得、得、得，咚咚咚！","keyword":"drum","prop":"🥁","color":"#3A8DDE","group":2,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/d.svg","audio":"audio/letters/d.mp3","audio_en":"audio/en/L-d.mp3","video":null,"narration":[["zh","这是字母"],["en","D."],["zh","d 像一面小鼓，竖着一根鼓槌：得、得、得，咚咚咚！"],["zh","它常发的音是：得，就像"],["en","drum"],["zh","开头的声音。"],["en","D."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.77,"en","D."],[2.06,6.7,"zh","d 像一面小鼓，竖着一根鼓槌：得、得、得，咚咚咚！"],[7,9.44,"zh","它常发的音是：得，就像"],[9.74,10.32,"en","drum"],[10.62,11.64,"zh","开头的声音。"],[11.94,12.35,"en","D."]],"narration_sec":12.85},{"id":"L-g","letter":"g","upper":"G","name":"G","sound":"/ɡ/","sound_zh":"咕","shape":"一只张嘴的小青蛙","story":"g 像一只小青蛙，下巴挂着长尾巴：咕、咕、咕！","keyword":"go","prop":"🐸","color":"#2EA868","group":3,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/g.svg","audio":"audio/letters/g.mp3","audio_en":"audio/en/L-g.mp3","video":null,"narration":[["zh","这是字母"],["en","G."],["zh","g 像一只小青蛙，下巴挂着长尾巴：咕、咕、咕！"],["zh","它常发的音是：咕，就像"],["en","go"],["zh","开头的声音。"],["en","G."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.83,"en","G."],[2.13,6.26,"zh","g 像一只小青蛙，下巴挂着长尾巴：咕、咕、咕！"],[6.56,8.86,"zh","它常发的音是：咕，就像"],[9.16,9.58,"en","go"],[9.88,10.9,"zh","开头的声音。"],[11.2,11.68,"en","G."]],"narration_sec":12.18},{"id":"L-o","letter":"o","upper":"O","name":"O","sound":"/ɒ/","sound_zh":"哦","shape":"一张张大的嘴巴","story":"o 圆圆的，像一张张得大大的嘴巴：哦！哦！哦！","keyword":"octopus","prop":"😮","color":"#FF8A3D","group":3,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/o.svg","audio":"audio/letters/o.mp3","audio_en":"audio/en/L-o.mp3","video":null,"narration":[["zh","这是字母"],["en","O."],["zh","o 圆圆的，像一张张得大大的嘴巴：哦！哦！哦！"],["zh","它常发的音是：哦，就像"],["en","octopus"],["zh","开头的声音。"],["en","O."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.71,"en","O."],[2.01,6.91,"zh","o 圆圆的，像一张张得大大的嘴巴：哦！哦！哦！"],[7.21,9.5,"zh","它常发的音是：哦，就像"],[9.8,10.77,"en","octopus"],[11.07,12.09,"zh","开头的声音。"],[12.39,12.74,"en","O."]],"narration_sec":13.24},{"id":"L-u","letter":"u","upper":"U","name":"U","sound":"/ʌ/","sound_zh":"呃","shape":"一把倒过来的雨伞","story":"u 像一把倒过来的雨伞，雨伞翻了：呃！","keyword":"umbrella","prop":"☂️","color":"#9C6ADE","group":3,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/u.svg","audio":"audio/letters/u.mp3","audio_en":"audio/en/L-u.mp3","video":null,"narration":[["zh","这是字母"],["en","U."],["zh","u 像一把倒过来的雨伞，雨伞翻了：呃！"],["zh","它常发的音是：呃，就像"],["en","umbrella"],["zh","开头的声音。"],["en","U."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.79,"en","U."],[2.09,5.29,"zh","u 像一把倒过来的雨伞，雨伞翻了：呃！"],[5.59,7.93,"zh","它常发的音是：呃，就像"],[8.23,9.09,"en","umbrella"],[9.39,10.4,"zh","开头的声音。"],[10.7,11.15,"en","U."]],"narration_sec":11.65},{"id":"L-l","letter":"l","upper":"L","name":"L","sound":"/l/","sound_zh":"了","shape":"一根长长的棒棒糖棍","story":"l 像一根长长的棒棒糖棍，舔一舔：了、了、了！","keyword":"lollipop","prop":"🍭","color":"#FF8FB1","group":3,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/l.svg","audio":"audio/letters/l.mp3","audio_en":"audio/en/L-l.mp3","video":null,"narration":[["zh","这是字母"],["en","L."],["zh","l 像一根长长的棒棒糖棍，舔一舔：了、了、了！"],["zh","它常发的音是：了，就像"],["en","lollipop"],["zh","开头的声音。"],["en","L."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.77,"en","L."],[2.07,6.22,"zh","l 像一根长长的棒棒糖棍，舔一舔：了、了、了！"],[6.52,8.76,"zh","它常发的音是：了，就像"],[9.06,9.84,"en","lollipop"],[10.14,11.16,"zh","开头的声音。"],[11.46,11.87,"en","L."]],"narration_sec":12.37},{"id":"L-f","letter":"f","upper":"F","name":"F","sound":"/f/","sound_zh":"夫","shape":"一面小旗子","story":"f 像一面小旗子，风一吹：夫——夫——","keyword":"fan","prop":"🚩","color":"#E5484D","group":3,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/f.svg","audio":"audio/letters/f.mp3","audio_en":"audio/en/L-f.mp3","video":null,"narration":[["zh","这是字母"],["en","F."],["zh","f 像一面小旗子，风一吹：夫——夫——"],["zh","它常发的音是：夫，就像"],["en","fan"],["zh","开头的声音。"],["en","F."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.79,"en","F."],[2.09,5.37,"zh","f 像一面小旗子，风一吹：夫——夫——"],[5.67,7.98,"zh","它常发的音是：夫，就像"],[8.28,8.8,"en","fan"],[9.1,10.12,"zh","开头的声音。"],[10.42,10.86,"en","F."]],"narration_sec":11.36},{"id":"L-b","letter":"b","upper":"B","name":"B","sound":"/b/","sound_zh":"波","shape":"一个拍皮球的大肚子","story":"b 像一根棍子挺着圆圆的大肚子，拍皮球：波、波、波！","keyword":"ball","prop":"🏀","color":"#F2643A","group":3,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/b.svg","audio":"audio/letters/b.mp3","audio_en":"audio/en/L-b.mp3","video":null,"narration":[["zh","这是字母"],["en","B."],["zh","b 像一根棍子挺着圆圆的大肚子，拍皮球：波、波、波！"],["zh","它常发的音是：波，就像"],["en","ball"],["zh","开头的声音。"],["en","B."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.76,"en","B."],[2.06,7.01,"zh","b 像一根棍子挺着圆圆的大肚子，拍皮球：波、波、波！"],[7.31,9.57,"zh","它常发的音是：波，就像"],[9.87,10.37,"en","ball"],[10.67,11.69,"zh","开头的声音。"],[11.99,12.39,"en","B."]],"narration_sec":12.89},{"id":"L-j","letter":"j","upper":"J","name":"J","sound":"/dʒ/","sound_zh":"机","shape":"一根钓鱼钩","story":"j 像一根钓鱼钩，钓到鱼高兴得跳起来：机、机、jump！","keyword":"jump","prop":"🎣","color":"#3A8DDE","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/j.svg","audio":"audio/letters/j.mp3","audio_en":"audio/en/L-j.mp3","video":null,"narration":[["zh","这是字母"],["en","J."],["zh","j 像一根钓鱼钩，钓到鱼高兴得跳起来：机、机、jump！"],["zh","它常发的音是：机，就像"],["en","jump"],["zh","开头的声音。"],["en","J."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.84,"en","J."],[2.14,6.7,"zh","j 像一根钓鱼钩，钓到鱼高兴得跳起来：机、机、jump！"],[7,9.35,"zh","它常发的音是：机，就像"],[9.65,10.1,"en","jump"],[10.4,11.42,"zh","开头的声音。"],[11.72,12.21,"en","J."]],"narration_sec":12.71},{"id":"L-z","letter":"z","upper":"Z","name":"Z","sound":"/z/","sound_zh":"滋","shape":"一道弯弯的闪电","story":"z 像一道闪电，小蜜蜂飞过：滋——滋——","keyword":"zoo","prop":"🐝","color":"#E0A400","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/z.svg","audio":"audio/letters/z.mp3","audio_en":"audio/en/L-z.mp3","video":null,"narration":[["zh","这是字母"],["en","Z."],["zh","z 像一道闪电，小蜜蜂飞过：滋——滋——"],["zh","它常发的音是：滋，就像"],["en","zoo"],["zh","开头的声音。"],["en","Z."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.83,"en","Z."],[2.13,5.54,"zh","z 像一道闪电，小蜜蜂飞过：滋——滋——"],[5.84,8.19,"zh","它常发的音是：滋，就像"],[8.49,8.95,"en","zoo"],[9.25,10.27,"zh","开头的声音。"],[10.57,11.05,"en","Z."]],"narration_sec":11.55},{"id":"L-w","letter":"w","upper":"W","name":"W","sound":"/w/","sound_zh":"呜","shape":"两道小波浪","story":"w 像两道小波浪，风吹过来：呜——呜——","keyword":"wave","prop":"🌊","color":"#3A8DDE","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/w.svg","audio":"audio/letters/w.mp3","audio_en":"audio/en/L-w.mp3","video":null,"narration":[["zh","这是字母"],["en","W."],["zh","w 像两道小波浪，风吹过来：呜——呜——"],["zh","它常发的音是：呜，就像"],["en","wave"],["zh","开头的声音。"],["en","W."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,2.07,"en","W."],[2.37,5.99,"zh","w 像两道小波浪，风吹过来：呜——呜——"],[6.29,8.58,"zh","它常发的音是：呜，就像"],[8.88,9.34,"en","wave"],[9.64,10.66,"zh","开头的声音。"],[10.96,11.68,"en","W."]],"narration_sec":12.18},{"id":"L-v","letter":"v","upper":"V","name":"V","sound":"/v/","sound_zh":"呜","shape":"一个胜利手势","story":"v 像比了一个胜利的手势！小汽车开过：vvv——","keyword":"van","prop":"✌️","color":"#9C6ADE","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/v.svg","audio":"audio/letters/v.mp3","audio_en":"audio/en/L-v.mp3","video":null,"narration":[["zh","这是字母"],["en","V."],["zh","v 像比了一个胜利的手势！小汽车开过：vvv——"],["zh","它常发的音是：呜，就像"],["en","van"],["zh","开头的声音。"],["en","V."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.77,"en","V."],[2.07,6.23,"zh","v 像比了一个胜利的手势！小汽车开过：vvv——"],[6.53,8.82,"zh","它常发的音是：呜，就像"],[9.12,9.61,"en","van"],[9.91,10.93,"zh","开头的声音。"],[11.23,11.64,"en","V."]],"narration_sec":12.14},{"id":"L-y","letter":"y","upper":"Y","name":"Y","sound":"/j/","sound_zh":"呀","shape":"一个举起双手的小人","story":"y 像一个举起双手的小人，开心地喊：耶！呀！","keyword":"yes","prop":"🙌","color":"#FF8A3D","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/y.svg","audio":"audio/letters/y.mp3","audio_en":"audio/en/L-y.mp3","video":null,"narration":[["zh","这是字母"],["en","Y."],["zh","y 像一个举起双手的小人，开心地喊：耶！呀！"],["zh","它常发的音是：呀，就像"],["en","yes"],["zh","开头的声音。"],["en","Y."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.82,"en","Y."],[2.12,6.41,"zh","y 像一个举起双手的小人，开心地喊：耶！呀！"],[6.71,9.06,"zh","它常发的音是：呀，就像"],[9.36,9.96,"en","yes"],[10.26,11.28,"zh","开头的声音。"],[11.58,12.04,"en","Y."]],"narration_sec":12.54},{"id":"L-x","letter":"x","upper":"X","name":"X","sound":"/ks/","sound_zh":"克斯","shape":"两根交叉的小棍","story":"x 像两根交叉的小棍，盒子 box 的最后：克斯！","keyword":"box","prop":"❌","color":"#E5484D","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/x.svg","audio":"audio/letters/x.mp3","audio_en":"audio/en/L-x.mp3","video":null,"narration":[["zh","这是字母"],["en","X."],["zh","x 像两根交叉的小棍，盒子 box 的最后：克斯！"],["zh","它常发的音是：克斯，就像"],["en","box"],["zh","开头的声音。"],["en","X."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.95,"en","X."],[2.25,6.24,"zh","x 像两根交叉的小棍，盒子 box 的最后：克斯！"],[6.54,9.1,"zh","它常发的音是：克斯，就像"],[9.4,10.07,"en","box"],[10.37,11.39,"zh","开头的声音。"],[11.69,12.29,"en","X."]],"narration_sec":12.79},{"id":"L-q","letter":"q","upper":"Q","name":"Q","sound":"/kw/","sound_zh":"扩","shape":"一只带小尾巴的鸭子","story":"q 常和 u 手拉手。像一只小鸭子：扩、扩、嘎嘎嘎！","keyword":"quack","prop":"🦆","color":"#E0A400","group":4,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）","image":"img/letters/q.svg","audio":"audio/letters/q.mp3","audio_en":"audio/en/L-q.mp3","video":null,"narration":[["zh","这是字母"],["en","Q."],["zh","q 常和 u 手拉手。像一只小鸭子：扩、扩、嘎嘎嘎！"],["zh","它常发的音是：扩，就像"],["en","quack"],["zh","开头的声音。"],["en","Q."]],"cues":[[0.2,1.05,"zh","这是字母"],[1.35,1.88,"en","Q."],[2.18,7.24,"zh","q 常和 u 手拉手。像一只小鸭子：扩、扩、嘎嘎嘎！"],[7.54,9.87,"zh","它常发的音是：扩，就像"],[10.17,10.61,"en","quack"],[10.91,11.93,"zh","开头的声音。"],[12.23,12.75,"en","Q."]],"narration_sec":13.25}],"letter_groups":[["s","a","t","p","i","n"],["c","k","e","h","r","m","d"],["g","o","u","l","f","b"],["j","z","w","v","y","x","q"]],"blends":[{"id":"B-sit","word":"sit","meaning":"坐","emoji":"🪑","unlock_group":1,"letters":["s","i","t"],"link":"跑累了，坐下来「歇」一歇。","link_full":"跑累了，坐下来「歇」一歇。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["pan","ant","nap"],"audio":"audio/blend/sit.mp3","audio_en":"audio/en/sit.mp3","narration":[["zh","我们来拼一拼！"],["zh","嘶、咦、特，快一点，再快一点——"],["en","sit!"],["zh","跑累了，坐下来「歇」一歇。"],["zh","坐。"],["en","sit"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.59,"zh","嘶、咦、特，快一点，再快一点——"],[4.89,5.32,"en","sit!"],[5.62,7.53,"zh","跑累了，坐下来「歇」一歇。"],[7.83,8.22,"zh","坐。"],[8.52,8.96,"en","sit"]],"narration_sec":9.46},{"id":"B-pan","word":"pan","meaning":"平底锅","emoji":"🍳","unlock_group":1,"letters":["p","a","n"],"link":"平底锅像一个大「盘」子。","link_full":"平底锅像一个大「盘」子。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["sit","tap","ant"],"audio":"audio/blend/pan.mp3","audio_en":"audio/en/pan.mp3","narration":[["zh","我们来拼一拼！"],["zh","噗、哎、嗯，快一点，再快一点——"],["en","pan!"],["zh","平底锅像一个大「盘」子。"],["zh","平底锅。"],["en","pan"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.49,"zh","噗、哎、嗯，快一点，再快一点——"],[4.79,5.35,"en","pan!"],[5.65,7.42,"zh","平底锅像一个大「盘」子。"],[7.72,8.51,"zh","平底锅。"],[8.81,9.35,"en","pan"]],"narration_sec":9.85},{"id":"B-pin","word":"pin","meaning":"别针","emoji":"📌","unlock_group":1,"letters":["p","i","n"],"link":"「拼」起来的纸，用别针别住。","link_full":"「拼」起来的纸，用别针别住。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["nap","pan","tap"],"audio":"audio/blend/pin.mp3","audio_en":"audio/en/pin.mp3","narration":[["zh","我们来拼一拼！"],["zh","噗、咦、嗯，快一点，再快一点——"],["en","pin!"],["zh","「拼」起来的纸，用别针别住。"],["zh","别针。"],["en","pin"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.43,"zh","噗、咦、嗯，快一点，再快一点——"],[4.73,5.22,"en","pin!"],[5.52,7.62,"zh","「拼」起来的纸，用别针别住。"],[7.92,8.47,"zh","别针。"],[8.77,9.24,"en","pin"]],"narration_sec":9.74},{"id":"B-ant","word":"ant","meaning":"蚂蚁","emoji":"🐜","unlock_group":1,"letters":["a","n","t"],"link":"小蚂蚁排队，「安」安静静搬东西。","link_full":"小蚂蚁排队，「安」安静静搬东西。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["sit","pin","pan"],"audio":"audio/blend/ant.mp3","audio_en":"audio/en/ant.mp3","narration":[["zh","我们来拼一拼！"],["zh","哎、嗯、特，快一点，再快一点——"],["en","ant!"],["zh","小蚂蚁排队，「安」安静静搬东西。"],["zh","蚂蚁。"],["en","ant"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.57,"zh","哎、嗯、特，快一点，再快一点——"],[4.87,5.45,"en","ant!"],[5.75,8.3,"zh","小蚂蚁排队，「安」安静静搬东西。"],[8.6,9.16,"zh","蚂蚁。"],[9.46,10.02,"en","ant"]],"narration_sec":10.52},{"id":"B-tap","word":"tap","meaning":"水龙头","emoji":"🚰","unlock_group":1,"letters":["t","a","p"],"link":"水龙头「嗒」「嗒」地滴水。","link_full":"水龙头「嗒」「嗒」地滴水。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["ant","nap","pin"],"audio":"audio/blend/tap.mp3","audio_en":"audio/en/tap.mp3","narration":[["zh","我们来拼一拼！"],["zh","特、哎、噗，快一点，再快一点——"],["en","tap!"],["zh","水龙头「嗒」「嗒」地滴水。"],["zh","水龙头。"],["en","tap"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.56,"zh","特、哎、噗，快一点，再快一点——"],[4.86,5.29,"en","tap!"],[5.59,7.26,"zh","水龙头「嗒」「嗒」地滴水。"],[7.56,8.35,"zh","水龙头。"],[8.65,9.05,"en","tap"]],"narration_sec":9.55},{"id":"B-nap","word":"nap","meaning":"小睡","emoji":"😴","unlock_group":1,"letters":["n","a","p"],"link":"「拿」个枕头，睡个午觉。","link_full":"「拿」个枕头，睡个午觉。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["tap","sit","pan"],"audio":"audio/blend/nap.mp3","audio_en":"audio/en/nap.mp3","narration":[["zh","我们来拼一拼！"],["zh","嗯、哎、噗，快一点，再快一点——"],["en","nap!"],["zh","「拿」个枕头，睡个午觉。"],["zh","小睡。"],["en","nap"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.53,"zh","嗯、哎、噗，快一点，再快一点——"],[4.83,5.28,"en","nap!"],[5.58,7.33,"zh","「拿」个枕头，睡个午觉。"],[7.63,8.26,"zh","小睡。"],[8.56,8.98,"en","nap"]],"narration_sec":9.48},{"id":"B-cat","word":"cat","meaning":"小猫","emoji":"🐱","unlock_group":2,"letters":["c","a","t"],"link":"咔！它！","link_full":"cat 听起来像「咔，它！」：小猫「咔」地一扑，按住了小老鼠——就是它，小猫！","memory_word":"cat","image":"img/cat.svg","video":"video/cat.mp4","status":"待审","source":"复用记忆单词卡：本次新写（Phil 资料里 cat 只有画面联想，无谐音）","distractors":["hat","hen","man"],"audio":"audio/blend/cat.mp3","audio_en":"audio/en/cat.mp3","narration":[["zh","我们来拼一拼！"],["zh","咳、哎、特，快一点，再快一点——"],["en","cat!"],["zh","咔！它！"],["zh","小猫。"],["en","cat"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.56,"zh","咳、哎、特，快一点，再快一点——"],[4.86,5.3,"en","cat!"],[5.6,6.82,"zh","咔！它！"],[7.12,7.7,"zh","小猫。"],[8,8.44,"en","cat"]],"narration_sec":8.94},{"id":"B-hat","word":"hat","meaning":"帽子","emoji":"🎩","unlock_group":2,"letters":["h","a","t"],"link":"「哈」一口气，吹走了帽子！","link_full":"「哈」一口气，吹走了帽子！","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["cat","pen","bed"],"audio":"audio/blend/hat.mp3","audio_en":"audio/en/hat.mp3","narration":[["zh","我们来拼一拼！"],["zh","哈、哎、特，快一点，再快一点——"],["en","hat!"],["zh","「哈」一口气，吹走了帽子！"],["zh","帽子。"],["en","hat"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.55,"zh","哈、哎、特，快一点，再快一点——"],[4.85,5.28,"en","hat!"],[5.58,7.43,"zh","「哈」一口气，吹走了帽子！"],[7.73,8.27,"zh","帽子。"],[8.57,9.02,"en","hat"]],"narration_sec":9.52},{"id":"B-man","word":"man","meaning":"男人","emoji":"👨","unlock_group":2,"letters":["m","a","n"],"link":"一个大男人，「慢」慢走过来。","link_full":"一个大男人，「慢」慢走过来。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["hen","cat","red"],"audio":"audio/blend/man.mp3","audio_en":"audio/en/man.mp3","narration":[["zh","我们来拼一拼！"],["zh","嗯、哎、嗯，快一点，再快一点——"],["en","man!"],["zh","一个大男人，「慢」慢走过来。"],["zh","男人。"],["en","man"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.47,"zh","嗯、哎、嗯，快一点，再快一点——"],[4.77,5.34,"en","man!"],[5.64,7.69,"zh","一个大男人，「慢」慢走过来。"],[7.99,8.54,"zh","男人。"],[8.84,9.36,"en","man"]],"narration_sec":9.86},{"id":"B-hen","word":"hen","meaning":"母鸡","emoji":"🐔","unlock_group":2,"letters":["h","e","n"],"link":"母鸡「哼」一声，下了一个蛋。","link_full":"母鸡「哼」一声，下了一个蛋。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["cat","man","pen"],"audio":"audio/blend/hen.mp3","audio_en":"audio/en/hen.mp3","narration":[["zh","我们来拼一拼！"],["zh","哈、哎、嗯，快一点，再快一点——"],["en","hen!"],["zh","母鸡「哼」一声，下了一个蛋。"],["zh","母鸡。"],["en","hen"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.48,"zh","哈、哎、嗯，快一点，再快一点——"],[4.78,5.24,"en","hen!"],[5.54,7.48,"zh","母鸡「哼」一声，下了一个蛋。"],[7.78,8.34,"zh","母鸡。"],[8.64,9.1,"en","hen"]],"narration_sec":9.6},{"id":"B-pen","word":"pen","meaning":"钢笔","emoji":"🖊️","unlock_group":2,"letters":["p","e","n"],"link":"一支钢笔，「喷」出一点墨水。","link_full":"一支钢笔，「喷」出一点墨水。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["hat","bed","ten"],"audio":"audio/blend/pen.mp3","audio_en":"audio/en/pen.mp3","narration":[["zh","我们来拼一拼！"],["zh","噗、哎、嗯，快一点，再快一点——"],["en","pen!"],["zh","一支钢笔，「喷」出一点墨水。"],["zh","钢笔。"],["en","pen"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.49,"zh","噗、哎、嗯，快一点，再快一点——"],[4.79,5.26,"en","pen!"],[5.56,7.67,"zh","一支钢笔，「喷」出一点墨水。"],[7.97,8.54,"zh","钢笔。"],[8.84,9.32,"en","pen"]],"narration_sec":9.82},{"id":"B-ten","word":"ten","meaning":"十","emoji":"🔟","unlock_group":2,"letters":["t","e","n"],"link":"伸出十根手指，「疼」不疼？不疼！","link_full":"伸出十根手指，「疼」不疼？不疼！","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["pen","red","hen"],"audio":"audio/blend/ten.mp3","audio_en":"audio/en/ten.mp3","narration":[["zh","我们来拼一拼！"],["zh","特、哎、嗯，快一点，再快一点——"],["en","ten!"],["zh","伸出十根手指，「疼」不疼？不疼！"],["zh","十。"],["en","ten"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.52,"zh","特、哎、嗯，快一点，再快一点——"],[4.82,5.31,"en","ten!"],[5.61,8.7,"zh","伸出十根手指，「疼」不疼？不疼！"],[9,9.46,"zh","十。"],[9.76,10.25,"en","ten"]],"narration_sec":10.75},{"id":"B-red","word":"red","meaning":"红色","emoji":"🔴","unlock_group":2,"letters":["r","e","d"],"link":"红红的苹果，「热」得脸都红了。","link_full":"红红的苹果，「热」得脸都红了。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["ten","hat","bed"],"audio":"audio/blend/red.mp3","audio_en":"audio/en/red.mp3","narration":[["zh","我们来拼一拼！"],["zh","儿、哎、得，快一点，再快一点——"],["en","red!"],["zh","红红的苹果，「热」得脸都红了。"],["zh","红色。"],["en","red"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.58,"zh","儿、哎、得，快一点，再快一点——"],[4.88,5.34,"en","red!"],[5.64,7.91,"zh","红红的苹果，「热」得脸都红了。"],[8.21,8.79,"zh","红色。"],[9.09,9.51,"en","red"]],"narration_sec":10.01},{"id":"B-bed","word":"bed","meaning":"床","emoji":"🛏️","unlock_group":3,"letters":["b","e","d"],"link":"b、d 是床头床尾，e 躺在中间","link_full":"把 bed 的三个字母摆开：b 和 d 像床的两头栏杆，中间的 e 是躺下的人。","memory_word":"bed","image":"img/bed.png","video":"video/bed.mp4","status":"待审","source":"复用记忆单词卡：obsidian-notes/10-单词速记库/words/bed.md","distractors":["red","pen","hat"],"audio":"audio/blend/bed.mp3","audio_en":"audio/en/bed.mp3","narration":[["zh","我们来拼一拼！"],["zh","波、哎、得，快一点，再快一点——"],["en","bed!"],["zh","b、d 是床头床尾，e 躺在中间"],["zh","床。"],["en","bed"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.55,"zh","波、哎、得，快一点，再快一点——"],[4.85,5.3,"en","bed!"],[5.6,8.57,"zh","b、d 是床头床尾，e 躺在中间"],[8.87,9.27,"zh","床。"],[9.57,9.99,"en","bed"]],"narration_sec":10.49},{"id":"B-dog","word":"dog","meaning":"小狗","emoji":"🐶","unlock_group":3,"letters":["d","o","g"],"link":"逗狗！","link_full":"dog 听起来像「逗狗」：拿根骨头逗一逗，小狗摇着尾巴跳起来——它就是小狗！","memory_word":"dog","image":"img/dog.svg","video":"video/dog.mp4","status":"待审","source":"复用记忆单词卡：本次新写","distractors":["pig","bus","cup"],"audio":"audio/blend/dog.mp3","audio_en":"audio/en/dog.mp3","narration":[["zh","我们来拼一拼！"],["zh","得、哦、咕，快一点，再快一点——"],["en","dog!"],["zh","逗狗！"],["zh","小狗。"],["en","dog"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.49,"zh","得、哦、咕，快一点，再快一点——"],[4.79,5.3,"en","dog!"],[5.6,6.15,"zh","逗狗！"],[6.45,7.05,"zh","小狗。"],[7.35,7.84,"en","dog"]],"narration_sec":8.34},{"id":"B-sun","word":"sun","meaning":"太阳","emoji":"☀️","unlock_group":3,"letters":["s","u","n"],"link":"云散啦！","link_full":"sun 听起来像「散」：太阳一出来，乌云全都「散」开啦，到处亮堂堂！","memory_word":"sun","image":"img/sun.svg","video":"video/sun.mp4","status":"待审","source":"复用记忆单词卡：本次新写","distractors":["bus","cup","bag"],"audio":"audio/blend/sun.mp3","audio_en":"audio/en/sun.mp3","narration":[["zh","我们来拼一拼！"],["zh","嘶、呃、嗯，快一点，再快一点——"],["en","sun!"],["zh","云散啦！"],["zh","太阳。"],["en","sun"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.57,"zh","嘶、呃、嗯，快一点，再快一点——"],[4.87,5.44,"en","sun!"],[5.74,6.43,"zh","云散啦！"],[6.73,7.31,"zh","太阳。"],[7.61,8.18,"en","sun"]],"narration_sec":8.68},{"id":"B-pig","word":"pig","meaning":"小猪","emoji":"🐷","unlock_group":3,"letters":["p","i","g"],"link":"小猪「屁股」圆滚滚。","link_full":"小猪「屁股」圆滚滚。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["dog","bag","sun"],"audio":"audio/blend/pig.mp3","audio_en":"audio/en/pig.mp3","narration":[["zh","我们来拼一拼！"],["zh","噗、咦、咕，快一点，再快一点——"],["en","pig!"],["zh","小猪「屁股」圆滚滚。"],["zh","小猪。"],["en","pig"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.47,"zh","噗、咦、咕，快一点，再快一点——"],[4.77,5.2,"en","pig!"],[5.5,6.93,"zh","小猪「屁股」圆滚滚。"],[7.23,7.85,"zh","小猪。"],[8.15,8.59,"en","pig"]],"narration_sec":9.09},{"id":"B-bus","word":"bus","meaning":"公共汽车","emoji":"🚌","unlock_group":3,"letters":["b","u","s"],"link":"「巴士」来啦，排队上车！","link_full":"「巴士」来啦，排队上车！","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["sun","pig","cup"],"audio":"audio/blend/bus.mp3","audio_en":"audio/en/bus.mp3","narration":[["zh","我们来拼一拼！"],["zh","波、呃、嘶，快一点，再快一点——"],["en","bus!"],["zh","「巴士」来啦，排队上车！"],["zh","公共汽车。"],["en","bus"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.58,"zh","波、呃、嘶，快一点，再快一点——"],[4.88,5.51,"en","bus!"],[5.81,7.67,"zh","「巴士」来啦，排队上车！"],[7.97,8.87,"zh","公共汽车。"],[9.17,9.75,"en","bus"]],"narration_sec":10.25},{"id":"B-cup","word":"cup","meaning":"杯子","emoji":"🥤","unlock_group":3,"letters":["c","u","p"],"link":"捧着杯子，「咔」一口喝光。","link_full":"捧着杯子，「咔」一口喝光。","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["bag","dog","bus"],"audio":"audio/blend/cup.mp3","audio_en":"audio/en/cup.mp3","narration":[["zh","我们来拼一拼！"],["zh","咳、呃、噗，快一点，再快一点——"],["en","cup!"],["zh","捧着杯子，「咔」一口喝光。"],["zh","杯子。"],["en","cup"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.61,"zh","咳、呃、噗，快一点，再快一点——"],[4.91,5.26,"en","cup!"],[5.56,7.49,"zh","捧着杯子，「咔」一口喝光。"],[7.79,8.34,"zh","杯子。"],[8.64,8.97,"en","cup"]],"narration_sec":9.47},{"id":"B-bag","word":"bag","meaning":"包","emoji":"🎒","unlock_group":3,"letters":["b","a","g"],"link":"「背个」包，去上学！","link_full":"「背个」包，去上学！","memory_word":null,"image":null,"video":null,"status":"待审","source":"本次新写（2026-10-11）；待 Phil 审","distractors":["cup","pig","dog"],"audio":"audio/blend/bag.mp3","audio_en":"audio/en/bag.mp3","narration":[["zh","我们来拼一拼！"],["zh","波、哎、咕，快一点，再快一点——"],["en","bag!"],["zh","「背个」包，去上学！"],["zh","包。"],["en","bag"]],"cues":[[0.2,1.28,"zh","我们来拼一拼！"],[1.58,4.53,"zh","波、哎、咕，快一点，再快一点——"],[4.83,5.28,"en","bag!"],[5.58,7.01,"zh","「背个」包，去上学！"],[7.31,7.67,"zh","包。"],[7.97,8.41,"en","bag"]],"narration_sec":8.91}],"ui_audio":{"start":"audio/ui/start.mp3","close":"audio/ui/close.mp3","which":"audio/ui/which.mp3","great1":"audio/ui/great1.mp3","great2":"audio/ui/great2.mp3","great3":"audio/ui/great3.mp3","again":"audio/ui/again.mp3","retry":"audio/ui/retry.mp3","tryok":"audio/ui/tryok.mp3","allright":"audio/ui/allright.mp3","pass":"audio/ui/pass.mp3","notyet":"audio/ui/notyet.mp3","done":"audio/ui/done.mp3","next":"audio/ui/next.mp3","hello":"audio/ui/hello.mp3","sticker":"audio/ui/sticker.mp3","letterq":"audio/ui/letterq.mp3"},"ship_candidates":[{"id":"A","anchor":"湿扑","picked":true,"line":"ship 听起来像「湿扑」：大船冲进大海，浪花「扑」地打上甲板，船上的人全身都湿啦！","why":"夸张画面＋动作声，6-7 岁都懂「湿」和「扑」；画面能直接画出来"},{"id":"B","anchor":"嘘～噗","picked":false,"line":"船长说「嘘～」，大烟囱却「噗」地喷出一团烟——ship！","why":"拟声好玩，但「噗」离 /ɪp/ 稍远，画面要两步"},{"id":"C","anchor":"洗盆","picked":false,"line":"小朋友坐在洗澡盆里划呀划，假装开大船——「洗盆」变成 ship！","why":"孩子熟悉澡盆，但谐音偏弱，容易记成「盆＝船」"},{"id":"D","anchor":"i 当桅杆（原卡）","picked":false,"line":"ship 中间的 i 当船上的桅杆","why":"Phil 已评「不够巧妙」，仅留作对照"}]}/*CONTENT-END*/
 </script>
-
 <script>
 (function(){
 'use strict';
@@ -179,283 +229,554 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 const $app = document.getElementById('app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-const wait = ms => new Promise(r => setTimeout(r, ms));
 const timers = new Set();
 function later(fn, ms){ const t = setTimeout(() => { timers.delete(t); fn(); }, ms); timers.add(t); return t; }
 function clearTimers(){ timers.forEach(clearTimeout); timers.clear(); }
 const pad = n => String(n).padStart(2, '0');
 function dateKey(d){ return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
-function today(){
-  const q = new URLSearchParams(location.search).get('today'); // 方便老师/审稿时模拟“第二天”：?today=2026-10-12
-  if (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) return q;
-  return dateKey(new Date());
-}
+const QS = new URLSearchParams(location.search);
+function today(){ const q = QS.get('today'); return q && /^\d{4}-\d{2}-\d{2}$/.test(q) ? q : dateKey(new Date()); } // ?today=2026-10-12 模拟第二天
 function addDays(key, n){ const [y, m, d] = key.split('-').map(Number); return dateKey(new Date(y, m - 1, d + n)); }
 function isoLocal(d = new Date()){
   const off = -d.getTimezoneOffset(), s = off >= 0 ? '+' : '-';
   return dateKey(d) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()) + s + pad(Math.floor(Math.abs(off) / 60)) + ':' + pad(Math.abs(off) % 60);
 }
 function toast(msg){ const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2200); }
+const chunk = (a, sizes) => { const out = []; let i = 0; for (const s of sizes) { if (i >= a.length) break; out.push(a.slice(i, i + s)); i += s; } while (i < a.length) { out.push(a.slice(i, i + 5)); i += 5; } return out; };
+const splitN = (a, max) => { if (a.length <= max) return [a]; const n = Math.ceil(a.length / max), base = Math.floor(a.length / n), extra = a.length % n; return chunk(a, Array.from({ length: n }, (_, i) => base + (i < extra ? 1 : 0))); };
 
 /* ---------- 存储 ---------- */
-const KEY = 'rbw.progress.v1', TKEY = 'rbw.trials.v1';
+const KEY = 'rbw.progress.v2', TKEY = 'rbw.trials.v1';
 function load(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } }
 function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-function progress(){ const p = load(KEY, null); return p && p.words ? p : { words: {}, sessions: [] }; }
-
-/* ---------- 发音 ---------- */
-let voice = null;
-function pickVoice(){
-  if (!('speechSynthesis' in window)) return;
-  const vs = speechSynthesis.getVoices();
-  voice = vs.find(v => /en[-_]US/i.test(v.lang) && /Samantha|Google|Natural|Aria|Jenny/i.test(v.name)) || vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
-}
-if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
-function speak(word, btn){
-  if (!('speechSynthesis' in window)) { toast('这个浏览器不能发音，换 Safari 或 Chrome 试试'); return; }
-  try {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(word);
-    u.lang = 'en-US'; u.rate = 0.8; if (voice) u.voice = voice;
-    if (btn) { btn.classList.add('playing'); const off = () => btn.classList.remove('playing'); u.onend = off; u.onerror = off; setTimeout(off, 2500); }
-    speechSynthesis.speak(u);
-  } catch (e) { toast('发音没播出来，再点一次'); }
-}
+function P(){ const p = load(KEY, null); return p && p.items ? p : { items: {}, sessions: [], stars: 0, stickers: [], settings: { grade: '一年级', size: 0, muted: false }, override: null }; }
+function setP(fn){ const p = P(); fn(p); save(KEY, p); return p; }
 
 /* ---------- 图标 ---------- */
 const ICON = {
-  key: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M12.5 12H21M18 12v3.5M21 12v2.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>',
-  speaker: '<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#2F5DA8"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11" fill="none" stroke="#2F5DA8" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  speaker: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#2F5DA8"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11" fill="none" stroke="#2F5DA8" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  mute: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#7A7468"/><path d="M16 9.5l5 5M21 9.5l-5 5" stroke="#E5484D" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  replay: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 1 0 2.1-5" fill="none" stroke="#2F5DA8" stroke-width="2.6" stroke-linecap="round"/><path d="M6.5 3v4.6h4.6" fill="none" stroke="#2F5DA8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>',
+  film: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="#F2643A"/><path d="M10 9.2v5.6l4.8-2.8z" fill="#fff"/></svg>',
+  arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  home: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z" fill="#F2643A"/></svg>',
   star: c => `<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.2 6.1 20.4l1.3-6.6L2.5 9.3l6.6-.8z" fill="${c}" stroke="${c === '#E9DCC8' ? '#E0CFB4' : '#E2A400'}" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
-  back: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  mascot: '<svg class="mascot" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="94" rx="26" ry="5" fill="#000" opacity=".08"/><path d="M22 58c0-22 12-40 28-40s28 18 28 40-12 32-28 32-28-10-28-32z" fill="#FFC93C"/><path d="M36 20l-6-14 14 9M64 20l6-14-14 9" fill="#FFC93C"/><circle cx="40" cy="52" r="9" fill="#fff"/><circle cx="60" cy="52" r="9" fill="#fff"/><circle cx="42" cy="54" r="4.5" fill="#2A2A3A"/><circle cx="62" cy="54" r="4.5" fill="#2A2A3A"/><path d="M42 68q8 7 16 0" fill="none" stroke="#2A2A3A" stroke-width="3" stroke-linecap="round"/><circle cx="31" cy="64" r="5" fill="#FF8FB1" opacity=".6"/><circle cx="69" cy="64" r="5" fill="#FF8FB1" opacity=".6"/></svg>',
 };
 
 /* ---------- 内容 ---------- */
-let WORDS = [], CONTENT = null;
+let C = null; const ITEMS = new Map();
 async function loadContent(){
   try {
     const r = await fetch('content/words.json', { cache: 'no-store' });
     if (!r.ok) throw new Error(r.status);
-    CONTENT = await r.json(); CONTENT._from = 'content/words.json';
+    C = await r.json(); C._from = 'content/words.json';
   } catch (e) {
     const raw = document.getElementById('fallback-content').textContent.replace('/*CONTENT-START*/', '').replace('/*CONTENT-END*/', '');
-    CONTENT = JSON.parse(raw); CONTENT._from = '内置副本';
+    C = JSON.parse(raw); C._from = '内置副本';
   }
-  WORDS = (CONTENT.words || []).filter(w => w && w.word && w.meaning);
+  ITEMS.clear();
+  (C.letters || []).forEach(l => ITEMS.set(l.id, { type: 'letter', id: l.id, d: l }));
+  (C.blends || []).forEach(b => ITEMS.set(b.id, { type: 'blend', id: b.id, d: b }));
+  (C.words || []).forEach(w => ITEMS.set('W-' + w.word, { type: 'word', id: 'W-' + w.word, d: w }));
 }
-const byWord = w => WORDS.find(x => x.word === w);
-function optionsFor(w){
-  const pool = (w.distractors || []).filter(m => m !== w.meaning);
-  const others = shuffle(WORDS.filter(x => x.word !== w.word).map(x => x.meaning)).filter(m => !pool.includes(m) && m !== w.meaning);
-  const picks = pool.slice(0, 3).concat(others).slice(0, 3);
-  return shuffle([w.meaning].concat(picks));
+const it = id => ITEMS.get(id);
+const label = x => x.type === 'letter' ? x.d.letter : x.d.word;
+const pic = x => x.type === 'letter' ? x.d.letter : (x.d.emoji || '❓');
+const zh = x => x.type === 'letter' ? '字母 ' + x.d.letter : x.d.meaning;
+const videoOf = x => x.d.video || (x.type === 'blend' && x.d.memory_word ? (it('W-' + x.d.memory_word) || {}).d?.video : null) || null;
+function wordSize(word, max, min){ const avail = Math.min(window.innerWidth || 390, 600) - 80; return Math.max(min, Math.min(max, Math.floor(avail / (word.length * 0.6)))); }
+
+/* ---------- 学习路径：字母 → 拼读小词 → 记忆单词 ---------- */
+function wordList(grade){
+  const all = C.words || [];
+  if (grade === '三四年级') return all.filter(w => w.group === '三四年级').map(w => 'W-' + w.word);
+  const g1 = all.filter(w => w.group !== '三四年级').map(w => w.word);
+  const first = (C.day1 || []).filter(w => g1.includes(w)); // 第一组记忆单词＝最早那 5 个
+  return first.concat(g1.filter(w => !first.includes(w))).map(w => 'W-' + w);
 }
-function wordSize(word, max, min, width){
-  // 单词按长度缩放，toothbrush 在 390 宽手机上也不换行
-  const avail = Math.min(width || window.innerWidth, 980) - 120;
-  return Math.max(min, Math.min(max, Math.floor(avail / (word.length * 0.62))));
+function buildPath(grade){
+  const steps = [], groups = C.letter_groups || [];
+  const wc = chunk(wordList(grade), [5, 5, 5]);
+  groups.forEach((g, gi) => {
+    splitN(g.map(l => 'L-' + l), 4).forEach(ids => steps.push({ station: 'letter', ids, g: gi + 1 }));
+    const bl = (C.blends || []).filter(b => b.unlock_group === gi + 1).map(b => b.id);
+    if (bl.length) splitN(bl, 4).forEach(ids => steps.push({ station: 'blend', ids, g: gi + 1 }));
+    if (wc[gi]) steps.push({ station: 'word', ids: wc[gi], g: gi + 1 });
+  });
+  wc.slice(groups.length).forEach(ids => steps.push({ station: 'word', ids }));
+  return steps;
+}
+function stationStats(p){
+  const g = p.settings.grade, seen = id => !!p.items[id], ok = id => p.items[id] && p.items[id].state === 'ok';
+  const L = (C.letters || []).map(l => l.id), B = (C.blends || []).map(b => b.id), W = wordList(g);
+  const mk = (ids, name, ic) => ({ name, ic, total: ids.length, seen: ids.filter(seen).length, ok: ids.filter(ok).length });
+  return { letter: mk(L, '字母小乐园', 'Aa'), blend: mk(B, '拼读小词', '🧩'), word: mk(W, '记忆单词', '🧠') };
+}
+function blendUnlocked(p, b){ return (b.letters || []).every(l => p.items['L-' + l]); }
+function nextSession(){
+  const p = P(), t = today(), size = p.settings.size || 0;
+  if (p.override && p.override.ids && p.override.ids.length) return { kind: 'pick', ids: p.override.ids.filter(it).slice(0, 8), station: it(p.override.ids[0])?.type || 'word' };
+  const due = Object.keys(p.items).filter(id => it(id) && p.items[id].state === 'miss' && p.items[id].due <= t);
+  if (due.length) return { kind: 'review', ids: due.slice(0, size || 5), station: it(due[0]).type };
+  for (const st of buildPath(p.settings.grade)) {
+    let fresh = st.ids.filter(id => !p.items[id] && it(id));
+    if (st.station === 'blend') fresh = fresh.filter(id => blendUnlocked(p, it(id).d));
+    if (fresh.length) return { kind: 'new', ids: size ? fresh.slice(0, size) : fresh, station: st.station, g: st.g };
+  }
+  const okIds = shuffle(Object.keys(p.items).filter(id => it(id)));
+  return { kind: 'free', ids: okIds.slice(0, size || 4), station: okIds.length ? it(okIds[0]).type : 'letter' };
 }
 
-/* ---------- 今日安排 ---------- */
-function todaysPlan(){
-  const p = progress(), t = today();
-  const due = WORDS.filter(w => { const s = p.words[w.word]; return s && s.status === 'missed' && s.due <= t; });
-  const fresh = WORDS.filter(w => !p.words[w.word]);
-  return { review: due.map(w => w.word), list: due.concat(fresh).slice(0, 5) };
+/* ---------- 声音：一个共用 <audio>，第一次点按钮时解锁 ---------- */
+const A = document.getElementById('voice');
+let unlocked = false, seqTok = 0, curFin = null, playingBtn = null;
+const muted = () => !!P().settings.muted;
+function play(src){
+  return new Promise(res => {
+    if (!src || muted()) { res(false); return; }
+    let done = false, to = null;
+    const fin = ok => { if (done) return; done = true; clearTimeout(to); A.onended = A.onerror = null; curFin = null; res(ok); };
+    curFin = fin;
+    A.onended = () => fin(true); A.onerror = () => fin(false);
+    try { A.src = src; } catch (e) { fin(false); return; }
+    to = setTimeout(() => fin(false), 30000);
+    let pr; try { pr = A.play(); } catch (e) { fin(false); return; }
+    if (!pr || typeof pr.then !== 'function') { fin(false); return; } // 没有真正的音频（如测试环境）
+    pr.then(() => { unlocked = true; }).catch(err => { fin(false); if (err && err.name === 'NotAllowedError') needTap(); });
+  });
+}
+async function say(list, btn){ // 依次播放；被新的播放打断就返回 false
+  const tok = ++seqTok; markBtn(btn);
+  let ok = true;
+  for (const src of [].concat(list).filter(Boolean)) { if (tok !== seqTok) return false; ok = (await play(src)) && ok; }
+  if (tok === seqTok) markBtn(null);
+  return tok === seqTok && ok;
+}
+function hush(){ seqTok++; markBtn(null); if (curFin) curFin(false); try { A.pause(); } catch (e) {} }
+function markBtn(b){ if (playingBtn) playingBtn.classList.remove('playing'); playingBtn = b || null; if (b) b.classList.add('playing'); }
+function ui(k){ return C.ui_audio && C.ui_audio[k]; }
+function unlockAudio(){ // 必须在点击里同步调用：iOS 只有手势里的 play() 才放行
+  if (unlocked) return;
+  try { A.muted = true; A.src = ui('next') || ''; const pr = A.play(); if (pr && pr.then) pr.then(() => { A.pause(); A.muted = false; unlocked = true; }).catch(() => { A.muted = false; }); else A.muted = false; } catch (e) { A.muted = false; }
+}
+function needTap(){
+  if (document.querySelector('.tapme')) return;
+  const b = document.createElement('button'); b.className = 'tapme'; b.textContent = '🔊 点我听声音';
+  b.onclick = () => { b.remove(); unlockAudio(); const rp = $app.querySelector('[data-act="replay"],[data-act="qsay"]'); if (rp) rp.click(); };
+  document.body.appendChild(b);
 }
 
-/* ---------- 共用片段 ---------- */
-function topbar(opts = {}){
-  const left = opts.back ? `<button class="iconbtn" data-act="${opts.back}" aria-label="返回">${ICON.back}</button>` :
-    `<div class="brand"><span class="key">${ICON.key}</span>右脑记单词</div>`;
-  const dots = opts.dots ? `<div class="dots" aria-label="进度">${opts.dots.map(s => `<i class="${s}"></i>`).join('')}</div>` : '';
-  const right = opts.right || '';
-  return `<div class="top">${left}${dots}${right}</div>`;
+/* 跟着旁白的时间点亮卡片上的元素（data-at = 第几句开始出现） */
+let syncRaf = 0;
+function syncCard(card, cues){
+  cancelAnimationFrame(syncRaf);
+  const els = [...card.querySelectorAll('.rv')], lit = card.querySelectorAll('[data-lit]');
+  const showAll = () => { card.classList.remove('sync'); els.forEach(e => e.classList.add('on')); lit.forEach(e => e.classList.remove('lit')); const tl = card.querySelector('.tiles'); if (tl) tl.classList.add('merge'); };
+  if (muted() || !cues || !cues.length) { showAll(); return showAll; }
+  card.classList.add('sync'); els.forEach(e => e.classList.remove('on'));
+  const tick = () => {
+    if (!card.isConnected) return;
+    const t = A.currentTime || 0; let idx = -1;
+    cues.forEach((c, i) => { if (t >= c[0] - 0.05) idx = i; });
+    els.forEach(e => e.classList.toggle('on', idx >= +e.dataset.at));
+    if (lit.length) { // 拼读：一个字母一个字母亮
+      const c = cues[1]; const span = c ? (c[1] - c[0]) * 0.62 : 0;
+      const at = i => c[0] + span * i / lit.length;
+      lit.forEach((e, i) => e.classList.toggle('lit', !!c && !!cues[2] && t >= at(i) && t < (i + 1 < lit.length ? at(i + 1) : cues[2][0])));
+      const tl = card.querySelector('.tiles'); if (tl && cues[2]) tl.classList.toggle('merge', t >= cues[2][0] - 0.1);
+    }
+    if (!A.paused) syncRaf = requestAnimationFrame(tick);
+  };
+  A.addEventListener('playing', tick, { once: true });
+  return showAll;
 }
-function linkCard(w, extra = ''){
-  const png = /\.png$/i.test(w.image || '');
-  const scene = w.image ? `<div class="scene ${png ? 'png' : ''}"><img src="${esc(w.image)}" alt="${esc(w.scene || w.slogan)}"></div>` : '';
-  return `<div class="card learn">
-    <div class="timer"></div>
-    <div class="wordrow">
-      <div><div class="bigword" style="font-size:${wordSize(w.word, 72, 40)}px">${esc(w.word)}</div><div class="ipa">${esc(w.ipa || '')}</div></div>
-      <button class="say" data-say="${esc(w.word)}" aria-label="听发音">${ICON.speaker}</button>
-    </div>
-    ${scene}
-    <div class="txt">
-      <div class="slogan">${esc(w.slogan || w.hook)}</div>
-      <div class="hook">${esc(w.hook)}</div>
-      <div class="meaning">${esc(w.meaning)}</div>
-    </div>
-    <div class="below">${extra}</div>
-  </div>`;
-}
-function startTimer(secs){ const t = $app.querySelector('.timer'); if (!t) return; t.style.setProperty('--secs', secs + 's'); t.classList.remove('run'); void t.offsetWidth; t.classList.add('run'); }
 
-/* ---------- 路由 ---------- */
-let S = {}; // 当前一轮的状态
+/* ---------- 屏幕 ---------- */
+let S = null;
 function show(html, cls = ''){
-  clearTimers();
+  clearTimers(); hush(); closeVideo();
+  document.querySelectorAll('.tapme').forEach(e => e.remove());
   $app.innerHTML = `<section class="screen ${cls}">${html}</section>`;
+  const h = $app.querySelector('[data-focus]'); if (h) h.focus({ preventScroll: true });
   window.scrollTo(0, 0);
-  const h = $app.querySelector('h1,h2,.bigword,.qword'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+}
+function muteBtn(){ const m = muted(); return `<button class="ib ${m ? 'off' : ''}" data-act="mute" aria-label="${m ? '打开声音' : '关掉声音'}">${m ? ICON.mute : ICON.speaker}</button>`; }
+function topbar(mid = ''){
+  const p = P();
+  return `<div class="top"><span class="pill" aria-label="星星 ${p.stars} 颗">${ICON.star('#FFC93C')}<span id="starN">${p.stars}</span></span>${mid}${muteBtn()}</div>`;
+}
+function dots(){ if (!S) return ''; return `<div class="dots" aria-label="第 ${S.i + 1} 个，共 ${S.ids.length} 个">${S.ids.map((_, k) => `<i class="${k < S.i ? 'done' : k === S.i ? 'on' : ''}"></i>`).join('')}</div>`; }
+
+/* 首页 */
+function renderHome(){
+  S = null;
+  const p = P(), st = stationStats(p), nx = nextSession();
+  const cur = nx.station;
+  const order = ['letter', 'blend', 'word'];
+  const stops = order.map(k => {
+    const s = st[k], done = s.seen >= s.total && s.total > 0;
+    const pct = s.total ? Math.round(s.seen / s.total * 100) : 0;
+    return `<div class="stop ${k === cur ? 'now' : ''} ${done ? 'done' : ''}">
+      <div class="ic" aria-hidden="true">${s.ic}</div>
+      <div class="meta"><div class="nm">${s.name}</div><div class="prog"><b style="width:${pct}%"></b></div><div class="cnt">${s.seen} / ${s.total}</div></div>
+      ${k === cur ? '<span class="here">现在在这里</span>' : ''}</div>`;
+  }).join('');
+  const prev = nx.ids.map(id => { const x = it(id); return `<span>${esc(x.type === 'letter' ? x.d.letter : x.d.emoji || x.d.word)}</span>`; }).join('');
+  const bub = nx.kind === 'review' ? '先复习昨天的！' : nx.kind === 'pick' ? '老师选好啦！' : nx.kind === 'free' ? '都学完啦！再玩一次？' : cur === 'letter' ? '去字母小乐园！' : cur === 'blend' ? '来拼小词！' : '来记单词！';
+  const stk = (p.stickers || []).slice(-12).reverse().map(s => `<span>${esc(s)}</span>`).join('');
+  show(`${topbar(`<button class="ib parentbtn" data-hold="parent" aria-label="家长和老师（按住）">家长<i></i></button>`)}
+    <div class="hello">${ICON.mascot}<div class="say-bub">${bub}</div></div>
+    <div class="path" aria-label="学习路线">${stops}</div>
+    <button class="go pulse" data-act="go" aria-label="开始">${ICON.play}开始</button>
+    <div class="preview" aria-label="这次要学">${prev}</div>
+    <div class="shelf"><div class="row"><em>我的贴纸</em>${stk || '<span class="small">学会一个就送一张</span>'}</div></div>`);
+  if (unlocked) later(() => say(ui('hello')), 400);
 }
 
-/* ===== 首页 ===== */
-function home(){
-  const plan = todaysPlan(), p = progress();
-  const done = plan.list.length === 0;
-  const goalN = done ? WORDS.length : plan.list.length;
-  const tomorrow = WORDS.filter(w => (p.words[w.word] || {}).status === 'missed');
-  const chips = (done ? WORDS : plan.list).map(w => `<div class="chip ${plan.review.includes(w.word) ? 'review' : ''}">${w.image ? `<img src="${esc(w.image)}" alt="">` : ''}<b>${esc(w.word)}</b></div>`).join('');
-  show(`${topbar({ right: '<button class="iconbtn" data-act="teacher">老师入口</button>' })}
-    ${plan.review.length ? `<div class="banner">昨天没记住的 ${plan.review.map(esc).join('、')} 回来啦，先把${plan.review.length > 1 ? '它们' : '它'}拿下！</div>` : ''}
-    <div class="hero">
-      ${done ? `<h1>今天的词都学完啦！</h1><p class="small">${tomorrow.length ? `明天再来复习：${tomorrow.map(w => esc(w.word)).join('、')}` : '5 个词第一次就全答对了，太棒了。'}</p>`
-             : `<h1>今天 ${plan.list.length} 个词</h1><p class="small">每个词先看一把“钥匙”，再合上考考自己。</p>`}
-      <div class="chips">${chips}</div>
-      ${done ? `<button class="btn ghost" data-act="practice">再练一遍（不计成绩）</button>`
-             : `<button class="btn primary pulse" data-act="start">开始学习</button>`}
-      <div class="steps"><div><b>👀</b>看钥匙</div><div><b>🙈</b>合上</div><div><b>✏️</b>选意思</div><div><b>📅</b>明天复习</div></div>
-    </div>
-    <div class="goal"><div class="gs">${Array.from({ length: goalN }, (_, k) => ICON.star(k < Math.ceil(goalN * 0.8) ? '#FFC93C' : '#E9DCC8')).join('')}</div><p>今天的小目标：合上以后，<br>${goalN} 个里第一次就想起 ${Math.ceil(goalN * 0.8)} 个！</p></div>
-    <div class="homefoot small">进度只存在这台设备的浏览器里</div>`, 'narrow');
+/* 开始一轮 */
+function startSession(plan, opts = {}){
+  const p = P();
+  if (plan.kind === 'pick') setP(q => { q.override = null; });
+  S = { kind: plan.kind, ids: plan.ids.slice(), i: 0, phase: 'learn', res: {}, stars: 0, started: isoLocal(), trial: !!opts.trial, trialName: opts.name || '' };
+  if (!S.ids.length) { renderHome(); return; }
+  if (S.trial) { renderLearn(); return; }
+  renderLearn(true);
+  say(ui('start')).then(() => { if (S && S.phase === 'learn' && S.i === 0 && !S.cardStarted) startNarr(); });
 }
 
-/* ===== 学习 ===== */
-function startSession(practice){
-  const plan = todaysPlan();
-  const list = practice ? WORDS.slice() : plan.list;
-  S = { mode: 'learn', practice: !!practice, list: list.map(w => w.word), i: 0, first: {}, retest: {}, queue: [], q: null };
-  learnStep();
+/* 学习卡 */
+function learnCard(x, relink){
+  const d = x.d, vid = videoOf(x) && !S.trial;
+  const ctrl = `<div class="ctrl">
+      <button class="round" data-act="replay" aria-label="再听一遍">${ICON.replay}</button>
+      ${vid ? `<button class="vidbtn" data-act="video">${ICON.film}看动画</button>` : ''}
+      ${S.trial ? '' : `<button class="next" data-act="next" aria-label="下一步" disabled>${ICON.arrow}</button>`}
+    </div>`;
+  const tag = relink ? '<div class="relink">👀 再看一遍</div>' : '';
+  if (x.type === 'letter') {
+    return `<div class="card learn letter">${tag}<div class="timer"></div>
+      <div class="letterimg rv" data-at="0"><img src="${esc(d.image)}" alt="${esc(d.shape)}"></div>
+      <div class="letterbig rv" data-at="1" style="color:${esc(d.color)}"><span class="up">${esc(d.upper)}</span><span class="lo">${esc(d.letter)}</span></div>
+      <div class="badges"><span class="badge snd rv" data-at="3">🔊 ${esc(d.sound_zh)}</span><span class="badge rv" data-at="4">${esc(d.prop)} <span class="en">${esc(d.keyword)}</span></span></div>
+      ${ctrl}</div>`;
+  }
+  if (x.type === 'blend') {
+    const L = d.letters.map(l => it('L-' + l)?.d || { letter: l, sound_zh: '' });
+    const picture = d.image ? `<div class="scene rv" data-at="3"><img src="${esc(d.image)}" alt=""></div>` : `<div class="scene rv" data-at="3"><span class="emo">${esc(d.emoji)}</span></div>`;
+    return `<div class="card learn blend">${tag}<div class="timer"></div>
+      <div class="tiles rv on" data-at="0">${L.map(l => `<span class="tile" data-lit>${esc(l.letter)}<small>${esc(l.sound_zh)}</small></span>`).join('')}</div>
+      ${picture}
+      <div class="linkline rv" data-at="3">${esc(d.link)}</div>
+      <div class="meaning rv" data-at="4">${esc(d.meaning)}</div>
+      ${ctrl}</div>`;
+  }
+  const png = /\.png$/i.test(d.image || '');
+  return `<div class="card learn word">${tag}<div class="timer"></div>
+    <div class="bigword rv" data-at="0" style="font-size:${wordSize(d.word, 76, 44)}px">${esc(d.word)}</div>
+    <div class="scene ${png ? 'png' : ''} rv" data-at="0"><img src="${esc(d.image)}" alt="${esc(d.scene || d.slogan)}"></div>
+    <div class="txt"><div class="slogan rv" data-at="1">${esc(d.slogan)}</div><div class="meaning rv" data-at="3">${esc(d.meaning)}</div></div>
+    ${ctrl}</div>`;
 }
-function sessionDots(){ return S.list.map((w, k) => k < S.i ? 'done' : k === S.i ? 'on' : ''); }
-function learnStep(){
-  const w = byWord(S.list[S.i]);
-  const last = S.i === S.list.length - 1;
-  show(`${topbar({ back: 'home', dots: sessionDots(), right: `<span class="iconbtn" aria-hidden="true">${S.i + 1}/${S.list.length}</span>` })}
-    ${linkCard(w, `<button class="btn primary" data-act="next" disabled>${last ? '合上，考考我' : '下一个'}</button>`)}`);
-  startTimer(10);
-  speak(w.word, $app.querySelector('.say'));
-  const b = $app.querySelector('[data-act=next]');
-  later(() => { b.disabled = false; }, 3000);   // 至少看 3 秒
-  later(() => { b.classList.add('pulse'); }, 10000); // 10 秒到了，按钮跳一跳
+function renderLearn(waitIntro){
+  const x = it(S.ids[S.i]); S.phase = 'learn'; S.cardStarted = false;
+  show(`${topbar(dots())}<div class="narrow">${learnCard(x, S.relink)}</div>`);
+  const card = $app.querySelector('.card');
+  S.reveal = syncCard(card, null);
+  if (!muted() && !S.trial) { card.classList.add('sync'); card.querySelectorAll('.rv').forEach(e => e.classList.toggle('on', +e.dataset.at === 0)); }
+  if (S.trial) { trialLearn(x); return; }
+  if (!waitIntro || muted()) startNarr();
+  later(() => { if (muted() || A.paused) enableNext(); }, 4000); // 没声音（静音/播放失败）时 4 秒后也能往下走；有声音就等旁白讲完
 }
-function closeStep(){
-  show(`${topbar({ back: 'home' })}
-    <div class="hero" style="text-align:center;padding:36px 22px">
-      <div style="font-size:64px;line-height:1">🙈</div>
-      <h1>合上啦！</h1>
-      <p class="small" style="font-size:16px">图片、中文和口号都收起来了。<br>只看英文，选出它的中文意思。</p>
-      <div style="height:18px"></div>
-      <button class="btn primary pulse" data-act="beginquiz">开始测</button>
-    </div>`, 'narrow');
+function startNarr(){
+  if (!S) return; S.cardStarted = true;
+  const x = it(S.ids[S.i]), card = $app.querySelector('.card'); if (!card) return;
+  const showAll = syncCard(card, x.d.cues);
+  const btn = card.querySelector('[data-act="replay"]');
+  say(x.d.audio, btn).then(() => { showAll(); enableNext(); });
+}
+function enableNext(){ const n = $app.querySelector('.next'); if (n && n.disabled) { n.disabled = false; n.classList.add('pulse'); } }
+function afterLearn(){
+  if (S.relink) { S.relink = false; renderQuiz(true); return; }
+  S.i++;
+  if (S.i < S.ids.length) { renderLearn(true); const i0 = S.i; say(ui('next')).then(() => { if (S && S.phase === 'learn' && S.i === i0 && !S.cardStarted) startNarr(); }); return; }
+  renderClose();
 }
 
-/* ===== 测 ===== */
-function beginQuiz(){
-  S.mode = 'quiz';
-  S.queue = shuffle(S.list);
-  S.done = [];
-  quizStep();
+/* 合上 */
+function renderClose(){
+  S.phase = 'close'; S.i = 0;
+  show(`${topbar()}<div class="closebox"><div class="big" aria-hidden="true">🙈</div><b>藏起来啦！</b><div class="small" style="font-size:18px">听声音，点图片</div>
+    <div style="width:100%;max-width:320px;margin-top:24px"><button class="btn primary" data-act="toquiz">${ICON.arrow} 开始</button></div></div>`);
+  say(ui('close')).then(ok => { if (S && S.phase === 'close') later(() => renderQuiz(), ok ? 300 : 2200); });
 }
-function quizDots(){ return S.list.map((w, k) => k < S.done.length ? 'done' : k === S.done.length ? 'on' : ''); }
-function quizStep(retry){
-  const word = retry || S.queue[0];
-  const w = byWord(word);
-  S.q = { word, retry: !!retry, opts: optionsFor(w), answered: false };
-  show(`${topbar({ back: 'home', dots: quizDots(), right: `<span class="iconbtn" aria-hidden="true">测 ${S.done.length + 1}/${S.list.length}</span>` })}
-    <div class="qcard">
-      <div class="qlabel">${retry ? '再试一次！它是什么意思？' : '它是什么意思？'}</div>
-      <div class="qword" style="font-size:${wordSize(w.word, 80, 44)}px">${esc(w.word)}</div>
-      <button class="say" style="margin:0 auto" data-say="${esc(w.word)}" aria-label="听发音">${ICON.speaker}</button>
-      <div class="opts">${S.q.opts.map(m => `<button class="opt" data-opt="${esc(m)}">${esc(m)}</button>`).join('')}</div>
-      <div class="fb" aria-live="polite"></div>
-    </div>`, 'narrow');
-}
-function answer(btn){
-  if (!S.q || S.q.answered) return;
-  S.q.answered = true;
-  const w = byWord(S.q.word), pick = btn.dataset.opt, ok = pick === w.meaning;
-  $app.querySelectorAll('.opt').forEach(o => { o.disabled = true; if (o !== btn) o.classList.add('dim'); });
-  btn.classList.add(ok ? 'right' : 'wrong');
-  const fb = $app.querySelector('.fb');
-  if (!S.q.retry) S.first[w.word] = { ok, pick };
-  else S.retest[w.word] = { ok, pick };
 
-  if (S.mode === 'trial') return trialAnswered(w, pick, ok);
-
-  if (ok) {
-    fb.className = 'fb ok'; fb.textContent = S.q.retry ? '这次对啦！明天还会再见到它' : pick + '，答对啦！';
-    later(nextQuestion, S.q.retry ? 1400 : 900);
-  } else if (!S.q.retry) {
-    fb.className = 'fb no'; fb.textContent = '差一点！回去再看一眼钥匙';
-    later(() => relink(w.word), 1100);
+/* 测验 */
+function optionsFor(x){
+  const pool = [...ITEMS.values()].filter(y => y.type === x.type && y.id !== x.id);
+  let picks = [];
+  if (x.type === 'letter') {
+    const sess = (S ? S.ids : []).filter(id => id !== x.id && it(id)?.type === 'letter').map(it);
+    const learned = Object.keys(P().items).filter(id => id.startsWith('L-') && id !== x.id).map(it).filter(Boolean);
+    const grp = pool.filter(y => y.d.group === x.d.group);
+    picks = shuffle(sess).concat(shuffle(learned), shuffle(grp), shuffle(pool));
   } else {
-    const right = [...$app.querySelectorAll('.opt')].find(o => o.dataset.opt === w.meaning);
-    right.classList.remove('dim'); right.classList.add('right');
-    fb.className = 'fb no'; fb.textContent = '是「' + w.meaning + '」。没关系，明天它还会回来';
-    later(nextQuestion, 2000);
+    const dd = (x.d.distractors || []).map(w => it((x.type === 'blend' ? 'B-' : 'W-') + w)).filter(Boolean);
+    picks = dd.concat(shuffle(pool));
   }
+  const seen = new Set([pic(x)]); const out = [];
+  for (const y of picks) { if (out.length >= 3) break; if (!seen.has(pic(y)) && (x.type === 'letter' || y.d.meaning !== x.d.meaning)) { seen.add(pic(y)); out.push(y); } }
+  return shuffle([x].concat(out));
 }
-function relink(word){
-  const w = byWord(word);
-  show(`${topbar({ back: 'home', dots: quizDots() })}
-    <div style="text-align:center"><span class="relink-tag">🔑 再看一眼钥匙</span></div>
-    ${linkCard(w, `<button class="btn blue" data-act="retry" disabled>看好了，再试一次</button>`)}`);
-  startTimer(10);
-  speak(w.word, $app.querySelector('.say'));
-  const b = $app.querySelector('[data-act=retry]');
-  later(() => { b.disabled = false; }, 3000);
-  later(() => b.classList.add('pulse'), 10000);
+function qPrompt(x){ return x.type === 'letter' ? [x.d.audio_en, ui('letterq')] : [x.d.audio_en, ui('which')]; }
+function renderQuiz(retry){
+  const x = it(S.ids[S.i]); S.phase = 'quiz'; S.retry = !!retry; S.locked = false;
+  const opts = optionsFor(x); S.opts = opts.map(o => o.id);
+  const head = x.type === 'letter' ? '' : `<div class="qword" style="font-size:${wordSize(x.d.word, 64, 40)}px">${esc(x.d.word)}</div>`;
+  const tiles = opts.map((o, k) => x.type === 'letter'
+    ? `<button class="opt" data-opt="${k}" aria-label="字母 ${esc(o.d.letter)}"><span class="let" style="color:${esc(o.d.color)}">${esc(o.d.letter)}</span></button>`
+    : `<button class="opt" data-opt="${k}" aria-label="${esc(o.d.meaning)}"><span class="pic" aria-hidden="true">${esc(o.d.emoji)}</span><span class="lab">${esc(o.d.meaning)}</span></button>`).join('');
+  show(`${topbar(dots())}<div class="narrow"><div class="qcard">${S.trial ? '<div class="timer"></div>' : ''}
+      <div class="qtop"><button class="qspk" data-act="qsay" aria-label="再听一遍">${ICON.speaker}</button>${head}</div>
+      <div class="opts">${tiles}</div><div class="fb" aria-live="polite"></div></div></div>`);
+  const pre = retry && !S.trial ? [ui('retry')] : [];
+  say(pre.concat(qPrompt(x)), $app.querySelector('.qspk'));
+  S.qStart = Date.now();
 }
-function nextQuestion(){
-  S.done.push(S.queue.shift());
-  if (S.queue.length) quizStep(); else finish();
+function flyStar(fromEl){
+  const to = document.getElementById('starN'); if (!fromEl || !to) return;
+  const a = fromEl.getBoundingClientRect(), b = to.getBoundingClientRect();
+  const s = document.createElement('div'); s.className = 'flystar'; s.innerHTML = ICON.star('#FFC93C');
+  s.style.left = (a.left + a.width / 2 - 27) + 'px'; s.style.top = (a.top + a.height / 2 - 27) + 'px';
+  document.body.appendChild(s);
+  requestAnimationFrame(() => requestAnimationFrame(() => { s.style.left = (b.left - 14) + 'px'; s.style.top = (b.top - 14) + 'px'; s.style.transform = 'scale(.5) rotate(180deg)'; }));
+  setTimeout(() => { s.remove(); to.textContent = P().stars; to.parentElement.animate && to.parentElement.animate([{ transform: 'scale(1.3)' }, { transform: 'none' }], 300); }, 820);
 }
+function answer(k, el){
+  if (S.locked) return; S.locked = true;
+  const x = it(S.ids[S.i]), choice = S.opts[k], right = choice === x.id;
+  const fb = $app.querySelector('.fb'), btns = [...$app.querySelectorAll('.opt')];
+  hush();
+  if (S.trial) { trialAnswer(x, right, choice); return; }
+  if (right) {
+    el.classList.add('right'); btns.forEach(b => b !== el && b.classList.add('dim'));
+    const first = !S.retry;
+    if (first) { S.stars++; setP(p => { p.stars++; }); flyStar(el); }
+    S.res[x.id] = S.retry ? 'retry-ok' : 'ok';
+    fb.className = 'fb ok'; fb.textContent = first ? '真棒！⭐' : '这次对啦！';
+    const clip = first ? ui('great' + (1 + Math.floor(Math.random() * 3))) : ui('tryok');
+    say([clip, x.d.audio_en]).then(() => later(nextQ, 300));
+    return;
+  }
+  el.classList.add('wrong');
+  if (!S.retry) {
+    fb.className = 'fb no'; fb.textContent = '再看一遍哦';
+    S.res[x.id] = 'miss';
+    say(ui('again')).then(ok => later(() => { S.relink = true; renderLearn(); }, ok ? 200 : 1200));
+    return;
+  }
+  const rb = btns[S.opts.indexOf(x.id)]; if (rb) rb.classList.add('right');
+  fb.className = 'fb no'; fb.textContent = '是这个哦';
+  S.res[x.id] = 'miss';
+  say(x.d.audio_en).then(ok => later(nextQ, ok ? 1200 : 2000));
+}
+function nextQ(){ S.i++; if (S.i < S.ids.length) renderQuiz(); else finish(); }
 
-/* ===== 结果 ===== */
+/* 结果 */
 function finish(){
-  const total = S.list.length;
-  const got = S.list.filter(w => S.first[w] && S.first[w].ok);
-  const missed = S.list.filter(w => !(S.first[w] && S.first[w].ok));
-  const pass = got.length >= Math.ceil(total * 0.8);
-  if (!S.practice) {
-    const p = progress(), t = today();
-    S.list.forEach(w => {
-      const prev = p.words[w] || { tries: 0 };
-      const ok = got.includes(w);
-      p.words[w] = { status: ok ? 'remembered' : 'missed', due: ok ? null : addDays(t, 1), tries: (prev.tries || 0) + 1, last: t, lastFirstTry: ok };
+  const t = today();
+  const ids = S.ids, res = S.res;
+  const okIds = ids.filter(id => res[id] === 'ok');
+  const p = setP(p => {
+    ids.forEach(id => {
+      const prev = p.items[id] || { n: 0, first: t };
+      const ok = res[id] === 'ok';
+      p.items[id] = { ...prev, n: (prev.n || 0) + 1, last: t, state: ok ? 'ok' : 'miss', due: ok ? null : addDays(t, 1), result: res[id] };
     });
-    p.sessions.push({ at: isoLocal(), date: t, words: S.list, firstTry: S.first, retest: S.retest, score: got.length, total });
-    save(KEY, p);
-  }
-  const starColors = Array.from({ length: total }, (_, k) => k < got.length ? '#FFC93C' : '#E9DCC8');
-  show(`${topbar({ right: '<button class="iconbtn" data-act="home">首页</button>' })}
-    <div class="hero" style="text-align:center">
-      <div class="small">${S.practice ? '练习（不计成绩）' : '第一次就答对的'}</div>
-      <div class="score">${got.length}<small>/${total}</small></div>
-      <div class="stars">${starColors.map((c, k) => `<span style="display:contents">${ICON.star(c).replace('<svg', `<svg style="animation-delay:${0.15 * k + 0.2}s"`)}</span>`).join('')}</div>
-      <h2>${got.length === total ? '全对！你的钥匙全都管用！' : pass ? '达标啦，真厉害！' : '还差一点点，明天再来！'}</h2>
-      <div class="bar" aria-label="达标线 4/5"><div class="fill" style="width:0"></div><div class="mark"><span>达标 ${Math.ceil(total * 0.8)}/${total}</span></div></div>
-      <div class="verdict ${pass ? 'pass' : 'fail'}">${pass ? '✓ 达到 ' + Math.ceil(total * 0.8) + '/' + total + ' 标准' : '未达到 ' + Math.ceil(total * 0.8) + '/' + total + ' 标准'}</div>
-      <ul class="wl">${S.list.map(x => { const w = byWord(x), ok = got.includes(x);
-        return `<li><span class="w">${esc(w.word)}</span><span class="m">${esc(w.meaning)}</span><span class="tag ${ok ? 'ok' : 'again'}">${ok ? '想起来了' : '明天再来'}</span></li>`; }).join('')}</ul>
-      <div style="height:18px"></div>
-      <button class="btn primary" data-act="home">好的</button>
-    </div>`, 'narrow');
-  requestAnimationFrame(() => setTimeout(() => { const f = $app.querySelector('.bar .fill'); if (f) f.style.width = (got.length / total * 100) + '%'; }, 50));
-  if (got.length === total) confetti(); else if (pass) confetti(60);
+    okIds.forEach(id => p.stickers.push(pic(it(id))));
+    p.sessions.push({ at: isoLocal(), kind: S.kind, ids, res, stars: S.stars });
+    if (p.sessions.length > 200) p.sessions = p.sessions.slice(-200);
+  });
+  const all = okIds.length === ids.length, good = okIds.length >= Math.ceil(ids.length * 0.6);
+  const stars = ids.map((id, k) => `<span style="animation-delay:${k * 0.15}s;display:inline-block">${ICON.star(res[id] === 'ok' ? '#FFC93C' : '#E9DCC8')}</span>`).join('');
+  const stk = ids.map((id, k) => `<span class="stk ${res[id] === 'ok' ? '' : 'miss'}" style="animation-delay:${0.4 + k * 0.18}s">${esc(pic(it(id)))}</span>`).join('');
+  const title = all ? '全对啦！' : good ? '真棒！' : '明天再来！';
+  S.phase = 'result';
+  show(`${topbar()}<div class="result narrow">
+    ${ICON.mascot.replace('class="mascot"', 'class="mascot" style="width:110px;height:110px"')}
+    <div class="rtitle">${title}</div>
+    <div class="bigstars" aria-label="${okIds.length} 颗星">${stars}</div>
+    <div class="stickers" aria-label="新贴纸">${stk}</div>
+    ${ids.length - okIds.length ? `<div class="small" style="font-size:16px">灰色的明天再见 👋</div>` : ''}
+    <div style="width:100%;margin-top:auto;padding-top:20px"><button class="btn primary" data-act="home" data-focus tabindex="-1">${ICON.home.replace('#F2643A', '#fff').replace('<svg', '<svg width="28" height="28"')} 回家</button></div></div>`);
+  if (all) confetti(); else if (good) confetti(70);
+  say([all ? ui('allright') : good ? ui('pass') : ui('notyet'), okIds.length ? ui('sticker') : null]);
 }
 
-/* ===== 彩带 ===== */
+/* ---------- 视频弹窗 ---------- */
+function openVideo(src){
+  hush(); closeVideo();
+  const m = document.createElement('div'); m.className = 'modal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-label', '看动画');
+  m.innerHTML = `<video src="${esc(src)}" playsinline controls autoplay preload="auto"></video><button class="x" aria-label="关掉">✕</button>`;
+  document.body.appendChild(m);
+  const v = m.querySelector('video'); v.muted = muted();
+  m.querySelector('.x').onclick = closeVideo;
+  m.addEventListener('click', e => { if (e.target === m) closeVideo(); });
+  v.addEventListener('ended', () => setTimeout(closeVideo, 600));
+  try { const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); } catch (e) {}
+}
+function closeVideo(){ document.querySelectorAll('.modal').forEach(m => { const v = m.querySelector('video'); if (v) { try { v.pause(); } catch (e) {} v.removeAttribute('src'); } m.remove(); }); if (S && S.phase === 'learn') enableNext(); }
+
+/* ---------- 家长 / 老师 ---------- */
+let PTAB = 'progress', PICKF = 'letter', PICKSEL = [];
+function renderParent(){
+  S = null; hush();
+  const p = P();
+  const tabs = [['progress', '进度'], ['pick', '选内容'], ['trial', '10 秒测试'], ['content', '内容审稿']].map(([k, n]) => `<button class="${PTAB === k ? 'on' : ''}" data-ptab="${k}">${n}</button>`).join('');
+  let body = '';
+  if (PTAB === 'progress') {
+    const st = stationStats(p), t = today();
+    const due = Object.keys(p.items).filter(id => it(id) && p.items[id].state === 'miss');
+    const ses = p.sessions.slice(-8).reverse().map(s => `<div class="rec">${esc(s.at.replace('T', ' ').slice(0, 16))} · ${esc({ new: '新学', review: '复习', pick: '老师选', free: '自由练' }[s.kind] || s.kind)} · ${s.ids.map(id => { const x = it(id); return x ? esc(label(x)) + (s.res[id] === 'ok' ? '✓' : '✗') : ''; }).join(' ')}</div>`).join('');
+    const nx = nextSession();
+    body = `<div class="panel"><h2>学习进度</h2><div class="kv">
+      ${['letter', 'blend', 'word'].map(k => `<span>${st[k].name}</span><b>学过 ${st[k].seen} / ${st[k].total}，一次答对 ${st[k].ok}</b>`).join('')}
+      <span>星星</span><b>${p.stars}</b><span>贴纸</span><b>${(p.stickers || []).length}</b>
+      <span>下一轮</span><b>${nx.ids.map(id => esc(label(it(id)))).join('、')}（${esc({ new: '按路线', review: '先复习', pick: '老师选的', free: '全部学过，随机练' }[nx.kind])}）</b>
+      <span>待复习</span><b>${due.length ? due.map(id => `${esc(label(it(id)))}（${esc(p.items[id].due)}）`).join('、') : '没有'}</b></div>
+      <p class="small">规则：第一次就点对才算记住；点错会马上再看一遍、再考一次，但仍记为「明天复习」。今天是 ${esc(t)}${QS.get('today') ? '（模拟）' : ''}。</p></div>
+      <div class="panel"><h2>最近几轮</h2>${ses || '<p class="small">还没有记录。</p>'}</div>
+      <div class="panel"><h2>设置</h2>
+        <p class="small" style="margin:0 0 6px">记忆单词用哪一组</p>
+        <div class="seg" data-set="grade">${(C.groups || []).map(g => `<button class="${p.settings.grade === g.id ? 'on' : ''}" data-v="${esc(g.id)}">${esc(g.label)}</button>`).join('')}</div>
+        <p class="small" style="margin:12px 0 6px">每轮几个（字母默认 3–4 个，单词默认 5 个）</p>
+        <div class="seg" data-set="size">${[[0, '自动'], [3, '3 个'], [4, '4 个'], [5, '5 个']].map(([v, n]) => `<button class="${(p.settings.size || 0) === v ? 'on' : ''}" data-v="${v}">${n}</button>`).join('')}</div>
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button class="btn ghost sm" data-act="exportp">导出进度 JSON</button><button class="btn ghost sm" data-act="reset">清空进度</button></div></div>`;
+  } else if (PTAB === 'pick') {
+    const filt = [['letter', '字母'], ['blend', '拼读小词'], ['一年级', '一年级单词'], ['三四年级', '三四年级单词']];
+    const list = [...ITEMS.values()].filter(x => PICKF === 'letter' ? x.type === 'letter' : PICKF === 'blend' ? x.type === 'blend' : x.type === 'word' && (x.d.group === '三四年级') === (PICKF === '三四年级'));
+    const cur = p.override && p.override.ids || [];
+    body = `<div class="panel"><h2>下次学这些</h2><p class="small" style="margin-top:0">点选 3–5 个，按「下次学这些」。孩子下一次点「开始」就学这几个，学完自动回到正常路线。</p>
+      <div class="seg" data-pickf>${filt.map(([k, n]) => `<button class="${PICKF === k ? 'on' : ''}" data-v="${k}">${n}</button>`).join('')}</div>
+      <div class="pick">${list.map(x => `<button class="${PICKSEL.includes(x.id) ? 'on' : ''} ${p.items[x.id] ? 'seen' : ''}" data-pick="${esc(x.id)}">${x.type === 'letter' ? '' : esc(x.d.emoji || '')}<b>${esc(label(x))}</b>${x.type === 'letter' ? '' : esc(x.d.meaning)}</button>`).join('')}</div>
+      <p style="margin:12px 0 8px;font-weight:800">已选 ${PICKSEL.length} 个：${PICKSEL.map(id => esc(label(it(id)))).join('、') || '—'}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn blue sm" data-act="setpick" ${PICKSEL.length ? '' : 'disabled'}>下次学这些</button><button class="btn ghost sm" data-act="clearsel">清空所选</button></div>
+      <p class="small">当前已安排：${cur.length ? cur.map(id => esc(label(it(id) || { type: 'word', d: { word: id } }))).join('、') + ' <button class="btn ghost sm" data-act="clearpick" style="display:inline-flex;min-height:36px">取消安排</button>' : '没有（按正常路线）'}</p></div>`;
+  } else if (PTAB === 'trial') {
+    const recs = load(TKEY, []);
+    const ids = PICKSEL.length ? PICKSEL : (C.day1 || []).map(w => 'W-' + w);
+    body = `<div class="panel"><h2>10 秒测试</h2>
+      <p class="small" style="margin-top:0">每个看 10 秒（旁白没讲完就等讲完），全部看完后藏起来，听声音点图片，只答一次。用「选内容」里选中的；没选就用第一天的 5 个词。</p>
+      <p style="font-weight:800">本次：${ids.map(id => esc(label(it(id)))).join('、')}</p>
+      <label class="field"><span class="small">孩子名字（可不填）</span><input id="tname" maxlength="20" autocomplete="off"></label>
+      <div style="margin-top:12px"><button class="btn primary" data-act="trial">开始 10 秒测试</button></div></div>
+      <div class="panel"><h2>测试记录（${recs.length}）</h2>
+      ${recs.slice().reverse().map(r => `<div class="rec"><b>${esc(r.name || '未填名字')}</b> · ${esc(r.at.replace('T', ' ').slice(0, 16))} · <b>${r.score}/${r.total}</b><br>${r.items.map(i => `${esc(i.label)}${i.correct ? '✓' : '✗（选了 ' + esc(i.chose) + '）'}`).join(' ')}</div>`).join('') || '<p class="small">还没有记录。</p>'}
+      <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap"><button class="btn ghost sm" data-act="export" ${recs.length ? '' : 'disabled'}>导出 JSON</button><button class="btn ghost sm" data-act="clearrec" ${recs.length ? '' : 'disabled'}>清空记录</button></div></div>`;
+  } else {
+    const stTag = s => s === '已认可' ? '<span class="st ok">已认可</span>' : '<span class="st wait">待审</span>';
+    const W = (C.words || []).map(w => `<article><h3>${esc(w.emoji)} ${esc(w.word)} <span class="small">${esc(w.meaning)} · ${esc(w.group)}</span>${stTag(w.status)}</h3>
+      <p><b>口号：</b>${esc(w.slogan)}</p><p><b>联想：</b>${esc(w.hook)}</p><p class="small"><b>线索：</b>${esc(w.cue)}　<b>边界：</b>${esc(w.boundary)}</p>
+      <p class="small"><b>来源：</b>${esc(w.source)}</p><p class="small">${esc(w.review_status || '')}</p>
+      <p class="small"><a href="${esc(w.video)}" target="_blank" rel="noopener">动画</a> · <a href="${esc(w.audio)}" target="_blank" rel="noopener">播报</a></p></article>`).join('');
+    const SC = (C.ship_candidates || []).map(c => `<p>${c.picked ? '✅ 采用' : '　候选'} <b>${esc(c.id)}「${esc(c.anchor)}」</b>：${esc(c.line)} <span class="small">— ${esc(c.why)}</span></p>`).join('');
+    const Ls = (C.letters || []).map(l => `<article><h3><span style="color:${esc(l.color)}">${esc(l.upper)} ${esc(l.letter)}</span> <span class="small">第 ${l.group} 组 · 音 ${esc(l.sound)} ≈ ${esc(l.sound_zh)} · ${esc(l.keyword)}</span>${stTag(l.status)}${l.video ? '' : '<span class="st ph">无动画</span>'}</h3><p>${esc(l.story)}</p></article>`).join('');
+    const Bs = (C.blends || []).map(b => `<article><h3>${esc(b.emoji)} ${esc(b.word)} <span class="small">${esc(b.meaning)} · 第 ${b.unlock_group} 组解锁</span>${stTag(b.status)}${b.image ? '' : '<span class="st ph">图为 emoji</span>'}</h3><p>${esc(b.link_full || b.link)}</p></article>`).join('');
+    body = `<div class="panel"><h2>ship 的候选联想</h2>${SC}</div>
+      <div class="panel"><h2>记忆单词（${(C.words || []).length}）</h2><div class="lst">${W}</div></div>
+      <div class="panel"><h2>字母（${(C.letters || []).length}）</h2><p class="small">字母音为中文近似音＋英文关键词开头音，不是标准音标录音。</p><div class="lst">${Ls}</div></div>
+      <div class="panel"><h2>拼读小词（${(C.blends || []).length}）</h2><div class="lst">${Bs}</div></div>
+      <p class="small">内容版本 ${esc(C.version)} · 读取自 ${esc(C._from)}</p>`;
+  }
+  show(`<div class="top"><button class="btn ghost sm" data-act="home">← 回孩子页</button><b>家长 / 老师</b>${muteBtn()}</div>
+    <div class="tabs">${tabs}</div>${body}`, 'narrow');
+}
+
+/* 10 秒测试 */
+function trialLearn(x){
+  const card = $app.querySelector('.card'); const tm = card.querySelector('.timer');
+  tm.style.setProperty('--secs', '10s'); tm.classList.add('run');
+  const showAll = syncCard(card, x.d.cues);
+  let narrDone = false, timeDone = false;
+  const go = () => { if (narrDone && timeDone && S && S.phase === 'learn') { S.shown.push(Date.now() - S.t0); S.i++; if (S.i < S.ids.length) renderLearn(); else renderClose(); } };
+  S.t0 = Date.now(); S.shown = S.shown || [];
+  say(x.d.audio, card.querySelector('[data-act="replay"]')).then(() => { showAll(); narrDone = true; go(); });
+  later(() => { timeDone = true; go(); }, 10000);
+}
+function trialAnswer(x, right, choice){
+  const btns = [...$app.querySelectorAll('.opt')];
+  const el = btns[S.opts.indexOf(choice)]; el.classList.add(right ? 'right' : 'wrong');
+  S.trialRes = S.trialRes || [];
+  S.trialRes.push({ id: x.id, label: label(x), correct: right, chose: choice === x.id ? label(x) : zh(it(choice)), ms: Date.now() - S.qStart, shown_ms: (S.shown || [])[S.trialRes.length] || null });
+  later(() => { S.i++; if (S.i < S.ids.length) renderQuiz(); else trialDone(); }, 700);
+}
+function trialDone(){
+  const r = S.trialRes || [], score = r.filter(x => x.correct).length;
+  const rec = { at: isoLocal(), name: S.trialName, version: C.version, total: r.length, score, items: r, rule: '每个看 10 秒（旁白没完就等完），全部看完后测，一次作答' };
+  const recs = load(TKEY, []); recs.push(rec); save(TKEY, recs);
+  S.phase = 'result';
+  show(`<div class="top"><b>10 秒测试结果</b>${muteBtn()}</div><div class="panel narrow" style="text-align:center"><div class="count">${score}/${r.length}</div>
+    <p>${esc(rec.name || '未填名字')} · ${esc(rec.at.replace('T', ' ').slice(0, 16))}</p>
+    <div class="lst" style="text-align:left">${r.map(i => `<article>${esc(i.label)} ${i.correct ? '✓' : '✗ 选了 ' + esc(i.chose)}</article>`).join('')}</div>
+    <div style="margin-top:14px"><button class="btn primary" data-act="parent">回家长页</button></div></div>`);
+}
+
+/* 导出 */
+function download(name, obj){
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+
+/* ---------- 事件 ---------- */
+$app.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || b.disabled) return;
+  const act = b.dataset.act;
+  if (b.dataset.opt != null && S && S.phase === 'quiz') { answer(+b.dataset.opt, b); return; }
+  if (b.dataset.ptab) { PTAB = b.dataset.ptab; renderParent(); return; }
+  if (b.dataset.pick) { const id = b.dataset.pick; PICKSEL = PICKSEL.includes(id) ? PICKSEL.filter(x => x !== id) : PICKSEL.concat(id).slice(-8); renderParent(); return; }
+  if (b.parentElement && b.parentElement.dataset.pickf != null) { PICKF = b.dataset.v; renderParent(); return; }
+  if (b.parentElement && b.parentElement.dataset.set) { const k = b.parentElement.dataset.set, v = b.dataset.v; setP(p => { p.settings[k] = k === 'size' ? +v : v; }); renderParent(); return; }
+  switch (act) {
+    case 'go': unlockAudio(); startSession(nextSession()); break;
+    case 'mute': {
+      const m = !muted(); setP(p => { p.settings.muted = m; });
+      if (m) { hush(); if (S && S.reveal) S.reveal(); const c = $app.querySelector('.card'); if (c) { c.classList.remove('sync'); c.querySelectorAll('.rv').forEach(x => x.classList.add('on')); } enableNext(); }
+      b.outerHTML = muteBtn(); break;
+    }
+    case 'replay': unlockAudio(); startNarr(); break;
+    case 'video': { const x = it(S.ids[S.i]); const v = videoOf(x); if (v) openVideo(v); break; }
+    case 'next': afterLearn(); break;
+    case 'toquiz': renderQuiz(); break;
+    case 'qsay': unlockAudio(); say(qPrompt(it(S.ids[S.i])), b); break;
+    case 'home': renderHome(); break;
+    case 'parent': renderParent(); break;
+    case 'setpick': setP(p => { p.override = { ids: PICKSEL.slice(), at: isoLocal() }; }); toast('好了，下次点「开始」就学这些'); PICKSEL = []; renderParent(); break;
+    case 'clearsel': PICKSEL = []; renderParent(); break;
+    case 'clearpick': setP(p => { p.override = null; }); renderParent(); break;
+    case 'trial': { const name = (document.getElementById('tname') || {}).value || ''; const ids = PICKSEL.length ? PICKSEL.slice() : (C.day1 || []).map(w => 'W-' + w); unlockAudio(); startSession({ kind: 'trial', ids }, { trial: true, name: name.trim() }); break; }
+    case 'export': download('rightbrain-trials-' + today() + '.json', { exported_at: isoLocal(), version: C.version, records: load(TKEY, []) }); break;
+    case 'exportp': download('rightbrain-progress-' + today() + '.json', { exported_at: isoLocal(), version: C.version, progress: P() }); break;
+    case 'clearrec': if (confirm('清空所有测试记录？')) { save(TKEY, []); renderParent(); } break;
+    case 'reset': if (confirm('清空孩子的全部进度、星星和贴纸？')) { const s = P().settings; localStorage.removeItem(KEY); setP(p => { p.settings = s; }); renderParent(); } break;
+  }
+});
+/* 家长入口：按住 1.2 秒，防止孩子误点 */
+let holdT = null;
+function holdStart(e){ const b = e.target.closest && e.target.closest('[data-hold]'); if (!b) return; e.preventDefault(); b.classList.add('hold'); holdT = setTimeout(() => { holdT = null; b.classList.remove('hold'); PTAB = 'progress'; renderParent(); }, 1200); }
+function holdEnd(){ if (holdT) { clearTimeout(holdT); holdT = null; const b = $app.querySelector('.hold'); if (b) { b.classList.remove('hold'); toast('家长请按住不放'); } } }
+$app.addEventListener('pointerdown', holdStart); ['pointerup', 'pointerleave', 'pointercancel'].forEach(t => $app.addEventListener(t, holdEnd, true));
+$app.addEventListener('contextmenu', e => { if (e.target.closest('[data-hold]')) e.preventDefault(); });
+
+/* ---------- 彩带 ---------- */
 function confetti(n = 160){
   if (!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const c = document.getElementById('confetti'), ctx = c.getContext && c.getContext('2d');
   if (!ctx) return;
   c.hidden = false; c.width = innerWidth * devicePixelRatio; c.height = innerHeight * devicePixelRatio; ctx.scale(devicePixelRatio, devicePixelRatio);
   const cols = ['#F2643A', '#FFC93C', '#2F5DA8', '#2EA868', '#FF8FB1'];
-  const ps = Array.from({ length: n }, () => ({ x: innerWidth / 2 + (Math.random() - .5) * 80, y: innerHeight * .35, vx: (Math.random() - .5) * 13, vy: -Math.random() * 13 - 4, r: Math.random() * 6 + 4, c: cols[Math.floor(Math.random() * cols.length)], a: Math.random() * 6, va: (Math.random() - .5) * .3 }));
+  const ps = Array.from({ length: n }, () => ({ x: innerWidth / 2 + (Math.random() - .5) * 80, y: innerHeight * .3, vx: (Math.random() - .5) * 13, vy: -Math.random() * 13 - 4, r: Math.random() * 6 + 4, c: cols[Math.floor(Math.random() * cols.length)], a: Math.random() * 6, va: (Math.random() - .5) * .3 }));
   const t0 = performance.now();
   (function tick(t){
     ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -464,132 +785,11 @@ function confetti(n = 160){
   })(t0);
 }
 
-/* ===== 老师入口 ===== */
-function trials(){ return load(TKEY, []); }
-function teacher(){
-  const ts = trials();
-  show(`${topbar({ back: 'home' })}
-    <h1>老师入口</h1>
-    <div class="list">
-      <div class="panel">
-        <h2>10 秒测试模式</h2>
-        <p class="small">请一位三、四年级的孩子来：每个词自动显示 10 秒，然后合上，只看英文选中文。每个词只答一次，结果带时间保存在这台设备上。5 个记住 4 个＝达标。</p>
-        <button class="btn primary" data-act="trialsetup">开始 10 秒测试</button>
-      </div>
-      <div class="panel">
-        <h2>测试记录（${ts.length}）</h2>
-        ${ts.length ? ts.slice(-5).reverse().map(r => `<div class="rec"><b>${esc(r.child || '未填代号')}</b> · ${esc(r.grade || '')} · ${esc(r.at.replace('T', ' ').slice(0, 16))} · <b>${r.score}/${r.total}</b> ${r.pass ? '✓ 达标' : '未达标'}</div>`).join('') : '<p class="small">还没有记录。</p>'}
-        <div class="row" style="margin-top:12px"><button class="btn ghost" data-act="export" ${ts.length ? '' : 'disabled'}>导出 JSON</button><button class="btn ghost" data-act="cleartrials" ${ts.length ? '' : 'disabled'}>清空</button></div>
-      </div>
-      <div class="panel">
-        <h2>今天的 5 把钥匙</h2>
-        <p class="small">内容来自 ${esc(CONTENT._from)}（${esc(CONTENT.version || '')}）。“已认可”＝Phil 有通过记录；“待审”＝还没有。</p>
-        <div class="ctx">${WORDS.map(w => `<article><h3>${esc(w.word)} <span class="small">${esc(w.meaning)}</span> <span class="st ${w.status === '已认可' ? 'ok' : 'wait'}">${esc(w.status)}</span></h3>
-          <p><b>${esc(w.method)}</b>：${esc(w.hook)}</p><p class="small">来源：${esc(w.source)}</p></article>`).join('')}</div>
-      </div>
-      <div class="panel">
-        <h2>孩子的学习进度</h2>
-        <p class="small">没记住的词第二天会回来。换孩子用这台设备时可以清空。</p>
-        <button class="btn ghost" data-act="resetprogress">清空学习进度</button>
-      </div>
-    </div>`, 'narrow');
-}
-function trialSetup(){
-  S = { mode: 'trialsetup', grade: S.grade || '三年级', child: S.child || '' };
-  show(`${topbar({ back: 'teacher' })}
-    <div class="panel">
-      <h1>10 秒测试</h1>
-      <p class="small">老师操作，孩子看屏幕。看词阶段不用点，10 秒自动翻下一个。</p>
-      <label class="field"><b>孩子代号（选填，别写全名）</b><input id="child" maxlength="20" placeholder="例如：小A" value="${esc(S.child)}"></label>
-      <div class="field"><b>年级</b><div class="seg"><button data-grade="三年级" class="${S.grade === '三年级' ? 'on' : ''}">三年级</button><button data-grade="四年级" class="${S.grade === '四年级' ? 'on' : ''}">四年级</button></div></div>
-      <label class="field"><b>这个孩子之前见过这些词吗？（选填）</b><input id="prior" maxlength="60" placeholder="例如：认识 eye、bed"></label>
-      <div style="height:6px"></div>
-      <button class="btn primary" data-act="trialgo">准备好了，开始</button>
-    </div>`, 'narrow');
-}
-function trialGo(){
-  const child = ($app.querySelector('#child') || {}).value || '', prior = ($app.querySelector('#prior') || {}).value || '';
-  S = { mode: 'trial', grade: S.grade, child: child.trim(), prior: prior.trim(), list: WORDS.slice(0, 5).map(w => w.word), i: 0, first: {}, retest: {}, answers: [], startedAt: isoLocal() };
-  trialLearn();
-}
-function trialLearn(){
-  const w = byWord(S.list[S.i]);
-  show(`${topbar({ dots: S.list.map((x, k) => k < S.i ? 'done' : k === S.i ? 'on' : ''), right: `<span class="iconbtn"><b class="cd" style="color:var(--orange);font-size:20px">10</b>秒</span>` })}
-    ${linkCard(w, '')}`);
-  startTimer(10);
-  speak(w.word, $app.querySelector('.say'));
-  let left = 10; const cd = $app.querySelector('.cd');
-  const tick = () => { left--; if (cd) cd.textContent = left; if (left > 0) later(tick, 1000); else { S.i++; S.i < S.list.length ? trialLearn() : trialClosed(); } };
-  later(tick, 1000);
-}
-function trialClosed(){
-  show(`<div class="hero" style="text-align:center;padding:40px 22px;margin-top:30px">
-      <div style="font-size:64px;line-height:1">🙈</div><h1>合上啦！</h1>
-      <p class="small" style="font-size:16px">现在只看英文。请孩子自己选，老师不提示。</p>
-      <div style="height:16px"></div><button class="btn primary" data-act="trialquiz">开始测</button></div>`, 'narrow');
-}
-function trialQuiz(){ S.queue = shuffle(S.list); S.done = []; S.mode = 'trial'; trialQ(); }
-function trialQ(){ quizStep(); S.q.shownAt = performance.now(); }
-function trialAnswered(w, pick, ok){
-  S.answers.push({ word: w.word, correct: w.meaning, picked: pick, ok, ms: Math.round(performance.now() - S.q.shownAt), options: S.q.opts });
-  const fb = $app.querySelector('.fb'); fb.className = 'fb ' + (ok ? 'ok' : 'no'); fb.textContent = ok ? '记下了 ✓' : '记下了';
-  later(() => { S.done.push(S.queue.shift()); S.queue.length ? trialQ() : trialResult(); }, 800);
-}
-function trialResult(){
-  const score = S.answers.filter(a => a.ok).length, total = S.list.length, pass = score >= 4;
-  const rec = { id: 't' + Date.now(), at: isoLocal(), startedAt: S.startedAt, child: S.child, grade: S.grade, priorKnowledge: S.prior,
-    secondsPerWord: 10, contentVersion: CONTENT.version || '', contentFrom: CONTENT._from, score, total, passBar: '4/5', pass,
-    answers: S.answers, words: S.list.map(x => { const w = byWord(x); return { word: w.word, hook: w.hook, status: w.status }; }),
-    userAgent: navigator.userAgent };
-  const all = trials(); all.push(rec); save(TKEY, all);
-  show(`${topbar({ back: 'teacher' })}
-    <div class="hero" style="text-align:center">
-      <div class="small">10 秒测试 · ${esc(S.child || '未填代号')} · ${esc(S.grade)}</div>
-      <div class="score">${score}<small>/${total}</small></div>
-      <div class="verdict ${pass ? 'pass' : 'fail'}">${pass ? '✓ 这个孩子达到 4/5' : '这个孩子未达到 4/5'}</div>
-      <ul class="wl">${S.answers.map(a => `<li><span class="w">${esc(a.word)}</span><span class="m">${a.ok ? esc(a.correct) : `选了「${esc(a.picked)}」`}</span><span class="tag ${a.ok ? 'ok' : 'again'}">${a.ok ? '想起来了' : '没想起'}</span></li>`).join('')}</ul>
-      <p class="small">已保存在本机，记录时间 ${esc(rec.at.replace('T', ' ').slice(0, 19))}</p>
-      <div class="list"><button class="btn primary" data-act="export">导出全部记录 JSON</button><button class="btn ghost" data-act="trialsetup">再测一个孩子</button></div>
-    </div>`, 'narrow');
-  if (score === total) confetti();
-}
-function exportTrials(){
-  const data = { exportedAt: isoLocal(), app: '右脑记单词 · 5 词 MVP', trials: trials() };
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '10秒测试记录-' + today() + '.json';
-  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
-  toast('已导出 ' + data.trials.length + ' 条记录');
-}
-
-/* ---------- 点击分发 ---------- */
-$app.addEventListener('click', e => {
-  const say = e.target.closest('[data-say]'); if (say) return speak(say.dataset.say, say);
-  const opt = e.target.closest('[data-opt]'); if (opt) return answer(opt);
-  const g = e.target.closest('[data-grade]'); if (g) { S.grade = g.dataset.grade; $app.querySelectorAll('[data-grade]').forEach(b => b.classList.toggle('on', b === g)); return; }
-  const a = e.target.closest('[data-act]'); if (!a) return;
-  switch (a.dataset.act) {
-    case 'home': if ('speechSynthesis' in window) speechSynthesis.cancel(); return home();
-    case 'start': return startSession(false);
-    case 'practice': return startSession(true);
-    case 'next': S.i++; return S.i < S.list.length ? learnStep() : closeStep();
-    case 'beginquiz': return beginQuiz();
-    case 'retry': return quizStep(S.q.word);
-    case 'teacher': S = {}; return teacher();
-    case 'trialsetup': return trialSetup();
-    case 'trialgo': return trialGo();
-    case 'trialquiz': return trialQuiz();
-    case 'export': return exportTrials();
-    case 'cleartrials': if (confirm('确定清空所有 10 秒测试记录？建议先导出。')) { save(TKEY, []); teacher(); } return;
-    case 'resetprogress': if (confirm('确定清空这台设备上的学习进度？')) { localStorage.removeItem(KEY); toast('已清空'); } return;
-  }
-});
-
-window.__rb = { get S(){ return S; }, get WORDS(){ return WORDS; }, today, addDays, todaysPlan, progress, trials, home };
+/* ---------- 启动 ---------- */
 loadContent().then(() => {
-  if (!WORDS.length) { $app.innerHTML = '<p style="padding:24px">词库没读到。请检查 content/words.json。</p>'; return; }
-  home();
-  document.dispatchEvent(new Event('rb:ready'));
-});
+  if (QS.get('parent') === '1') renderParent(); else renderHome();
+}).catch(err => { $app.innerHTML = '<p style="padding:20px">内容没加载出来：' + esc(err && err.message) + '</p>'; });
+window.__rb = { P, nextSession, buildPath, it, get S(){ return S; } }; // 测试用
 })();
 </script>
 </body>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="拿根骨头逗一逗，小狗摇着尾巴跳起来"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EAF7EC"/>
+<ellipse cx="170" cy="216" rx="110" ry="10" fill="#CFE8D3"/>
+<g transform="translate(-20 0)"><rect x="50" y="142" width="40" height="38" rx="13" fill="#2F5DA8"/><circle cx="70" cy="120" r="23" fill="#FFD9B8"/><path d="M47 117 q2 -24 24 -24 q20 0 23 20 q-9 -9 -20 -7 q-13 2 -27 11z" fill="#2B2B2B"/><circle cx="62" cy="121" r="3" fill="#2B2B2B"/><circle cx="78" cy="121" r="3" fill="#2B2B2B"/><circle cx="56" cy="129" r="4" fill="#FFB0A0" opacity=".7"/><circle cx="84" cy="129" r="4" fill="#FFB0A0" opacity=".7"/><path d="M64 132 q6 7 12 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/><path d="M86 150 l40 -40" stroke="#FFD9B8" stroke-width="9" stroke-linecap="round"/></g>
+<g class="pulse"><path d="M100 92 h34 a8 8 0 1 1 6 10 a8 8 0 1 1 -6 6 h-34 a8 8 0 1 1 -6 -6 a8 8 0 1 1 6 -10z" fill="#fff" stroke="#C9B79C" stroke-width="2"/></g>
+<g class="bob">
+ <path class="sway" d="M262 150 q26 -20 20 -48" fill="none" stroke="#C98A4B" stroke-width="10" stroke-linecap="round"/>
+ <ellipse cx="220" cy="168" rx="52" ry="34" fill="#E0A465"/>
+ <rect x="182" y="188" width="14" height="28" rx="7" fill="#C98A4B"/><rect x="238" y="188" width="14" height="28" rx="7" fill="#C98A4B"/>
+ <circle cx="186" cy="124" r="38" fill="#E0A465"/>
+ <ellipse cx="156" cy="118" rx="12" ry="26" fill="#8A5A3A" transform="rotate(20 156 118)"/><ellipse cx="216" cy="118" rx="12" ry="26" fill="#8A5A3A" transform="rotate(-20 216 118)"/>
+ <ellipse cx="176" cy="140" rx="18" ry="13" fill="#F6D7B0"/><ellipse cx="172" cy="134" rx="7" ry="5" fill="#2B2B2B"/>
+ <circle cx="174" cy="116" r="5" fill="#2B2B2B"/><circle cx="200" cy="116" r="5" fill="#2B2B2B"/>
+ <path d="M168 148 q4 12 12 2" fill="#E86A6A"/>
+</g></svg>

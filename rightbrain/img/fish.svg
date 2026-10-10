@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="小鱼从水里飞起来，又扑通掉回去洗个澡"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#E3F4FF"/>
+<path d="M0 170 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V240 H0z" fill="#7FC4EC"/>
+<path d="M0 186 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V240 H0z" fill="#4FA6DC"/>
+<path d="M120 172 q40 -140 120 -60" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round" opacity=".9"/>
+<g class="bob"><g transform="rotate(-24 180 86)">
+ <ellipse cx="180" cy="86" rx="44" ry="26" fill="#FF8A3D"/>
+ <path d="M220 86 l30 -24 v48z" fill="#FF6A1F"/><path d="M166 62 q14 -18 30 0z" fill="#FF6A1F"/>
+ <circle cx="156" cy="80" r="8" fill="#fff"/><circle cx="154" cy="80" r="4.5" fill="#2B2B2B"/>
+ <path d="M140 94 q6 4 10 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/>
+ <path d="M178 70 q8 16 0 32 M194 70 q8 16 0 32" fill="none" stroke="#FFB27A" stroke-width="3"/>
+</g></g>
+<g fill="#fff" stroke="#9AD3E6" stroke-width="2"><circle class="fall" cx="96" cy="150" r="7"/><circle class="fall f2" cx="112" cy="140" r="5"/><circle class="fall f3" cx="80" cy="140" r="4"/><circle class="fall f2" cx="250" cy="150" r="6"/></g></svg>

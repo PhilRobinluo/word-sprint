@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="两只小手一合——啪！拍手"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF3E8"/>
+<g style="animation:cl .8s ease-in-out infinite;transform-box:fill-box" ><g transform="translate(118 150) scale(1 1)"><rect x="-26" y="-40" width="52" height="70" rx="24" fill="#FFD9B8"/><rect x="-26" y="-64" width="12" height="34" rx="6" fill="#FFD9B8"/><rect x="-12" y="-72" width="12" height="40" rx="6" fill="#FFD9B8"/><rect x="2" y="-70" width="12" height="38" rx="6" fill="#FFD9B8"/><rect x="16" y="-60" width="11" height="30" rx="5.5" fill="#FFD9B8"/><rect x="-44" y="-26" width="26" height="12" rx="6" fill="#FFD9B8" transform="rotate(-30 -30 -20)"/><rect x="-16" y="28" width="32" height="40" fill="#3A8DDE"/></g></g>
+<g style="animation:cr .8s ease-in-out infinite;transform-box:fill-box"><g transform="translate(202 150) scale(-1 1)"><rect x="-26" y="-40" width="52" height="70" rx="24" fill="#FFD9B8"/><rect x="-26" y="-64" width="12" height="34" rx="6" fill="#FFD9B8"/><rect x="-12" y="-72" width="12" height="40" rx="6" fill="#FFD9B8"/><rect x="2" y="-70" width="12" height="38" rx="6" fill="#FFD9B8"/><rect x="16" y="-60" width="11" height="30" rx="5.5" fill="#FFD9B8"/><rect x="-44" y="-26" width="26" height="12" rx="6" fill="#FFD9B8" transform="rotate(-30 -30 -20)"/><rect x="-16" y="28" width="32" height="40" fill="#3A8DDE"/></g></g>
+<style>@keyframes cl{0%,100%{transform:translateX(-14px)}50%{transform:translateX(10px)}}@keyframes cr{0%,100%{transform:translateX(14px)}50%{transform:translateX(-10px)}}</style>
+<g class="flash" stroke="#F2643A" stroke-width="6" stroke-linecap="round"><path d="M160 40 v22 M120 52 l10 16 M200 52 l-10 16 M96 80 l16 8 M224 80 l-16 8"/></g>
+<g fill="#FFC93C"><path class="pulse" d="M40 60 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5z"/><path class="pulse" d="M280 140 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z"/></g></svg>

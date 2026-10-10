@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="球飞过来，双手一合接住它"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EAF3FF"/>
+<path d="M30 60 q60 -40 110 10" fill="none" stroke="#9BB8DE" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round"/>
+<g class="bob"><circle cx="150" cy="96" r="30" fill="#F2643A"/><path d="M122 86 q28 14 56 0 M128 112 q22 -12 44 0" fill="none" stroke="#fff" stroke-width="4"/></g>
+<g transform="rotate(-20 110 170)"><g transform="translate(110 170) scale(1 1)"><rect x="-26" y="-40" width="52" height="70" rx="24" fill="#FFD9B8"/><rect x="-26" y="-64" width="12" height="34" rx="6" fill="#FFD9B8"/><rect x="-12" y="-72" width="12" height="40" rx="6" fill="#FFD9B8"/><rect x="2" y="-70" width="12" height="38" rx="6" fill="#FFD9B8"/><rect x="16" y="-60" width="11" height="30" rx="5.5" fill="#FFD9B8"/><rect x="-44" y="-26" width="26" height="12" rx="6" fill="#FFD9B8" transform="rotate(-30 -30 -20)"/><rect x="-16" y="28" width="32" height="40" fill="#3A8DDE"/></g></g><g transform="rotate(20 190 170)"><g transform="translate(190 170) scale(-1 1)"><rect x="-26" y="-40" width="52" height="70" rx="24" fill="#FFD9B8"/><rect x="-26" y="-64" width="12" height="34" rx="6" fill="#FFD9B8"/><rect x="-12" y="-72" width="12" height="40" rx="6" fill="#FFD9B8"/><rect x="2" y="-70" width="12" height="38" rx="6" fill="#FFD9B8"/><rect x="16" y="-60" width="11" height="30" rx="5.5" fill="#FFD9B8"/><rect x="-44" y="-26" width="26" height="12" rx="6" fill="#FFD9B8" transform="rotate(-30 -30 -20)"/><rect x="-16" y="28" width="32" height="40" fill="#3A8DDE"/></g></g></svg>

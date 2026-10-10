@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="一个想法冒出来，立刻用铅笔写进小本"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF8E8"/>
+<g class="bob"><g transform="rotate(-6 150 140)">
+ <rect x="80" y="70" width="150" height="140" rx="10" fill="#3A8DDE"/>
+ <rect x="94" y="78" width="130" height="126" rx="6" fill="#fff"/>
+ <g stroke="#CFE0F5" stroke-width="3"><path d="M104 106 h110 M104 126 h110 M104 146 h110 M104 166 h110 M104 186 h110"/></g>
+ <path d="M106 104 q14 -10 26 0 t26 0 M106 124 q10 -8 20 0 t24 0 t20 0" fill="none" stroke="#2F5DA8" stroke-width="3" stroke-linecap="round"/>
+ <g fill="#B8C4D6"><circle cx="86" cy="84" r="5"/><circle cx="86" cy="100" r="5"/><circle cx="86" cy="116" r="5"/><circle cx="86" cy="132" r="5"/><circle cx="86" cy="148" r="5"/><circle cx="86" cy="164" r="5"/><circle cx="86" cy="180" r="5"/><circle cx="86" cy="196" r="5"/></g>
+</g></g>
+<g class="sway"><g transform="rotate(35 230 140)"><rect x="222" y="70" width="16" height="110" rx="3" fill="#FFC93C"/><path d="M222 180 h16 l-8 20z" fill="#F5D6A8"/><path d="M227 192 h6 l-3 8z" fill="#2B2B2B"/><rect x="222" y="62" width="16" height="12" rx="3" fill="#FF8FB1"/></g></g>
+<g class="pulse"><circle cx="256" cy="54" r="22" fill="#FFE26A"/><rect x="248" y="74" width="16" height="12" rx="3" fill="#B8C4D6"/><g stroke="#FFC93C" stroke-width="4" stroke-linecap="round"><path d="M256 20 v-8 M228 32 l-6 -6 M284 32 l6 -6"/></g></g></svg>

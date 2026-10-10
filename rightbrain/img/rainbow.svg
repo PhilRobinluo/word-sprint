@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="刚下完雨，天上挂出一张弯弯的弓"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#E9F3FF"/>
+<g fill="none" stroke-width="14"><path d="M40 210 a120 120 0 0 1 240 0" stroke="#F2643A"/><path d="M54 210 a106 106 0 0 1 212 0" stroke="#FF9F2E"/><path d="M68 210 a92 92 0 0 1 184 0" stroke="#FFC93C"/><path d="M82 210 a78 78 0 0 1 156 0" stroke="#2EA868"/><path d="M96 210 a64 64 0 0 1 128 0" stroke="#3A8DDE"/><path d="M110 210 a50 50 0 0 1 100 0" stroke="#7B5CD6"/></g>
+<g class="bob"><g fill="#fff"><circle cx="50" cy="196" r="22"/><circle cx="76" cy="186" r="26"/><circle cx="100" cy="200" r="18"/></g><g fill="#fff"><circle cx="230" cy="200" r="18"/><circle cx="254" cy="186" r="26"/><circle cx="280" cy="196" r="22"/></g></g>
+<g class="drift"><g fill="#B8C4D6"><circle cx="66" cy="50" r="16"/><circle cx="86" cy="44" r="20"/><circle cx="106" cy="52" r="14"/></g>
+<g stroke="#7FB2E5" stroke-width="3" stroke-linecap="round"><line class="fall" x1="74" y1="70" x2="70" y2="80"/><line class="fall f2" x1="90" y1="72" x2="86" y2="82"/><line class="fall f3" x1="104" y1="70" x2="100" y2="80"/></g></g></svg>

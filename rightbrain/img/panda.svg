@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="圆滚滚、胖乎乎的胖达抱着竹子啃"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EEF8E8"/>
+<ellipse cx="160" cy="216" rx="110" ry="10" fill="#D5EBCB"/>
+<g class="sway"><rect x="236" y="40" width="12" height="170" rx="6" fill="#6CBF5A"/><path d="M242 80 q30 -20 46 -6 q-26 10 -46 6z M242 120 q-30 -20 -46 -6 q26 10 46 6z" fill="#8ED17B"/><rect x="236" y="96" width="12" height="4" fill="#4E9A40"/><rect x="236" y="150" width="12" height="4" fill="#4E9A40"/></g>
+<g class="bob">
+ <ellipse cx="150" cy="168" rx="78" ry="52" fill="#fff" stroke="#E2E2E2" stroke-width="2"/>
+ <ellipse cx="96" cy="204" rx="24" ry="14" fill="#2B2B2B"/><ellipse cx="204" cy="204" rx="24" ry="14" fill="#2B2B2B"/>
+ <circle cx="150" cy="100" r="52" fill="#fff" stroke="#E2E2E2" stroke-width="2"/>
+ <circle cx="106" cy="58" r="18" fill="#2B2B2B"/><circle cx="194" cy="58" r="18" fill="#2B2B2B"/>
+ <ellipse cx="128" cy="98" rx="14" ry="18" fill="#2B2B2B" transform="rotate(20 128 98)"/><ellipse cx="172" cy="98" rx="14" ry="18" fill="#2B2B2B" transform="rotate(-20 172 98)"/>
+ <circle cx="130" cy="96" r="4" fill="#fff"/><circle cx="170" cy="96" r="4" fill="#fff"/>
+ <ellipse cx="150" cy="118" rx="8" ry="5" fill="#2B2B2B"/><path d="M142 128 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/>
+ <ellipse cx="216" cy="146" rx="26" ry="16" fill="#2B2B2B" transform="rotate(-30 216 146)"/>
+ <ellipse cx="88" cy="150" rx="22" ry="16" fill="#2B2B2B" transform="rotate(30 88 150)"/>
+</g></svg>

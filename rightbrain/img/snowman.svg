@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="两个雪球叠起来，加上胡萝卜鼻子，就是雪人"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EEF5FF"/>
+<g fill="#fff"><circle class="fall " cx="30" cy="40" r="4"/><circle class="fall f2" cx="80" cy="20" r="4"/><circle class="fall f3" cx="240" cy="30" r="4"/><circle class="fall " cx="290" cy="70" r="4"/><circle class="fall f3" cx="50" cy="120" r="4"/><circle class="fall f2" cx="280" cy="140" r="4"/><circle class="fall f2" cx="200" cy="16" r="4"/></g>
+<ellipse cx="160" cy="214" rx="120" ry="14" fill="#fff"/>
+<g class="bob">
+ <circle cx="160" cy="166" r="50" fill="#fff" stroke="#D8E4F2" stroke-width="3"/>
+ <circle cx="160" cy="92" r="36" fill="#fff" stroke="#D8E4F2" stroke-width="3"/>
+ <rect x="130" y="44" width="60" height="10" rx="4" fill="#2B2B2B"/><rect x="140" y="20" width="40" height="30" rx="4" fill="#2B2B2B"/>
+ <circle cx="148" cy="86" r="4.5" fill="#2B2B2B"/><circle cx="172" cy="86" r="4.5" fill="#2B2B2B"/>
+ <path d="M160 94 l30 8 l-30 4z" fill="#FF8A3D"/>
+ <path d="M126 122 q34 16 68 0 l-4 12 q-30 12 -60 0z" fill="#E5484D"/><rect x="176" y="126" width="12" height="30" rx="4" fill="#E5484D"/>
+ <g fill="#2B2B2B"><circle cx="160" cy="150" r="4"/><circle cx="160" cy="170" r="4"/><circle cx="160" cy="190" r="4"/></g>
+ <path d="M112 150 l-40 -30 M74 122 l-8 -12 M74 122 l-14 2" stroke="#8A5A3A" stroke-width="5" stroke-linecap="round"/>
+ <path d="M208 150 l40 -30 M246 122 l8 -12 M246 122 l14 2" stroke="#8A5A3A" stroke-width="5" stroke-linecap="round"/>
+</g></svg>

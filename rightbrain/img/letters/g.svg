@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="字母 g：一只张嘴的小青蛙">
+<style>.bob{animation:bob 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}@keyframes bob{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.03,0.98)}}
+.prop{animation:pr 1.8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}@keyframes pr{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg) scale(1.08)}}
+.blink{animation:bl 3.5s infinite;transform-box:fill-box;transform-origin:50% 50%}@keyframes bl{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="320" height="240" rx="24" fill="#E1F2E9"/>
+<circle cx="270" cy="40" r="60" fill="#CCEADA"/><circle cx="30" cy="220" r="50" fill="#D5EDE0"/>
+<text x="26" y="62" font-family="Fredoka,'Baloo 2',ui-rounded,'Arial Rounded MT Bold','Nunito',system-ui,sans-serif" font-weight="700" font-size="44" fill="#77C69C">G</text>
+<g class="bob">
+<text x="150" y="200" text-anchor="middle" font-family="Fredoka,'Baloo 2',ui-rounded,'Arial Rounded MT Bold','Nunito',system-ui,sans-serif" font-weight="700" font-size="200" fill="#2EA868" stroke="#2EA868" stroke-width="2">g</text>
+
+<g class="blink"><circle cx="137" cy="98" r="11" fill="#fff" stroke="#2B2B2B" stroke-width="2.5"/><circle cx="163" cy="98" r="11" fill="#fff" stroke="#2B2B2B" stroke-width="2.5"/>
+<circle cx="139" cy="100" r="5" fill="#2B2B2B"/><circle cx="165" cy="100" r="5" fill="#2B2B2B"/></g>
+</g>
+<text class="prop" x="268" y="210" text-anchor="middle" font-size="52">🐸</text>
+</svg>

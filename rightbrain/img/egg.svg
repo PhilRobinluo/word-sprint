@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="哥哥饿坏啦，一口吞下一个大鸡蛋"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF7E6"/>
+<ellipse cx="160" cy="218" rx="120" ry="9" fill="#F3E2C4"/>
+<rect x="104" y="146" width="66" height="66" rx="22" fill="#3A8DDE"/>
+<circle cx="137" cy="112" r="40" fill="#FFD9B8"/>
+<path d="M97 104 q2 -42 40 -42 q36 0 40 34 q-16 -16 -36 -12 q-24 4 -44 20z" fill="#2B2B2B"/>
+<path d="M118 102 q6 -6 12 0 M144 102 q6 -6 12 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/>
+<ellipse class="pulse" cx="137" cy="132" rx="16" ry="14" fill="#C2413B"/>
+<circle cx="112" cy="122" r="6" fill="#FFB0A0" opacity=".7"/><circle cx="162" cy="122" r="6" fill="#FFB0A0" opacity=".7"/>
+<g class="bob"><ellipse cx="226" cy="118" rx="34" ry="44" fill="#FFFDF5" stroke="#E7D5B0" stroke-width="4"/><ellipse cx="214" cy="100" rx="8" ry="12" fill="#fff"/></g>
+<g stroke="#F2643A" stroke-width="4" stroke-linecap="round" class="flash"><path d="M182 70 l8 10 M200 58 l2 12"/></g>
+<path d="M60 70 q-10 -14 4 -20 M74 82 q-14 -8 -2 -18" fill="none" stroke="#B8C4D6" stroke-width="3" stroke-linecap="round"/></svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="小猫「咔」地一扑，按住了小老鼠"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF3E0"/>
+<ellipse cx="160" cy="214" rx="120" ry="10" fill="#F5DEC0"/>
+<g class="bob">
+ <path d="M84 120 l10 -40 l26 26z M180 106 l26 -26 l10 40z" fill="#F29A4A"/>
+ <ellipse cx="150" cy="168" rx="70" ry="44" fill="#F29A4A"/>
+ <circle cx="150" cy="122" r="50" fill="#F7B267"/>
+ <path d="M96 98 l8 -42 l30 30z M174 86 l30 -30 l8 42z" fill="#F7B267"/>
+ <path d="M104 92 l4 -22 l16 16z M184 86 l16 -16 l4 22z" fill="#FFC9C9"/>
+ <circle cx="132" cy="118" r="7" fill="#2B2B2B"/><circle cx="168" cy="118" r="7" fill="#2B2B2B"/><circle cx="134" cy="116" r="2.4" fill="#fff"/><circle cx="170" cy="116" r="2.4" fill="#fff"/>
+ <path d="M144 134 l6 6 l6 -6z" fill="#E86A6A"/><path d="M150 140 q-8 10 -16 4 M150 140 q8 10 16 4" fill="none" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round"/>
+ <g stroke="#8A5A3A" stroke-width="2" stroke-linecap="round"><path d="M112 136 l-30 -6 M112 142 l-30 4 M188 136 l30 -6 M188 142 l30 4"/></g>
+ <ellipse cx="206" cy="196" rx="20" ry="12" fill="#F7B267"/>
+</g>
+<g class="flash"><path d="M232 150 l10 -16 M246 168 l18 -6 M230 186 l14 10" stroke="#F2643A" stroke-width="4" stroke-linecap="round"/></g>
+<g transform="translate(250 186)"><ellipse cx="0" cy="10" rx="20" ry="13" fill="#A9A9B8"/><circle cx="16" cy="-2" r="8" fill="#C4C4D0"/><circle cx="-10" cy="6" r="2.5" fill="#2B2B2B"/><path d="M-20 14 q-20 6 -26 -6" fill="none" stroke="#A9A9B8" stroke-width="3"/></g></svg>

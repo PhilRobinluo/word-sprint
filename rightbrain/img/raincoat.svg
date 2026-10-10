@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="雨点扑过来，雨衣把它们挡在外面"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#E6F0FA"/>
+<g stroke="#7FB2E5" stroke-width="4" stroke-linecap="round"><line class="fall " x1="30" y1="30" x2="25" y2="44"/><line class="fall f2" x1="70" y1="60" x2="65" y2="74"/><line class="fall f3" x1="250" y1="40" x2="245" y2="54"/><line class="fall " x1="290" y1="90" x2="285" y2="104"/><line class="fall f3" x1="40" y1="140" x2="35" y2="154"/><line class="fall f2" x1="270" y1="160" x2="265" y2="174"/><line class="fall f2" x1="110" y1="24" x2="105" y2="38"/><line class="fall " x1="210" y1="20" x2="205" y2="34"/><line class="fall f2" x1="20" y1="200" x2="15" y2="214"/><line class="fall f3" x1="300" y1="200" x2="295" y2="214"/></g>
+<g class="bob">
+ <path d="M160 52 q-52 0 -56 70 l-20 86 h152 l-20 -86 q-4 -70 -56 -70z" fill="#FFC93C"/>
+ <circle cx="160" cy="104" r="28" fill="#FFD9B8"/><circle cx="152" cy="104" r="3" fill="#2B2B2B"/><circle cx="168" cy="104" r="3" fill="#2B2B2B"/><circle cx="146" cy="112" r="4" fill="#FFB0A0" opacity=".7"/><circle cx="174" cy="112" r="4" fill="#FFB0A0" opacity=".7"/><path d="M152 116 q8 7 16 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/>
+ <path d="M126 96 q2 -36 34 -36 q32 0 34 36 q-10 -18 -34 -18 q-24 0 -34 18z" fill="#F2B400"/>
+ <g fill="#F2B400"><circle cx="160" cy="150" r="5"/><circle cx="160" cy="172" r="5"/><circle cx="160" cy="194" r="5"/></g>
+ <rect x="128" y="206" width="22" height="16" rx="6" fill="#E5484D"/><rect x="170" y="206" width="22" height="16" rx="6" fill="#E5484D"/>
+</g></svg>

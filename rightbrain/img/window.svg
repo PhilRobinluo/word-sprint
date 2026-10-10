@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="风从墙上的方框吹进屋里"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#F3EEE6"/>
+<rect x="70" y="40" width="180" height="150" rx="10" fill="#8EC9F0" stroke="#A0703F" stroke-width="12"/>
+<circle cx="200" cy="80" r="16" fill="#FFD45C"/><g fill="#fff"><circle cx="110" cy="80" r="12"/><circle cx="126" cy="74" r="14"/><circle cx="142" cy="82" r="10"/></g>
+<path d="M160 40 v150 M70 115 h180" stroke="#A0703F" stroke-width="8"/>
+<g class="sway"><path d="M70 34 h40 q-10 60 10 156 h-50z" fill="#F2643A" opacity=".9"/></g>
+<g class="sway" style="animation-delay:-1.5s"><path d="M250 34 h-40 q10 60 -10 156 h50z" fill="#F2643A" opacity=".9"/></g>
+<rect x="60" y="28" width="200" height="12" rx="6" fill="#6B4423"/><rect x="58" y="190" width="204" height="14" rx="5" fill="#C9965E"/>
+<g class="drift" fill="none" stroke="#6AA9D8" stroke-width="5" stroke-linecap="round"><path d="M120 140 q30 -14 60 0 q20 10 40 -4"/><path d="M110 164 q30 -10 56 2"/></g></svg>
