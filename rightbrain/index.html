@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF6E9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23F2643A%22/%3E%3Ccircle cx=%2212%22 cy=%2216%22 r=%225%22 fill=%22none%22 stroke=%22white%22 stroke-width=%223%22/%3E%3Cpath d=%22M17 16h9M23 16v4%22 stroke=%22white%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<title>右脑记单词 · 今天 5 个词</title>
+<style>
+:root{
+  --bg:#FFF6E9; --paper:#FFFFFF; --ink:#2A2A3A; --muted:#7A7468;
+  --orange:#F2643A; --orange-d:#D94E25; --blue:#2F5DA8; --blue-l:#E6EEFB;
+  --yellow:#FFC93C; --green:#2EA868; --green-l:#E3F6EA; --red:#E5484D; --red-l:#FDE8E8;
+  --line:#F0E4D2; --shadow:0 10px 30px rgba(140,90,30,.12),0 2px 6px rgba(140,90,30,.08);
+  --r:28px;
+  --word-font: ui-rounded,"SF Pro Rounded","Arial Rounded MT Bold","Nunito","Varela Round","Noto Sans",system-ui,sans-serif;
+  --zh-font: "PingFang SC","HarmonyOS Sans SC","Noto Sans CJK SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--zh-font);font-size:16px;line-height:1.55}
+body{background:
+  radial-gradient(600px 400px at 110% -10%, #FFE2C2 0, transparent 60%),
+  radial-gradient(500px 380px at -20% 110%, #DCEBFF 0, transparent 60%), var(--bg);background-attachment:fixed}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+.app{max-width:520px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom));min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;margin-bottom:12px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px;letter-spacing:.5px}
+.brand .key{width:30px;height:30px;border-radius:10px;background:var(--orange);display:grid;place-items:center;box-shadow:0 3px 0 var(--orange-d)}
+.iconbtn{min-width:44px;height:44px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 12px;background:#fff;box-shadow:0 2px 0 var(--line);font-size:14px;color:var(--muted);font-weight:700}
+.dots{display:flex;gap:6px;align-items:center}
+.dots i{width:10px;height:10px;border-radius:50%;background:#EADBC5;transition:all .3s}
+.dots i.on{background:var(--orange);width:22px;border-radius:6px}
+.dots i.done{background:var(--yellow)}
+.screen{flex:1;display:flex;flex-direction:column;animation:enter .38s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes enter{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.btn{min-height:60px;border-radius:20px;padding:0 24px;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;transition:transform .12s, box-shadow .12s, opacity .2s, background .2s}
+.btn:active{transform:translateY(3px)}
+.btn.primary{background:var(--orange);color:#fff;box-shadow:0 5px 0 var(--orange-d)}
+.btn.primary:active{box-shadow:0 2px 0 var(--orange-d)}
+.btn.blue{background:var(--blue);color:#fff;box-shadow:0 5px 0 #1E4589}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:0 4px 0 var(--line)}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.btn.pulse{animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.small{font-size:14px;color:var(--muted)}
+h1{font-size:28px;line-height:1.25;margin:6px 0 6px;font-weight:900}
+h2{font-size:22px;margin:0 0 8px;font-weight:900}
+
+/* home */
+.hero{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:22px 20px 20px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:#FFE7CF}
+.hero > *{position:relative;z-index:1}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 22px}
+.chip{background:#FFF8EE;border:2px solid var(--line);border-radius:999px;padding:5px 16px 5px 5px;display:flex;align-items:center;gap:8px;animation:bob 3s ease-in-out infinite}
+.chip:nth-child(2){animation-delay:-.6s}.chip:nth-child(3){animation-delay:-1.2s}.chip:nth-child(4){animation-delay:-1.8s}.chip:nth-child(5){animation-delay:-2.4s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.chip img{width:46px;height:46px;object-fit:cover;mix-blend-mode:multiply;border-radius:50%;background:#fff}
+.chip b{font-family:var(--word-font);font-size:18px;color:var(--blue);line-height:1.2}
+.chip.review{border-color:var(--yellow);background:#FFF5D6}
+.banner{border-radius:18px;padding:12px 14px;background:#FFF5D6;border:2px dashed var(--yellow);font-weight:700;margin-bottom:14px;font-size:15px}
+.steps{display:flex;gap:8px;margin:18px 2px 4px;justify-content:space-between}
+.steps div{flex:1;text-align:center;font-size:13px;color:var(--muted);font-weight:700}
+.steps b{display:grid;place-items:center;width:38px;height:38px;margin:0 auto 4px;border-radius:50%;background:#fff;box-shadow:0 3px 0 var(--line);font-size:18px}
+.goal{margin-top:16px;background:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:16px 18px;display:flex;align-items:center;gap:14px}
+.goal .gs{display:flex;gap:2px}.goal .gs svg{width:22px;height:22px}
+.goal p{margin:0;font-size:15px;font-weight:700;line-height:1.45}
+.homefoot{margin-top:auto;padding-top:22px;display:flex;justify-content:center}
+
+/* card */
+.card{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 18px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.wordrow{display:flex;align-items:center;justify-content:center;gap:10px;width:100%}
+.bigword{font-family:var(--word-font);font-weight:900;color:var(--orange);letter-spacing:1px;line-height:1.05;margin:2px 0;white-space:nowrap}
+.ipa{font-size:15px;color:var(--muted);font-family:"Noto Sans","Lucida Sans Unicode",sans-serif;margin-top:-2px}
+.say{width:52px;height:52px;border-radius:50%;background:var(--blue-l);display:grid;place-items:center;flex:none;transition:transform .15s}
+.say:active{transform:scale(.92)}
+.say.playing{background:var(--blue);animation:ring 1s infinite}
+.say.playing svg path{fill:#fff;stroke:#fff}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(47,93,168,.45)}100%{box-shadow:0 0 0 14px rgba(47,93,168,0)}}
+.scene{width:100%;max-width:330px;aspect-ratio:4/3;margin:10px auto 6px;border-radius:22px;background:#FFFCF6;display:grid;place-items:center;overflow:hidden}
+.scene img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.scene.png img{width:86%;height:96%}
+.slogan{text-wrap:balance;font-size:23px;font-weight:900;color:var(--blue);line-height:1.3;margin:6px 4px 2px}
+.hook{text-wrap:pretty;font-size:14.5px;color:var(--muted);line-height:1.55;margin:4px 6px 0;max-width:420px}
+.meaning{font-size:34px;font-weight:900;color:var(--orange);margin:8px 0 0;letter-spacing:4px}
+.timer{position:absolute;left:0;top:0;height:6px;background:var(--yellow);width:0;border-radius:0 6px 6px 0}
+.timer.run{animation:fill var(--secs,10s) linear forwards}
+@keyframes fill{to{width:100%}}
+.below{margin-top:14px;display:flex;flex-direction:column;gap:10px;width:100%}
+.below:empty{display:none}
+.relink-tag{display:inline-flex;align-items:center;gap:6px;background:#FFF5D6;color:#8A5A00;font-weight:800;border-radius:999px;padding:6px 14px;margin-bottom:10px;font-size:15px}
+
+/* quiz */
+.qcard{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:30px 18px 26px;text-align:center;position:relative}
+.qlabel{font-size:15px;color:var(--muted);font-weight:700}
+.qword{font-family:var(--word-font);font-weight:900;color:var(--blue);margin:10px 0 6px;white-space:nowrap}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.opt{min-height:84px;border-radius:22px;background:#fff;font-size:26px;font-weight:900;box-shadow:0 5px 0 var(--line),0 0 0 2px var(--line) inset;transition:transform .12s, background .2s, box-shadow .2s;color:var(--ink)}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 var(--line),0 0 0 2px var(--line) inset}
+.opt.right{background:var(--green-l);color:var(--green);box-shadow:0 5px 0 #B7E2C7,0 0 0 3px var(--green) inset;animation:yay .5s}
+.opt.wrong{background:var(--red-l);color:var(--red);box-shadow:0 5px 0 #F5C2C2,0 0 0 3px var(--red) inset;animation:shake .45s}
+.opt.dim{opacity:.45}
+@keyframes yay{40%{transform:scale(1.08)}}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.fb{min-height:34px;margin-top:16px;font-size:20px;font-weight:900}
+.fb.ok{color:var(--green)}.fb.no{color:var(--red)}
+
+/* result */
+.score{font-family:var(--word-font);font-weight:900;font-size:84px;line-height:1;color:var(--orange);margin:8px 0 2px}
+.score small{font-size:40px;color:#E8B48F}
+.stars{display:flex;justify-content:center;gap:6px;margin:6px 0 10px}
+.stars svg{width:38px;height:38px;animation:starpop .5s backwards}
+.bar{position:relative;height:16px;border-radius:10px;background:#F3E7D6;margin:34px 4px 6px;overflow:visible}
+.bar .fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--yellow),var(--orange));transition:width 1s .3s cubic-bezier(.2,.9,.3,1)}
+.bar .mark{position:absolute;left:80%;top:-8px;bottom:-8px;width:3px;background:var(--blue);border-radius:2px}
+.bar .mark span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800;color:var(--blue);white-space:nowrap}
+.verdict{display:inline-block;margin-top:12px;padding:8px 16px;border-radius:999px;font-weight:900;font-size:17px}
+.verdict.pass{background:var(--green-l);color:var(--green)}.verdict.fail{background:#FFF0E0;color:#B8601E}
+@keyframes starpop{from{transform:scale(0) rotate(-40deg)}to{transform:none}}
+.wl{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:8px;text-align:left}
+.wl li{display:flex;align-items:center;gap:12px;background:#FFFBF4;border-radius:16px;padding:10px 14px}
+.wl .w{font-family:var(--word-font);font-weight:900;font-size:20px;color:var(--blue);flex:1}
+.wl .m{font-weight:700}
+.tag{font-size:13px;font-weight:800;border-radius:999px;padding:3px 10px}
+.tag.ok{background:var(--green-l);color:var(--green)}.tag.again{background:#FFF0E0;color:#B8601E}
+
+/* teacher */
+.panel{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}
+.list{display:flex;flex-direction:column;gap:12px}
+.row{display:flex;gap:10px;align-items:center}
+.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}
+.field input{height:52px;border-radius:16px;border:2px solid var(--line);padding:0 14px;font-size:18px;font-family:inherit;background:#FFFBF4}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.seg button{min-height:52px;border-radius:16px;background:#FFFBF4;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:17px}
+.seg button.on{background:var(--blue-l);box-shadow:0 0 0 3px var(--blue) inset;color:var(--blue)}
+.count{font-family:var(--word-font);font-weight:900;font-size:72px;color:var(--orange);line-height:1}
+.ctx{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.ctx article{border:2px solid var(--line);border-radius:18px;padding:12px 14px;background:#FFFCF7}
+.ctx h3{margin:0 0 4px;font-family:var(--word-font);font-size:22px;color:var(--blue);display:flex;align-items:center;gap:8px}
+.ctx p{margin:4px 0;font-size:14.5px}
+.st{font-family:var(--zh-font);font-size:12px;border-radius:999px;padding:2px 9px;font-weight:800}
+.st.ok{background:var(--green-l);color:var(--green)}.st.wait{background:#FFF0E0;color:#B8601E}
+.rec{font-size:14px;border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;z-index:50;animation:enter .3s}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
+
+@media (min-width:900px){
+  .app{max-width:980px;padding-top:28px}
+  .screen.narrow{max-width:560px;margin:0 auto;width:100%}
+  .card.learn{display:grid;grid-template-columns:1.05fr 1fr;grid-template-areas:"word word" "scene text" "scene below";column-gap:32px;text-align:left;padding:28px 36px 30px;align-items:center}
+  .card.learn .wordrow{grid-area:word;justify-content:center}
+  .card.learn .scene{grid-area:scene;max-width:none;margin:8px 0}
+  .card.learn .txt{grid-area:text;align-self:end}
+  .card.learn .below{grid-area:below;align-self:start}
+  .card.learn .slogan{font-size:30px;margin:0}
+  .card.learn .meaning{font-size:44px}
+  .card.learn .hook{font-size:16px;margin:8px 0 0}
+  .qcard{max-width:620px;margin:0 auto;width:100%}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app"><noscript>需要打开 JavaScript 才能使用。</noscript></div>
+<canvas id="confetti" hidden></canvas>
+
+<!-- 内容兜底副本：用 file:// 直接双击打开时浏览器不让读 content/words.json，就用这份。
+     以 content/words.json 为准；改完词库运行 `node tools/embed-content.mjs` 同步这里。 -->
+<script type="application/json" id="fallback-content">
+/*CONTENT-START*/{"deck":"今日 5 词（小学三四年级起点）","version":"mvp-5-20261011","updated":"2026-10-11","note":"字段沿用项目 words.json 的写法（hook/cue/boundary/prereq/scene/method/basis/review_status）。status 只有两种：已认可＝在 Phil 的笔记或审稿台里有他本人通过的记录；待审＝还没有。slogan 是卡片上那一行短口号，从 hook 缩写而来，以 hook 原文为准。distractors 是测验里的 3 个干扰项。","words":[{"word":"bed","ipa":"/bed/","meaning":"床","topic":"家居","method":"字形联想","hook":"把 bed 的三个字母摆开：b 和 d 像床的两头栏杆，中间的 e 是躺下的人。","slogan":"b、d 是床头床尾，e 躺在中间","cue":"看两头那对字母，中间夹着什么？","boundary":"这只是字形线索；发音 /bed/ 要单独听词典。","prereq":"能分清小写 b 与 d 的朝向。","scene":"字母 b 和 d 当床的两头，e 躺在中间","basis":"原创字形线索；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/bed.md（hook/cue/boundary/scene 原文）；prereq 取自 project/lab/mnemonic-300-20261006/words.json","image":"img/bed.png","image_source":"project/lab/word-picture-trial-20261006/bed-v2.png（Codex 生成，未见 Phil 认可记录）","distractors":["桌子","椅子","雨伞"]},{"word":"eye","ipa":"/aɪ/","meaning":"眼睛","topic":"身体","method":"字形联想","hook":"把 eye 写大：左右两个 e 当眼睛，中间 y 当鼻子；看到 e-y-e，就在脑中补出一张有两只眼睛的脸。","slogan":"两个 e 是眼睛，y 是鼻子","cue":"两边相同，中间不同，像脸上的哪种排列？","boundary":"eye 的发音与字母形状无关，须单独听词典。","prereq":"认识小写 e、y；先听过整个词的正确发音。","scene":"e-y-e 排成一张脸：两只眼睛夹着一个鼻子","basis":"原创字形线索；不是词源（同一思路见沪江公开示例 https://m.hujiang.com/en/p1290671/）","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/eye.md（hook/cue/boundary 原文）；prereq 取自 project/lab/mnemonic-300-20261006/words.json；slogan 同 project/lab/微信示例-20261006/素材清单.json","image":"img/eye.png","image_source":"project/lab/word-picture-trial-20261006/eye.png（Codex 生成，未见 Phil 认可记录）","distractors":["鼻子","耳朵","牙刷"]},{"word":"ship","ipa":"/ʃɪp/","meaning":"大船","topic":"交通","method":"音形线索","hook":"ship 中间只有一个 i，把它当船上短短的桅杆；先听 /ʃɪp/，再想起桅杆下的大船，别拖成 sheep 的元音。","slogan":"中间的 i 是桅杆，下面是大船","cue":"看短短的 i，想起它下面承载的东西。","boundary":"ship 是单数一条船；别和 sheep（绵羊）的长元音混。","prereq":"已听过 /ɪ/ 与 /iː/ 的区别。","scene":"大船上竖着一根 i 形桅杆，s、h、p 站在甲板上","basis":"真实音形对比＋原创画面；不是词源","status":"待审","review_status":"AI初稿；待 Phil 逐词确认","source":"obsidian-notes/10-单词速记库/words/ship.md（hook/cue/boundary 原文）；prereq 取自 project/lab/mnemonic-300-20261006/words.json；scene 为本次补写","image":"img/ship.svg","image_source":"本次手绘 SVG（i 当桅杆），待审","distractors":["绵羊","汽车","床"]},{"word":"umbrella","ipa":"/ʌmˈbrelə/","meaning":"雨伞","topic":"生活","method":"谐音","hook":"umbrella 读起来像「俺不来了」：下雨天躲在伞下朝朋友喊——头顶撑着的那把伞就是雨伞。","slogan":"俺不来了！","cue":"下雨天你躲在什么下面喊「俺不来了」？","boundary":"这是谐音联想，不是词源；谐音不代替英语发音，要听真实读音。","prereq":"俺、不、来、了 都是熟字（Phil 判定）。","scene":"下雨天躲在伞下朝朋友喊","basis":"谐音联想；不是词源","status":"已认可","review_status":"谐音锚点「俺不来了」由 Phil 2026-10-06 判为合格","source":"obsidian-notes/11-单词速记skill/SKILL.md「对照表（Phil 2026-10-06 亲自判的）」：umbrella →「俺不来了」✅ 合格；画面与扣回取自 11-单词速记skill/references/谐音法.md「验收过的样本」。hook 按 谐音法.md 固定句式拼成，cue 为本次补写（待审）","image":"img/umbrella.svg","image_source":"本次手绘 SVG（雨天伞下喊「俺不来了」），待审","distractors":["雨衣","帽子","眼睛"]},{"word":"toothbrush","ipa":"/ˈtuːθbrʌʃ/","meaning":"牙刷","topic":"生活","method":"真实合成","hook":"tooth 牙齿＋brush 刷子：想象小刷子排队给一颗颗牙齿洗澡；前半说刷哪里，后半说用什么。","slogan":"tooth 牙齿 ＋ brush 刷子","cue":"回想那把小刷子服务的部位。","boundary":"组合里用 tooth，不换成复数 teeth；本卡只教工具名。","prereq":"先认识 tooth（牙齿）、brush（刷子）","scene":"小刷子给一颗颗牙齿洗澡","basis":"真实构词；场景为原创助记","status":"已认可","review_status":"Phil 在审稿台点了 pass（2026-10-06 17:29 UTC+8，版本 87453c4fedea1f33）","source":"project/lab/mnemonic-review-20261006/feedback/live/state.json reviews.toothbrush = pass（对应 project/lab/mnemonic-300-20261006/words.json 中这条 hook+cue）；boundary/prereq 取自 obsidian-notes/10-单词速记库/words/toothbrush.md","image":"img/toothbrush.svg","image_source":"本次手绘 SVG（小刷子给牙齿洗澡），待审","distractors":["牙膏","毛巾","梳子"]}]}/*CONTENT-END*/
+</script>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- 小工具 ---------- */
+const $app = document.getElementById('app');
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const timers = new Set();
+function later(fn, ms){ const t = setTimeout(() => { timers.delete(t); fn(); }, ms); timers.add(t); return t; }
+function clearTimers(){ timers.forEach(clearTimeout); timers.clear(); }
+const pad = n => String(n).padStart(2, '0');
+function dateKey(d){ return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+function today(){
+  const q = new URLSearchParams(location.search).get('today'); // 方便老师/审稿时模拟“第二天”：?today=2026-10-12
+  if (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) return q;
+  return dateKey(new Date());
+}
+function addDays(key, n){ const [y, m, d] = key.split('-').map(Number); return dateKey(new Date(y, m - 1, d + n)); }
+function isoLocal(d = new Date()){
+  const off = -d.getTimezoneOffset(), s = off >= 0 ? '+' : '-';
+  return dateKey(d) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()) + s + pad(Math.floor(Math.abs(off) / 60)) + ':' + pad(Math.abs(off) % 60);
+}
+function toast(msg){ const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2200); }
+
+/* ---------- 存储 ---------- */
+const KEY = 'rbw.progress.v1', TKEY = 'rbw.trials.v1';
+function load(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } }
+function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+function progress(){ const p = load(KEY, null); return p && p.words ? p : { words: {}, sessions: [] }; }
+
+/* ---------- 发音 ---------- */
+let voice = null;
+function pickVoice(){
+  if (!('speechSynthesis' in window)) return;
+  const vs = speechSynthesis.getVoices();
+  voice = vs.find(v => /en[-_]US/i.test(v.lang) && /Samantha|Google|Natural|Aria|Jenny/i.test(v.name)) || vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+}
+if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function speak(word, btn){
+  if (!('speechSynthesis' in window)) { toast('这个浏览器不能发音，换 Safari 或 Chrome 试试'); return; }
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(word);
+    u.lang = 'en-US'; u.rate = 0.8; if (voice) u.voice = voice;
+    if (btn) { btn.classList.add('playing'); const off = () => btn.classList.remove('playing'); u.onend = off; u.onerror = off; setTimeout(off, 2500); }
+    speechSynthesis.speak(u);
+  } catch (e) { toast('发音没播出来，再点一次'); }
+}
+
+/* ---------- 图标 ---------- */
+const ICON = {
+  key: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="12" r="4.5" fill="none" stroke="#fff" stroke-width="2.6"/><path d="M12.5 12H21M18 12v3.5M21 12v2.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>',
+  speaker: '<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#2F5DA8"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11" fill="none" stroke="#2F5DA8" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  star: c => `<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.6L12 17.2 6.1 20.4l1.3-6.6L2.5 9.3l6.6-.8z" fill="${c}" stroke="${c === '#E9DCC8' ? '#E0CFB4' : '#E2A400'}" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
+  back: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+};
+
+/* ---------- 内容 ---------- */
+let WORDS = [], CONTENT = null;
+async function loadContent(){
+  try {
+    const r = await fetch('content/words.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    CONTENT = await r.json(); CONTENT._from = 'content/words.json';
+  } catch (e) {
+    const raw = document.getElementById('fallback-content').textContent.replace('/*CONTENT-START*/', '').replace('/*CONTENT-END*/', '');
+    CONTENT = JSON.parse(raw); CONTENT._from = '内置副本';
+  }
+  WORDS = (CONTENT.words || []).filter(w => w && w.word && w.meaning);
+}
+const byWord = w => WORDS.find(x => x.word === w);
+function optionsFor(w){
+  const pool = (w.distractors || []).filter(m => m !== w.meaning);
+  const others = shuffle(WORDS.filter(x => x.word !== w.word).map(x => x.meaning)).filter(m => !pool.includes(m) && m !== w.meaning);
+  const picks = pool.slice(0, 3).concat(others).slice(0, 3);
+  return shuffle([w.meaning].concat(picks));
+}
+function wordSize(word, max, min, width){
+  // 单词按长度缩放，toothbrush 在 390 宽手机上也不换行
+  const avail = Math.min(width || window.innerWidth, 980) - 120;
+  return Math.max(min, Math.min(max, Math.floor(avail / (word.length * 0.62))));
+}
+
+/* ---------- 今日安排 ---------- */
+function todaysPlan(){
+  const p = progress(), t = today();
+  const due = WORDS.filter(w => { const s = p.words[w.word]; return s && s.status === 'missed' && s.due <= t; });
+  const fresh = WORDS.filter(w => !p.words[w.word]);
+  return { review: due.map(w => w.word), list: due.concat(fresh).slice(0, 5) };
+}
+
+/* ---------- 共用片段 ---------- */
+function topbar(opts = {}){
+  const left = opts.back ? `<button class="iconbtn" data-act="${opts.back}" aria-label="返回">${ICON.back}</button>` :
+    `<div class="brand"><span class="key">${ICON.key}</span>右脑记单词</div>`;
+  const dots = opts.dots ? `<div class="dots" aria-label="进度">${opts.dots.map(s => `<i class="${s}"></i>`).join('')}</div>` : '';
+  const right = opts.right || '';
+  return `<div class="top">${left}${dots}${right}</div>`;
+}
+function linkCard(w, extra = ''){
+  const png = /\.png$/i.test(w.image || '');
+  const scene = w.image ? `<div class="scene ${png ? 'png' : ''}"><img src="${esc(w.image)}" alt="${esc(w.scene || w.slogan)}"></div>` : '';
+  return `<div class="card learn">
+    <div class="timer"></div>
+    <div class="wordrow">
+      <div><div class="bigword" style="font-size:${wordSize(w.word, 72, 40)}px">${esc(w.word)}</div><div class="ipa">${esc(w.ipa || '')}</div></div>
+      <button class="say" data-say="${esc(w.word)}" aria-label="听发音">${ICON.speaker}</button>
+    </div>
+    ${scene}
+    <div class="txt">
+      <div class="slogan">${esc(w.slogan || w.hook)}</div>
+      <div class="hook">${esc(w.hook)}</div>
+      <div class="meaning">${esc(w.meaning)}</div>
+    </div>
+    <div class="below">${extra}</div>
+  </div>`;
+}
+function startTimer(secs){ const t = $app.querySelector('.timer'); if (!t) return; t.style.setProperty('--secs', secs + 's'); t.classList.remove('run'); void t.offsetWidth; t.classList.add('run'); }
+
+/* ---------- 路由 ---------- */
+let S = {}; // 当前一轮的状态
+function show(html, cls = ''){
+  clearTimers();
+  $app.innerHTML = `<section class="screen ${cls}">${html}</section>`;
+  window.scrollTo(0, 0);
+  const h = $app.querySelector('h1,h2,.bigword,.qword'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+}
+
+/* ===== 首页 ===== */
+function home(){
+  const plan = todaysPlan(), p = progress();
+  const done = plan.list.length === 0;
+  const goalN = done ? WORDS.length : plan.list.length;
+  const tomorrow = WORDS.filter(w => (p.words[w.word] || {}).status === 'missed');
+  const chips = (done ? WORDS : plan.list).map(w => `<div class="chip ${plan.review.includes(w.word) ? 'review' : ''}">${w.image ? `<img src="${esc(w.image)}" alt="">` : ''}<b>${esc(w.word)}</b></div>`).join('');
+  show(`${topbar({ right: '<button class="iconbtn" data-act="teacher">老师入口</button>' })}
+    ${plan.review.length ? `<div class="banner">昨天没记住的 ${plan.review.map(esc).join('、')} 回来啦，先把${plan.review.length > 1 ? '它们' : '它'}拿下！</div>` : ''}
+    <div class="hero">
+      ${done ? `<h1>今天的词都学完啦！</h1><p class="small">${tomorrow.length ? `明天再来复习：${tomorrow.map(w => esc(w.word)).join('、')}` : '5 个词第一次就全答对了，太棒了。'}</p>`
+             : `<h1>今天 ${plan.list.length} 个词</h1><p class="small">每个词先看一把“钥匙”，再合上考考自己。</p>`}
+      <div class="chips">${chips}</div>
+      ${done ? `<button class="btn ghost" data-act="practice">再练一遍（不计成绩）</button>`
+             : `<button class="btn primary pulse" data-act="start">开始学习</button>`}
+      <div class="steps"><div><b>👀</b>看钥匙</div><div><b>🙈</b>合上</div><div><b>✏️</b>选意思</div><div><b>📅</b>明天复习</div></div>
+    </div>
+    <div class="goal"><div class="gs">${Array.from({ length: goalN }, (_, k) => ICON.star(k < Math.ceil(goalN * 0.8) ? '#FFC93C' : '#E9DCC8')).join('')}</div><p>今天的小目标：合上以后，<br>${goalN} 个里第一次就想起 ${Math.ceil(goalN * 0.8)} 个！</p></div>
+    <div class="homefoot small">进度只存在这台设备的浏览器里</div>`, 'narrow');
+}
+
+/* ===== 学习 ===== */
+function startSession(practice){
+  const plan = todaysPlan();
+  const list = practice ? WORDS.slice() : plan.list;
+  S = { mode: 'learn', practice: !!practice, list: list.map(w => w.word), i: 0, first: {}, retest: {}, queue: [], q: null };
+  learnStep();
+}
+function sessionDots(){ return S.list.map((w, k) => k < S.i ? 'done' : k === S.i ? 'on' : ''); }
+function learnStep(){
+  const w = byWord(S.list[S.i]);
+  const last = S.i === S.list.length - 1;
+  show(`${topbar({ back: 'home', dots: sessionDots(), right: `<span class="iconbtn" aria-hidden="true">${S.i + 1}/${S.list.length}</span>` })}
+    ${linkCard(w, `<button class="btn primary" data-act="next" disabled>${last ? '合上，考考我' : '下一个'}</button>`)}`);
+  startTimer(10);
+  speak(w.word, $app.querySelector('.say'));
+  const b = $app.querySelector('[data-act=next]');
+  later(() => { b.disabled = false; }, 3000);   // 至少看 3 秒
+  later(() => { b.classList.add('pulse'); }, 10000); // 10 秒到了，按钮跳一跳
+}
+function closeStep(){
+  show(`${topbar({ back: 'home' })}
+    <div class="hero" style="text-align:center;padding:36px 22px">
+      <div style="font-size:64px;line-height:1">🙈</div>
+      <h1>合上啦！</h1>
+      <p class="small" style="font-size:16px">图片、中文和口号都收起来了。<br>只看英文，选出它的中文意思。</p>
+      <div style="height:18px"></div>
+      <button class="btn primary pulse" data-act="beginquiz">开始测</button>
+    </div>`, 'narrow');
+}
+
+/* ===== 测 ===== */
+function beginQuiz(){
+  S.mode = 'quiz';
+  S.queue = shuffle(S.list);
+  S.done = [];
+  quizStep();
+}
+function quizDots(){ return S.list.map((w, k) => k < S.done.length ? 'done' : k === S.done.length ? 'on' : ''); }
+function quizStep(retry){
+  const word = retry || S.queue[0];
+  const w = byWord(word);
+  S.q = { word, retry: !!retry, opts: optionsFor(w), answered: false };
+  show(`${topbar({ back: 'home', dots: quizDots(), right: `<span class="iconbtn" aria-hidden="true">测 ${S.done.length + 1}/${S.list.length}</span>` })}
+    <div class="qcard">
+      <div class="qlabel">${retry ? '再试一次！它是什么意思？' : '它是什么意思？'}</div>
+      <div class="qword" style="font-size:${wordSize(w.word, 80, 44)}px">${esc(w.word)}</div>
+      <button class="say" style="margin:0 auto" data-say="${esc(w.word)}" aria-label="听发音">${ICON.speaker}</button>
+      <div class="opts">${S.q.opts.map(m => `<button class="opt" data-opt="${esc(m)}">${esc(m)}</button>`).join('')}</div>
+      <div class="fb" aria-live="polite"></div>
+    </div>`, 'narrow');
+}
+function answer(btn){
+  if (!S.q || S.q.answered) return;
+  S.q.answered = true;
+  const w = byWord(S.q.word), pick = btn.dataset.opt, ok = pick === w.meaning;
+  $app.querySelectorAll('.opt').forEach(o => { o.disabled = true; if (o !== btn) o.classList.add('dim'); });
+  btn.classList.add(ok ? 'right' : 'wrong');
+  const fb = $app.querySelector('.fb');
+  if (!S.q.retry) S.first[w.word] = { ok, pick };
+  else S.retest[w.word] = { ok, pick };
+
+  if (S.mode === 'trial') return trialAnswered(w, pick, ok);
+
+  if (ok) {
+    fb.className = 'fb ok'; fb.textContent = S.q.retry ? '这次对啦！明天还会再见到它' : pick + '，答对啦！';
+    later(nextQuestion, S.q.retry ? 1400 : 900);
+  } else if (!S.q.retry) {
+    fb.className = 'fb no'; fb.textContent = '差一点！回去再看一眼钥匙';
+    later(() => relink(w.word), 1100);
+  } else {
+    const right = [...$app.querySelectorAll('.opt')].find(o => o.dataset.opt === w.meaning);
+    right.classList.remove('dim'); right.classList.add('right');
+    fb.className = 'fb no'; fb.textContent = '是「' + w.meaning + '」。没关系，明天它还会回来';
+    later(nextQuestion, 2000);
+  }
+}
+function relink(word){
+  const w = byWord(word);
+  show(`${topbar({ back: 'home', dots: quizDots() })}
+    <div style="text-align:center"><span class="relink-tag">🔑 再看一眼钥匙</span></div>
+    ${linkCard(w, `<button class="btn blue" data-act="retry" disabled>看好了，再试一次</button>`)}`);
+  startTimer(10);
+  speak(w.word, $app.querySelector('.say'));
+  const b = $app.querySelector('[data-act=retry]');
+  later(() => { b.disabled = false; }, 3000);
+  later(() => b.classList.add('pulse'), 10000);
+}
+function nextQuestion(){
+  S.done.push(S.queue.shift());
+  if (S.queue.length) quizStep(); else finish();
+}
+
+/* ===== 结果 ===== */
+function finish(){
+  const total = S.list.length;
+  const got = S.list.filter(w => S.first[w] && S.first[w].ok);
+  const missed = S.list.filter(w => !(S.first[w] && S.first[w].ok));
+  const pass = got.length >= Math.ceil(total * 0.8);
+  if (!S.practice) {
+    const p = progress(), t = today();
+    S.list.forEach(w => {
+      const prev = p.words[w] || { tries: 0 };
+      const ok = got.includes(w);
+      p.words[w] = { status: ok ? 'remembered' : 'missed', due: ok ? null : addDays(t, 1), tries: (prev.tries || 0) + 1, last: t, lastFirstTry: ok };
+    });
+    p.sessions.push({ at: isoLocal(), date: t, words: S.list, firstTry: S.first, retest: S.retest, score: got.length, total });
+    save(KEY, p);
+  }
+  const starColors = Array.from({ length: total }, (_, k) => k < got.length ? '#FFC93C' : '#E9DCC8');
+  show(`${topbar({ right: '<button class="iconbtn" data-act="home">首页</button>' })}
+    <div class="hero" style="text-align:center">
+      <div class="small">${S.practice ? '练习（不计成绩）' : '第一次就答对的'}</div>
+      <div class="score">${got.length}<small>/${total}</small></div>
+      <div class="stars">${starColors.map((c, k) => `<span style="display:contents">${ICON.star(c).replace('<svg', `<svg style="animation-delay:${0.15 * k + 0.2}s"`)}</span>`).join('')}</div>
+      <h2>${got.length === total ? '全对！你的钥匙全都管用！' : pass ? '达标啦，真厉害！' : '还差一点点，明天再来！'}</h2>
+      <div class="bar" aria-label="达标线 4/5"><div class="fill" style="width:0"></div><div class="mark"><span>达标 ${Math.ceil(total * 0.8)}/${total}</span></div></div>
+      <div class="verdict ${pass ? 'pass' : 'fail'}">${pass ? '✓ 达到 ' + Math.ceil(total * 0.8) + '/' + total + ' 标准' : '未达到 ' + Math.ceil(total * 0.8) + '/' + total + ' 标准'}</div>
+      <ul class="wl">${S.list.map(x => { const w = byWord(x), ok = got.includes(x);
+        return `<li><span class="w">${esc(w.word)}</span><span class="m">${esc(w.meaning)}</span><span class="tag ${ok ? 'ok' : 'again'}">${ok ? '想起来了' : '明天再来'}</span></li>`; }).join('')}</ul>
+      <div style="height:18px"></div>
+      <button class="btn primary" data-act="home">好的</button>
+    </div>`, 'narrow');
+  requestAnimationFrame(() => setTimeout(() => { const f = $app.querySelector('.bar .fill'); if (f) f.style.width = (got.length / total * 100) + '%'; }, 50));
+  if (got.length === total) confetti(); else if (pass) confetti(60);
+}
+
+/* ===== 彩带 ===== */
+function confetti(n = 160){
+  if (!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const c = document.getElementById('confetti'), ctx = c.getContext && c.getContext('2d');
+  if (!ctx) return;
+  c.hidden = false; c.width = innerWidth * devicePixelRatio; c.height = innerHeight * devicePixelRatio; ctx.scale(devicePixelRatio, devicePixelRatio);
+  const cols = ['#F2643A', '#FFC93C', '#2F5DA8', '#2EA868', '#FF8FB1'];
+  const ps = Array.from({ length: n }, () => ({ x: innerWidth / 2 + (Math.random() - .5) * 80, y: innerHeight * .35, vx: (Math.random() - .5) * 13, vy: -Math.random() * 13 - 4, r: Math.random() * 6 + 4, c: cols[Math.floor(Math.random() * cols.length)], a: Math.random() * 6, va: (Math.random() - .5) * .3 }));
+  const t0 = performance.now();
+  (function tick(t){
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    ps.forEach(p => { p.vy += .32; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.a += p.va; ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillStyle = p.c; ctx.fillRect(-p.r / 2, -p.r / 4, p.r, p.r / 2); ctx.restore(); });
+    if (t - t0 < 2800) requestAnimationFrame(tick); else { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, c.width, c.height); c.hidden = true; }
+  })(t0);
+}
+
+/* ===== 老师入口 ===== */
+function trials(){ return load(TKEY, []); }
+function teacher(){
+  const ts = trials();
+  show(`${topbar({ back: 'home' })}
+    <h1>老师入口</h1>
+    <div class="list">
+      <div class="panel">
+        <h2>10 秒测试模式</h2>
+        <p class="small">请一位三、四年级的孩子来：每个词自动显示 10 秒，然后合上，只看英文选中文。每个词只答一次，结果带时间保存在这台设备上。5 个记住 4 个＝达标。</p>
+        <button class="btn primary" data-act="trialsetup">开始 10 秒测试</button>
+      </div>
+      <div class="panel">
+        <h2>测试记录（${ts.length}）</h2>
+        ${ts.length ? ts.slice(-5).reverse().map(r => `<div class="rec"><b>${esc(r.child || '未填代号')}</b> · ${esc(r.grade || '')} · ${esc(r.at.replace('T', ' ').slice(0, 16))} · <b>${r.score}/${r.total}</b> ${r.pass ? '✓ 达标' : '未达标'}</div>`).join('') : '<p class="small">还没有记录。</p>'}
+        <div class="row" style="margin-top:12px"><button class="btn ghost" data-act="export" ${ts.length ? '' : 'disabled'}>导出 JSON</button><button class="btn ghost" data-act="cleartrials" ${ts.length ? '' : 'disabled'}>清空</button></div>
+      </div>
+      <div class="panel">
+        <h2>今天的 5 把钥匙</h2>
+        <p class="small">内容来自 ${esc(CONTENT._from)}（${esc(CONTENT.version || '')}）。“已认可”＝Phil 有通过记录；“待审”＝还没有。</p>
+        <div class="ctx">${WORDS.map(w => `<article><h3>${esc(w.word)} <span class="small">${esc(w.meaning)}</span> <span class="st ${w.status === '已认可' ? 'ok' : 'wait'}">${esc(w.status)}</span></h3>
+          <p><b>${esc(w.method)}</b>：${esc(w.hook)}</p><p class="small">来源：${esc(w.source)}</p></article>`).join('')}</div>
+      </div>
+      <div class="panel">
+        <h2>孩子的学习进度</h2>
+        <p class="small">没记住的词第二天会回来。换孩子用这台设备时可以清空。</p>
+        <button class="btn ghost" data-act="resetprogress">清空学习进度</button>
+      </div>
+    </div>`, 'narrow');
+}
+function trialSetup(){
+  S = { mode: 'trialsetup', grade: S.grade || '三年级', child: S.child || '' };
+  show(`${topbar({ back: 'teacher' })}
+    <div class="panel">
+      <h1>10 秒测试</h1>
+      <p class="small">老师操作，孩子看屏幕。看词阶段不用点，10 秒自动翻下一个。</p>
+      <label class="field"><b>孩子代号（选填，别写全名）</b><input id="child" maxlength="20" placeholder="例如：小A" value="${esc(S.child)}"></label>
+      <div class="field"><b>年级</b><div class="seg"><button data-grade="三年级" class="${S.grade === '三年级' ? 'on' : ''}">三年级</button><button data-grade="四年级" class="${S.grade === '四年级' ? 'on' : ''}">四年级</button></div></div>
+      <label class="field"><b>这个孩子之前见过这些词吗？（选填）</b><input id="prior" maxlength="60" placeholder="例如：认识 eye、bed"></label>
+      <div style="height:6px"></div>
+      <button class="btn primary" data-act="trialgo">准备好了，开始</button>
+    </div>`, 'narrow');
+}
+function trialGo(){
+  const child = ($app.querySelector('#child') || {}).value || '', prior = ($app.querySelector('#prior') || {}).value || '';
+  S = { mode: 'trial', grade: S.grade, child: child.trim(), prior: prior.trim(), list: WORDS.slice(0, 5).map(w => w.word), i: 0, first: {}, retest: {}, answers: [], startedAt: isoLocal() };
+  trialLearn();
+}
+function trialLearn(){
+  const w = byWord(S.list[S.i]);
+  show(`${topbar({ dots: S.list.map((x, k) => k < S.i ? 'done' : k === S.i ? 'on' : ''), right: `<span class="iconbtn"><b class="cd" style="color:var(--orange);font-size:20px">10</b>秒</span>` })}
+    ${linkCard(w, '')}`);
+  startTimer(10);
+  speak(w.word, $app.querySelector('.say'));
+  let left = 10; const cd = $app.querySelector('.cd');
+  const tick = () => { left--; if (cd) cd.textContent = left; if (left > 0) later(tick, 1000); else { S.i++; S.i < S.list.length ? trialLearn() : trialClosed(); } };
+  later(tick, 1000);
+}
+function trialClosed(){
+  show(`<div class="hero" style="text-align:center;padding:40px 22px;margin-top:30px">
+      <div style="font-size:64px;line-height:1">🙈</div><h1>合上啦！</h1>
+      <p class="small" style="font-size:16px">现在只看英文。请孩子自己选，老师不提示。</p>
+      <div style="height:16px"></div><button class="btn primary" data-act="trialquiz">开始测</button></div>`, 'narrow');
+}
+function trialQuiz(){ S.queue = shuffle(S.list); S.done = []; S.mode = 'trial'; trialQ(); }
+function trialQ(){ quizStep(); S.q.shownAt = performance.now(); }
+function trialAnswered(w, pick, ok){
+  S.answers.push({ word: w.word, correct: w.meaning, picked: pick, ok, ms: Math.round(performance.now() - S.q.shownAt), options: S.q.opts });
+  const fb = $app.querySelector('.fb'); fb.className = 'fb ' + (ok ? 'ok' : 'no'); fb.textContent = ok ? '记下了 ✓' : '记下了';
+  later(() => { S.done.push(S.queue.shift()); S.queue.length ? trialQ() : trialResult(); }, 800);
+}
+function trialResult(){
+  const score = S.answers.filter(a => a.ok).length, total = S.list.length, pass = score >= 4;
+  const rec = { id: 't' + Date.now(), at: isoLocal(), startedAt: S.startedAt, child: S.child, grade: S.grade, priorKnowledge: S.prior,
+    secondsPerWord: 10, contentVersion: CONTENT.version || '', contentFrom: CONTENT._from, score, total, passBar: '4/5', pass,
+    answers: S.answers, words: S.list.map(x => { const w = byWord(x); return { word: w.word, hook: w.hook, status: w.status }; }),
+    userAgent: navigator.userAgent };
+  const all = trials(); all.push(rec); save(TKEY, all);
+  show(`${topbar({ back: 'teacher' })}
+    <div class="hero" style="text-align:center">
+      <div class="small">10 秒测试 · ${esc(S.child || '未填代号')} · ${esc(S.grade)}</div>
+      <div class="score">${score}<small>/${total}</small></div>
+      <div class="verdict ${pass ? 'pass' : 'fail'}">${pass ? '✓ 这个孩子达到 4/5' : '这个孩子未达到 4/5'}</div>
+      <ul class="wl">${S.answers.map(a => `<li><span class="w">${esc(a.word)}</span><span class="m">${a.ok ? esc(a.correct) : `选了「${esc(a.picked)}」`}</span><span class="tag ${a.ok ? 'ok' : 'again'}">${a.ok ? '想起来了' : '没想起'}</span></li>`).join('')}</ul>
+      <p class="small">已保存在本机，记录时间 ${esc(rec.at.replace('T', ' ').slice(0, 19))}</p>
+      <div class="list"><button class="btn primary" data-act="export">导出全部记录 JSON</button><button class="btn ghost" data-act="trialsetup">再测一个孩子</button></div>
+    </div>`, 'narrow');
+  if (score === total) confetti();
+}
+function exportTrials(){
+  const data = { exportedAt: isoLocal(), app: '右脑记单词 · 5 词 MVP', trials: trials() };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '10秒测试记录-' + today() + '.json';
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  toast('已导出 ' + data.trials.length + ' 条记录');
+}
+
+/* ---------- 点击分发 ---------- */
+$app.addEventListener('click', e => {
+  const say = e.target.closest('[data-say]'); if (say) return speak(say.dataset.say, say);
+  const opt = e.target.closest('[data-opt]'); if (opt) return answer(opt);
+  const g = e.target.closest('[data-grade]'); if (g) { S.grade = g.dataset.grade; $app.querySelectorAll('[data-grade]').forEach(b => b.classList.toggle('on', b === g)); return; }
+  const a = e.target.closest('[data-act]'); if (!a) return;
+  switch (a.dataset.act) {
+    case 'home': if ('speechSynthesis' in window) speechSynthesis.cancel(); return home();
+    case 'start': return startSession(false);
+    case 'practice': return startSession(true);
+    case 'next': S.i++; return S.i < S.list.length ? learnStep() : closeStep();
+    case 'beginquiz': return beginQuiz();
+    case 'retry': return quizStep(S.q.word);
+    case 'teacher': S = {}; return teacher();
+    case 'trialsetup': return trialSetup();
+    case 'trialgo': return trialGo();
+    case 'trialquiz': return trialQuiz();
+    case 'export': return exportTrials();
+    case 'cleartrials': if (confirm('确定清空所有 10 秒测试记录？建议先导出。')) { save(TKEY, []); teacher(); } return;
+    case 'resetprogress': if (confirm('确定清空这台设备上的学习进度？')) { localStorage.removeItem(KEY); toast('已清空'); } return;
+  }
+});
+
+window.__rb = { get S(){ return S; }, get WORDS(){ return WORDS; }, today, addDays, todaysPlan, progress, trials, home };
+loadContent().then(() => {
+  if (!WORDS.length) { $app.innerHTML = '<p style="padding:24px">词库没读到。请检查 content/words.json。</p>'; return; }
+  home();
+  document.dispatchEvent(new Event('rb:ready'));
+});
+})();
+</script>
+</body>
+</html>

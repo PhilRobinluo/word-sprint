@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="下雨天，小朋友躲在大伞下面喊：俺不来了！">
+  <style>
+    .drop{stroke:#7FB2E5;stroke-width:4;stroke-linecap:round;animation:fall 1.1s linear infinite}
+    .d2{animation-delay:-.35s}.d3{animation-delay:-.7s}
+    @keyframes fall{from{transform:translateY(-30px);opacity:0}20%{opacity:1}to{transform:translateY(40px);opacity:0}}
+    .shout{transform-origin:236px 118px;animation:pop 1.6s ease-in-out infinite}
+    @keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+    @media (prefers-reduced-motion:reduce){.drop,.shout{animation:none}}
+  </style>
+  <rect x="0" y="0" width="320" height="240" rx="24" fill="#EAF3FC"/>
+  <g>
+    <line class="drop" x1="30" y1="30" x2="24" y2="46"/><line class="drop d2" x1="70" y1="20" x2="64" y2="36"/>
+    <line class="drop d3" x1="200" y1="24" x2="194" y2="40"/><line class="drop" x1="250" y1="40" x2="244" y2="56"/>
+    <line class="drop d2" x1="290" y1="22" x2="284" y2="38"/><line class="drop d3" x1="120" y1="12" x2="114" y2="28"/>
+    <line class="drop d2" x1="20" y1="120" x2="14" y2="136"/><line class="drop" x1="290" y1="170" x2="284" y2="186"/>
+    <line class="drop d3" x1="230" y1="190" x2="224" y2="206"/><line class="drop d2" x1="40" y1="190" x2="34" y2="206"/>
+  </g>
+  <ellipse cx="120" cy="222" rx="80" ry="9" fill="#C9DDF2"/>
+  <!-- kid -->
+  <rect x="100" y="166" width="44" height="44" rx="14" fill="#FFC93C"/>
+  <rect x="104" y="206" width="12" height="16" rx="5" fill="#2F5DA8"/><rect x="128" y="206" width="12" height="16" rx="5" fill="#2F5DA8"/>
+  <circle cx="122" cy="146" r="25" fill="#FFD9B8"/>
+  <path d="M97 142 q2 -26 26 -26 q22 0 26 22 q-10 -10 -22 -8 q-14 2 -30 12z" fill="#2B2B2B"/>
+  <circle cx="114" cy="146" r="3.2" fill="#2B2B2B"/><circle cx="131" cy="146" r="3.2" fill="#2B2B2B"/>
+  <ellipse cx="124" cy="160" rx="6" ry="7" fill="#C2413B"/>
+  <circle cx="107" cy="154" r="4" fill="#FFB0A0" opacity=".7"/><circle cx="139" cy="154" r="4" fill="#FFB0A0" opacity=".7"/>
+  <!-- umbrella -->
+  <line x1="94" y1="74" x2="94" y2="176" stroke="#5A3A22" stroke-width="5" stroke-linecap="round"/>
+  <path d="M94 176 q0 14 -11 14 q-9 0 -9 -9" fill="none" stroke="#5A3A22" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="92" cy="182" r="0" fill="#FFD9B8"/>
+  <rect x="86" y="168" width="18" height="12" rx="6" fill="#FFD9B8"/>
+  <path d="M10 110 Q94 0 178 110 Q164 96 150 110 Q136 96 122 110 Q108 96 94 110 Q80 96 66 110 Q52 96 38 110 Q24 96 10 110Z" fill="#F2643A"/>
+  <path d="M94 26 Q70 60 66 110 Q80 96 94 110 Q108 96 122 110 Q118 60 94 26Z" fill="#FF8A5B"/>
+  <circle cx="94" cy="24" r="5" fill="#5A3A22"/>
+  <!-- speech bubble -->
+  <g class="shout">
+    <path d="M182 92 h112 a14 14 0 0 1 14 14 v30 a14 14 0 0 1 -14 14 h-82 l-20 16 l4 -16 h-14 a14 14 0 0 1 -14 -14 v-30 a14 14 0 0 1 14 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3"/>
+    <text x="238" y="130" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-weight="900" font-size="24" fill="#2F5DA8">俺不来了！</text>
+  </g>
+</svg>

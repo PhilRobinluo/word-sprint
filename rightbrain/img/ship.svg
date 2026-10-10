@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="一艘大船，中间的字母 i 是短短的桅杆">
+  <style>
+    .boat{animation:rock 3s ease-in-out infinite;transform-origin:160px 170px}
+    @keyframes rock{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-4px)}}
+    .wave{animation:slide 4s linear infinite}
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-80px)}}
+    .flag{animation:wave 1.2s ease-in-out infinite;transform-origin:168px 60px}
+    @keyframes wave{0%,100%{transform:skewY(0)}50%{transform:skewY(-8deg)}}
+    @media (prefers-reduced-motion:reduce){.boat,.wave,.flag{animation:none}}
+    .lt{font-family:ui-rounded,'Arial Rounded MT Bold','Nunito','Noto Sans',sans-serif;font-weight:900}
+  </style>
+  <rect width="320" height="240" rx="24" fill="#E6F1FF"/>
+  <circle cx="270" cy="46" r="20" fill="#FFD45C"/>
+  <g class="boat">
+    <!-- mast = letter i -->
+    <rect x="152" y="80" width="16" height="82" rx="8" fill="#F2643A"/>
+    <circle cx="160" cy="58" r="11" fill="#F2643A"/>
+    <path class="flag" d="M168 52 l34 8 l-34 10z" fill="#FFC93C"/>
+    <!-- hull -->
+    <path d="M44 162 L276 162 L248 206 L72 206 Z" fill="#2F5DA8"/>
+    <rect x="44" y="156" width="232" height="10" rx="5" fill="#1F4589"/>
+    <g fill="#fff"><circle cx="96" cy="182" r="7"/><circle cx="126" cy="182" r="7"/><circle cx="194" cy="182" r="7"/><circle cx="224" cy="182" r="7"/></g>
+    <g class="lt" font-size="60" fill="#2F5DA8">
+      <text x="144" y="154" text-anchor="end">sh</text><text x="176" y="154">p</text>
+    </g>
+  </g>
+  <g class="wave">
+    <path d="M0 212 q20 -12 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V240 H0z" fill="#7FB2E5"/>
+    <path d="M0 222 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V240 H0z" fill="#5B97D8"/>
+  </g>
+</svg>

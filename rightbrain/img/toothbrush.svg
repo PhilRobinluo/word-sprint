@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="一把小刷子在给牙齿洗澡：tooth 牙齿加 brush 刷子">
+  <style>
+    .brush{animation:scrub .9s ease-in-out infinite}
+    @keyframes scrub{0%,100%{transform:translate(0,0)}50%{transform:translate(-14px,6px)}}
+    .bub{animation:float 2.4s ease-in-out infinite}.b2{animation-delay:-.8s}.b3{animation-delay:-1.6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion:reduce){.brush,.bub{animation:none}}
+    .lbl{font-family:ui-rounded,'Arial Rounded MT Bold','Nunito','Noto Sans CJK SC',sans-serif;font-weight:900}
+  </style>
+  <rect width="320" height="240" rx="24" fill="#E8F7F3"/>
+  <!-- tooth -->
+  <path d="M52 92 q0 -40 38 -40 q18 0 30 10 q12 -10 30 -10 q38 0 38 40 q0 38 -16 76 q-9 22 -20 0 q-10 -28 -32 -28 q-22 0 -32 28 q-11 22 -20 0 q-16 -38 -16 -76z" fill="#fff" stroke="#3A6E8F" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="102" cy="100" r="5" fill="#2B2B2B"/><circle cx="138" cy="100" r="5" fill="#2B2B2B"/>
+  <circle cx="104" cy="98" r="1.6" fill="#fff"/><circle cx="140" cy="98" r="1.6" fill="#fff"/>
+  <path d="M106 116 q14 14 28 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="92" cy="114" r="6" fill="#FFB0A0" opacity=".7"/><circle cx="148" cy="114" r="6" fill="#FFB0A0" opacity=".7"/>
+  <!-- bubbles -->
+  <g fill="#fff" stroke="#9AD3E6" stroke-width="2.5">
+    <circle class="bub" cx="70" cy="50" r="12"/><circle class="bub b2" cx="96" cy="34" r="8"/>
+    <circle class="bub b3" cx="168" cy="40" r="10"/><circle class="bub b2" cx="58" cy="76" r="6"/>
+  </g>
+  <!-- brush -->
+  <g class="brush">
+    <g transform="rotate(-28 230 120)">
+      <rect x="170" y="112" width="140" height="20" rx="10" fill="#2F7DE1"/>
+      <rect x="172" y="114" width="40" height="16" rx="8" fill="#64A6F2"/>
+      <rect x="168" y="86" width="48" height="26" rx="5" fill="#FFFFFF" stroke="#2F7DE1" stroke-width="3"/>
+      <g stroke="#7FD0C9" stroke-width="3"><line x1="176" y1="90" x2="176" y2="108"/><line x1="186" y1="90" x2="186" y2="108"/><line x1="196" y1="90" x2="196" y2="108"/><line x1="206" y1="90" x2="206" y2="108"/></g>
+    </g>
+  </g>
+  <!-- labels -->
+  <g class="lbl" font-size="20">
+    <rect x="70" y="188" width="92" height="34" rx="17" fill="#fff" stroke="#3A6E8F" stroke-width="2"/>
+    <text x="116" y="211" text-anchor="middle" fill="#3A6E8F">tooth</text>
+    <text x="178" y="212" text-anchor="middle" fill="#F2643A" font-size="26">+</text>
+    <rect x="194" y="188" width="96" height="34" rx="17" fill="#fff" stroke="#2F7DE1" stroke-width="2"/>
+    <text x="242" y="211" text-anchor="middle" fill="#2F7DE1">brush</text>
+  </g>
+</svg>
