@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="拿个枕头，睡个午觉"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EEF1FF"/><g class=""><g transform="translate(70.0 80.0) rotate(0 90.0 90.0) scale(1.8)"><path d="M10 34q40-10 80 0q6 16 0 32q-40 10-80 0q-6-16 0-32z" fill="#fff" stroke="#C9DDF2" stroke-width="3"/><path d="M30 50h40" stroke="#E6EEFB" stroke-width="6" stroke-linecap="round"/></g></g><g class="bob"><g transform="translate(90.0 70.0) rotate(0 60.0 60.0) scale(1.2)"><path d="M64 14a30 30 0 1 0 22 42a24 24 0 1 1-22-42z" fill="#FFC93C"/><circle cx="44" cy="58" r="26" fill="#FFD9B8"/><path d="M33 58q4 4 8 0M47 58q4 4 8 0" fill="none" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round"/><path d="M40 70q4 3 8 0" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/><path d="M18 50q2-26 26-26q22 0 26 20q-12-10-26-8q-14 2-26 14z" fill="#2B2B2B"/></g></g><g class="pulse"><path d="M246 58.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="207.0" y="20.0" width="98" height="40" rx="20.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="242" y="56.0" width="16" height="6" fill="#fff"/><text x="256" y="46.48" text-anchor="middle" font-size="18" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">拿个枕头</text></g></svg>

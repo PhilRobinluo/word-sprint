@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="汤锅里噗噗冒泡"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#F1F4F8"/><ellipse cx="160" cy="218" rx="130" ry="10" fill="#DDE3EA"/><g class=""><g transform="translate(75.0 65.0) rotate(0 85.0 85.0) scale(1.7)"><rect x="18" y="38" width="64" height="44" rx="10" fill="#9AA6B2"/><rect x="12" y="44" width="10" height="8" rx="3" fill="#6E7A86"/><rect x="78" y="44" width="10" height="8" rx="3" fill="#6E7A86"/><path d="M16 38q34-18 68 0z" fill="#B7C3CF"/><circle cx="50" cy="26" r="5" fill="#6E7A86"/><path d="M40 16q-4-6 0-10M60 16q-4-6 0-10" fill="none" stroke="#C9D3DD" stroke-width="3" stroke-linecap="round"/></g></g><g class="bob"><g transform="translate(125.0 15.0) rotate(0 35.0 35.0) scale(0.7)"><g fill="#fff" stroke="#7FB2E5" stroke-width="3"><circle cx="30" cy="70" r="10"/><circle cx="56" cy="50" r="14"/><circle cx="76" cy="76" r="8"/><circle cx="40" cy="30" r="7"/></g></g></g><g class="pulse"><path d="M250 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="214.0" y="18.0" width="92" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="246" y="58.0" width="16" height="6" fill="#fff"/><text x="260" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">噗噗！</text></g></svg>

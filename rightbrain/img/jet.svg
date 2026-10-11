@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="飞机来接我啦"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#DDEEFF"/><g class="drift"><g transform="translate(30.0 20.0) rotate(0 40.0 40.0) scale(0.8)"><path d="M20 70q-14 0-14-14t16-14q2-18 22-18t22 16q22-2 24 16t-18 14z" fill="#fff"/></g></g><g class="drift"><g transform="translate(225.0 145.0) rotate(0 35.0 35.0) scale(0.7)"><path d="M20 70q-14 0-14-14t16-14q2-18 22-18t22 16q22-2 24 16t-18 14z" fill="#fff"/></g></g><g class="bob"><g transform="translate(80.0 20.0) rotate(0 90.0 90.0) scale(1.8)"><path d="M8 54q0-8 10-8h56q18 0 22 8q-4 8-22 8H18q-10 0-10-8z" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><path d="M40 48l18-32h10l-8 32zM40 60l18 28h10l-8-28zM14 48l-6-16h8l12 16z" fill="#2F5DA8"/><circle cx="62" cy="54" r="3" fill="#7FB2E5"/><circle cx="72" cy="54" r="3" fill="#7FB2E5"/><circle cx="52" cy="54" r="3" fill="#7FB2E5"/><path d="M4 70q8 0 14-6" fill="none" stroke="#C9DDF2" stroke-width="3" stroke-linecap="round"/></g></g><g class="bob2"><rect x="40" y="192" width="40" height="38" rx="13" fill="#FFC93C"/><circle cx="60" cy="170" r="23" fill="#FFD9B8"/><path d="M37 167 q2 -24 24 -24 q20 0 23 20 q-9 -9 -20 -7 q-13 2 -27 11z" fill="#2B2B2B"/><circle cx="52" cy="171" r="3" fill="#2B2B2B"/><circle cx="68" cy="171" r="3" fill="#2B2B2B"/><circle cx="46" cy="179" r="4" fill="#FFB0A0" opacity=".7"/><circle cx="74" cy="179" r="4" fill="#FFB0A0" opacity=".7"/><path d="M54 182 q6 7 12 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/></g><g class="pulse"><path d="M240 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="193.0" y="18.0" width="114" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="236" y="58.0" width="16" height="6" fill="#fff"/><text x="250" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">来接我！</text></g></svg>

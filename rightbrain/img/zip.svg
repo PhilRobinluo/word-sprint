@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="拉链滋——地拉上"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EFF8EA"/><g class=""><g transform="translate(65.0 35.0) rotate(0 95.0 95.0) scale(1.9)"><path d="M30 12l-20 12-4 40 14 2v30h60V66l14-2-4-40-20-12q-10 10-20 10t-20-10z" fill="#5BAE6A"/><path d="M50 22v74" stroke="#2E7A3A" stroke-width="3"/></g></g><g class="bob"><g transform="translate(130.0 110.0) rotate(0 30.0 30.0) scale(0.6)"><rect x="20" y="8" width="60" height="84" rx="10" fill="#2EA868"/><path d="M50 8v84" stroke="#1E7A4A" stroke-width="3"/><path d="M44 14h12" stroke="#BBB" stroke-width="4"/><path d="M44 22h12" stroke="#BBB" stroke-width="4"/><path d="M44 30h12" stroke="#BBB" stroke-width="4"/><path d="M44 38h12" stroke="#BBB" stroke-width="4"/><path d="M44 46h12" stroke="#BBB" stroke-width="4"/><rect x="42" y="52" width="16" height="12" rx="3" fill="#999"/><rect x="45" y="62" width="10" height="20" rx="4" fill="#BBB"/></g></g><g class="pulse"><path d="M246 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="210.0" y="18.0" width="92" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="242" y="58.0" width="16" height="6" fill="#fff"/><text x="256" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">滋——</text></g></svg>

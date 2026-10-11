@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="挤橙汁挤得乱七八糟：哦，乱挤！"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#FFF4E6"/><ellipse cx="160" cy="218" rx="130" ry="10" fill="#F3DEC4"/><g class="pulse"><g transform="translate(60.0 90.0) rotate(0 50.0 50.0) scale(1.0)"><circle cx="50" cy="56" r="32" fill="#FF9A1F"/><path d="M50 24q-2-10 4-14" stroke="#8A5A3A" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M54 18q14-10 22 2q-12 8-22-2z" fill="#2EA868"/><g fill="#E07C00"><circle cx="40" cy="50" r="1.5"/><circle cx="60" cy="62" r="1.5"/><circle cx="48" cy="70" r="1.5"/><circle cx="66" cy="46" r="1.5"/></g><ellipse cx="36" cy="44" rx="6" ry="9" fill="#fff" opacity=".3"/></g></g><g class="bob"><g transform="translate(170.0 90.0) rotate(0 50.0 50.0) scale(1.0)"><path d="M30 24h40l-6 66H36z" fill="#fff" stroke="#FFB45C" stroke-width="3"/><path d="M32 40h36l-5 50H37z" fill="#FFA62B"/><path d="M60 24l10-20" stroke="#E5484D" stroke-width="4" stroke-linecap="round"/><circle cx="34" cy="26" r="10" fill="#FF9A1F" stroke="#fff" stroke-width="3"/></g></g><g fill="#FFA62B"><circle cx="160" cy="110" r="6"/><circle cx="172" cy="86" r="4"/><circle cx="150" cy="80" r="5"/></g><g class="pulse"><path d="M80 59.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="27.0" y="19.0" width="126" height="42" rx="21.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="76" y="57.0" width="16" height="6" fill="#fff"/><text x="90" y="47.2" text-anchor="middle" font-size="20" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">哦，乱挤！</text></g></svg>

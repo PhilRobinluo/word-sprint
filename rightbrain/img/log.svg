@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="搂着大木头过小河"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EEF8E8"/><path d="M0 190 q40 -10 80 0 t80 0 t80 0 t80 0 V240 H0z" fill="#7FB2E5"/><g class="bob"><g transform="translate(80.0 60.0) rotate(0 90.0 90.0) scale(1.8)"><rect x="16" y="34" width="66" height="36" rx="4" fill="#B97A4A"/><path d="M24 44h40M30 58h44" stroke="#8A5A3A" stroke-width="3" stroke-linecap="round"/><ellipse cx="80" cy="52" rx="12" ry="18" fill="#E2B888" stroke="#8A5A3A" stroke-width="3"/><ellipse cx="80" cy="52" rx="6" ry="9" fill="none" stroke="#B97A4A" stroke-width="2"/><path d="M30 34l-6-12q8 0 10 8" fill="#2EA868"/></g></g><g class="bob2"><rect x="100" y="134" width="40" height="38" rx="13" fill="#2EA868"/><circle cx="120" cy="112" r="23" fill="#FFD9B8"/><path d="M97 109 q2 -24 24 -24 q20 0 23 20 q-9 -9 -20 -7 q-13 2 -27 11z" fill="#2B2B2B"/><circle cx="112" cy="113" r="3" fill="#2B2B2B"/><circle cx="128" cy="113" r="3" fill="#2B2B2B"/><circle cx="106" cy="121" r="4" fill="#FFB0A0" opacity=".7"/><circle cx="134" cy="121" r="4" fill="#FFB0A0" opacity=".7"/><path d="M114 124 q6 7 12 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/></g><g class="pulse"><path d="M246 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="210.0" y="18.0" width="92" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="242" y="58.0" width="16" height="6" fill="#fff"/><text x="256" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">搂住！</text></g></svg>

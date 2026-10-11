@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="一个大男人，慢慢走过来"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EEF5FF"/><ellipse cx="160" cy="218" rx="130" ry="10" fill="#DCE8F7"/><g class="bob"><g transform="translate(75.0 65.0) rotate(0 75.0 75.0) scale(1.5)"><rect x="26" y="62" width="48" height="30" rx="14" fill="#2F5DA8"/><path d="M46 62l4 10 4-10z" fill="#fff"/><circle cx="50" cy="40" r="20" fill="#FFD9B8"/><path d="M30 36q0-20 20-20t20 18q-10-6-20-6t-20 8z" fill="#8A5A3A"/><circle cx="43" cy="40" r="2.6" fill="#2B2B2B"/><circle cx="57" cy="40" r="2.6" fill="#2B2B2B"/><circle cx="44" cy="39" r="1" fill="#fff"/><circle cx="58" cy="39" r="1" fill="#fff"/><path d="M42 50q8 4 16 0" fill="none" stroke="#8A5A3A" stroke-width="4" stroke-linecap="round"/></g></g><g class="pulse"><path d="M246 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="210.0" y="18.0" width="92" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="242" y="58.0" width="16" height="6" fill="#fff"/><text x="256" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">慢慢走</text></g></svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="调皮的小猪在泥里打滚"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#F6F1EA"/><g class=""><g transform="translate(30.0 60.0) rotate(0 130.0 130.0) scale(2.6)"><ellipse cx="50" cy="60" rx="46" ry="16" fill="#8A5A3A"/><ellipse cx="34" cy="56" rx="10" ry="4" fill="#A9774E"/><ellipse cx="66" cy="64" rx="8" ry="3" fill="#A9774E"/></g></g><g class="bob"><g transform="translate(95.0 65.0) rotate(0 65.0 65.0) scale(1.3)"><path d="M22 30l4-18 14 12zM78 30l-4-18-14 12z" fill="#F48FB1"/><circle cx="50" cy="54" r="32" fill="#F8A5C2"/><ellipse cx="50" cy="62" rx="14" ry="10" fill="#F48FB1"/><circle cx="45" cy="62" r="3" fill="#C2185B"/><circle cx="55" cy="62" r="3" fill="#C2185B"/><circle cx="38" cy="46" r="3.5" fill="#2B2B2B"/><circle cx="62" cy="46" r="3.5" fill="#2B2B2B"/><circle cx="39" cy="45" r="1" fill="#fff"/><circle cx="63" cy="45" r="1" fill="#fff"/></g></g><g class="pulse"><path d="M246 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="210.0" y="18.0" width="92" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="242" y="58.0" width="16" height="6" fill="#fff"/><text x="256" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">调皮！</text></g></svg>

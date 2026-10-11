@@ -1,0 +1,437 @@
+{
+ "a": {
+  "ipa": "æ",
+  "source": "Wikimedia Commons “File:Near-open front unrounded vowel.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Near-open_front_unrounded_vowel.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims).",
+  "cut_ms": [
+   0,
+   690
+  ],
+  "extended_from_ms": null,
+  "duration": 0.72,
+  "onset_ms": 0,
+  "sounding_ms": 550,
+  "voiced_ratio": 0.13,
+  "zcr": 0.135
+ },
+ "e": {
+  "ipa": "ɛ",
+  "source": "Wikimedia Commons “File:Open-mid front unrounded vowel.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Open-mid_front_unrounded_vowel.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims).",
+  "cut_ms": [
+   0,
+   640
+  ],
+  "extended_from_ms": null,
+  "duration": 0.72,
+  "onset_ms": 0,
+  "sounding_ms": 550,
+  "voiced_ratio": 0.15,
+  "zcr": 0.131
+ },
+ "i": {
+  "ipa": "ɪ",
+  "source": "Wikimedia Commons “File:Near-close near-front unrounded vowel.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Near-close_near-front_unrounded_vowel.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims).",
+  "cut_ms": [
+   10,
+   540
+  ],
+  "extended_from_ms": null,
+  "duration": 0.72,
+  "onset_ms": 0,
+  "sounding_ms": 520,
+  "voiced_ratio": 0.25,
+  "zcr": 0.149
+ },
+ "o": {
+  "ipa": "ɑ",
+  "source": "Wikimedia Commons “File:Open back unrounded vowel.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Open_back_unrounded_vowel.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims).",
+  "cut_ms": [
+   0,
+   550
+  ],
+  "extended_from_ms": null,
+  "duration": 0.72,
+  "onset_ms": 0,
+  "sounding_ms": 540,
+  "voiced_ratio": 0.28,
+  "zcr": 0.101
+ },
+ "u": {
+  "ipa": "ʌ",
+  "source": "Wikimedia Commons “File:Open-mid back unrounded vowel.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Open-mid_back_unrounded_vowel.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims).",
+  "cut_ms": [
+   0,
+   620
+  ],
+  "extended_from_ms": null,
+  "duration": 0.72,
+  "onset_ms": 0,
+  "sounding_ms": 550,
+  "voiced_ratio": 0.27,
+  "zcr": 0.095
+ },
+ "s": {
+  "ipa": "s",
+  "source": "Wikimedia Commons “File:Voiceless alveolar sibilant.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_sibilant.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "Peter Isotalo",
+  "cut_ms": [
+   230,
+   440
+  ],
+  "extended_from_ms": 210,
+  "duration": 0.624,
+  "onset_ms": 0,
+  "sounding_ms": 450,
+  "voiced_ratio": 0.0,
+  "zcr": 0.637
+ },
+ "z": {
+  "ipa": "z",
+  "source": "Wikimedia Commons “File:Voiced alveolar sibilant.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiced_alveolar_sibilant.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   190,
+   420
+  ],
+  "extended_from_ms": 230,
+  "duration": 0.672,
+  "onset_ms": 0,
+  "sounding_ms": 500,
+  "voiced_ratio": 0.02,
+  "zcr": 0.528
+ },
+ "h": {
+  "ipa": "h",
+  "source": "Wikimedia Commons “File:Voiceless glottal fricative.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiceless_glottal_fricative.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   210,
+   480
+  ],
+  "extended_from_ms": 270,
+  "duration": 0.6,
+  "onset_ms": 0,
+  "sounding_ms": 430,
+  "voiced_ratio": 0.0,
+  "zcr": 0.248
+ },
+ "m": {
+  "ipa": "m",
+  "source": "Wikimedia Commons “File:Bilabial nasal.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   190,
+   370
+  ],
+  "extended_from_ms": 180,
+  "duration": 0.672,
+  "onset_ms": 0,
+  "sounding_ms": 490,
+  "voiced_ratio": 0.69,
+  "zcr": 0.042
+ },
+ "n": {
+  "ipa": "n",
+  "source": "Wikimedia Commons “File:Alveolar nasal.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Alveolar_nasal.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   320,
+   500
+  ],
+  "extended_from_ms": 180,
+  "duration": 0.672,
+  "onset_ms": 0,
+  "sounding_ms": 490,
+  "voiced_ratio": 0.71,
+  "zcr": 0.061
+ },
+ "l": {
+  "ipa": "l",
+  "source": "Wikimedia Commons “File:Alveolar lateral approximant.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Alveolar_lateral_approximant.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   200,
+   410
+  ],
+  "extended_from_ms": 210,
+  "duration": 0.624,
+  "onset_ms": 0,
+  "sounding_ms": 450,
+  "voiced_ratio": 0.8,
+  "zcr": 0.052
+ },
+ "y": {
+  "ipa": "j",
+  "source": "Wikimedia Commons “File:Palatal approximant.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Palatal_approximant.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   240,
+   440
+  ],
+  "extended_from_ms": null,
+  "duration": 0.384,
+  "onset_ms": 0,
+  "sounding_ms": 200,
+  "voiced_ratio": 0.65,
+  "zcr": 0.101
+ },
+ "w": {
+  "ipa": "w",
+  "source": "Wikimedia Commons “File:Voiced labio-velar approximant.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiced_labio-velar_approximant.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   0,
+   250
+  ],
+  "extended_from_ms": null,
+  "duration": 0.432,
+  "onset_ms": 0,
+  "sounding_ms": 250,
+  "voiced_ratio": 0.72,
+  "zcr": 0.035
+ },
+ "j": {
+  "ipa": "dʒ",
+  "source": "Wikimedia Commons “File:Voiced palato-alveolar affricate.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiced_palato-alveolar_affricate.ogg",
+  "license": "Public domain",
+  "author": "The original uploader was Octane at English Wikipedia.",
+  "cut_ms": [
+   40,
+   180
+  ],
+  "extended_from_ms": null,
+  "duration": 0.312,
+  "onset_ms": 0,
+  "sounding_ms": 140,
+  "voiced_ratio": 0.07,
+  "zcr": 0.203
+ },
+ "t": {
+  "ipa": "t",
+  "source": "Wikimedia Commons “File:Voiceless alveolar plosive.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_plosive.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   200,
+   290
+  ],
+  "extended_from_ms": null,
+  "duration": 0.264,
+  "onset_ms": 0,
+  "sounding_ms": 90,
+  "voiced_ratio": 0.11,
+  "zcr": 0.092
+ },
+ "k": {
+  "ipa": "k",
+  "source": "Wikimedia Commons “File:Voiceless velar plosive.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiceless_velar_plosive.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   190,
+   290
+  ],
+  "extended_from_ms": null,
+  "duration": 0.288,
+  "onset_ms": 0,
+  "sounding_ms": 100,
+  "voiced_ratio": 0.3,
+  "zcr": 0.155
+ },
+ "d": {
+  "ipa": "d",
+  "source": "Wikimedia Commons “File:Voiced alveolar plosive.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiced_alveolar_plosive.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   190,
+   280
+  ],
+  "extended_from_ms": null,
+  "duration": 0.264,
+  "onset_ms": 0,
+  "sounding_ms": 90,
+  "voiced_ratio": 0.0,
+  "zcr": 0.109
+ },
+ "b": {
+  "ipa": "b",
+  "source": "Wikimedia Commons “File:Voiced bilabial plosive.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiced_bilabial_plosive.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   190,
+   280
+  ],
+  "extended_from_ms": null,
+  "duration": 0.264,
+  "onset_ms": 0,
+  "sounding_ms": 90,
+  "voiced_ratio": 0.44,
+  "zcr": 0.088
+ },
+ "g": {
+  "ipa": "ɡ",
+  "source": "Wikimedia Commons “File:Voiced velar plosive.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiced_velar_plosive.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   200,
+   290
+  ],
+  "extended_from_ms": null,
+  "duration": 0.264,
+  "onset_ms": 0,
+  "sounding_ms": 90,
+  "voiced_ratio": 0.22,
+  "zcr": 0.128
+ },
+ "p": {
+  "ipa": "p",
+  "source": "Microsoft Edge TTS en-US-AnaNeural 读 “pan”，截取词首辅音",
+  "url": "",
+  "license": "本项目生成（TTS 输出）",
+  "author": "—",
+  "cut_ms": [
+   210,
+   320
+  ],
+  "extended_from_ms": null,
+  "duration": 0.288,
+  "onset_ms": 0,
+  "sounding_ms": 110,
+  "voiced_ratio": 0.0,
+  "zcr": 0.428
+ },
+ "f": {
+  "ipa": "f",
+  "source": "Microsoft Edge TTS en-US-AnaNeural 读 “fan”，截取词首辅音",
+  "url": "",
+  "license": "本项目生成（TTS 输出）",
+  "author": "—",
+  "cut_ms": [
+   280,
+   340
+  ],
+  "extended_from_ms": 60,
+  "duration": 0.624,
+  "onset_ms": 0,
+  "sounding_ms": 460,
+  "voiced_ratio": 0.0,
+  "zcr": 0.469
+ },
+ "r": {
+  "ipa": "ɹ",
+  "source": "Microsoft Edge TTS en-US-AnaNeural 读 “red”，截取词首辅音",
+  "url": "",
+  "license": "本项目生成（TTS 输出）",
+  "author": "—",
+  "cut_ms": [
+   250,
+   300
+  ],
+  "extended_from_ms": 50,
+  "duration": 0.648,
+  "onset_ms": 0,
+  "sounding_ms": 460,
+  "voiced_ratio": 0.85,
+  "zcr": 0.073
+ },
+ "v": {
+  "ipa": "v",
+  "source": "Microsoft Edge TTS en-US-AnaNeural 读 “five”，截取词尾辅音",
+  "url": "",
+  "license": "本项目生成（TTS 输出）",
+  "author": "—",
+  "cut_ms": [
+   670,
+   830
+  ],
+  "extended_from_ms": 160,
+  "duration": 0.696,
+  "onset_ms": 0,
+  "sounding_ms": 520,
+  "voiced_ratio": 0.98,
+  "zcr": 0.084
+ },
+ "c": {
+  "ipa": "k",
+  "source": "Wikimedia Commons “File:Voiceless velar plosive.ogg”",
+  "url": "https://commons.wikimedia.org/wiki/File:Voiceless_velar_plosive.ogg",
+  "license": "CC BY-SA 3.0",
+  "author": "见文件页（Commons 未提供机器可读作者）",
+  "cut_ms": [
+   190,
+   290
+  ],
+  "extended_from_ms": null,
+  "note": "与 k 同一个音",
+  "duration": 0.288,
+  "onset_ms": 0,
+  "sounding_ms": 100,
+  "voiced_ratio": 0.3,
+  "zcr": 0.155
+ },
+ "x": {
+  "ipa": "ks",
+  "source": "由 k ＋ s 两段拼接",
+  "url": "",
+  "license": "同 k、s",
+  "author": "—",
+  "cut_ms": null,
+  "duration": 0.864,
+  "onset_ms": 0,
+  "sounding_ms": 560,
+  "voiced_ratio": 0.05,
+  "zcr": 0.548
+ },
+ "q": {
+  "ipa": "kw",
+  "source": "由 k ＋ w 两段拼接",
+  "url": "",
+  "license": "同 k、w",
+  "author": "—",
+  "cut_ms": null,
+  "duration": 0.648,
+  "onset_ms": 0,
+  "sounding_ms": 350,
+  "voiced_ratio": 0.6,
+  "zcr": 0.082
+ }
+}

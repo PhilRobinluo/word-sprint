@@ -1,6 +1,6 @@
 {
  "deck": "右脑记单词",
- "version": "mvp-24-20261011",
+ "version": "starter-42-20261011",
  "updated": "2026-10-11",
  "note": "字段沿用项目 words.json 写法（hook/cue/boundary/prereq/scene/method/basis/review_status）。status：已认可＝Phil 本人有通过记录；待审＝没有。slogan＝卡片口号；narration＝播报脚本（en 段用 en-US-AnaNeural，zh 段用 zh-CN-XiaoxiaoNeural）；distractors＝测验里的 3 个干扰词（用它们的图）；emoji＝测验选项图。",
  "groups": [
@@ -19,6 +19,36 @@
   "ship",
   "umbrella",
   "toothbrush"
+ ],
+ "ship_candidates": [
+  {
+   "id": "A",
+   "anchor": "湿扑",
+   "picked": true,
+   "line": "ship 听起来像「湿扑」：大船冲进大海，浪花「扑」地打上甲板，船上的人全身都湿啦！",
+   "why": "夸张画面＋动作声，6-7 岁都懂「湿」和「扑」；画面能直接画出来"
+  },
+  {
+   "id": "B",
+   "anchor": "嘘～噗",
+   "picked": false,
+   "line": "船长说「嘘～」，大烟囱却「噗」地喷出一团烟——ship！",
+   "why": "拟声好玩，但「噗」离 /ɪp/ 稍远，画面要两步"
+  },
+  {
+   "id": "C",
+   "anchor": "洗盆",
+   "picked": false,
+   "line": "小朋友坐在洗澡盆里划呀划，假装开大船——「洗盆」变成 ship！",
+   "why": "孩子熟悉澡盆，但谐音偏弱，容易记成「盆＝船」"
+  },
+  {
+   "id": "D",
+   "anchor": "i 当桅杆（原卡）",
+   "picked": false,
+   "line": "ship 中间的 i 当船上的桅杆",
+   "why": "Phil 已评「不够巧妙」，仅留作对照"
+  }
  ],
  "words": [
   {
@@ -74,6 +104,11 @@
    "audio": "audio/narr/bed.mp3",
    "audio_en": "audio/en/bed.mp3",
    "video": "video/bed.mp4",
+   "icon": "img/icons/bed.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -167,6 +202,11 @@
    "audio": "audio/narr/eye.mp3",
    "audio_en": "audio/en/eye.mp3",
    "video": "video/eye.mp4",
+   "icon": "img/icons/eye.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -260,6 +300,11 @@
    "audio": "audio/narr/ship.mp3",
    "audio_en": "audio/en/ship.mp3",
    "video": "video/ship.mp4",
+   "icon": "img/icons/ship.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -353,6 +398,11 @@
    "audio": "audio/narr/umbrella.mp3",
    "audio_en": "audio/en/umbrella.mp3",
    "video": "video/umbrella.mp4",
+   "icon": "img/icons/umbrella.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -446,6 +496,11 @@
    "audio": "audio/narr/toothbrush.mp3",
    "audio_en": "audio/en/toothbrush.mp3",
    "video": "video/toothbrush.mp4",
+   "icon": "img/icons/toothbrush.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -539,6 +594,11 @@
    "audio": "audio/narr/cat.mp3",
    "audio_en": "audio/en/cat.mp3",
    "video": "video/cat.mp4",
+   "icon": "img/icons/cat.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -632,6 +692,11 @@
    "audio": "audio/narr/dog.mp3",
    "audio_en": "audio/en/dog.mp3",
    "video": "video/dog.mp4",
+   "icon": "img/icons/dog.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -725,6 +790,11 @@
    "audio": "audio/narr/apple.mp3",
    "audio_en": "audio/en/apple.mp3",
    "video": "video/apple.mp4",
+   "icon": "img/icons/apple.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -818,6 +888,11 @@
    "audio": "audio/narr/sun.mp3",
    "audio_en": "audio/en/sun.mp3",
    "video": "video/sun.mp4",
+   "icon": "img/icons/sun.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -911,6 +986,11 @@
    "audio": "audio/narr/fish.mp3",
    "audio_en": "audio/en/fish.mp3",
    "video": "video/fish.mp4",
+   "icon": "img/icons/fish.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1004,6 +1084,11 @@
    "audio": "audio/narr/egg.mp3",
    "audio_en": "audio/en/egg.mp3",
    "video": "video/egg.mp4",
+   "icon": "img/icons/egg.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1097,6 +1182,11 @@
    "audio": "audio/narr/cake.mp3",
    "audio_en": "audio/en/cake.mp3",
    "video": "video/cake.mp4",
+   "icon": "img/icons/cake.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1190,6 +1280,11 @@
    "audio": "audio/narr/panda.mp3",
    "audio_en": "audio/en/panda.mp3",
    "video": "video/panda.mp4",
+   "icon": "img/icons/panda.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1283,6 +1378,11 @@
    "audio": "audio/narr/tiger.mp3",
    "audio_en": "audio/en/tiger.mp3",
    "video": "video/tiger.mp4",
+   "icon": "img/icons/tiger.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1376,6 +1476,11 @@
    "audio": "audio/narr/clap.mp3",
    "audio_en": "audio/en/clap.mp3",
    "video": "video/clap.mp4",
+   "icon": "img/icons/clap.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1469,6 +1574,11 @@
    "audio": "audio/narr/catch.mp3",
    "audio_en": "audio/en/catch.mp3",
    "video": "video/catch.mp4",
+   "icon": "img/icons/catch.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1562,6 +1672,11 @@
    "audio": "audio/narr/window.mp3",
    "audio_en": "audio/en/window.mp3",
    "video": "video/window.mp4",
+   "icon": "img/icons/window.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1655,6 +1770,11 @@
    "audio": "audio/narr/rainbow.mp3",
    "audio_en": "audio/en/rainbow.mp3",
    "video": "video/rainbow.mp4",
+   "icon": "img/icons/rainbow.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1748,6 +1868,11 @@
    "audio": "audio/narr/raincoat.mp3",
    "audio_en": "audio/en/raincoat.mp3",
    "video": "video/raincoat.mp4",
+   "icon": "img/icons/raincoat.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1841,6 +1966,11 @@
    "audio": "audio/narr/snowman.mp3",
    "audio_en": "audio/en/snowman.mp3",
    "video": "video/snowman.mp4",
+   "icon": "img/icons/snowman.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -1934,6 +2064,11 @@
    "audio": "audio/narr/notebook.mp3",
    "audio_en": "audio/en/notebook.mp3",
    "video": "video/notebook.mp4",
+   "icon": "img/icons/notebook.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -2027,6 +2162,11 @@
    "audio": "audio/narr/dessert.mp3",
    "audio_en": "audio/en/dessert.mp3",
    "video": "video/dessert.mp4",
+   "icon": "img/icons/dessert.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -2120,6 +2260,11 @@
    "audio": "audio/narr/library.mp3",
    "audio_en": "audio/en/library.mp3",
    "video": "video/library.mp4",
+   "icon": "img/icons/library.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -2213,6 +2358,11 @@
    "audio": "audio/narr/strong.mp3",
    "audio_en": "audio/en/strong.mp3",
    "video": "video/strong.mp4",
+   "icon": "img/icons/strong.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
    "cues": [
     [
      0.2,
@@ -2252,6 +2402,1770 @@
     ]
    ],
    "narration_sec": 11.96
+  },
+  {
+   "word": "one",
+   "ipa": "/wʌn/",
+   "meaning": "一",
+   "emoji": "1️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "one 听起来像「嗡」：一只小蚊子嗡——地飞过来，只有一只！",
+   "slogan": "嗡——一只蚊子！",
+   "cue": "嗡嗡飞来几只蚊子？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "嗡都是熟字。",
+   "scene": "一只蚊子嗡嗡飞，小朋友竖起一根手指",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/one.svg",
+   "distractors": [
+    "three",
+    "apple",
+    "nose"
+   ],
+   "narration": [
+    [
+     "en",
+     "one"
+    ],
+    [
+     "zh",
+     "听起来像，嗡！"
+    ],
+    [
+     "zh",
+     "一只小蚊子，嗡——地飞过来，只有一只！"
+    ],
+    [
+     "zh",
+     "一个，就是一。"
+    ],
+    [
+     "en",
+     "one"
+    ],
+    [
+     "zh",
+     "一。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/one.mp3",
+   "audio_en": "audio/en/one.mp3",
+   "video": "video/one.mp4",
+   "icon": "img/icons/one.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.67,
+     "en",
+     "one"
+    ],
+    [
+     0.97,
+     2.23,
+     "zh",
+     "听起来像，嗡！"
+    ],
+    [
+     2.53,
+     5.86,
+     "zh",
+     "一只小蚊子，嗡——地飞过来，只有一只！"
+    ],
+    [
+     6.16,
+     7.44,
+     "zh",
+     "一个，就是一。"
+    ],
+    [
+     7.74,
+     8.21,
+     "en",
+     "one"
+    ],
+    [
+     8.51,
+     8.87,
+     "zh",
+     "一。"
+    ]
+   ],
+   "narration_sec": 9.37
+  },
+  {
+   "word": "two",
+   "ipa": "/tuː/",
+   "meaning": "二",
+   "emoji": "2️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "two 听起来像「兔」：草地上蹦出两只小兔子！",
+   "slogan": "兔！两只兔！",
+   "cue": "草地上蹦出几只兔？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "兔都是熟字。",
+   "scene": "两只小兔子蹦蹦跳",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/two.svg",
+   "distractors": [
+    "five",
+    "ear",
+    "banana"
+   ],
+   "narration": [
+    [
+     "en",
+     "two"
+    ],
+    [
+     "zh",
+     "听起来像，兔！"
+    ],
+    [
+     "zh",
+     "草地上，蹦！蹦！跳出两只小兔子！"
+    ],
+    [
+     "zh",
+     "两个，就是二。"
+    ],
+    [
+     "en",
+     "two"
+    ],
+    [
+     "zh",
+     "二。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/two.mp3",
+   "audio_en": "audio/en/two.mp3",
+   "video": "video/two.mp4",
+   "icon": "img/icons/two.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.64,
+     "en",
+     "two"
+    ],
+    [
+     0.94,
+     2.26,
+     "zh",
+     "听起来像，兔！"
+    ],
+    [
+     2.56,
+     6.45,
+     "zh",
+     "草地上，蹦！蹦！跳出两只小兔子！"
+    ],
+    [
+     6.75,
+     8.04,
+     "zh",
+     "两个，就是二。"
+    ],
+    [
+     8.34,
+     8.77,
+     "en",
+     "two"
+    ],
+    [
+     9.07,
+     9.45,
+     "zh",
+     "二。"
+    ]
+   ],
+   "narration_sec": 9.95
+  },
+  {
+   "word": "three",
+   "ipa": "/θriː/",
+   "meaning": "三",
+   "emoji": "3️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "three 开头有点像「树」：大树上站着三只小鸟。",
+   "slogan": "树上三只鸟",
+   "cue": "大树上站着几只鸟？",
+   "boundary": "谐音只像开头；three 的 th 要咬舌头，不是「树」的 sh。",
+   "prereq": "树都是熟字。",
+   "scene": "大树上站着三只小鸟",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/three.svg",
+   "distractors": [
+    "one",
+    "sun",
+    "hand"
+   ],
+   "narration": [
+    [
+     "en",
+     "three"
+    ],
+    [
+     "zh",
+     "听起来像，树！"
+    ],
+    [
+     "zh",
+     "大树上，一、二、三，站着三只小鸟！"
+    ],
+    [
+     "zh",
+     "三个，就是三。"
+    ],
+    [
+     "en",
+     "three"
+    ],
+    [
+     "zh",
+     "三。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/three.mp3",
+   "audio_en": "audio/en/three.mp3",
+   "video": "video/three.mp4",
+   "icon": "img/icons/three.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.66,
+     "en",
+     "three"
+    ],
+    [
+     0.96,
+     2.29,
+     "zh",
+     "听起来像，树！"
+    ],
+    [
+     2.59,
+     6.05,
+     "zh",
+     "大树上，一、二、三，站着三只小鸟！"
+    ],
+    [
+     6.35,
+     7.71,
+     "zh",
+     "三个，就是三。"
+    ],
+    [
+     8.01,
+     8.47,
+     "en",
+     "three"
+    ],
+    [
+     8.77,
+     9.19,
+     "zh",
+     "三。"
+    ]
+   ],
+   "narration_sec": 9.69
+  },
+  {
+   "word": "four",
+   "ipa": "/fɔː/",
+   "meaning": "四",
+   "emoji": "4️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "four 听起来像「福」：过年啦，门上贴着四个「福」字！",
+   "slogan": "四个福字",
+   "cue": "门上贴了几个福字？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "福都是熟字。",
+   "scene": "门上贴着四个福字",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/four.svg",
+   "distractors": [
+    "seven",
+    "cake",
+    "monkey"
+   ],
+   "narration": [
+    [
+     "en",
+     "four"
+    ],
+    [
+     "zh",
+     "听起来像，福！"
+    ],
+    [
+     "zh",
+     "过年啦！门上贴着福、福、福、福，四个福字！"
+    ],
+    [
+     "zh",
+     "四个，就是四。"
+    ],
+    [
+     "en",
+     "four"
+    ],
+    [
+     "zh",
+     "四。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/four.mp3",
+   "audio_en": "audio/en/four.mp3",
+   "video": "video/four.mp4",
+   "icon": "img/icons/four.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.68,
+     "en",
+     "four"
+    ],
+    [
+     0.98,
+     2.36,
+     "zh",
+     "听起来像，福！"
+    ],
+    [
+     2.66,
+     7.5,
+     "zh",
+     "过年啦！门上贴着福、福、福、福，四个福字！"
+    ],
+    [
+     7.8,
+     9.13,
+     "zh",
+     "四个，就是四。"
+    ],
+    [
+     9.43,
+     9.91,
+     "en",
+     "four"
+    ],
+    [
+     10.21,
+     10.65,
+     "zh",
+     "四。"
+    ]
+   ],
+   "narration_sec": 11.15
+  },
+  {
+   "word": "five",
+   "ipa": "/faɪv/",
+   "meaning": "五",
+   "emoji": "5️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "five 听起来像「飞舞」：五只蝴蝶在花丛里飞舞。",
+   "slogan": "五只蝴蝶在飞舞",
+   "cue": "花丛里几只蝴蝶在飞舞？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "飞舞都是熟字。",
+   "scene": "五只蝴蝶在花丛上飞舞",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/five.svg",
+   "distractors": [
+    "two",
+    "fish",
+    "orange"
+   ],
+   "narration": [
+    [
+     "en",
+     "five"
+    ],
+    [
+     "zh",
+     "听起来像，飞舞！"
+    ],
+    [
+     "zh",
+     "花丛里，五只蝴蝶飞呀飞，飞舞起来啦！"
+    ],
+    [
+     "zh",
+     "五个，就是五。"
+    ],
+    [
+     "en",
+     "five"
+    ],
+    [
+     "zh",
+     "五。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/five.mp3",
+   "audio_en": "audio/en/five.mp3",
+   "video": "video/five.mp4",
+   "icon": "img/icons/five.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.71,
+     "en",
+     "five"
+    ],
+    [
+     1.01,
+     2.54,
+     "zh",
+     "听起来像，飞舞！"
+    ],
+    [
+     2.84,
+     5.91,
+     "zh",
+     "花丛里，五只蝴蝶飞呀飞，飞舞起来啦！"
+    ],
+    [
+     6.21,
+     7.5,
+     "zh",
+     "五个，就是五。"
+    ],
+    [
+     7.8,
+     8.31,
+     "en",
+     "five"
+    ],
+    [
+     8.61,
+     8.98,
+     "zh",
+     "五。"
+    ]
+   ],
+   "narration_sec": 9.48
+  },
+  {
+   "word": "seven",
+   "ipa": "/ˈsevn/",
+   "meaning": "七",
+   "emoji": "7️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "seven 听起来像「洗碗」：帮妈妈洗碗，一共洗了七个。",
+   "slogan": "洗碗，洗七个！",
+   "cue": "帮妈妈洗了几个碗？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "洗碗都是熟字。",
+   "scene": "帮妈妈洗碗，叠起七个碗",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/seven.svg",
+   "distractors": [
+    "eight",
+    "egg",
+    "duck"
+   ],
+   "narration": [
+    [
+     "en",
+     "seven"
+    ],
+    [
+     "zh",
+     "听起来像，洗碗！"
+    ],
+    [
+     "zh",
+     "吃完饭，帮妈妈洗碗：一个、两个……一共洗了七个！"
+    ],
+    [
+     "zh",
+     "七个，就是七。"
+    ],
+    [
+     "en",
+     "seven"
+    ],
+    [
+     "zh",
+     "七。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/seven.mp3",
+   "audio_en": "audio/en/seven.mp3",
+   "video": "video/seven.mp4",
+   "icon": "img/icons/seven.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.9,
+     "en",
+     "seven"
+    ],
+    [
+     1.2,
+     2.69,
+     "zh",
+     "听起来像，洗碗！"
+    ],
+    [
+     2.99,
+     7.22,
+     "zh",
+     "吃完饭，帮妈妈洗碗：一个、两个……一共洗了七个！"
+    ],
+    [
+     7.52,
+     8.85,
+     "zh",
+     "七个，就是七。"
+    ],
+    [
+     9.15,
+     9.85,
+     "en",
+     "seven"
+    ],
+    [
+     10.15,
+     10.57,
+     "zh",
+     "七。"
+    ]
+   ],
+   "narration_sec": 11.07
+  },
+  {
+   "word": "eight",
+   "ipa": "/eɪt/",
+   "meaning": "八",
+   "emoji": "8️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "eight 听起来像「哎」：哎呀！章鱼伸出了八条腿！",
+   "slogan": "哎呀！八条腿！",
+   "cue": "章鱼有几条腿？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "哎都是熟字。",
+   "scene": "章鱼伸出八条腿，小朋友吓一跳",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/eight.svg",
+   "distractors": [
+    "nine",
+    "cat",
+    "yellow"
+   ],
+   "narration": [
+    [
+     "en",
+     "eight"
+    ],
+    [
+     "zh",
+     "听起来像，哎！"
+    ],
+    [
+     "zh",
+     "哎呀！章鱼伸出了八条长长的腿！"
+    ],
+    [
+     "zh",
+     "八个，就是八。"
+    ],
+    [
+     "en",
+     "eight"
+    ],
+    [
+     "zh",
+     "八。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/eight.mp3",
+   "audio_en": "audio/en/eight.mp3",
+   "video": "video/eight.mp4",
+   "icon": "img/icons/eight.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.54,
+     "en",
+     "eight"
+    ],
+    [
+     0.84,
+     2.15,
+     "zh",
+     "听起来像，哎！"
+    ],
+    [
+     2.45,
+     5.48,
+     "zh",
+     "哎呀！章鱼伸出了八条长长的腿！"
+    ],
+    [
+     5.78,
+     7.0,
+     "zh",
+     "八个，就是八。"
+    ],
+    [
+     7.3,
+     7.65,
+     "en",
+     "eight"
+    ],
+    [
+     7.95,
+     8.31,
+     "zh",
+     "八。"
+    ]
+   ],
+   "narration_sec": 8.81
+  },
+  {
+   "word": "nine",
+   "ipa": "/naɪn/",
+   "meaning": "九",
+   "emoji": "9️⃣",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "nine 听起来像「奶」：小牛口渴啦，一口气喝了九杯牛奶！",
+   "slogan": "九杯牛奶！",
+   "cue": "小牛喝了几杯奶？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "奶都是熟字。",
+   "scene": "排成两排的九杯牛奶",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/nine.svg",
+   "distractors": [
+    "four",
+    "dog",
+    "blue"
+   ],
+   "narration": [
+    [
+     "en",
+     "nine"
+    ],
+    [
+     "zh",
+     "听起来像，奶！"
+    ],
+    [
+     "zh",
+     "小牛口渴啦，咕嘟咕嘟，一口气喝了九杯奶！"
+    ],
+    [
+     "zh",
+     "九个，就是九。"
+    ],
+    [
+     "en",
+     "nine"
+    ],
+    [
+     "zh",
+     "九。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/nine.mp3",
+   "audio_en": "audio/en/nine.mp3",
+   "video": "video/nine.mp4",
+   "icon": "img/icons/nine.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.72,
+     "en",
+     "nine"
+    ],
+    [
+     1.02,
+     2.31,
+     "zh",
+     "听起来像，奶！"
+    ],
+    [
+     2.61,
+     6.11,
+     "zh",
+     "小牛口渴啦，咕嘟咕嘟，一口气喝了九杯奶！"
+    ],
+    [
+     6.41,
+     7.73,
+     "zh",
+     "九个，就是九。"
+    ],
+    [
+     8.03,
+     8.55,
+     "en",
+     "nine"
+    ],
+    [
+     8.85,
+     9.23,
+     "zh",
+     "九。"
+    ]
+   ],
+   "narration_sec": 9.73
+  },
+  {
+   "word": "yellow",
+   "ipa": "/ˈjeləʊ/",
+   "meaning": "黄色",
+   "emoji": "🟡",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "yellow 听起来像「夜路」：走夜路，提着一盏黄黄的灯笼。",
+   "slogan": "夜路提黄灯笼",
+   "cue": "走夜路时提着什么颜色的灯笼？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "夜路都是熟字。",
+   "scene": "夜里小朋友提着黄灯笼",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/yellow.svg",
+   "distractors": [
+    "green",
+    "banana",
+    "sun"
+   ],
+   "narration": [
+    [
+     "en",
+     "yellow"
+    ],
+    [
+     "zh",
+     "听起来像，夜路！"
+    ],
+    [
+     "zh",
+     "走夜路啦，提着一盏黄黄的灯笼，亮堂堂！"
+    ],
+    [
+     "zh",
+     "灯笼的颜色，就是黄色。"
+    ],
+    [
+     "en",
+     "yellow"
+    ],
+    [
+     "zh",
+     "黄色。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/yellow.mp3",
+   "audio_en": "audio/en/yellow.mp3",
+   "video": "video/yellow.mp4",
+   "icon": "img/icons/yellow.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.81,
+     "en",
+     "yellow"
+    ],
+    [
+     1.11,
+     2.53,
+     "zh",
+     "听起来像，夜路！"
+    ],
+    [
+     2.83,
+     6.13,
+     "zh",
+     "走夜路啦，提着一盏黄黄的灯笼，亮堂堂！"
+    ],
+    [
+     6.43,
+     8.4,
+     "zh",
+     "灯笼的颜色，就是黄色。"
+    ],
+    [
+     8.7,
+     9.31,
+     "en",
+     "yellow"
+    ],
+    [
+     9.61,
+     10.17,
+     "zh",
+     "黄色。"
+    ]
+   ],
+   "narration_sec": 10.67
+  },
+  {
+   "word": "green",
+   "ipa": "/ɡriːn/",
+   "meaning": "绿色",
+   "emoji": "🟢",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "green 听起来像「锅里」：锅里的青菜绿油油。",
+   "slogan": "锅里青菜绿油油",
+   "cue": "锅里的青菜是什么颜色？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "锅里都是熟字。",
+   "scene": "炒锅里一锅绿油油的青菜",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/green.svg",
+   "distractors": [
+    "blue",
+    "apple",
+    "monkey"
+   ],
+   "narration": [
+    [
+     "en",
+     "green"
+    ],
+    [
+     "zh",
+     "听起来像，锅里！"
+    ],
+    [
+     "zh",
+     "妈妈炒菜啦，锅里的青菜，绿油油的！"
+    ],
+    [
+     "zh",
+     "青菜的颜色，就是绿色。"
+    ],
+    [
+     "en",
+     "green"
+    ],
+    [
+     "zh",
+     "绿色。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/green.mp3",
+   "audio_en": "audio/en/green.mp3",
+   "video": "video/green.mp4",
+   "icon": "img/icons/green.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.8,
+     "en",
+     "green"
+    ],
+    [
+     1.1,
+     2.55,
+     "zh",
+     "听起来像，锅里！"
+    ],
+    [
+     2.85,
+     5.76,
+     "zh",
+     "妈妈炒菜啦，锅里的青菜，绿油油的！"
+    ],
+    [
+     6.06,
+     8.06,
+     "zh",
+     "青菜的颜色，就是绿色。"
+    ],
+    [
+     8.36,
+     8.96,
+     "en",
+     "green"
+    ],
+    [
+     9.26,
+     9.84,
+     "zh",
+     "绿色。"
+    ]
+   ],
+   "narration_sec": 10.34
+  },
+  {
+   "word": "blue",
+   "ipa": "/bluː/",
+   "meaning": "蓝色",
+   "emoji": "🔵",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "blue 听起来像「不漏」：蓝蓝的天，一滴雨也不漏。",
+   "slogan": "蓝天，一滴雨也不漏",
+   "cue": "一滴雨也不漏的天空是什么颜色？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "不漏都是熟字。",
+   "scene": "蓝天白云下的小朋友",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/blue.svg",
+   "distractors": [
+    "yellow",
+    "fish",
+    "ear"
+   ],
+   "narration": [
+    [
+     "en",
+     "blue"
+    ],
+    [
+     "zh",
+     "听起来像，不漏！"
+    ],
+    [
+     "zh",
+     "今天是大晴天，蓝蓝的天，一滴雨也不漏！"
+    ],
+    [
+     "zh",
+     "天空的颜色，就是蓝色。"
+    ],
+    [
+     "en",
+     "blue"
+    ],
+    [
+     "zh",
+     "蓝色。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/blue.mp3",
+   "audio_en": "audio/en/blue.mp3",
+   "video": "video/blue.mp4",
+   "icon": "img/icons/blue.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.69,
+     "en",
+     "blue"
+    ],
+    [
+     0.99,
+     2.35,
+     "zh",
+     "听起来像，不漏！"
+    ],
+    [
+     2.65,
+     5.86,
+     "zh",
+     "今天是大晴天，蓝蓝的天，一滴雨也不漏！"
+    ],
+    [
+     6.16,
+     8.17,
+     "zh",
+     "天空的颜色，就是蓝色。"
+    ],
+    [
+     8.47,
+     8.95,
+     "en",
+     "blue"
+    ],
+    [
+     9.25,
+     9.86,
+     "zh",
+     "蓝色。"
+    ]
+   ],
+   "narration_sec": 10.36
+  },
+  {
+   "word": "nose",
+   "ipa": "/nəʊz/",
+   "meaning": "鼻子",
+   "emoji": "👃",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "nose 听起来像「挠」：鼻子痒痒的，挠一挠！",
+   "slogan": "鼻子痒，挠一挠",
+   "cue": "哪里痒痒要挠一挠？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "挠都是熟字。",
+   "scene": "小朋友挠鼻子",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/nose.svg",
+   "distractors": [
+    "ear",
+    "hand",
+    "eye"
+   ],
+   "narration": [
+    [
+     "en",
+     "nose"
+    ],
+    [
+     "zh",
+     "听起来像，挠！"
+    ],
+    [
+     "zh",
+     "哎呀，鼻子痒痒的，挠一挠，阿嚏！"
+    ],
+    [
+     "zh",
+     "脸中间用来闻味道的，就是鼻子。"
+    ],
+    [
+     "en",
+     "nose"
+    ],
+    [
+     "zh",
+     "鼻子。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/nose.mp3",
+   "audio_en": "audio/en/nose.mp3",
+   "video": "video/nose.mp4",
+   "icon": "img/icons/nose.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.88,
+     "en",
+     "nose"
+    ],
+    [
+     1.18,
+     2.47,
+     "zh",
+     "听起来像，挠！"
+    ],
+    [
+     2.77,
+     5.75,
+     "zh",
+     "哎呀，鼻子痒痒的，挠一挠，阿嚏！"
+    ],
+    [
+     6.05,
+     8.65,
+     "zh",
+     "脸中间用来闻味道的，就是鼻子。"
+    ],
+    [
+     8.95,
+     9.63,
+     "en",
+     "nose"
+    ],
+    [
+     9.93,
+     10.48,
+     "zh",
+     "鼻子。"
+    ]
+   ],
+   "narration_sec": 10.98
+  },
+  {
+   "word": "ear",
+   "ipa": "/ɪə/",
+   "meaning": "耳朵",
+   "emoji": "👂",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "ear 听起来像「一耳」：竖起一只耳朵，仔细听！",
+   "slogan": "竖起一只耳朵",
+   "cue": "竖起什么来听声音？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "一耳都是熟字。",
+   "scene": "小朋友竖起耳朵听",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/ear.svg",
+   "distractors": [
+    "nose",
+    "eye",
+    "hand"
+   ],
+   "narration": [
+    [
+     "en",
+     "ear"
+    ],
+    [
+     "zh",
+     "听起来像，一耳！"
+    ],
+    [
+     "zh",
+     "嘘——竖起一只耳朵，仔细听一听！"
+    ],
+    [
+     "zh",
+     "用来听声音的，就是耳朵。"
+    ],
+    [
+     "en",
+     "ear"
+    ],
+    [
+     "zh",
+     "耳朵。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/ear.mp3",
+   "audio_en": "audio/en/ear.mp3",
+   "video": "video/ear.mp4",
+   "icon": "img/icons/ear.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.7,
+     "en",
+     "ear"
+    ],
+    [
+     1.0,
+     2.44,
+     "zh",
+     "听起来像，一耳！"
+    ],
+    [
+     2.74,
+     5.46,
+     "zh",
+     "嘘——竖起一只耳朵，仔细听一听！"
+    ],
+    [
+     5.76,
+     7.76,
+     "zh",
+     "用来听声音的，就是耳朵。"
+    ],
+    [
+     8.06,
+     8.56,
+     "en",
+     "ear"
+    ],
+    [
+     8.86,
+     9.4,
+     "zh",
+     "耳朵。"
+    ]
+   ],
+   "narration_sec": 9.9
+  },
+  {
+   "word": "hand",
+   "ipa": "/hænd/",
+   "meaning": "手",
+   "emoji": "✋",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "hand 开头像「喊」：上课举起手，大声喊：到！",
+   "slogan": "举起手，喊：到！",
+   "cue": "喊「到」的时候举起什么？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "喊都是熟字。",
+   "scene": "小朋友举手喊到",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/hand.svg",
+   "distractors": [
+    "ear",
+    "nose",
+    "clap"
+   ],
+   "narration": [
+    [
+     "en",
+     "hand"
+    ],
+    [
+     "zh",
+     "听起来像，喊！"
+    ],
+    [
+     "zh",
+     "老师点名啦！举起手，大声喊：到！"
+    ],
+    [
+     "zh",
+     "举起来的，就是手。"
+    ],
+    [
+     "en",
+     "hand"
+    ],
+    [
+     "zh",
+     "手。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/hand.mp3",
+   "audio_en": "audio/en/hand.mp3",
+   "video": "video/hand.mp4",
+   "icon": "img/icons/hand.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.77,
+     "en",
+     "hand"
+    ],
+    [
+     1.07,
+     2.36,
+     "zh",
+     "听起来像，喊！"
+    ],
+    [
+     2.66,
+     6.21,
+     "zh",
+     "老师点名啦！举起手，大声喊：到！"
+    ],
+    [
+     6.51,
+     8.1,
+     "zh",
+     "举起来的，就是手。"
+    ],
+    [
+     8.4,
+     8.97,
+     "en",
+     "hand"
+    ],
+    [
+     9.27,
+     9.7,
+     "zh",
+     "手。"
+    ]
+   ],
+   "narration_sec": 10.2
+  },
+  {
+   "word": "monkey",
+   "ipa": "/ˈmʌŋki/",
+   "meaning": "猴子",
+   "emoji": "🐒",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "monkey 听起来像「忙给」：小猴子忙着给大家摘桃子。",
+   "slogan": "猴子忙给你摘桃",
+   "cue": "是谁忙着给大家摘桃子？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "忙给都是熟字。",
+   "scene": "小猴子在桃树下摘桃",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/monkey.svg",
+   "distractors": [
+    "panda",
+    "tiger",
+    "duck"
+   ],
+   "narration": [
+    [
+     "en",
+     "monkey"
+    ],
+    [
+     "zh",
+     "听起来像，忙给！"
+    ],
+    [
+     "zh",
+     "小猴子爬上树，忙着摘桃子，忙给你，忙给我！"
+    ],
+    [
+     "zh",
+     "爱爬树、爱吃桃的，就是猴子。"
+    ],
+    [
+     "en",
+     "monkey"
+    ],
+    [
+     "zh",
+     "猴子。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/monkey.mp3",
+   "audio_en": "audio/en/monkey.mp3",
+   "video": "video/monkey.mp4",
+   "icon": "img/icons/monkey.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.85,
+     "en",
+     "monkey"
+    ],
+    [
+     1.15,
+     2.56,
+     "zh",
+     "听起来像，忙给！"
+    ],
+    [
+     2.86,
+     6.67,
+     "zh",
+     "小猴子爬上树，忙着摘桃子，忙给你，忙给我！"
+    ],
+    [
+     6.97,
+     9.62,
+     "zh",
+     "爱爬树、爱吃桃的，就是猴子。"
+    ],
+    [
+     9.92,
+     10.56,
+     "en",
+     "monkey"
+    ],
+    [
+     10.86,
+     11.41,
+     "zh",
+     "猴子。"
+    ]
+   ],
+   "narration_sec": 11.91
+  },
+  {
+   "word": "duck",
+   "ipa": "/dʌk/",
+   "meaning": "鸭子",
+   "emoji": "🦆",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "duck 听起来像「搭客」：小鸭子搭客，背着小青蛙过河。",
+   "slogan": "小鸭子搭客过河",
+   "cue": "谁背着小青蛙过河？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "搭客都是熟字。",
+   "scene": "小鸭子背着小青蛙在河里游",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/duck.svg",
+   "distractors": [
+    "monkey",
+    "fish",
+    "cat"
+   ],
+   "narration": [
+    [
+     "en",
+     "duck"
+    ],
+    [
+     "zh",
+     "听起来像，搭客！"
+    ],
+    [
+     "zh",
+     "小鸭子在河里搭客：上来吧，小青蛙，我背你过河！"
+    ],
+    [
+     "zh",
+     "嘎嘎叫的，就是鸭子。"
+    ],
+    [
+     "en",
+     "duck"
+    ],
+    [
+     "zh",
+     "鸭子。"
+    ]
+   ],
+   "fx": "bubbles",
+   "audio": "audio/narr/duck.mp3",
+   "audio_en": "audio/en/duck.mp3",
+   "video": "video/duck.mp4",
+   "icon": "img/icons/duck.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.74,
+     "en",
+     "duck"
+    ],
+    [
+     1.04,
+     2.52,
+     "zh",
+     "听起来像，搭客！"
+    ],
+    [
+     2.82,
+     7.0,
+     "zh",
+     "小鸭子在河里搭客：上来吧，小青蛙，我背你过河！"
+    ],
+    [
+     7.3,
+     9.09,
+     "zh",
+     "嘎嘎叫的，就是鸭子。"
+    ],
+    [
+     9.39,
+     9.93,
+     "en",
+     "duck"
+    ],
+    [
+     10.23,
+     10.8,
+     "zh",
+     "鸭子。"
+    ]
+   ],
+   "narration_sec": 11.3
+  },
+  {
+   "word": "banana",
+   "ipa": "/bəˈnɑːnə/",
+   "meaning": "香蕉",
+   "emoji": "🍌",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "banana 听起来像「爸拿那」：爸爸拿起那根黄黄的香蕉。",
+   "slogan": "爸爸拿那根香蕉",
+   "cue": "爸爸拿起了哪根水果？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "爸拿那都是熟字。",
+   "scene": "爸爸举着一根香蕉",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/banana.svg",
+   "distractors": [
+    "orange",
+    "apple",
+    "cake"
+   ],
+   "narration": [
+    [
+     "en",
+     "banana"
+    ],
+    [
+     "zh",
+     "听起来像，爸拿那！"
+    ],
+    [
+     "zh",
+     "爸爸，拿那根！爸爸拿起那根弯弯的香蕉。"
+    ],
+    [
+     "zh",
+     "弯弯黄黄的，就是香蕉。"
+    ],
+    [
+     "en",
+     "banana"
+    ],
+    [
+     "zh",
+     "香蕉。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/banana.mp3",
+   "audio_en": "audio/en/banana.mp3",
+   "video": "video/banana.mp4",
+   "icon": "img/icons/banana.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.99,
+     "en",
+     "banana"
+    ],
+    [
+     1.29,
+     2.91,
+     "zh",
+     "听起来像，爸拿那！"
+    ],
+    [
+     3.21,
+     6.86,
+     "zh",
+     "爸爸，拿那根！爸爸拿起那根弯弯的香蕉。"
+    ],
+    [
+     7.16,
+     9.15,
+     "zh",
+     "弯弯黄黄的，就是香蕉。"
+    ],
+    [
+     9.45,
+     10.24,
+     "en",
+     "banana"
+    ],
+    [
+     10.54,
+     11.14,
+     "zh",
+     "香蕉。"
+    ]
+   ],
+   "narration_sec": 11.64
+  },
+  {
+   "word": "orange",
+   "ipa": "/ˈɒrɪndʒ/",
+   "meaning": "橙子",
+   "emoji": "🍊",
+   "group": "一年级",
+   "method": "谐音",
+   "hook": "orange 听起来像「哦，乱挤」：挤橙汁挤得到处都是——哦，乱挤！",
+   "slogan": "哦，乱挤！挤橙汁",
+   "cue": "挤得到处都是汁的水果是什么？",
+   "boundary": "谐音联想，不是词源；要听真实读音。",
+   "prereq": "哦，乱挤都是熟字。",
+   "scene": "橙子和一杯橙汁，汁水溅出来",
+   "basis": "谐音联想；不是词源",
+   "status": "待审",
+   "review_status": "本次新写（2026-10-11 第二轮）；待 Phil 审",
+   "source": "本次新写",
+   "image": "img/orange.svg",
+   "distractors": [
+    "banana",
+    "egg",
+    "sun"
+   ],
+   "narration": [
+    [
+     "en",
+     "orange"
+    ],
+    [
+     "zh",
+     "听起来像，哦，乱挤！"
+    ],
+    [
+     "zh",
+     "挤橙汁啦，挤呀挤，溅得到处都是，哦，乱挤！"
+    ],
+    [
+     "zh",
+     "圆圆的、能挤出汁的，就是橙子。"
+    ],
+    [
+     "en",
+     "orange"
+    ],
+    [
+     "zh",
+     "橙子。"
+    ]
+   ],
+   "fx": "sparkle",
+   "audio": "audio/narr/orange.mp3",
+   "audio_en": "audio/en/orange.mp3",
+   "video": "video/orange.mp4",
+   "icon": "img/icons/orange.svg",
+   "cue_map": {
+    "slogan": 1,
+    "meaning": 3
+   },
+   "cues": [
+    [
+     0.2,
+     0.94,
+     "en",
+     "orange"
+    ],
+    [
+     1.24,
+     3.21,
+     "zh",
+     "听起来像，哦，乱挤！"
+    ],
+    [
+     3.51,
+     7.49,
+     "zh",
+     "挤橙汁啦，挤呀挤，溅得到处都是，哦，乱挤！"
+    ],
+    [
+     7.79,
+     10.58,
+     "zh",
+     "圆圆的、能挤出汁的，就是橙子。"
+    ],
+    [
+     10.88,
+     11.62,
+     "en",
+     "orange"
+    ],
+    [
+     11.92,
+     12.49,
+     "zh",
+     "橙子。"
+    ]
+   ],
+   "narration_sec": 12.99
   }
  ],
  "letters": [
@@ -2261,18 +4175,20 @@
    "upper": "S",
    "name": "S",
    "sound": "/s/",
-   "sound_zh": "嘶",
    "shape": "一条弯弯的小蛇",
-   "story": "s 像一条弯弯扭扭的小蛇，嘶——嘶——嘶！",
+   "story": "s 像一条弯弯扭扭的小蛇，在草地上爬呀爬。",
+   "tip": "上下牙轻轻合上，让气从牙缝里细细地漏出来。",
    "keyword": "snake",
+   "keyword_pos": "开头",
    "prop": "🐍",
    "color": "#2EA868",
    "group": 1,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/s.svg",
    "audio": "audio/letters/s.mp3",
    "audio_en": "audio/en/L-s.mp3",
+   "phon": "audio/phon/s.mp3",
    "video": "video/letters/s.mp4",
    "narration": [
     [
@@ -2285,11 +4201,27 @@
     ],
     [
      "zh",
-     "s 像一条弯弯扭扭的小蛇，嘶——嘶——嘶！"
+     "s 像一条弯弯扭扭的小蛇，在草地上爬呀爬。"
     ],
     [
      "zh",
-     "它常发的音是：嘶，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "s"
+    ],
+    [
+     "ph",
+     "s"
+    ],
+    [
+     "zh",
+     "上下牙轻轻合上，让气从牙缝里细细地漏出来。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -2297,13 +4229,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "S."
+     "ph",
+     "s"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2321,34 +4258,58 @@
      2.18,
      5.84,
      "zh",
-     "s 像一条弯弯扭扭的小蛇，嘶——嘶——嘶！"
+     "s 像一条弯弯扭扭的小蛇，在草地上爬呀爬。"
     ],
     [
      6.14,
-     8.52,
+     7.59,
      "zh",
-     "它常发的音是：嘶，就像"
+     "听，它的声音是："
     ],
     [
-     8.82,
-     9.35,
+     7.89,
+     8.46,
+     "ph",
+     "s"
+    ],
+    [
+     8.76,
+     9.33,
+     "ph",
+     "s"
+    ],
+    [
+     9.63,
+     13.62,
+     "zh",
+     "上下牙轻轻合上，让气从牙缝里细细地漏出来。"
+    ],
+    [
+     13.92,
+     14.49,
+     "zh",
+     "就像"
+    ],
+    [
+     14.79,
+     15.32,
      "en",
      "snake"
     ],
     [
-     9.65,
-     10.67,
+     15.62,
+     16.64,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     10.97,
-     11.5,
-     "en",
-     "S."
+     16.94,
+     17.51,
+     "ph",
+     "s"
     ]
    ],
-   "narration_sec": 12.0
+   "narration_sec": 18.01
   },
   {
    "id": "L-a",
@@ -2356,18 +4317,20 @@
    "upper": "A",
    "name": "A",
    "sound": "/æ/",
-   "sound_zh": "哎",
    "shape": "一个带小柄的苹果",
-   "story": "a 像一个圆圆的小苹果，旁边一根小柄。咬一口，哎！",
+   "story": "a 像一个圆圆的小苹果，旁边伸出一根小柄。",
+   "tip": "嘴巴张大，嘴角往两边拉，短短地发音。",
    "keyword": "apple",
+   "keyword_pos": "开头",
    "prop": "🍎",
    "color": "#E5484D",
    "group": 1,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/a.svg",
    "audio": "audio/letters/a.mp3",
    "audio_en": "audio/en/L-a.mp3",
+   "phon": "audio/phon/a.mp3",
    "video": "video/letters/a.mp4",
    "narration": [
     [
@@ -2380,11 +4343,27 @@
     ],
     [
      "zh",
-     "a 像一个圆圆的小苹果，旁边一根小柄。咬一口，哎！"
+     "a 像一个圆圆的小苹果，旁边伸出一根小柄。"
     ],
     [
      "zh",
-     "它常发的音是：哎，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "zh",
+     "嘴巴张大，嘴角往两边拉，短短地发音。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -2392,13 +4371,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "A."
+     "ph",
+     "a"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2414,36 +4398,60 @@
     ],
     [
      2.04,
-     6.64,
+     5.39,
      "zh",
-     "a 像一个圆圆的小苹果，旁边一根小柄。咬一口，哎！"
+     "a 像一个圆圆的小苹果，旁边伸出一根小柄。"
     ],
     [
-     6.94,
-     9.27,
+     5.69,
+     7.14,
      "zh",
-     "它常发的音是：哎，就像"
+     "听，它的声音是："
     ],
     [
-     9.57,
-     10.17,
+     7.44,
+     8.11,
+     "ph",
+     "a"
+    ],
+    [
+     8.41,
+     9.08,
+     "ph",
+     "a"
+    ],
+    [
+     9.38,
+     12.65,
+     "zh",
+     "嘴巴张大，嘴角往两边拉，短短地发音。"
+    ],
+    [
+     12.95,
+     13.52,
+     "zh",
+     "就像"
+    ],
+    [
+     13.82,
+     14.42,
      "en",
      "apple"
     ],
     [
-     10.47,
-     11.49,
+     14.72,
+     15.73,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.79,
-     12.17,
-     "en",
-     "A."
+     16.03,
+     16.7,
+     "ph",
+     "a"
     ]
    ],
-   "narration_sec": 12.67
+   "narration_sec": 17.2
   },
   {
    "id": "L-t",
@@ -2451,18 +4459,20 @@
    "upper": "T",
    "name": "T",
    "sound": "/t/",
-   "sound_zh": "特",
    "shape": "一个小十字路标",
-   "story": "t 像一个小十字架，钟表嘀嗒嘀嗒：特、特、特！",
-   "keyword": "tick-tock",
-   "prop": "⏰",
+   "story": "t 像一个小十字路标，竖在路口。",
+   "tip": "舌尖顶住上牙后面，轻轻一弹，只吐一小口气，喉咙不出声。",
+   "keyword": "tiger",
+   "keyword_pos": "开头",
+   "prop": "🐯",
    "color": "#3A8DDE",
    "group": 1,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/t.svg",
    "audio": "audio/letters/t.mp3",
    "audio_en": "audio/en/L-t.mp3",
+   "phon": "audio/phon/t.mp3",
    "video": "video/letters/t.mp4",
    "narration": [
     [
@@ -2475,25 +4485,46 @@
     ],
     [
      "zh",
-     "t 像一个小十字架，钟表嘀嗒嘀嗒：特、特、特！"
+     "t 像一个小十字路标，竖在路口。"
     ],
     [
      "zh",
-     "它常发的音是：特，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "tick-tock"
+     "ph",
+     "t"
+    ],
+    [
+     "ph",
+     "t"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌尖顶住上牙后面，轻轻一弹，只吐一小口气，喉咙不出声。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "T."
+     "tiger"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "t"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2509,36 +4540,60 @@
     ],
     [
      2.1,
-     6.44,
+     4.66,
      "zh",
-     "t 像一个小十字架，钟表嘀嗒嘀嗒：特、特、特！"
+     "t 像一个小十字路标，竖在路口。"
     ],
     [
-     6.74,
-     9.07,
+     4.96,
+     6.41,
      "zh",
-     "它常发的音是：特，就像"
+     "听，它的声音是："
     ],
     [
-     9.37,
-     10.04,
+     6.71,
+     6.92,
+     "ph",
+     "t"
+    ],
+    [
+     7.22,
+     7.43,
+     "ph",
+     "t"
+    ],
+    [
+     7.73,
+     12.83,
+     "zh",
+     "舌尖顶住上牙后面，轻轻一弹，只吐一小口气，喉咙不出声。"
+    ],
+    [
+     13.13,
+     13.7,
+     "zh",
+     "就像"
+    ],
+    [
+     14.0,
+     14.65,
      "en",
-     "tick-tock"
+     "tiger"
     ],
     [
-     10.34,
-     11.36,
+     14.95,
+     15.96,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.66,
-     12.11,
-     "en",
-     "T."
+     16.26,
+     16.47,
+     "ph",
+     "t"
     ]
    ],
-   "narration_sec": 12.61
+   "narration_sec": 16.97
   },
   {
    "id": "L-p",
@@ -2546,18 +4601,20 @@
    "upper": "P",
    "name": "P",
    "sound": "/p/",
-   "sound_zh": "噗",
    "shape": "一根吹泡泡的小棒",
-   "story": "p 像一根吹泡泡的小棒，对着它一吹：噗！噗！噗！",
-   "keyword": "pop",
+   "story": "p 像一根吹泡泡的小棒，上面顶着一个圆圈。",
+   "tip": "双唇闭紧，一下子打开，吹出一小口气，喉咙不出声。",
+   "keyword": "panda",
+   "keyword_pos": "开头",
    "prop": "🫧",
    "color": "#9C6ADE",
    "group": 1,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/p.svg",
    "audio": "audio/letters/p.mp3",
    "audio_en": "audio/en/L-p.mp3",
+   "phon": "audio/phon/p.mp3",
    "video": "video/letters/p.mp4",
    "narration": [
     [
@@ -2570,25 +4627,46 @@
     ],
     [
      "zh",
-     "p 像一根吹泡泡的小棒，对着它一吹：噗！噗！噗！"
+     "p 像一根吹泡泡的小棒，上面顶着一个圆圈。"
     ],
     [
      "zh",
-     "它常发的音是：噗，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "pop"
+     "ph",
+     "p"
+    ],
+    [
+     "ph",
+     "p"
     ],
     [
      "zh",
-     "开头的声音。"
+     "双唇闭紧，一下子打开，吹出一小口气，喉咙不出声。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "P."
+     "panda"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "p"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2604,36 +4682,60 @@
     ],
     [
      2.08,
-     7.26,
+     5.77,
      "zh",
-     "p 像一根吹泡泡的小棒，对着它一吹：噗！噗！噗！"
+     "p 像一根吹泡泡的小棒，上面顶着一个圆圈。"
     ],
     [
-     7.56,
-     9.86,
+     6.07,
+     7.52,
      "zh",
-     "它常发的音是：噗，就像"
+     "听，它的声音是："
     ],
     [
-     10.16,
-     10.55,
+     7.82,
+     8.05,
+     "ph",
+     "p"
+    ],
+    [
+     8.35,
+     8.58,
+     "ph",
+     "p"
+    ],
+    [
+     8.88,
+     13.33,
+     "zh",
+     "双唇闭紧，一下子打开，吹出一小口气，喉咙不出声。"
+    ],
+    [
+     13.63,
+     14.2,
+     "zh",
+     "就像"
+    ],
+    [
+     14.5,
+     15.19,
      "en",
-     "pop"
+     "panda"
     ],
     [
-     10.85,
-     11.86,
+     15.49,
+     16.5,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     12.16,
-     12.59,
-     "en",
-     "P."
+     16.8,
+     17.03,
+     "ph",
+     "p"
     ]
    ],
-   "narration_sec": 13.09
+   "narration_sec": 17.53
   },
   {
    "id": "L-i",
@@ -2641,18 +4743,20 @@
    "upper": "I",
    "name": "I",
    "sound": "/ɪ/",
-   "sound_zh": "咦",
-   "shape": "一个戴着圆点帽的小人",
-   "story": "i 像一个小人，头上顶着一个小圆点。小虫叮了他一下：咦！",
+   "shape": "一个戴圆点帽的小人",
+   "story": "i 像一个小人，头上顶着一个小圆点。",
+   "tip": "嘴巴微微张开，舌头放松，短短地发音。",
    "keyword": "insect",
+   "keyword_pos": "开头",
    "prop": "🐛",
    "color": "#FF8A3D",
    "group": 1,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/i.svg",
    "audio": "audio/letters/i.mp3",
    "audio_en": "audio/en/L-i.mp3",
+   "phon": "audio/phon/i.mp3",
    "video": "video/letters/i.mp4",
    "narration": [
     [
@@ -2665,11 +4769,27 @@
     ],
     [
      "zh",
-     "i 像一个小人，头上顶着一个小圆点。小虫叮了他一下：咦！"
+     "i 像一个小人，头上顶着一个小圆点。"
     ],
     [
      "zh",
-     "它常发的音是：咦，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "zh",
+     "嘴巴微微张开，舌头放松，短短地发音。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -2677,13 +4797,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "I."
+     "ph",
+     "i"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2699,36 +4824,60 @@
     ],
     [
      2.07,
-     7.12,
+     4.83,
      "zh",
-     "i 像一个小人，头上顶着一个小圆点。小虫叮了他一下：咦！"
+     "i 像一个小人，头上顶着一个小圆点。"
     ],
     [
-     7.42,
-     9.72,
+     5.13,
+     6.58,
      "zh",
-     "它常发的音是：咦，就像"
+     "听，它的声音是："
     ],
     [
-     10.02,
-     10.89,
+     6.88,
+     7.53,
+     "ph",
+     "i"
+    ],
+    [
+     7.83,
+     8.48,
+     "ph",
+     "i"
+    ],
+    [
+     8.78,
+     12.1,
+     "zh",
+     "嘴巴微微张开，舌头放松，短短地发音。"
+    ],
+    [
+     12.4,
+     12.98,
+     "zh",
+     "就像"
+    ],
+    [
+     13.28,
+     14.15,
      "en",
      "insect"
     ],
     [
-     11.19,
-     12.21,
+     14.45,
+     15.46,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     12.51,
-     12.93,
-     "en",
-     "I."
+     15.76,
+     16.41,
+     "ph",
+     "i"
     ]
    ],
-   "narration_sec": 13.43
+   "narration_sec": 16.91
   },
   {
    "id": "L-n",
@@ -2736,18 +4885,20 @@
    "upper": "N",
    "name": "N",
    "sound": "/n/",
-   "sound_zh": "嗯",
    "shape": "一座小拱门",
-   "story": "n 像一座小拱门。小朋友摇摇头：嗯——嗯——不要不要！",
-   "keyword": "no",
+   "story": "n 像一座小拱门，小朋友从下面钻过去。",
+   "tip": "舌尖顶住上牙后面，用鼻子出声，可以一直哼下去。",
+   "keyword": "nose",
+   "keyword_pos": "开头",
    "prop": "🚪",
    "color": "#2F5DA8",
    "group": 1,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/n.svg",
    "audio": "audio/letters/n.mp3",
    "audio_en": "audio/en/L-n.mp3",
+   "phon": "audio/phon/n.mp3",
    "video": "video/letters/n.mp4",
    "narration": [
     [
@@ -2760,25 +4911,46 @@
     ],
     [
      "zh",
-     "n 像一座小拱门。小朋友摇摇头：嗯——嗯——不要不要！"
+     "n 像一座小拱门，小朋友从下面钻过去。"
     ],
     [
      "zh",
-     "它常发的音是：嗯，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "no"
+     "ph",
+     "n"
+    ],
+    [
+     "ph",
+     "n"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌尖顶住上牙后面，用鼻子出声，可以一直哼下去。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "N."
+     "nose"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "n"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2794,36 +4966,60 @@
     ],
     [
      2.11,
-     6.89,
+     5.36,
      "zh",
-     "n 像一座小拱门。小朋友摇摇头：嗯——嗯——不要不要！"
+     "n 像一座小拱门，小朋友从下面钻过去。"
     ],
     [
-     7.19,
-     9.46,
+     5.66,
+     7.11,
      "zh",
-     "它常发的音是：嗯，就像"
+     "听，它的声音是："
     ],
     [
-     9.76,
-     10.25,
+     7.41,
+     8.02,
+     "ph",
+     "n"
+    ],
+    [
+     8.32,
+     8.93,
+     "ph",
+     "n"
+    ],
+    [
+     9.23,
+     13.36,
+     "zh",
+     "舌尖顶住上牙后面，用鼻子出声，可以一直哼下去。"
+    ],
+    [
+     13.66,
+     14.23,
+     "zh",
+     "就像"
+    ],
+    [
+     14.53,
+     15.21,
      "en",
-     "no"
+     "nose"
     ],
     [
-     10.55,
-     11.57,
+     15.51,
+     16.52,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.87,
-     12.33,
-     "en",
-     "N."
+     16.82,
+     17.43,
+     "ph",
+     "n"
     ]
    ],
-   "narration_sec": 12.83
+   "narration_sec": 17.93
   },
   {
    "id": "L-c",
@@ -2831,19 +5027,21 @@
    "upper": "C",
    "name": "C",
    "sound": "/k/",
-   "sound_zh": "咳",
    "shape": "一块被咬了一口的饼干",
-   "story": "c 像一块被咬掉一口的饼干，吃得太快，咳！咳！",
-   "keyword": "cookie",
+   "story": "c 像一块被咬掉一口的圆饼干。",
+   "tip": "舌头后面顶住上面，一下子放开，吐一小口气，喉咙不出声。",
+   "keyword": "cat",
+   "keyword_pos": "开头",
    "prop": "🍪",
    "color": "#C98A4B",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/c.svg",
    "audio": "audio/letters/c.mp3",
    "audio_en": "audio/en/L-c.mp3",
-   "video": null,
+   "phon": "audio/phon/c.mp3",
+   "video": "video/letters/c.mp4",
    "narration": [
     [
      "zh",
@@ -2855,25 +5053,46 @@
     ],
     [
      "zh",
-     "c 像一块被咬掉一口的饼干，吃得太快，咳！咳！"
+     "c 像一块被咬掉一口的圆饼干。"
     ],
     [
      "zh",
-     "它常发的音是：咳，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "cookie"
+     "ph",
+     "c"
+    ],
+    [
+     "ph",
+     "c"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌头后面顶住上面，一下子放开，吐一小口气，喉咙不出声。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "C."
+     "cat"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "c"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2889,36 +5108,60 @@
     ],
     [
      2.16,
-     6.67,
+     4.52,
      "zh",
-     "c 像一块被咬掉一口的饼干，吃得太快，咳！咳！"
+     "c 像一块被咬掉一口的圆饼干。"
     ],
     [
-     6.97,
-     9.31,
+     4.82,
+     6.27,
      "zh",
-     "它常发的音是：咳，就像"
+     "听，它的声音是："
     ],
     [
-     9.61,
-     10.21,
+     6.57,
+     6.79,
+     "ph",
+     "c"
+    ],
+    [
+     7.09,
+     7.31,
+     "ph",
+     "c"
+    ],
+    [
+     7.61,
+     12.55,
+     "zh",
+     "舌头后面顶住上面，一下子放开，吐一小口气，喉咙不出声。"
+    ],
+    [
+     12.85,
+     13.42,
+     "zh",
+     "就像"
+    ],
+    [
+     13.72,
+     14.16,
      "en",
-     "cookie"
+     "cat"
     ],
     [
-     10.51,
-     11.53,
+     14.46,
+     15.47,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.83,
-     12.34,
-     "en",
-     "C."
+     15.77,
+     15.99,
+     "ph",
+     "c"
     ]
    ],
-   "narration_sec": 12.84
+   "narration_sec": 16.49
   },
   {
    "id": "L-k",
@@ -2926,19 +5169,21 @@
    "upper": "K",
    "name": "K",
    "sound": "/k/",
-   "sound_zh": "咳",
    "shape": "一个踢腿的小人",
-   "story": "k 像一个小人伸出一条腿，踢球！踢的时候咳一声：咳！",
-   "keyword": "kick",
+   "story": "k 像一个小人伸出一条腿，去踢球。",
+   "tip": "和 c 的声音一样：舌头后面顶住上面，一下子放开。",
+   "keyword": "kite",
+   "keyword_pos": "开头",
    "prop": "⚽",
    "color": "#F2643A",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/k.svg",
    "audio": "audio/letters/k.mp3",
    "audio_en": "audio/en/L-k.mp3",
-   "video": null,
+   "phon": "audio/phon/k.mp3",
+   "video": "video/letters/k.mp4",
    "narration": [
     [
      "zh",
@@ -2950,25 +5195,46 @@
     ],
     [
      "zh",
-     "k 像一个小人伸出一条腿，踢球！踢的时候咳一声：咳！"
+     "k 像一个小人伸出一条腿，去踢球。"
     ],
     [
      "zh",
-     "它常发的音是：咳，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "kick"
+     "ph",
+     "k"
+    ],
+    [
+     "ph",
+     "k"
     ],
     [
      "zh",
-     "开头的声音。"
+     "和 c 的声音一样：舌头后面顶住上面，一下子放开。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "K."
+     "kite"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "k"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -2984,36 +5250,60 @@
     ],
     [
      2.1,
-     7.06,
+     5.04,
      "zh",
-     "k 像一个小人伸出一条腿，踢球！踢的时候咳一声：咳！"
+     "k 像一个小人伸出一条腿，去踢球。"
     ],
     [
-     7.36,
-     9.7,
+     5.34,
+     6.79,
      "zh",
-     "它常发的音是：咳，就像"
+     "听，它的声音是："
     ],
     [
-     10.0,
-     10.32,
+     7.09,
+     7.31,
+     "ph",
+     "k"
+    ],
+    [
+     7.61,
+     7.83,
+     "ph",
+     "k"
+    ],
+    [
+     8.13,
+     12.25,
+     "zh",
+     "和 c 的声音一样：舌头后面顶住上面，一下子放开。"
+    ],
+    [
+     12.55,
+     13.12,
+     "zh",
+     "就像"
+    ],
+    [
+     13.42,
+     13.86,
      "en",
-     "kick"
+     "kite"
     ],
     [
-     10.62,
-     11.64,
+     14.16,
+     15.18,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.94,
-     12.39,
-     "en",
-     "K."
+     15.48,
+     15.7,
+     "ph",
+     "k"
     ]
    ],
-   "narration_sec": 12.89
+   "narration_sec": 16.2
   },
   {
    "id": "L-e",
@@ -3021,19 +5311,21 @@
    "upper": "E",
    "name": "E",
    "sound": "/e/",
-   "sound_zh": "哎",
-   "shape": "一只侧着张开的小嘴",
-   "story": "e 像一只张开的小嘴巴，看见鸡蛋，哎！哎！",
+   "shape": "一只张开的小嘴",
+   "story": "e 像一只张开的小嘴巴，正要吃鸡蛋。",
+   "tip": "嘴巴半张，嘴角稍稍往两边，短短地发音。",
    "keyword": "egg",
+   "keyword_pos": "开头",
    "prop": "🥚",
    "color": "#E0A400",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/e.svg",
    "audio": "audio/letters/e.mp3",
    "audio_en": "audio/en/L-e.mp3",
-   "video": null,
+   "phon": "audio/phon/e.mp3",
+   "video": "video/letters/e.mp4",
    "narration": [
     [
      "zh",
@@ -3045,11 +5337,27 @@
     ],
     [
      "zh",
-     "e 像一只张开的小嘴巴，看见鸡蛋，哎！哎！"
+     "e 像一只张开的小嘴巴，正要吃鸡蛋。"
     ],
     [
      "zh",
-     "它常发的音是：哎，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "zh",
+     "嘴巴半张，嘴角稍稍往两边，短短地发音。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -3057,13 +5365,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "E."
+     "ph",
+     "e"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3079,36 +5392,60 @@
     ],
     [
      2.03,
-     6.14,
+     4.88,
      "zh",
-     "e 像一只张开的小嘴巴，看见鸡蛋，哎！哎！"
+     "e 像一只张开的小嘴巴，正要吃鸡蛋。"
     ],
     [
-     6.44,
-     8.77,
+     5.18,
+     6.63,
      "zh",
-     "它常发的音是：哎，就像"
+     "听，它的声音是："
     ],
     [
-     9.07,
-     9.44,
+     6.93,
+     7.6,
+     "ph",
+     "e"
+    ],
+    [
+     7.9,
+     8.57,
+     "ph",
+     "e"
+    ],
+    [
+     8.87,
+     12.43,
+     "zh",
+     "嘴巴半张，嘴角稍稍往两边，短短地发音。"
+    ],
+    [
+     12.73,
+     13.3,
+     "zh",
+     "就像"
+    ],
+    [
+     13.6,
+     13.97,
      "en",
      "egg"
     ],
     [
-     9.74,
-     10.76,
+     14.27,
+     15.28,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.06,
-     11.43,
-     "en",
-     "E."
+     15.58,
+     16.25,
+     "ph",
+     "e"
     ]
    ],
-   "narration_sec": 11.93
+   "narration_sec": 16.75
   },
   {
    "id": "L-h",
@@ -3116,19 +5453,21 @@
    "upper": "H",
    "name": "H",
    "sound": "/h/",
-   "sound_zh": "哈",
    "shape": "一把小椅子",
-   "story": "h 像一把高背小椅子。跑累了坐上去，哈——哈——喘口气。",
+   "story": "h 像一把高背小椅子，跑累了就坐上去。",
+   "tip": "张开嘴，轻轻呵一口气，像对着冬天的玻璃窗呵气。",
    "keyword": "hat",
+   "keyword_pos": "开头",
    "prop": "🪑",
    "color": "#2EA868",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/h.svg",
    "audio": "audio/letters/h.mp3",
    "audio_en": "audio/en/L-h.mp3",
-   "video": null,
+   "phon": "audio/phon/h.mp3",
+   "video": "video/letters/h.mp4",
    "narration": [
     [
      "zh",
@@ -3140,11 +5479,27 @@
     ],
     [
      "zh",
-     "h 像一把高背小椅子。跑累了坐上去，哈——哈——喘口气。"
+     "h 像一把高背小椅子，跑累了就坐上去。"
     ],
     [
      "zh",
-     "它常发的音是：哈，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "h"
+    ],
+    [
+     "ph",
+     "h"
+    ],
+    [
+     "zh",
+     "张开嘴，轻轻呵一口气，像对着冬天的玻璃窗呵气。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -3152,13 +5507,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "H."
+     "ph",
+     "h"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3174,36 +5534,60 @@
     ],
     [
      2.26,
-     7.39,
+     5.39,
      "zh",
-     "h 像一把高背小椅子。跑累了坐上去，哈——哈——喘口气。"
+     "h 像一把高背小椅子，跑累了就坐上去。"
     ],
     [
-     7.69,
-     9.98,
+     5.69,
+     7.14,
      "zh",
-     "它常发的音是：哈，就像"
+     "听，它的声音是："
     ],
     [
-     10.28,
-     10.73,
+     7.44,
+     7.98,
+     "ph",
+     "h"
+    ],
+    [
+     8.28,
+     8.83,
+     "ph",
+     "h"
+    ],
+    [
+     9.13,
+     13.34,
+     "zh",
+     "张开嘴，轻轻呵一口气，像对着冬天的玻璃窗呵气。"
+    ],
+    [
+     13.64,
+     14.21,
+     "zh",
+     "就像"
+    ],
+    [
+     14.51,
+     14.95,
      "en",
      "hat"
     ],
     [
-     11.03,
-     12.04,
+     15.25,
+     16.27,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     12.34,
-     12.95,
-     "en",
-     "H."
+     16.57,
+     17.11,
+     "ph",
+     "h"
     ]
    ],
-   "narration_sec": 13.45
+   "narration_sec": 17.61
   },
   {
    "id": "L-r",
@@ -3211,19 +5595,21 @@
    "upper": "R",
    "name": "R",
    "sound": "/r/",
-   "sound_zh": "儿",
    "shape": "一根翘起来的小树枝",
-   "story": "r 像一根翘起来的小树枝，小狗咬着它：rrr——",
-   "keyword": "run",
+   "story": "r 像一根翘起来的小树枝，小狗咬着它跑。",
+   "tip": "舌头往后卷一点，不碰到上面，嘴唇稍稍收圆。",
+   "keyword": "red",
+   "keyword_pos": "开头",
    "prop": "🐶",
    "color": "#E5484D",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/r.svg",
    "audio": "audio/letters/r.mp3",
    "audio_en": "audio/en/L-r.mp3",
-   "video": null,
+   "phon": "audio/phon/r.mp3",
+   "video": "video/letters/r.mp4",
    "narration": [
     [
      "zh",
@@ -3235,25 +5621,46 @@
     ],
     [
      "zh",
-     "r 像一根翘起来的小树枝，小狗咬着它：rrr——"
+     "r 像一根翘起来的小树枝，小狗咬着它跑。"
     ],
     [
      "zh",
-     "它常发的音是：儿，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "run"
+     "ph",
+     "r"
+    ],
+    [
+     "ph",
+     "r"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌头往后卷一点，不碰到上面，嘴唇稍稍收圆。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "R."
+     "red"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "r"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3269,36 +5676,60 @@
     ],
     [
      2.1,
-     6.12,
+     5.36,
      "zh",
-     "r 像一根翘起来的小树枝，小狗咬着它：rrr——"
+     "r 像一根翘起来的小树枝，小狗咬着它跑。"
     ],
     [
-     6.42,
-     8.24,
+     5.66,
+     7.11,
      "zh",
-     "它常发的音是：儿，就像"
+     "听，它的声音是："
     ],
     [
-     8.54,
-     9.04,
+     7.41,
+     7.99,
+     "ph",
+     "r"
+    ],
+    [
+     8.29,
+     8.87,
+     "ph",
+     "r"
+    ],
+    [
+     9.17,
+     13.13,
+     "zh",
+     "舌头往后卷一点，不碰到上面，嘴唇稍稍收圆。"
+    ],
+    [
+     13.43,
+     14.0,
+     "zh",
+     "就像"
+    ],
+    [
+     14.3,
+     14.72,
      "en",
-     "run"
+     "red"
     ],
     [
-     9.34,
-     10.35,
+     15.02,
+     16.03,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     10.65,
-     11.1,
-     "en",
-     "R."
+     16.33,
+     16.91,
+     "ph",
+     "r"
     ]
    ],
-   "narration_sec": 11.6
+   "narration_sec": 17.41
   },
   {
    "id": "L-m",
@@ -3306,19 +5737,21 @@
    "upper": "M",
    "name": "M",
    "sound": "/m/",
-   "sound_zh": "嗯",
    "shape": "两座小山",
-   "story": "m 像两座小山。山上有好吃的冰淇淋，嗯——好吃！",
-   "keyword": "mmm",
+   "story": "m 像两座连在一起的小山。",
+   "tip": "双唇合上，用鼻子出声，可以一直哼下去。",
+   "keyword": "monkey",
+   "keyword_pos": "开头",
    "prop": "🍦",
    "color": "#FF8FB1",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/m.svg",
    "audio": "audio/letters/m.mp3",
    "audio_en": "audio/en/L-m.mp3",
-   "video": null,
+   "phon": "audio/phon/m.mp3",
+   "video": "video/letters/m.mp4",
    "narration": [
     [
      "zh",
@@ -3330,25 +5763,46 @@
     ],
     [
      "zh",
-     "m 像两座小山。山上有好吃的冰淇淋，嗯——好吃！"
+     "m 像两座连在一起的小山。"
     ],
     [
      "zh",
-     "它常发的音是：嗯，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "mmm"
+     "ph",
+     "m"
+    ],
+    [
+     "ph",
+     "m"
     ],
     [
      "zh",
-     "开头的声音。"
+     "双唇合上，用鼻子出声，可以一直哼下去。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "M."
+     "monkey"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "m"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3364,36 +5818,60 @@
     ],
     [
      2.12,
-     6.77,
+     4.24,
      "zh",
-     "m 像两座小山。山上有好吃的冰淇淋，嗯——好吃！"
+     "m 像两座连在一起的小山。"
     ],
     [
-     7.07,
-     9.35,
+     4.54,
+     5.99,
      "zh",
-     "它常发的音是：嗯，就像"
+     "听，它的声音是："
     ],
     [
-     9.65,
-     10.45,
+     6.29,
+     6.9,
+     "ph",
+     "m"
+    ],
+    [
+     7.2,
+     7.81,
+     "ph",
+     "m"
+    ],
+    [
+     8.11,
+     11.59,
+     "zh",
+     "双唇合上，用鼻子出声，可以一直哼下去。"
+    ],
+    [
+     11.89,
+     12.46,
+     "zh",
+     "就像"
+    ],
+    [
+     12.76,
+     13.4,
      "en",
-     "mmm"
+     "monkey"
     ],
     [
-     10.75,
-     11.77,
+     13.7,
+     14.72,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     12.07,
-     12.53,
-     "en",
-     "M."
+     15.02,
+     15.63,
+     "ph",
+     "m"
     ]
    ],
-   "narration_sec": 13.03
+   "narration_sec": 16.13
   },
   {
    "id": "L-d",
@@ -3401,19 +5879,21 @@
    "upper": "D",
    "name": "D",
    "sound": "/d/",
-   "sound_zh": "得",
    "shape": "一面带鼓槌的小鼓",
-   "story": "d 像一面小鼓，竖着一根鼓槌：得、得、得，咚咚咚！",
-   "keyword": "drum",
+   "story": "d 像一面小鼓，旁边竖着一根鼓槌。",
+   "tip": "舌尖顶住上牙后面，一弹，喉咙要震动。",
+   "keyword": "dog",
+   "keyword_pos": "开头",
    "prop": "🥁",
    "color": "#3A8DDE",
    "group": 2,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/d.svg",
    "audio": "audio/letters/d.mp3",
    "audio_en": "audio/en/L-d.mp3",
-   "video": null,
+   "phon": "audio/phon/d.mp3",
+   "video": "video/letters/d.mp4",
    "narration": [
     [
      "zh",
@@ -3425,25 +5905,46 @@
     ],
     [
      "zh",
-     "d 像一面小鼓，竖着一根鼓槌：得、得、得，咚咚咚！"
+     "d 像一面小鼓，旁边竖着一根鼓槌。"
     ],
     [
      "zh",
-     "它常发的音是：得，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "drum"
+     "ph",
+     "d"
+    ],
+    [
+     "ph",
+     "d"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌尖顶住上牙后面，一弹，喉咙要震动。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "D."
+     "dog"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "d"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3459,36 +5960,60 @@
     ],
     [
      2.06,
-     6.7,
+     4.95,
      "zh",
-     "d 像一面小鼓，竖着一根鼓槌：得、得、得，咚咚咚！"
+     "d 像一面小鼓，旁边竖着一根鼓槌。"
     ],
     [
-     7.0,
-     9.44,
+     5.25,
+     6.71,
      "zh",
-     "它常发的音是：得，就像"
+     "听，它的声音是："
     ],
     [
-     9.74,
-     10.32,
+     7.01,
+     7.22,
+     "ph",
+     "d"
+    ],
+    [
+     7.52,
+     7.73,
+     "ph",
+     "d"
+    ],
+    [
+     8.03,
+     11.45,
+     "zh",
+     "舌尖顶住上牙后面，一弹，喉咙要震动。"
+    ],
+    [
+     11.75,
+     12.33,
+     "zh",
+     "就像"
+    ],
+    [
+     12.63,
+     13.11,
      "en",
-     "drum"
+     "dog"
     ],
     [
-     10.62,
-     11.64,
+     13.41,
+     14.43,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.94,
-     12.35,
-     "en",
-     "D."
+     14.73,
+     14.94,
+     "ph",
+     "d"
     ]
    ],
-   "narration_sec": 12.85
+   "narration_sec": 15.44
   },
   {
    "id": "L-g",
@@ -3496,19 +6021,21 @@
    "upper": "G",
    "name": "G",
    "sound": "/ɡ/",
-   "sound_zh": "咕",
    "shape": "一只张嘴的小青蛙",
-   "story": "g 像一只小青蛙，下巴挂着长尾巴：咕、咕、咕！",
+   "story": "g 像一只小青蛙，下巴挂着长尾巴。",
+   "tip": "舌头后面顶住上面，一放，喉咙要震动。",
    "keyword": "go",
+   "keyword_pos": "开头",
    "prop": "🐸",
    "color": "#2EA868",
    "group": 3,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/g.svg",
    "audio": "audio/letters/g.mp3",
    "audio_en": "audio/en/L-g.mp3",
-   "video": null,
+   "phon": "audio/phon/g.mp3",
+   "video": "video/letters/g.mp4",
    "narration": [
     [
      "zh",
@@ -3520,11 +6047,27 @@
     ],
     [
      "zh",
-     "g 像一只小青蛙，下巴挂着长尾巴：咕、咕、咕！"
+     "g 像一只小青蛙，下巴挂着长尾巴。"
     ],
     [
      "zh",
-     "它常发的音是：咕，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
+     "zh",
+     "舌头后面顶住上面，一放，喉咙要震动。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -3532,13 +6075,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "G."
+     "ph",
+     "g"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3554,36 +6102,60 @@
     ],
     [
      2.13,
-     6.26,
+     4.92,
      "zh",
-     "g 像一只小青蛙，下巴挂着长尾巴：咕、咕、咕！"
+     "g 像一只小青蛙，下巴挂着长尾巴。"
     ],
     [
-     6.56,
-     8.86,
+     5.22,
+     6.67,
      "zh",
-     "它常发的音是：咕，就像"
+     "听，它的声音是："
     ],
     [
-     9.16,
-     9.58,
+     6.97,
+     7.18,
+     "ph",
+     "g"
+    ],
+    [
+     7.48,
+     7.69,
+     "ph",
+     "g"
+    ],
+    [
+     7.99,
+     11.35,
+     "zh",
+     "舌头后面顶住上面，一放，喉咙要震动。"
+    ],
+    [
+     11.65,
+     12.23,
+     "zh",
+     "就像"
+    ],
+    [
+     12.53,
+     12.94,
      "en",
      "go"
     ],
     [
-     9.88,
-     10.9,
+     13.24,
+     14.26,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.2,
-     11.68,
-     "en",
-     "G."
+     14.56,
+     14.77,
+     "ph",
+     "g"
     ]
    ],
-   "narration_sec": 12.18
+   "narration_sec": 15.27
   },
   {
    "id": "L-o",
@@ -3591,19 +6163,21 @@
    "upper": "O",
    "name": "O",
    "sound": "/ɒ/",
-   "sound_zh": "哦",
    "shape": "一张张大的嘴巴",
-   "story": "o 圆圆的，像一张张得大大的嘴巴：哦！哦！哦！",
+   "story": "o 圆圆的，像一张张得大大的嘴巴。",
+   "tip": "嘴巴张大，声音从喉咙后面出来，短短的。",
    "keyword": "octopus",
+   "keyword_pos": "开头",
    "prop": "😮",
    "color": "#FF8A3D",
    "group": 3,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/o.svg",
    "audio": "audio/letters/o.mp3",
    "audio_en": "audio/en/L-o.mp3",
-   "video": null,
+   "phon": "audio/phon/o.mp3",
+   "video": "video/letters/o.mp4",
    "narration": [
     [
      "zh",
@@ -3615,11 +6189,27 @@
     ],
     [
      "zh",
-     "o 圆圆的，像一张张得大大的嘴巴：哦！哦！哦！"
+     "o 圆圆的，像一张张得大大的嘴巴。"
     ],
     [
      "zh",
-     "它常发的音是：哦，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "zh",
+     "嘴巴张大，声音从喉咙后面出来，短短的。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -3627,13 +6217,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "O."
+     "ph",
+     "o"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3649,36 +6244,60 @@
     ],
     [
      2.01,
-     6.91,
+     4.84,
      "zh",
-     "o 圆圆的，像一张张得大大的嘴巴：哦！哦！哦！"
+     "o 圆圆的，像一张张得大大的嘴巴。"
     ],
     [
-     7.21,
-     9.5,
+     5.14,
+     6.59,
      "zh",
-     "它常发的音是：哦，就像"
+     "听，它的声音是："
     ],
     [
-     9.8,
-     10.77,
+     6.89,
+     7.56,
+     "ph",
+     "o"
+    ],
+    [
+     7.86,
+     8.53,
+     "ph",
+     "o"
+    ],
+    [
+     8.83,
+     12.27,
+     "zh",
+     "嘴巴张大，声音从喉咙后面出来，短短的。"
+    ],
+    [
+     12.57,
+     13.15,
+     "zh",
+     "就像"
+    ],
+    [
+     13.45,
+     14.42,
      "en",
      "octopus"
     ],
     [
-     11.07,
-     12.09,
+     14.72,
+     15.73,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     12.39,
-     12.74,
-     "en",
-     "O."
+     16.03,
+     16.7,
+     "ph",
+     "o"
     ]
    ],
-   "narration_sec": 13.24
+   "narration_sec": 17.2
   },
   {
    "id": "L-u",
@@ -3686,19 +6305,21 @@
    "upper": "U",
    "name": "U",
    "sound": "/ʌ/",
-   "sound_zh": "呃",
    "shape": "一把倒过来的雨伞",
-   "story": "u 像一把倒过来的雨伞，雨伞翻了：呃！",
+   "story": "u 像一把倒过来的雨伞，可以接住雨水。",
+   "tip": "嘴巴自然张开，舌头放松，短短地发音。",
    "keyword": "umbrella",
+   "keyword_pos": "开头",
    "prop": "☂️",
    "color": "#9C6ADE",
    "group": 3,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/u.svg",
    "audio": "audio/letters/u.mp3",
    "audio_en": "audio/en/L-u.mp3",
-   "video": null,
+   "phon": "audio/phon/u.mp3",
+   "video": "video/letters/u.mp4",
    "narration": [
     [
      "zh",
@@ -3710,11 +6331,27 @@
     ],
     [
      "zh",
-     "u 像一把倒过来的雨伞，雨伞翻了：呃！"
+     "u 像一把倒过来的雨伞，可以接住雨水。"
     ],
     [
      "zh",
-     "它常发的音是：呃，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "zh",
+     "嘴巴自然张开，舌头放松，短短地发音。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -3722,13 +6359,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "U."
+     "ph",
+     "u"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3744,36 +6386,60 @@
     ],
     [
      2.09,
-     5.29,
+     5.03,
      "zh",
-     "u 像一把倒过来的雨伞，雨伞翻了：呃！"
+     "u 像一把倒过来的雨伞，可以接住雨水。"
     ],
     [
-     5.59,
-     7.93,
+     5.33,
+     6.78,
      "zh",
-     "它常发的音是：呃，就像"
+     "听，它的声音是："
     ],
     [
-     8.23,
-     9.09,
+     7.08,
+     7.75,
+     "ph",
+     "u"
+    ],
+    [
+     8.05,
+     8.72,
+     "ph",
+     "u"
+    ],
+    [
+     9.02,
+     12.26,
+     "zh",
+     "嘴巴自然张开，舌头放松，短短地发音。"
+    ],
+    [
+     12.56,
+     13.13,
+     "zh",
+     "就像"
+    ],
+    [
+     13.43,
+     14.29,
      "en",
      "umbrella"
     ],
     [
-     9.39,
-     10.4,
+     14.59,
+     15.6,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     10.7,
-     11.15,
-     "en",
-     "U."
+     15.9,
+     16.57,
+     "ph",
+     "u"
     ]
    ],
-   "narration_sec": 11.65
+   "narration_sec": 17.07
   },
   {
    "id": "L-l",
@@ -3781,19 +6447,21 @@
    "upper": "L",
    "name": "L",
    "sound": "/l/",
-   "sound_zh": "了",
    "shape": "一根长长的棒棒糖棍",
-   "story": "l 像一根长长的棒棒糖棍，舔一舔：了、了、了！",
-   "keyword": "lollipop",
+   "story": "l 像一根长长的棒棒糖棍，直直地站着。",
+   "tip": "舌尖顶住上牙后面，让声音从舌头两边流出来。",
+   "keyword": "leg",
+   "keyword_pos": "开头",
    "prop": "🍭",
    "color": "#FF8FB1",
    "group": 3,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/l.svg",
    "audio": "audio/letters/l.mp3",
    "audio_en": "audio/en/L-l.mp3",
-   "video": null,
+   "phon": "audio/phon/l.mp3",
+   "video": "video/letters/l.mp4",
    "narration": [
     [
      "zh",
@@ -3805,25 +6473,46 @@
     ],
     [
      "zh",
-     "l 像一根长长的棒棒糖棍，舔一舔：了、了、了！"
+     "l 像一根长长的棒棒糖棍，直直地站着。"
     ],
     [
      "zh",
-     "它常发的音是：了，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "lollipop"
+     "ph",
+     "l"
+    ],
+    [
+     "ph",
+     "l"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌尖顶住上牙后面，让声音从舌头两边流出来。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "L."
+     "leg"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "l"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3839,36 +6528,60 @@
     ],
     [
      2.07,
-     6.22,
+     5.36,
      "zh",
-     "l 像一根长长的棒棒糖棍，舔一舔：了、了、了！"
+     "l 像一根长长的棒棒糖棍，直直地站着。"
     ],
     [
-     6.52,
-     8.76,
+     5.66,
+     7.11,
      "zh",
-     "它常发的音是：了，就像"
+     "听，它的声音是："
     ],
     [
-     9.06,
-     9.84,
+     7.41,
+     7.99,
+     "ph",
+     "l"
+    ],
+    [
+     8.29,
+     8.86,
+     "ph",
+     "l"
+    ],
+    [
+     9.16,
+     13.07,
+     "zh",
+     "舌尖顶住上牙后面，让声音从舌头两边流出来。"
+    ],
+    [
+     13.37,
+     13.95,
+     "zh",
+     "就像"
+    ],
+    [
+     14.25,
+     14.66,
      "en",
-     "lollipop"
+     "leg"
     ],
     [
-     10.14,
-     11.16,
+     14.96,
+     15.97,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.46,
-     11.87,
-     "en",
-     "L."
+     16.27,
+     16.85,
+     "ph",
+     "l"
     ]
    ],
-   "narration_sec": 12.37
+   "narration_sec": 17.34
   },
   {
    "id": "L-f",
@@ -3876,19 +6589,21 @@
    "upper": "F",
    "name": "F",
    "sound": "/f/",
-   "sound_zh": "夫",
    "shape": "一面小旗子",
-   "story": "f 像一面小旗子，风一吹：夫——夫——",
-   "keyword": "fan",
+   "story": "f 像一面小旗子，在风里飘。",
+   "tip": "上牙轻轻咬住下嘴唇，吹气，喉咙不出声。",
+   "keyword": "fish",
+   "keyword_pos": "开头",
    "prop": "🚩",
    "color": "#E5484D",
    "group": 3,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/f.svg",
    "audio": "audio/letters/f.mp3",
    "audio_en": "audio/en/L-f.mp3",
-   "video": null,
+   "phon": "audio/phon/f.mp3",
+   "video": "video/letters/f.mp4",
    "narration": [
     [
      "zh",
@@ -3900,25 +6615,46 @@
     ],
     [
      "zh",
-     "f 像一面小旗子，风一吹：夫——夫——"
+     "f 像一面小旗子，在风里飘。"
     ],
     [
      "zh",
-     "它常发的音是：夫，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "fan"
+     "ph",
+     "f"
+    ],
+    [
+     "ph",
+     "f"
     ],
     [
      "zh",
-     "开头的声音。"
+     "上牙轻轻咬住下嘴唇，吹气，喉咙不出声。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "F."
+     "fish"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "f"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -3934,36 +6670,60 @@
     ],
     [
      2.09,
-     5.37,
+     4.54,
      "zh",
-     "f 像一面小旗子，风一吹：夫——夫——"
+     "f 像一面小旗子，在风里飘。"
     ],
     [
-     5.67,
-     7.98,
+     4.84,
+     6.29,
      "zh",
-     "它常发的音是：夫，就像"
+     "听，它的声音是："
     ],
     [
-     8.28,
-     8.8,
+     6.59,
+     7.17,
+     "ph",
+     "f"
+    ],
+    [
+     7.47,
+     8.05,
+     "ph",
+     "f"
+    ],
+    [
+     8.35,
+     12.03,
+     "zh",
+     "上牙轻轻咬住下嘴唇，吹气，喉咙不出声。"
+    ],
+    [
+     12.33,
+     12.91,
+     "zh",
+     "就像"
+    ],
+    [
+     13.21,
+     13.82,
      "en",
-     "fan"
+     "fish"
     ],
     [
-     9.1,
-     10.12,
+     14.12,
+     15.14,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     10.42,
-     10.86,
-     "en",
-     "F."
+     15.44,
+     16.01,
+     "ph",
+     "f"
     ]
    ],
-   "narration_sec": 11.36
+   "narration_sec": 16.51
   },
   {
    "id": "L-b",
@@ -3971,19 +6731,21 @@
    "upper": "B",
    "name": "B",
    "sound": "/b/",
-   "sound_zh": "波",
-   "shape": "一个拍皮球的大肚子",
-   "story": "b 像一根棍子挺着圆圆的大肚子，拍皮球：波、波、波！",
-   "keyword": "ball",
+   "shape": "一个挺着大肚子的小棍",
+   "story": "b 像一根棍子挺着圆圆的大肚子。",
+   "tip": "双唇闭紧，一下子打开，喉咙要震动。",
+   "keyword": "bus",
+   "keyword_pos": "开头",
    "prop": "🏀",
    "color": "#F2643A",
    "group": 3,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/b.svg",
    "audio": "audio/letters/b.mp3",
    "audio_en": "audio/en/L-b.mp3",
-   "video": null,
+   "phon": "audio/phon/b.mp3",
+   "video": "video/letters/b.mp4",
    "narration": [
     [
      "zh",
@@ -3995,25 +6757,46 @@
     ],
     [
      "zh",
-     "b 像一根棍子挺着圆圆的大肚子，拍皮球：波、波、波！"
+     "b 像一根棍子挺着圆圆的大肚子。"
     ],
     [
      "zh",
-     "它常发的音是：波，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "ball"
+     "ph",
+     "b"
+    ],
+    [
+     "ph",
+     "b"
     ],
     [
      "zh",
-     "开头的声音。"
+     "双唇闭紧，一下子打开，喉咙要震动。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "B."
+     "bus"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "b"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4029,36 +6812,60 @@
     ],
     [
      2.06,
-     7.01,
+     4.65,
      "zh",
-     "b 像一根棍子挺着圆圆的大肚子，拍皮球：波、波、波！"
+     "b 像一根棍子挺着圆圆的大肚子。"
     ],
     [
-     7.31,
-     9.57,
+     4.95,
+     6.4,
      "zh",
-     "它常发的音是：波，就像"
+     "听，它的声音是："
     ],
     [
-     9.87,
-     10.37,
+     6.7,
+     6.91,
+     "ph",
+     "b"
+    ],
+    [
+     7.21,
+     7.42,
+     "ph",
+     "b"
+    ],
+    [
+     7.72,
+     10.92,
+     "zh",
+     "双唇闭紧，一下子打开，喉咙要震动。"
+    ],
+    [
+     11.22,
+     11.8,
+     "zh",
+     "就像"
+    ],
+    [
+     12.1,
+     12.68,
      "en",
-     "ball"
+     "bus"
     ],
     [
-     10.67,
-     11.69,
+     12.98,
+     13.99,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.99,
-     12.39,
-     "en",
-     "B."
+     14.29,
+     14.5,
+     "ph",
+     "b"
     ]
    ],
-   "narration_sec": 12.89
+   "narration_sec": 15.0
   },
   {
    "id": "L-j",
@@ -4066,19 +6873,21 @@
    "upper": "J",
    "name": "J",
    "sound": "/dʒ/",
-   "sound_zh": "机",
    "shape": "一根钓鱼钩",
-   "story": "j 像一根钓鱼钩，钓到鱼高兴得跳起来：机、机、jump！",
-   "keyword": "jump",
+   "story": "j 像一根钓鱼钩，头上还有一个小点。",
+   "tip": "舌头贴住上面，一下子放开，喉咙要震动。",
+   "keyword": "jet",
+   "keyword_pos": "开头",
    "prop": "🎣",
    "color": "#3A8DDE",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/j.svg",
    "audio": "audio/letters/j.mp3",
    "audio_en": "audio/en/L-j.mp3",
-   "video": null,
+   "phon": "audio/phon/j.mp3",
+   "video": "video/letters/j.mp4",
    "narration": [
     [
      "zh",
@@ -4090,25 +6899,46 @@
     ],
     [
      "zh",
-     "j 像一根钓鱼钩，钓到鱼高兴得跳起来：机、机、jump！"
+     "j 像一根钓鱼钩，头上还有一个小点。"
     ],
     [
      "zh",
-     "它常发的音是：机，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "jump"
+     "ph",
+     "j"
+    ],
+    [
+     "ph",
+     "j"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌头贴住上面，一下子放开，喉咙要震动。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "J."
+     "jet"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "j"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4124,36 +6954,60 @@
     ],
     [
      2.14,
-     6.7,
+     4.91,
      "zh",
-     "j 像一根钓鱼钩，钓到鱼高兴得跳起来：机、机、jump！"
+     "j 像一根钓鱼钩，头上还有一个小点。"
     ],
     [
-     7.0,
-     9.35,
+     5.21,
+     6.66,
      "zh",
-     "它常发的音是：机，就像"
+     "听，它的声音是："
     ],
     [
-     9.65,
-     10.1,
+     6.96,
+     7.22,
+     "ph",
+     "j"
+    ],
+    [
+     7.52,
+     7.78,
+     "ph",
+     "j"
+    ],
+    [
+     8.08,
+     11.51,
+     "zh",
+     "舌头贴住上面，一下子放开，喉咙要震动。"
+    ],
+    [
+     11.81,
+     12.38,
+     "zh",
+     "就像"
+    ],
+    [
+     12.68,
+     13.05,
      "en",
-     "jump"
+     "jet"
     ],
     [
-     10.4,
-     11.42,
+     13.35,
+     14.37,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.72,
-     12.21,
-     "en",
-     "J."
+     14.67,
+     14.93,
+     "ph",
+     "j"
     ]
    ],
-   "narration_sec": 12.71
+   "narration_sec": 15.43
   },
   {
    "id": "L-z",
@@ -4161,19 +7015,21 @@
    "upper": "Z",
    "name": "Z",
    "sound": "/z/",
-   "sound_zh": "滋",
    "shape": "一道弯弯的闪电",
-   "story": "z 像一道闪电，小蜜蜂飞过：滋——滋——",
-   "keyword": "zoo",
+   "story": "z 像一道弯弯折折的闪电。",
+   "tip": "和 s 一样的嘴形，可是喉咙要震动，像小蜜蜂飞。",
+   "keyword": "zip",
+   "keyword_pos": "开头",
    "prop": "🐝",
    "color": "#E0A400",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/z.svg",
    "audio": "audio/letters/z.mp3",
    "audio_en": "audio/en/L-z.mp3",
-   "video": null,
+   "phon": "audio/phon/z.mp3",
+   "video": "video/letters/z.mp4",
    "narration": [
     [
      "zh",
@@ -4185,25 +7041,46 @@
     ],
     [
      "zh",
-     "z 像一道闪电，小蜜蜂飞过：滋——滋——"
+     "z 像一道弯弯折折的闪电。"
     ],
     [
      "zh",
-     "它常发的音是：滋，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "zoo"
+     "ph",
+     "z"
+    ],
+    [
+     "ph",
+     "z"
     ],
     [
      "zh",
-     "开头的声音。"
+     "和 s 一样的嘴形，可是喉咙要震动，像小蜜蜂飞。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "Z."
+     "zip"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "z"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4219,36 +7096,60 @@
     ],
     [
      2.13,
-     5.54,
+     4.23,
      "zh",
-     "z 像一道闪电，小蜜蜂飞过：滋——滋——"
+     "z 像一道弯弯折折的闪电。"
     ],
     [
-     5.84,
-     8.19,
+     4.53,
+     5.98,
      "zh",
-     "它常发的音是：滋，就像"
+     "听，它的声音是："
     ],
     [
-     8.49,
-     8.95,
+     6.28,
+     6.9,
+     "ph",
+     "z"
+    ],
+    [
+     7.2,
+     7.82,
+     "ph",
+     "z"
+    ],
+    [
+     8.12,
+     12.08,
+     "zh",
+     "和 s 一样的嘴形，可是喉咙要震动，像小蜜蜂飞。"
+    ],
+    [
+     12.38,
+     12.96,
+     "zh",
+     "就像"
+    ],
+    [
+     13.26,
+     13.64,
      "en",
-     "zoo"
+     "zip"
     ],
     [
-     9.25,
-     10.27,
+     13.94,
+     14.95,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     10.57,
-     11.05,
-     "en",
-     "Z."
+     15.25,
+     15.87,
+     "ph",
+     "z"
     ]
    ],
-   "narration_sec": 11.55
+   "narration_sec": 16.37
   },
   {
    "id": "L-w",
@@ -4256,19 +7157,21 @@
    "upper": "W",
    "name": "W",
    "sound": "/w/",
-   "sound_zh": "呜",
    "shape": "两道小波浪",
-   "story": "w 像两道小波浪，风吹过来：呜——呜——",
-   "keyword": "wave",
+   "story": "w 像两道小波浪，一高一低。",
+   "tip": "嘴唇收得小小圆圆，然后一下子张开。",
+   "keyword": "window",
+   "keyword_pos": "开头",
    "prop": "🌊",
    "color": "#3A8DDE",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/w.svg",
    "audio": "audio/letters/w.mp3",
    "audio_en": "audio/en/L-w.mp3",
-   "video": null,
+   "phon": "audio/phon/w.mp3",
+   "video": "video/letters/w.mp4",
    "narration": [
     [
      "zh",
@@ -4280,25 +7183,46 @@
     ],
     [
      "zh",
-     "w 像两道小波浪，风吹过来：呜——呜——"
+     "w 像两道小波浪，一高一低。"
     ],
     [
      "zh",
-     "它常发的音是：呜，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "wave"
+     "ph",
+     "w"
+    ],
+    [
+     "ph",
+     "w"
     ],
     [
      "zh",
-     "开头的声音。"
+     "嘴唇收得小小圆圆，然后一下子张开。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "W."
+     "window"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "w"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4314,36 +7238,60 @@
     ],
     [
      2.37,
-     5.99,
+     4.93,
      "zh",
-     "w 像两道小波浪，风吹过来：呜——呜——"
+     "w 像两道小波浪，一高一低。"
     ],
     [
-     6.29,
-     8.58,
+     5.23,
+     6.68,
      "zh",
-     "它常发的音是：呜，就像"
+     "听，它的声音是："
     ],
     [
-     8.88,
-     9.34,
+     6.98,
+     7.35,
+     "ph",
+     "w"
+    ],
+    [
+     7.65,
+     8.02,
+     "ph",
+     "w"
+    ],
+    [
+     8.32,
+     11.29,
+     "zh",
+     "嘴唇收得小小圆圆，然后一下子张开。"
+    ],
+    [
+     11.59,
+     12.16,
+     "zh",
+     "就像"
+    ],
+    [
+     12.46,
+     13.17,
      "en",
-     "wave"
+     "window"
     ],
     [
-     9.64,
-     10.66,
+     13.47,
+     14.48,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     10.96,
-     11.68,
-     "en",
-     "W."
+     14.78,
+     15.15,
+     "ph",
+     "w"
     ]
    ],
-   "narration_sec": 12.18
+   "narration_sec": 15.65
   },
   {
    "id": "L-v",
@@ -4351,19 +7299,21 @@
    "upper": "V",
    "name": "V",
    "sound": "/v/",
-   "sound_zh": "呜",
    "shape": "一个胜利手势",
-   "story": "v 像比了一个胜利的手势！小汽车开过：vvv——",
+   "story": "v 像比了一个胜利的手势。",
+   "tip": "和 f 一样，上牙咬住下嘴唇，可是喉咙要震动。",
    "keyword": "van",
+   "keyword_pos": "开头",
    "prop": "✌️",
    "color": "#9C6ADE",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/v.svg",
    "audio": "audio/letters/v.mp3",
    "audio_en": "audio/en/L-v.mp3",
-   "video": null,
+   "phon": "audio/phon/v.mp3",
+   "video": "video/letters/v.mp4",
    "narration": [
     [
      "zh",
@@ -4375,11 +7325,27 @@
     ],
     [
      "zh",
-     "v 像比了一个胜利的手势！小汽车开过：vvv——"
+     "v 像比了一个胜利的手势。"
     ],
     [
      "zh",
-     "它常发的音是：呜，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "v"
+    ],
+    [
+     "ph",
+     "v"
+    ],
+    [
+     "zh",
+     "和 f 一样，上牙咬住下嘴唇，可是喉咙要震动。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -4387,13 +7353,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     "en",
-     "V."
+     "ph",
+     "v"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4409,36 +7380,60 @@
     ],
     [
      2.07,
-     6.23,
+     3.88,
      "zh",
-     "v 像比了一个胜利的手势！小汽车开过：vvv——"
+     "v 像比了一个胜利的手势。"
     ],
     [
-     6.53,
-     8.82,
+     4.18,
+     5.63,
      "zh",
-     "它常发的音是：呜，就像"
+     "听，它的声音是："
     ],
     [
-     9.12,
-     9.61,
+     5.93,
+     6.57,
+     "ph",
+     "v"
+    ],
+    [
+     6.87,
+     7.52,
+     "ph",
+     "v"
+    ],
+    [
+     7.82,
+     11.82,
+     "zh",
+     "和 f 一样，上牙咬住下嘴唇，可是喉咙要震动。"
+    ],
+    [
+     12.12,
+     12.69,
+     "zh",
+     "就像"
+    ],
+    [
+     12.99,
+     13.48,
      "en",
      "van"
     ],
     [
-     9.91,
-     10.93,
+     13.78,
+     14.79,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.23,
-     11.64,
-     "en",
-     "V."
+     15.09,
+     15.74,
+     "ph",
+     "v"
     ]
    ],
-   "narration_sec": 12.14
+   "narration_sec": 16.24
   },
   {
    "id": "L-y",
@@ -4446,19 +7441,21 @@
    "upper": "Y",
    "name": "Y",
    "sound": "/j/",
-   "sound_zh": "呀",
    "shape": "一个举起双手的小人",
-   "story": "y 像一个举起双手的小人，开心地喊：耶！呀！",
-   "keyword": "yes",
+   "story": "y 像一个举起双手欢呼的小人。",
+   "tip": "舌头抬高靠近上面，然后马上滑到后面的音。",
+   "keyword": "yellow",
+   "keyword_pos": "开头",
    "prop": "🙌",
    "color": "#FF8A3D",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/y.svg",
    "audio": "audio/letters/y.mp3",
    "audio_en": "audio/en/L-y.mp3",
-   "video": null,
+   "phon": "audio/phon/y.mp3",
+   "video": "video/letters/y.mp4",
    "narration": [
     [
      "zh",
@@ -4470,25 +7467,46 @@
     ],
     [
      "zh",
-     "y 像一个举起双手的小人，开心地喊：耶！呀！"
+     "y 像一个举起双手欢呼的小人。"
     ],
     [
      "zh",
-     "它常发的音是：呀，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "yes"
+     "ph",
+     "y"
+    ],
+    [
+     "ph",
+     "y"
     ],
     [
      "zh",
-     "开头的声音。"
+     "舌头抬高靠近上面，然后马上滑到后面的音。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "Y."
+     "yellow"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "y"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4504,36 +7522,60 @@
     ],
     [
      2.12,
-     6.41,
+     4.55,
      "zh",
-     "y 像一个举起双手的小人，开心地喊：耶！呀！"
+     "y 像一个举起双手欢呼的小人。"
     ],
     [
-     6.71,
-     9.06,
+     4.85,
+     6.3,
      "zh",
-     "它常发的音是：呀，就像"
+     "听，它的声音是："
     ],
     [
-     9.36,
-     9.96,
+     6.6,
+     6.92,
+     "ph",
+     "y"
+    ],
+    [
+     7.22,
+     7.54,
+     "ph",
+     "y"
+    ],
+    [
+     7.84,
+     11.4,
+     "zh",
+     "舌头抬高靠近上面，然后马上滑到后面的音。"
+    ],
+    [
+     11.7,
+     12.27,
+     "zh",
+     "就像"
+    ],
+    [
+     12.57,
+     13.17,
      "en",
-     "yes"
+     "yellow"
     ],
     [
-     10.26,
-     11.28,
+     13.47,
+     14.49,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     11.58,
-     12.04,
-     "en",
-     "Y."
+     14.79,
+     15.11,
+     "ph",
+     "y"
     ]
    ],
-   "narration_sec": 12.54
+   "narration_sec": 15.61
   },
   {
    "id": "L-x",
@@ -4541,19 +7583,21 @@
    "upper": "X",
    "name": "X",
    "sound": "/ks/",
-   "sound_zh": "克斯",
    "shape": "两根交叉的小棍",
-   "story": "x 像两根交叉的小棍，盒子 box 的最后：克斯！",
+   "story": "x 像两根交叉的小棍。",
+   "tip": "先发 k 的音，紧接着发 s 的音，快快连在一起。",
    "keyword": "box",
+   "keyword_pos": "最后",
    "prop": "❌",
    "color": "#E5484D",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/x.svg",
    "audio": "audio/letters/x.mp3",
    "audio_en": "audio/en/L-x.mp3",
-   "video": null,
+   "phon": "audio/phon/x.mp3",
+   "video": "video/letters/x.mp4",
    "narration": [
     [
      "zh",
@@ -4565,11 +7609,27 @@
     ],
     [
      "zh",
-     "x 像两根交叉的小棍，盒子 box 的最后：克斯！"
+     "x 像两根交叉的小棍。"
     ],
     [
      "zh",
-     "它常发的音是：克斯，就像"
+     "听，它的声音是："
+    ],
+    [
+     "ph",
+     "x"
+    ],
+    [
+     "ph",
+     "x"
+    ],
+    [
+     "zh",
+     "先发 k 的音，紧接着发 s 的音，快快连在一起。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
@@ -4577,13 +7637,18 @@
     ],
     [
      "zh",
-     "开头的声音。"
+     "最后的声音："
     ],
     [
-     "en",
-     "X."
+     "ph",
+     "x"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4599,36 +7664,60 @@
     ],
     [
      2.25,
-     6.24,
+     4.17,
      "zh",
-     "x 像两根交叉的小棍，盒子 box 的最后：克斯！"
+     "x 像两根交叉的小棍。"
     ],
     [
-     6.54,
-     9.1,
+     4.47,
+     5.92,
      "zh",
-     "它常发的音是：克斯，就像"
+     "听，它的声音是："
     ],
     [
-     9.4,
-     10.07,
+     6.22,
+     7.02,
+     "ph",
+     "x"
+    ],
+    [
+     7.32,
+     8.11,
+     "ph",
+     "x"
+    ],
+    [
+     8.41,
+     12.24,
+     "zh",
+     "先发 k 的音，紧接着发 s 的音，快快连在一起。"
+    ],
+    [
+     12.54,
+     13.11,
+     "zh",
+     "就像"
+    ],
+    [
+     13.41,
+     14.09,
      "en",
      "box"
     ],
     [
-     10.37,
-     11.39,
+     14.39,
+     15.37,
      "zh",
-     "开头的声音。"
+     "最后的声音："
     ],
     [
-     11.69,
-     12.29,
-     "en",
-     "X."
+     15.67,
+     16.47,
+     "ph",
+     "x"
     ]
    ],
-   "narration_sec": 12.79
+   "narration_sec": 16.97
   },
   {
    "id": "L-q",
@@ -4636,19 +7725,21 @@
    "upper": "Q",
    "name": "Q",
    "sound": "/kw/",
-   "sound_zh": "扩",
    "shape": "一只带小尾巴的鸭子",
-   "story": "q 常和 u 手拉手。像一只小鸭子：扩、扩、嘎嘎嘎！",
-   "keyword": "quack",
+   "story": "q 像一只小鸭子，后面拖着一条小尾巴；它总和 u 手拉手。",
+   "tip": "先发 k 的音，马上把嘴唇收圆，接上 w。",
+   "keyword": "queen",
+   "keyword_pos": "开头",
    "prop": "🦆",
    "color": "#E0A400",
    "group": 4,
    "status": "待审",
-   "source": "本次新写（2026-10-11）；待 Phil 审（形象与故事为本次新写）",
+   "source": "本次新写（2026-10-11）；待 Phil 审（形象、故事、发音提示为本次新写）",
    "image": "img/letters/q.svg",
    "audio": "audio/letters/q.mp3",
    "audio_en": "audio/en/L-q.mp3",
-   "video": null,
+   "phon": "audio/phon/q.mp3",
+   "video": "video/letters/q.mp4",
    "narration": [
     [
      "zh",
@@ -4660,25 +7751,46 @@
     ],
     [
      "zh",
-     "q 常和 u 手拉手。像一只小鸭子：扩、扩、嘎嘎嘎！"
+     "q 像一只小鸭子，后面拖着一条小尾巴；它总和 u 手拉手。"
     ],
     [
      "zh",
-     "它常发的音是：扩，就像"
+     "听，它的声音是："
     ],
     [
-     "en",
-     "quack"
+     "ph",
+     "q"
+    ],
+    [
+     "ph",
+     "q"
     ],
     [
      "zh",
-     "开头的声音。"
+     "先发 k 的音，马上把嘴唇收圆，接上 w。"
+    ],
+    [
+     "zh",
+     "就像"
     ],
     [
      "en",
-     "Q."
+     "queen"
+    ],
+    [
+     "zh",
+     "开头的声音："
+    ],
+    [
+     "ph",
+     "q"
     ]
    ],
+   "cue_map": {
+    "name": 1,
+    "sound": 4,
+    "keyword": 8
+   },
    "cues": [
     [
      0.2,
@@ -4694,36 +7806,60 @@
     ],
     [
      2.18,
-     7.24,
+     7.13,
      "zh",
-     "q 常和 u 手拉手。像一只小鸭子：扩、扩、嘎嘎嘎！"
+     "q 像一只小鸭子，后面拖着一条小尾巴；它总和 u 手拉手。"
     ],
     [
-     7.54,
-     9.87,
+     7.43,
+     8.88,
      "zh",
-     "它常发的音是：扩，就像"
+     "听，它的声音是："
     ],
     [
-     10.17,
-     10.61,
+     9.18,
+     9.76,
+     "ph",
+     "q"
+    ],
+    [
+     10.06,
+     10.65,
+     "ph",
+     "q"
+    ],
+    [
+     10.95,
+     14.55,
+     "zh",
+     "先发 k 的音，马上把嘴唇收圆，接上 w。"
+    ],
+    [
+     14.85,
+     15.42,
+     "zh",
+     "就像"
+    ],
+    [
+     15.72,
+     16.29,
      "en",
-     "quack"
+     "queen"
     ],
     [
-     10.91,
-     11.93,
+     16.59,
+     17.6,
      "zh",
-     "开头的声音。"
+     "开头的声音："
     ],
     [
-     12.23,
-     12.75,
-     "en",
-     "Q."
+     17.9,
+     18.49,
+     "ph",
+     "q"
     ]
    ],
-   "narration_sec": 13.25
+   "narration_sec": 18.99
   }
  ],
  "letter_groups": [
@@ -4768,6 +7904,7 @@
    "word": "sit",
    "meaning": "坐",
    "emoji": "🪑",
+   "icon": "img/icons/sit.svg",
    "unlock_group": 1,
    "letters": [
     "s",
@@ -4777,14 +7914,14 @@
    "link": "跑累了，坐下来「歇」一歇。",
    "link_full": "跑累了，坐下来「歇」一歇。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/sit.svg",
+   "video": "video/blend/sit.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "pan",
+    "ten",
     "ant",
-    "nap"
+    "hat"
    ],
    "audio": "audio/blend/sit.mp3",
    "audio_en": "audio/en/sit.mp3",
@@ -4794,8 +7931,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "s"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
      "zh",
-     "嘶、咦、特，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "sit"
     ],
     [
      "en",
@@ -4814,6 +7967,17 @@
      "sit"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -4823,42 +7987,67 @@
     ],
     [
      1.58,
-     4.59,
-     "zh",
-     "嘶、咦、特，快一点，再快一点——"
+     2.15,
+     "ph",
+     "s"
     ],
     [
-     4.89,
-     5.32,
+     2.45,
+     3.1,
+     "ph",
+     "i"
+    ],
+    [
+     3.4,
+     3.61,
+     "ph",
+     "t"
+    ],
+    [
+     3.91,
+     4.55,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.85,
+     5.93,
+     "phf",
+     "s-i-t"
+    ],
+    [
+     6.23,
+     6.67,
      "en",
      "sit!"
     ],
     [
-     5.62,
-     7.53,
+     6.97,
+     8.88,
      "zh",
      "跑累了，坐下来「歇」一歇。"
     ],
     [
-     7.83,
-     8.22,
+     9.18,
+     9.56,
      "zh",
      "坐。"
     ],
     [
-     8.52,
-     8.96,
+     9.86,
+     10.3,
      "en",
      "sit"
     ]
    ],
-   "narration_sec": 9.46
+   "narration_sec": 10.8
   },
   {
    "id": "B-pan",
    "word": "pan",
    "meaning": "平底锅",
    "emoji": "🍳",
+   "icon": "img/icons/pan.svg",
    "unlock_group": 1,
    "letters": [
     "p",
@@ -4868,14 +8057,14 @@
    "link": "平底锅像一个大「盘」子。",
    "link_full": "平底锅像一个大「盘」子。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/pan.svg",
+   "video": "video/blend/pan.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "sit",
-    "tap",
-    "ant"
+    "pin",
+    "cap",
+    "map"
    ],
    "audio": "audio/blend/pan.mp3",
    "audio_en": "audio/en/pan.mp3",
@@ -4885,8 +8074,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "p"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "噗、哎、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "pan"
     ],
     [
      "en",
@@ -4905,6 +8110,17 @@
      "pan"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -4914,59 +8130,84 @@
     ],
     [
      1.58,
-     4.49,
-     "zh",
-     "噗、哎、嗯，快一点，再快一点——"
+     1.81,
+     "ph",
+     "p"
     ],
     [
-     4.79,
-     5.35,
+     2.11,
+     2.78,
+     "ph",
+     "a"
+    ],
+    [
+     3.08,
+     3.69,
+     "ph",
+     "n"
+    ],
+    [
+     3.99,
+     4.63,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.93,
+     6.13,
+     "phf",
+     "p-a-n"
+    ],
+    [
+     6.43,
+     6.99,
      "en",
      "pan!"
     ],
     [
-     5.65,
-     7.42,
+     7.29,
+     9.05,
      "zh",
      "平底锅像一个大「盘」子。"
     ],
     [
-     7.72,
-     8.51,
+     9.35,
+     10.15,
      "zh",
      "平底锅。"
     ],
     [
-     8.81,
-     9.35,
+     10.45,
+     10.99,
      "en",
      "pan"
     ]
    ],
-   "narration_sec": 9.85
+   "narration_sec": 11.49
   },
   {
    "id": "B-pin",
    "word": "pin",
-   "meaning": "别针",
+   "meaning": "图钉",
    "emoji": "📌",
+   "icon": "img/icons/pin.svg",
    "unlock_group": 1,
    "letters": [
     "p",
     "i",
     "n"
    ],
-   "link": "「拼」起来的纸，用别针别住。",
-   "link_full": "「拼」起来的纸，用别针别住。",
+   "link": "「拼」图拼好了，用图钉钉在墙上。",
+   "link_full": "「拼」图拼好了，用图钉钉在墙上。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/pin.svg",
+   "video": "video/blend/pin.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "nap",
-    "pan",
-    "tap"
+    "tap",
+    "cat",
+    "pen"
    ],
    "audio": "audio/blend/pin.mp3",
    "audio_en": "audio/en/pin.mp3",
@@ -4976,8 +8217,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "p"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "噗、咦、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "pin"
     ],
     [
      "en",
@@ -4985,17 +8242,28 @@
     ],
     [
      "zh",
-     "「拼」起来的纸，用别针别住。"
+     "「拼」图拼好了，用图钉钉在墙上。"
     ],
     [
      "zh",
-     "别针。"
+     "图钉。"
     ],
     [
      "en",
      "pin"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5005,42 +8273,67 @@
     ],
     [
      1.58,
-     4.43,
-     "zh",
-     "噗、咦、嗯，快一点，再快一点——"
+     1.81,
+     "ph",
+     "p"
     ],
     [
-     4.73,
-     5.22,
+     2.11,
+     2.76,
+     "ph",
+     "i"
+    ],
+    [
+     3.06,
+     3.67,
+     "ph",
+     "n"
+    ],
+    [
+     3.97,
+     4.61,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.91,
+     6.07,
+     "phf",
+     "p-i-n"
+    ],
+    [
+     6.37,
+     6.86,
      "en",
      "pin!"
     ],
     [
-     5.52,
-     7.62,
+     7.16,
+     9.7,
      "zh",
-     "「拼」起来的纸，用别针别住。"
+     "「拼」图拼好了，用图钉钉在墙上。"
     ],
     [
-     7.92,
-     8.47,
+     10.0,
+     10.53,
      "zh",
-     "别针。"
+     "图钉。"
     ],
     [
-     8.77,
-     9.24,
+     10.83,
+     11.3,
      "en",
      "pin"
     ]
    ],
-   "narration_sec": 9.74
+   "narration_sec": 11.8
   },
   {
    "id": "B-ant",
    "word": "ant",
    "meaning": "蚂蚁",
    "emoji": "🐜",
+   "icon": "img/icons/ant.svg",
    "unlock_group": 1,
    "letters": [
     "a",
@@ -5050,14 +8343,14 @@
    "link": "小蚂蚁排队，「安」安静静搬东西。",
    "link_full": "小蚂蚁排队，「安」安静静搬东西。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/ant.svg",
+   "video": "video/blend/ant.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "sit",
-    "pin",
-    "pan"
+    "pan",
+    "net",
+    "hen"
    ],
    "audio": "audio/blend/ant.mp3",
    "audio_en": "audio/en/ant.mp3",
@@ -5067,8 +8360,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
      "zh",
-     "哎、嗯、特，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "ant"
     ],
     [
      "en",
@@ -5087,6 +8396,17 @@
      "ant"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5096,42 +8416,67 @@
     ],
     [
      1.58,
-     4.57,
-     "zh",
-     "哎、嗯、特，快一点，再快一点——"
+     2.25,
+     "ph",
+     "a"
     ],
     [
-     4.87,
-     5.45,
+     2.55,
+     3.16,
+     "ph",
+     "n"
+    ],
+    [
+     3.46,
+     3.67,
+     "ph",
+     "t"
+    ],
+    [
+     3.97,
+     4.61,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.91,
+     6.08,
+     "phf",
+     "a-n-t"
+    ],
+    [
+     6.38,
+     6.96,
      "en",
      "ant!"
     ],
     [
-     5.75,
-     8.3,
+     7.26,
+     9.81,
      "zh",
      "小蚂蚁排队，「安」安静静搬东西。"
     ],
     [
-     8.6,
-     9.16,
+     10.11,
+     10.67,
      "zh",
      "蚂蚁。"
     ],
     [
-     9.46,
-     10.02,
+     10.97,
+     11.53,
      "en",
      "ant"
     ]
    ],
-   "narration_sec": 10.52
+   "narration_sec": 12.03
   },
   {
    "id": "B-tap",
    "word": "tap",
    "meaning": "水龙头",
    "emoji": "🚰",
+   "icon": "img/icons/tap.svg",
    "unlock_group": 1,
    "letters": [
     "t",
@@ -5141,14 +8486,14 @@
    "link": "水龙头「嗒」「嗒」地滴水。",
    "link_full": "水龙头「嗒」「嗒」地滴水。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/tap.svg",
+   "video": "video/blend/tap.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "ant",
-    "nap",
-    "pin"
+    "hat",
+    "sit",
+    "pan"
    ],
    "audio": "audio/blend/tap.mp3",
    "audio_en": "audio/en/tap.mp3",
@@ -5158,8 +8503,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "t"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
      "zh",
-     "特、哎、噗，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "tap"
     ],
     [
      "en",
@@ -5178,6 +8539,17 @@
      "tap"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5187,42 +8559,67 @@
     ],
     [
      1.58,
-     4.56,
-     "zh",
-     "特、哎、噗，快一点，再快一点——"
+     1.79,
+     "ph",
+     "t"
     ],
     [
-     4.86,
-     5.29,
+     2.09,
+     2.76,
+     "ph",
+     "a"
+    ],
+    [
+     3.06,
+     3.29,
+     "ph",
+     "p"
+    ],
+    [
+     3.59,
+     4.23,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.53,
+     5.3,
+     "phf",
+     "t-a-p"
+    ],
+    [
+     5.6,
+     6.04,
      "en",
      "tap!"
     ],
     [
-     5.59,
-     7.26,
+     6.34,
+     8.01,
      "zh",
      "水龙头「嗒」「嗒」地滴水。"
     ],
     [
-     7.56,
-     8.35,
+     8.31,
+     9.1,
      "zh",
      "水龙头。"
     ],
     [
-     8.65,
-     9.05,
+     9.4,
+     9.8,
      "en",
      "tap"
     ]
    ],
-   "narration_sec": 9.55
+   "narration_sec": 10.3
   },
   {
    "id": "B-nap",
    "word": "nap",
-   "meaning": "小睡",
+   "meaning": "午睡",
    "emoji": "😴",
+   "icon": "img/icons/nap.svg",
    "unlock_group": 1,
    "letters": [
     "n",
@@ -5232,13 +8629,13 @@
    "link": "「拿」个枕头，睡个午觉。",
    "link_full": "「拿」个枕头，睡个午觉。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/nap.svg",
+   "video": "video/blend/nap.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "tap",
-    "sit",
+    "map",
+    "hat",
     "pan"
    ],
    "audio": "audio/blend/nap.mp3",
@@ -5249,8 +8646,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "n"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
      "zh",
-     "嗯、哎、噗，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "nap"
     ],
     [
      "en",
@@ -5262,13 +8675,24 @@
     ],
     [
      "zh",
-     "小睡。"
+     "午睡。"
     ],
     [
      "en",
      "nap"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5278,42 +8702,67 @@
     ],
     [
      1.58,
-     4.53,
-     "zh",
-     "嗯、哎、噗，快一点，再快一点——"
+     2.19,
+     "ph",
+     "n"
     ],
     [
-     4.83,
-     5.28,
+     2.49,
+     3.16,
+     "ph",
+     "a"
+    ],
+    [
+     3.46,
+     3.69,
+     "ph",
+     "p"
+    ],
+    [
+     3.99,
+     4.63,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.93,
+     6.13,
+     "phf",
+     "n-a-p"
+    ],
+    [
+     6.43,
+     6.87,
      "en",
      "nap!"
     ],
     [
-     5.58,
-     7.33,
+     7.17,
+     8.92,
      "zh",
      "「拿」个枕头，睡个午觉。"
     ],
     [
-     7.63,
-     8.26,
+     9.22,
+     9.77,
      "zh",
-     "小睡。"
+     "午睡。"
     ],
     [
-     8.56,
-     8.98,
+     10.07,
+     10.49,
      "en",
      "nap"
     ]
    ],
-   "narration_sec": 9.48
+   "narration_sec": 10.99
   },
   {
    "id": "B-cat",
    "word": "cat",
    "meaning": "小猫",
    "emoji": "🐱",
+   "icon": "img/icons/cat.svg",
    "unlock_group": 2,
    "letters": [
     "c",
@@ -5324,13 +8773,13 @@
    "link_full": "cat 听起来像「咔，它！」：小猫「咔」地一扑，按住了小老鼠——就是它，小猫！",
    "memory_word": "cat",
    "image": "img/cat.svg",
-   "video": "video/cat.mp4",
+   "video": "video/blend/cat.mp4",
    "status": "待审",
-   "source": "复用记忆单词卡：本次新写（Phil 资料里 cat 只有画面联想，无谐音）",
+   "source": "链接复用记忆单词卡：本次新写（Phil 资料里 cat 只有画面联想，无谐音）",
    "distractors": [
-    "hat",
-    "hen",
-    "man"
+    "man",
+    "pan",
+    "hen"
    ],
    "audio": "audio/blend/cat.mp3",
    "audio_en": "audio/en/cat.mp3",
@@ -5340,8 +8789,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "c"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
      "zh",
-     "咳、哎、特，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "cat"
     ],
     [
      "en",
@@ -5360,6 +8825,17 @@
      "cat"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5369,42 +8845,67 @@
     ],
     [
      1.58,
-     4.56,
-     "zh",
-     "咳、哎、特，快一点，再快一点——"
+     1.8,
+     "ph",
+     "c"
     ],
     [
-     4.86,
-     5.3,
+     2.1,
+     2.77,
+     "ph",
+     "a"
+    ],
+    [
+     3.07,
+     3.28,
+     "ph",
+     "t"
+    ],
+    [
+     3.58,
+     4.22,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.52,
+     5.28,
+     "phf",
+     "c-a-t"
+    ],
+    [
+     5.58,
+     6.02,
      "en",
      "cat!"
     ],
     [
-     5.6,
-     6.82,
+     6.32,
+     7.54,
      "zh",
      "咔！它！"
     ],
     [
-     7.12,
-     7.7,
+     7.84,
+     8.42,
      "zh",
      "小猫。"
     ],
     [
-     8.0,
-     8.44,
+     8.72,
+     9.15,
      "en",
      "cat"
     ]
    ],
-   "narration_sec": 8.94
+   "narration_sec": 9.65
   },
   {
    "id": "B-hat",
    "word": "hat",
    "meaning": "帽子",
-   "emoji": "🎩",
+   "emoji": "👒",
+   "icon": "img/icons/hat.svg",
    "unlock_group": 2,
    "letters": [
     "h",
@@ -5414,14 +8915,14 @@
    "link": "「哈」一口气，吹走了帽子！",
    "link_full": "「哈」一口气，吹走了帽子！",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/hat.svg",
+   "video": "video/blend/hat.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
     "cat",
-    "pen",
-    "bed"
+    "sit",
+    "pen"
    ],
    "audio": "audio/blend/hat.mp3",
    "audio_en": "audio/en/hat.mp3",
@@ -5431,8 +8932,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "h"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
      "zh",
-     "哈、哎、特，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "hat"
     ],
     [
      "en",
@@ -5451,6 +8968,17 @@
      "hat"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5460,42 +8988,67 @@
     ],
     [
      1.58,
-     4.55,
-     "zh",
-     "哈、哎、特，快一点，再快一点——"
+     2.12,
+     "ph",
+     "h"
     ],
     [
-     4.85,
-     5.28,
+     2.42,
+     3.09,
+     "ph",
+     "a"
+    ],
+    [
+     3.39,
+     3.6,
+     "ph",
+     "t"
+    ],
+    [
+     3.9,
+     4.54,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.84,
+     5.94,
+     "phf",
+     "h-a-t"
+    ],
+    [
+     6.24,
+     6.67,
      "en",
      "hat!"
     ],
     [
-     5.58,
-     7.43,
+     6.97,
+     8.82,
      "zh",
      "「哈」一口气，吹走了帽子！"
     ],
     [
-     7.73,
-     8.27,
+     9.12,
+     9.67,
      "zh",
      "帽子。"
     ],
     [
-     8.57,
-     9.02,
+     9.97,
+     10.41,
      "en",
      "hat"
     ]
    ],
-   "narration_sec": 9.52
+   "narration_sec": 10.91
   },
   {
    "id": "B-man",
    "word": "man",
    "meaning": "男人",
    "emoji": "👨",
+   "icon": "img/icons/man.svg",
    "unlock_group": 2,
    "letters": [
     "m",
@@ -5505,14 +9058,14 @@
    "link": "一个大男人，「慢」慢走过来。",
    "link_full": "一个大男人，「慢」慢走过来。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/man.svg",
+   "video": "video/blend/man.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "hen",
-    "cat",
-    "red"
+    "pan",
+    "ant",
+    "ten"
    ],
    "audio": "audio/blend/man.mp3",
    "audio_en": "audio/en/man.mp3",
@@ -5522,8 +9075,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "m"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "嗯、哎、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "man"
     ],
     [
      "en",
@@ -5542,6 +9111,17 @@
      "man"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5551,42 +9131,67 @@
     ],
     [
      1.58,
-     4.47,
-     "zh",
-     "嗯、哎、嗯，快一点，再快一点——"
+     2.19,
+     "ph",
+     "m"
     ],
     [
-     4.77,
-     5.34,
+     2.49,
+     3.16,
+     "ph",
+     "a"
+    ],
+    [
+     3.46,
+     4.07,
+     "ph",
+     "n"
+    ],
+    [
+     4.37,
+     5.01,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.31,
+     6.9,
+     "phf",
+     "m-a-n"
+    ],
+    [
+     7.2,
+     7.77,
      "en",
      "man!"
     ],
     [
-     5.64,
-     7.69,
+     8.07,
+     10.11,
      "zh",
      "一个大男人，「慢」慢走过来。"
     ],
     [
-     7.99,
-     8.54,
+     10.41,
+     10.96,
      "zh",
      "男人。"
     ],
     [
-     8.84,
-     9.36,
+     11.26,
+     11.79,
      "en",
      "man"
     ]
    ],
-   "narration_sec": 9.86
+   "narration_sec": 12.29
   },
   {
    "id": "B-hen",
    "word": "hen",
    "meaning": "母鸡",
    "emoji": "🐔",
+   "icon": "img/icons/hen.svg",
    "unlock_group": 2,
    "letters": [
     "h",
@@ -5596,14 +9201,14 @@
    "link": "母鸡「哼」一声，下了一个蛋。",
    "link_full": "母鸡「哼」一声，下了一个蛋。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/hen.svg",
+   "video": "video/blend/hen.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "cat",
-    "man",
-    "pen"
+    "pan",
+    "pen",
+    "net"
    ],
    "audio": "audio/blend/hen.mp3",
    "audio_en": "audio/en/hen.mp3",
@@ -5613,8 +9218,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "h"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "哈、哎、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "hen"
     ],
     [
      "en",
@@ -5633,6 +9254,17 @@
      "hen"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5642,42 +9274,67 @@
     ],
     [
      1.58,
-     4.48,
-     "zh",
-     "哈、哎、嗯，快一点，再快一点——"
+     2.12,
+     "ph",
+     "h"
     ],
     [
-     4.78,
+     2.42,
+     3.09,
+     "ph",
+     "e"
+    ],
+    [
+     3.39,
+     4.0,
+     "ph",
+     "n"
+    ],
+    [
+     4.3,
+     4.94,
+     "zh",
+     "快一点！"
+    ],
+    [
      5.24,
+     6.76,
+     "phf",
+     "h-e-n"
+    ],
+    [
+     7.06,
+     7.52,
      "en",
      "hen!"
     ],
     [
-     5.54,
-     7.48,
+     7.82,
+     9.76,
      "zh",
      "母鸡「哼」一声，下了一个蛋。"
     ],
     [
-     7.78,
-     8.34,
+     10.06,
+     10.62,
      "zh",
      "母鸡。"
     ],
     [
-     8.64,
-     9.1,
+     10.92,
+     11.37,
      "en",
      "hen"
     ]
    ],
-   "narration_sec": 9.6
+   "narration_sec": 11.87
   },
   {
    "id": "B-pen",
    "word": "pen",
    "meaning": "钢笔",
    "emoji": "🖊️",
+   "icon": "img/icons/pen.svg",
    "unlock_group": 2,
    "letters": [
     "p",
@@ -5687,14 +9344,14 @@
    "link": "一支钢笔，「喷」出一点墨水。",
    "link_full": "一支钢笔，「喷」出一点墨水。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/pen.svg",
+   "video": "video/blend/pen.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "hat",
-    "bed",
-    "ten"
+    "dad",
+    "sit",
+    "ant"
    ],
    "audio": "audio/blend/pen.mp3",
    "audio_en": "audio/en/pen.mp3",
@@ -5704,8 +9361,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "p"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "噗、哎、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "pen"
     ],
     [
      "en",
@@ -5724,6 +9397,17 @@
      "pen"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5733,59 +9417,84 @@
     ],
     [
      1.58,
-     4.49,
-     "zh",
-     "噗、哎、嗯，快一点，再快一点——"
+     1.81,
+     "ph",
+     "p"
     ],
     [
-     4.79,
-     5.26,
+     2.11,
+     2.78,
+     "ph",
+     "e"
+    ],
+    [
+     3.08,
+     3.69,
+     "ph",
+     "n"
+    ],
+    [
+     3.99,
+     4.63,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.93,
+     6.12,
+     "phf",
+     "p-e-n"
+    ],
+    [
+     6.42,
+     6.89,
      "en",
      "pen!"
     ],
     [
-     5.56,
-     7.67,
+     7.19,
+     9.3,
      "zh",
      "一支钢笔，「喷」出一点墨水。"
     ],
     [
-     7.97,
-     8.54,
+     9.6,
+     10.17,
      "zh",
      "钢笔。"
     ],
     [
-     8.84,
-     9.32,
+     10.47,
+     10.95,
      "en",
      "pen"
     ]
    ],
-   "narration_sec": 9.82
+   "narration_sec": 11.45
   },
   {
    "id": "B-ten",
    "word": "ten",
    "meaning": "十",
    "emoji": "🔟",
+   "icon": "img/icons/ten.svg",
    "unlock_group": 2,
    "letters": [
     "t",
     "e",
     "n"
    ],
-   "link": "伸出十根手指，「疼」不疼？不疼！",
-   "link_full": "伸出十根手指，「疼」不疼？不疼！",
+   "link": "伸出十根手指头，「疼」不疼？不疼！",
+   "link_full": "伸出十根手指头，「疼」不疼？不疼！",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/ten.svg",
+   "video": "video/blend/ten.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "pen",
-    "red",
-    "hen"
+    "pan",
+    "man",
+    "map"
    ],
    "audio": "audio/blend/ten.mp3",
    "audio_en": "audio/en/ten.mp3",
@@ -5795,8 +9504,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "t"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "特、哎、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "ten"
     ],
     [
      "en",
@@ -5804,7 +9529,7 @@
     ],
     [
      "zh",
-     "伸出十根手指，「疼」不疼？不疼！"
+     "伸出十根手指头，「疼」不疼？不疼！"
     ],
     [
      "zh",
@@ -5815,6 +9540,17 @@
      "ten"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5824,59 +9560,84 @@
     ],
     [
      1.58,
-     4.52,
-     "zh",
-     "特、哎、嗯，快一点，再快一点——"
+     1.79,
+     "ph",
+     "t"
     ],
     [
-     4.82,
-     5.31,
+     2.09,
+     2.76,
+     "ph",
+     "e"
+    ],
+    [
+     3.06,
+     3.67,
+     "ph",
+     "n"
+    ],
+    [
+     3.97,
+     4.61,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.91,
+     6.07,
+     "phf",
+     "t-e-n"
+    ],
+    [
+     6.37,
+     6.86,
      "en",
      "ten!"
     ],
     [
-     5.61,
-     8.7,
+     7.16,
+     10.43,
      "zh",
-     "伸出十根手指，「疼」不疼？不疼！"
+     "伸出十根手指头，「疼」不疼？不疼！"
     ],
     [
-     9.0,
-     9.46,
+     10.73,
+     11.18,
      "zh",
      "十。"
     ],
     [
-     9.76,
-     10.25,
+     11.48,
+     11.98,
      "en",
      "ten"
     ]
    ],
-   "narration_sec": 10.75
+   "narration_sec": 12.48
   },
   {
    "id": "B-red",
    "word": "red",
    "meaning": "红色",
    "emoji": "🔴",
+   "icon": "img/icons/red.svg",
    "unlock_group": 2,
    "letters": [
     "r",
     "e",
     "d"
    ],
-   "link": "红红的苹果，「热」得脸都红了。",
-   "link_full": "红红的苹果，「热」得脸都红了。",
+   "link": "红苹果「乐得」脸都红啦！",
+   "link_full": "红苹果「乐得」脸都红啦！",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/red.svg",
+   "video": "video/blend/red.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "ten",
-    "hat",
-    "bed"
+    "tap",
+    "cap",
+    "cat"
    ],
    "audio": "audio/blend/red.mp3",
    "audio_en": "audio/en/red.mp3",
@@ -5886,8 +9647,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "r"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "d"
+    ],
+    [
      "zh",
-     "儿、哎、得，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "red"
     ],
     [
      "en",
@@ -5895,7 +9672,7 @@
     ],
     [
      "zh",
-     "红红的苹果，「热」得脸都红了。"
+     "红苹果「乐得」脸都红啦！"
     ],
     [
      "zh",
@@ -5906,6 +9683,17 @@
      "red"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -5915,42 +9703,67 @@
     ],
     [
      1.58,
+     2.15,
+     "ph",
+     "r"
+    ],
+    [
+     2.45,
+     3.12,
+     "ph",
+     "e"
+    ],
+    [
+     3.42,
+     3.63,
+     "ph",
+     "d"
+    ],
+    [
+     3.93,
      4.58,
      "zh",
-     "儿、哎、得，快一点，再快一点——"
+     "快一点！"
     ],
     [
      4.88,
-     5.34,
+     5.99,
+     "phf",
+     "r-e-d"
+    ],
+    [
+     6.29,
+     6.75,
      "en",
      "red!"
     ],
     [
-     5.64,
-     7.91,
+     7.05,
+     8.86,
      "zh",
-     "红红的苹果，「热」得脸都红了。"
+     "红苹果「乐得」脸都红啦！"
     ],
     [
-     8.21,
-     8.79,
+     9.16,
+     9.74,
      "zh",
      "红色。"
     ],
     [
-     9.09,
-     9.51,
+     10.04,
+     10.46,
      "en",
      "red"
     ]
    ],
-   "narration_sec": 10.01
+   "narration_sec": 10.96
   },
   {
    "id": "B-bed",
    "word": "bed",
    "meaning": "床",
    "emoji": "🛏️",
+   "icon": "img/icons/bed.svg",
    "unlock_group": 3,
    "letters": [
     "b",
@@ -5961,13 +9774,13 @@
    "link_full": "把 bed 的三个字母摆开：b 和 d 像床的两头栏杆，中间的 e 是躺下的人。",
    "memory_word": "bed",
    "image": "img/bed.png",
-   "video": "video/bed.mp4",
+   "video": "video/blend/bed.mp4",
    "status": "待审",
-   "source": "复用记忆单词卡：obsidian-notes/10-单词速记库/words/bed.md",
+   "source": "链接复用记忆单词卡：obsidian-notes/10-单词速记库/words/bed.md",
    "distractors": [
-    "red",
-    "pen",
-    "hat"
+    "hen",
+    "hat",
+    "pig"
    ],
    "audio": "audio/blend/bed.mp3",
    "audio_en": "audio/en/bed.mp3",
@@ -5977,8 +9790,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "b"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "d"
+    ],
+    [
      "zh",
-     "波、哎、得，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "bed"
     ],
     [
      "en",
@@ -5997,6 +9826,17 @@
      "bed"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6006,42 +9846,639 @@
     ],
     [
      1.58,
-     4.55,
-     "zh",
-     "波、哎、得，快一点，再快一点——"
+     1.79,
+     "ph",
+     "b"
     ],
     [
-     4.85,
-     5.3,
+     2.09,
+     2.76,
+     "ph",
+     "e"
+    ],
+    [
+     3.06,
+     3.27,
+     "ph",
+     "d"
+    ],
+    [
+     3.57,
+     4.21,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.51,
+     5.26,
+     "phf",
+     "b-e-d"
+    ],
+    [
+     5.56,
+     6.01,
      "en",
      "bed!"
     ],
     [
-     5.6,
-     8.57,
+     6.31,
+     9.28,
      "zh",
      "b、d 是床头床尾，e 躺在中间"
     ],
     [
-     8.87,
-     9.27,
+     9.58,
+     9.98,
      "zh",
      "床。"
     ],
     [
-     9.57,
-     9.99,
+     10.28,
+     10.7,
      "en",
      "bed"
     ]
    ],
-   "narration_sec": 10.49
+   "narration_sec": 11.2
+  },
+  {
+   "id": "B-dad",
+   "word": "dad",
+   "meaning": "爸爸",
+   "emoji": "👨‍👧",
+   "icon": "img/icons/dad.svg",
+   "unlock_group": 2,
+   "letters": [
+    "d",
+    "a",
+    "d"
+   ],
+   "link": "叫一声「爹」，爸爸笑哈哈！",
+   "link_full": "叫一声「爹」，爸爸笑哈哈！",
+   "memory_word": null,
+   "image": "img/dad.svg",
+   "video": "video/blend/dad.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "hen",
+    "net",
+    "ten"
+   ],
+   "audio": "audio/blend/dad.mp3",
+   "audio_en": "audio/en/dad.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "d"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "d"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "dad"
+    ],
+    [
+     "en",
+     "dad!"
+    ],
+    [
+     "zh",
+     "叫一声「爹」，爸爸笑哈哈！"
+    ],
+    [
+     "zh",
+     "爸爸。"
+    ],
+    [
+     "en",
+     "dad"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.79,
+     "ph",
+     "d"
+    ],
+    [
+     2.09,
+     2.76,
+     "ph",
+     "a"
+    ],
+    [
+     3.06,
+     3.27,
+     "ph",
+     "d"
+    ],
+    [
+     3.57,
+     4.21,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.51,
+     5.26,
+     "phf",
+     "d-a-d"
+    ],
+    [
+     5.56,
+     6.07,
+     "en",
+     "dad!"
+    ],
+    [
+     6.37,
+     8.33,
+     "zh",
+     "叫一声「爹」，爸爸笑哈哈！"
+    ],
+    [
+     8.63,
+     9.15,
+     "zh",
+     "爸爸。"
+    ],
+    [
+     9.45,
+     9.94,
+     "en",
+     "dad"
+    ]
+   ],
+   "narration_sec": 10.44
+  },
+  {
+   "id": "B-map",
+   "word": "map",
+   "meaning": "地图",
+   "emoji": "🗺️",
+   "icon": "img/icons/map.svg",
+   "unlock_group": 2,
+   "letters": [
+    "m",
+    "a",
+    "p"
+   ],
+   "link": "「摸」着地图找宝藏。",
+   "link_full": "「摸」着地图找宝藏。",
+   "memory_word": null,
+   "image": "img/map.svg",
+   "video": "video/blend/map.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "nap",
+    "pan",
+    "hen"
+   ],
+   "audio": "audio/blend/map.mp3",
+   "audio_en": "audio/en/map.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "m"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "map"
+    ],
+    [
+     "en",
+     "map!"
+    ],
+    [
+     "zh",
+     "「摸」着地图找宝藏。"
+    ],
+    [
+     "zh",
+     "地图。"
+    ],
+    [
+     "en",
+     "map"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.19,
+     "ph",
+     "m"
+    ],
+    [
+     2.49,
+     3.16,
+     "ph",
+     "a"
+    ],
+    [
+     3.46,
+     3.69,
+     "ph",
+     "p"
+    ],
+    [
+     3.99,
+     4.63,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.93,
+     6.12,
+     "phf",
+     "m-a-p"
+    ],
+    [
+     6.42,
+     6.85,
+     "en",
+     "map!"
+    ],
+    [
+     7.15,
+     8.56,
+     "zh",
+     "「摸」着地图找宝藏。"
+    ],
+    [
+     8.86,
+     9.43,
+     "zh",
+     "地图。"
+    ],
+    [
+     9.73,
+     10.14,
+     "en",
+     "map"
+    ]
+   ],
+   "narration_sec": 10.64
+  },
+  {
+   "id": "B-net",
+   "word": "net",
+   "meaning": "网",
+   "emoji": "🥅",
+   "icon": "img/icons/net.svg",
+   "unlock_group": 2,
+   "letters": [
+    "n",
+    "e",
+    "t"
+   ],
+   "link": "「捏」着网兜去捞小鱼。",
+   "link_full": "「捏」着网兜去捞小鱼。",
+   "memory_word": null,
+   "image": "img/net.svg",
+   "video": "video/blend/net.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "cat",
+    "nap",
+    "pan"
+   ],
+   "audio": "audio/blend/net.mp3",
+   "audio_en": "audio/en/net.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "net"
+    ],
+    [
+     "en",
+     "net!"
+    ],
+    [
+     "zh",
+     "「捏」着网兜去捞小鱼。"
+    ],
+    [
+     "zh",
+     "网。"
+    ],
+    [
+     "en",
+     "net"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.19,
+     "ph",
+     "n"
+    ],
+    [
+     2.49,
+     3.16,
+     "ph",
+     "e"
+    ],
+    [
+     3.46,
+     3.67,
+     "ph",
+     "t"
+    ],
+    [
+     3.97,
+     4.61,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.91,
+     6.07,
+     "phf",
+     "n-e-t"
+    ],
+    [
+     6.37,
+     6.77,
+     "en",
+     "net!"
+    ],
+    [
+     7.07,
+     8.55,
+     "zh",
+     "「捏」着网兜去捞小鱼。"
+    ],
+    [
+     8.85,
+     9.2,
+     "zh",
+     "网。"
+    ],
+    [
+     9.5,
+     9.87,
+     "en",
+     "net"
+    ]
+   ],
+   "narration_sec": 10.37
+  },
+  {
+   "id": "B-cap",
+   "word": "cap",
+   "meaning": "鸭舌帽",
+   "emoji": "🧢",
+   "icon": "img/icons/cap.svg",
+   "unlock_group": 2,
+   "letters": [
+    "c",
+    "a",
+    "p"
+   ],
+   "link": "鸭舌帽「卡」在头上，戴得牢牢的。",
+   "link_full": "鸭舌帽「卡」在头上，戴得牢牢的。",
+   "memory_word": null,
+   "image": "img/cap.svg",
+   "video": "video/blend/cap.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "hen",
+    "red",
+    "pan"
+   ],
+   "audio": "audio/blend/cap.mp3",
+   "audio_en": "audio/en/cap.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "c"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "cap"
+    ],
+    [
+     "en",
+     "cap!"
+    ],
+    [
+     "zh",
+     "鸭舌帽「卡」在头上，戴得牢牢的。"
+    ],
+    [
+     "zh",
+     "鸭舌帽。"
+    ],
+    [
+     "en",
+     "cap"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.8,
+     "ph",
+     "c"
+    ],
+    [
+     2.1,
+     2.77,
+     "ph",
+     "a"
+    ],
+    [
+     3.07,
+     3.3,
+     "ph",
+     "p"
+    ],
+    [
+     3.6,
+     4.24,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.54,
+     5.33,
+     "phf",
+     "c-a-p"
+    ],
+    [
+     5.63,
+     6.06,
+     "en",
+     "cap!"
+    ],
+    [
+     6.36,
+     8.78,
+     "zh",
+     "鸭舌帽「卡」在头上，戴得牢牢的。"
+    ],
+    [
+     9.08,
+     9.82,
+     "zh",
+     "鸭舌帽。"
+    ],
+    [
+     10.12,
+     10.51,
+     "en",
+     "cap"
+    ]
+   ],
+   "narration_sec": 11.01
   },
   {
    "id": "B-dog",
    "word": "dog",
    "meaning": "小狗",
    "emoji": "🐶",
+   "icon": "img/icons/dog.svg",
    "unlock_group": 3,
    "letters": [
     "d",
@@ -6052,13 +10489,13 @@
    "link_full": "dog 听起来像「逗狗」：拿根骨头逗一逗，小狗摇着尾巴跳起来——它就是小狗！",
    "memory_word": "dog",
    "image": "img/dog.svg",
-   "video": "video/dog.mp4",
+   "video": "video/blend/dog.mp4",
    "status": "待审",
-   "source": "复用记忆单词卡：本次新写",
+   "source": "链接复用记忆单词卡：本次新写",
    "distractors": [
-    "pig",
-    "bus",
-    "cup"
+    "ant",
+    "bed",
+    "bug"
    ],
    "audio": "audio/blend/dog.mp3",
    "audio_en": "audio/en/dog.mp3",
@@ -6068,8 +10505,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "d"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
      "zh",
-     "得、哦、咕，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "dog"
     ],
     [
      "en",
@@ -6088,6 +10541,17 @@
      "dog"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6097,42 +10561,67 @@
     ],
     [
      1.58,
-     4.49,
-     "zh",
-     "得、哦、咕，快一点，再快一点——"
+     1.79,
+     "ph",
+     "d"
     ],
     [
-     4.79,
-     5.3,
+     2.09,
+     2.76,
+     "ph",
+     "o"
+    ],
+    [
+     3.06,
+     3.27,
+     "ph",
+     "g"
+    ],
+    [
+     3.57,
+     4.21,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.51,
+     5.25,
+     "phf",
+     "d-o-g"
+    ],
+    [
+     5.55,
+     6.05,
      "en",
      "dog!"
     ],
     [
-     5.6,
-     6.15,
+     6.35,
+     6.91,
      "zh",
      "逗狗！"
     ],
     [
-     6.45,
-     7.05,
+     7.21,
+     7.81,
      "zh",
      "小狗。"
     ],
     [
-     7.35,
-     7.84,
+     8.11,
+     8.59,
      "en",
      "dog"
     ]
    ],
-   "narration_sec": 8.34
+   "narration_sec": 9.09
   },
   {
    "id": "B-sun",
    "word": "sun",
    "meaning": "太阳",
    "emoji": "☀️",
+   "icon": "img/icons/sun.svg",
    "unlock_group": 3,
    "letters": [
     "s",
@@ -6143,13 +10632,13 @@
    "link_full": "sun 听起来像「散」：太阳一出来，乌云全都「散」开啦，到处亮堂堂！",
    "memory_word": "sun",
    "image": "img/sun.svg",
-   "video": "video/sun.mp4",
+   "video": "video/blend/sun.mp4",
    "status": "待审",
-   "source": "复用记忆单词卡：本次新写",
+   "source": "链接复用记忆单词卡：本次新写",
    "distractors": [
+    "fan",
     "bus",
-    "cup",
-    "bag"
+    "lip"
    ],
    "audio": "audio/blend/sun.mp3",
    "audio_en": "audio/en/sun.mp3",
@@ -6159,8 +10648,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "s"
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
      "zh",
-     "嘶、呃、嗯，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "sun"
     ],
     [
      "en",
@@ -6179,6 +10684,17 @@
      "sun"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6188,58 +10704,83 @@
     ],
     [
      1.58,
-     4.57,
-     "zh",
-     "嘶、呃、嗯，快一点，再快一点——"
+     2.15,
+     "ph",
+     "s"
     ],
     [
-     4.87,
-     5.44,
+     2.45,
+     3.12,
+     "ph",
+     "u"
+    ],
+    [
+     3.42,
+     4.03,
+     "ph",
+     "n"
+    ],
+    [
+     4.33,
+     4.97,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.27,
+     6.81,
+     "phf",
+     "s-u-n"
+    ],
+    [
+     7.11,
+     7.68,
      "en",
      "sun!"
     ],
     [
-     5.74,
-     6.43,
+     7.98,
+     8.68,
      "zh",
      "云散啦！"
     ],
     [
-     6.73,
-     7.31,
+     8.98,
+     9.55,
      "zh",
      "太阳。"
     ],
     [
-     7.61,
-     8.18,
+     9.85,
+     10.42,
      "en",
      "sun"
     ]
    ],
-   "narration_sec": 8.68
+   "narration_sec": 10.92
   },
   {
    "id": "B-pig",
    "word": "pig",
    "meaning": "小猪",
    "emoji": "🐷",
+   "icon": "img/icons/pig.svg",
    "unlock_group": 3,
    "letters": [
     "p",
     "i",
     "g"
    ],
-   "link": "小猪「屁股」圆滚滚。",
-   "link_full": "小猪「屁股」圆滚滚。",
+   "link": "调「皮」的小猪，在泥里打滚！",
+   "link_full": "调「皮」的小猪，在泥里打滚！",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/pig.svg",
+   "video": "video/blend/pig.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "dog",
-    "bag",
+    "leg",
+    "mom",
     "sun"
    ],
    "audio": "audio/blend/pig.mp3",
@@ -6250,8 +10791,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "p"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
      "zh",
-     "噗、咦、咕，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "pig"
     ],
     [
      "en",
@@ -6259,7 +10816,7 @@
     ],
     [
      "zh",
-     "小猪「屁股」圆滚滚。"
+     "调「皮」的小猪，在泥里打滚！"
     ],
     [
      "zh",
@@ -6270,6 +10827,17 @@
      "pig"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6279,42 +10847,67 @@
     ],
     [
      1.58,
-     4.47,
-     "zh",
-     "噗、咦、咕，快一点，再快一点——"
+     1.81,
+     "ph",
+     "p"
     ],
     [
-     4.77,
-     5.2,
+     2.11,
+     2.76,
+     "ph",
+     "i"
+    ],
+    [
+     3.06,
+     3.27,
+     "ph",
+     "g"
+    ],
+    [
+     3.57,
+     4.21,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.51,
+     5.25,
+     "phf",
+     "p-i-g"
+    ],
+    [
+     5.55,
+     5.99,
      "en",
      "pig!"
     ],
     [
-     5.5,
-     6.93,
+     6.29,
+     8.37,
      "zh",
-     "小猪「屁股」圆滚滚。"
+     "调「皮」的小猪，在泥里打滚！"
     ],
     [
-     7.23,
-     7.85,
+     8.67,
+     9.29,
      "zh",
      "小猪。"
     ],
     [
-     8.15,
-     8.59,
+     9.59,
+     10.02,
      "en",
      "pig"
     ]
    ],
-   "narration_sec": 9.09
+   "narration_sec": 10.52
   },
   {
    "id": "B-bus",
    "word": "bus",
    "meaning": "公共汽车",
    "emoji": "🚌",
+   "icon": "img/icons/bus.svg",
    "unlock_group": 3,
    "letters": [
     "b",
@@ -6324,14 +10917,14 @@
    "link": "「巴士」来啦，排队上车！",
    "link_full": "「巴士」来啦，排队上车！",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/bus.svg",
+   "video": "video/blend/bus.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "sun",
-    "pig",
-    "cup"
+    "map",
+    "ten",
+    "nap"
    ],
    "audio": "audio/blend/bus.mp3",
    "audio_en": "audio/en/bus.mp3",
@@ -6341,8 +10934,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "b"
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "ph",
+     "s"
+    ],
+    [
      "zh",
-     "波、呃、嘶，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "bus"
     ],
     [
      "en",
@@ -6361,6 +10970,17 @@
      "bus"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6370,42 +10990,67 @@
     ],
     [
      1.58,
-     4.58,
-     "zh",
-     "波、呃、嘶，快一点，再快一点——"
+     1.79,
+     "ph",
+     "b"
     ],
     [
-     4.88,
-     5.51,
+     2.09,
+     2.76,
+     "ph",
+     "u"
+    ],
+    [
+     3.06,
+     3.63,
+     "ph",
+     "s"
+    ],
+    [
+     3.93,
+     4.57,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.87,
+     5.99,
+     "phf",
+     "b-u-s"
+    ],
+    [
+     6.29,
+     6.92,
      "en",
      "bus!"
     ],
     [
-     5.81,
-     7.67,
+     7.22,
+     9.08,
      "zh",
      "「巴士」来啦，排队上车！"
     ],
     [
-     7.97,
-     8.87,
+     9.38,
+     10.28,
      "zh",
      "公共汽车。"
     ],
     [
-     9.17,
-     9.75,
+     10.58,
+     11.16,
      "en",
      "bus"
     ]
    ],
-   "narration_sec": 10.25
+   "narration_sec": 11.66
   },
   {
    "id": "B-cup",
    "word": "cup",
    "meaning": "杯子",
-   "emoji": "🥤",
+   "emoji": "☕",
+   "icon": "img/icons/cup.svg",
    "unlock_group": 3,
    "letters": [
     "c",
@@ -6415,13 +11060,13 @@
    "link": "捧着杯子，「咔」一口喝光。",
    "link_full": "捧着杯子，「咔」一口喝光。",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/cup.svg",
+   "video": "video/blend/cup.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "bag",
-    "dog",
+    "sun",
+    "bug",
     "bus"
    ],
    "audio": "audio/blend/cup.mp3",
@@ -6432,8 +11077,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "c"
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
      "zh",
-     "咳、呃、噗，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "cup"
     ],
     [
      "en",
@@ -6452,6 +11113,17 @@
      "cup"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6461,42 +11133,67 @@
     ],
     [
      1.58,
-     4.61,
-     "zh",
-     "咳、呃、噗，快一点，再快一点——"
+     1.8,
+     "ph",
+     "c"
     ],
     [
-     4.91,
-     5.26,
+     2.1,
+     2.77,
+     "ph",
+     "u"
+    ],
+    [
+     3.07,
+     3.3,
+     "ph",
+     "p"
+    ],
+    [
+     3.6,
+     4.24,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.54,
+     5.32,
+     "phf",
+     "c-u-p"
+    ],
+    [
+     5.62,
+     5.97,
      "en",
      "cup!"
     ],
     [
-     5.56,
-     7.49,
+     6.27,
+     8.2,
      "zh",
      "捧着杯子，「咔」一口喝光。"
     ],
     [
-     7.79,
-     8.34,
+     8.5,
+     9.05,
      "zh",
      "杯子。"
     ],
     [
-     8.64,
-     8.97,
+     9.35,
+     9.69,
      "en",
      "cup"
     ]
    ],
-   "narration_sec": 9.47
+   "narration_sec": 10.19
   },
   {
    "id": "B-bag",
    "word": "bag",
-   "meaning": "包",
+   "meaning": "书包",
    "emoji": "🎒",
+   "icon": "img/icons/bag.svg",
    "unlock_group": 3,
    "letters": [
     "b",
@@ -6506,14 +11203,14 @@
    "link": "「背个」包，去上学！",
    "link_full": "「背个」包，去上学！",
    "memory_word": null,
-   "image": null,
-   "video": null,
+   "image": "img/bag.svg",
+   "video": "video/blend/bag.mp4",
    "status": "待审",
    "source": "本次新写（2026-10-11）；待 Phil 审",
    "distractors": [
-    "cup",
-    "pig",
-    "dog"
+    "fan",
+    "dog",
+    "tap"
    ],
    "audio": "audio/blend/bag.mp3",
    "audio_en": "audio/en/bag.mp3",
@@ -6523,8 +11220,24 @@
      "我们来拼一拼！"
     ],
     [
+     "ph",
+     "b"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
      "zh",
-     "波、哎、咕，快一点，再快一点——"
+     "快一点！"
+    ],
+    [
+     "phf",
+     "bag"
     ],
     [
      "en",
@@ -6536,13 +11249,24 @@
     ],
     [
      "zh",
-     "包。"
+     "书包。"
     ],
     [
      "en",
      "bag"
     ]
    ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
    "cues": [
     [
      0.2,
@@ -6552,38 +11276,2351 @@
     ],
     [
      1.58,
-     4.53,
-     "zh",
-     "波、哎、咕，快一点，再快一点——"
+     1.79,
+     "ph",
+     "b"
     ],
     [
-     4.83,
-     5.28,
+     2.09,
+     2.76,
+     "ph",
+     "a"
+    ],
+    [
+     3.06,
+     3.27,
+     "ph",
+     "g"
+    ],
+    [
+     3.57,
+     4.21,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.51,
+     5.27,
+     "phf",
+     "b-a-g"
+    ],
+    [
+     5.57,
+     6.02,
      "en",
      "bag!"
     ],
     [
-     5.58,
-     7.01,
+     6.32,
+     7.75,
      "zh",
      "「背个」包，去上学！"
     ],
     [
-     7.31,
-     7.67,
+     8.05,
+     8.61,
      "zh",
-     "包。"
+     "书包。"
     ],
     [
-     7.97,
-     8.41,
+     8.91,
+     9.35,
      "en",
      "bag"
     ]
    ],
-   "narration_sec": 8.91
+   "narration_sec": 9.85
+  },
+  {
+   "id": "B-mom",
+   "word": "mom",
+   "meaning": "妈妈",
+   "emoji": "👩",
+   "icon": "img/icons/mom.svg",
+   "unlock_group": 3,
+   "letters": [
+    "m",
+    "o",
+    "m"
+   ],
+   "link": "妈妈「摸摸」我的头。",
+   "link_full": "妈妈「摸摸」我的头。",
+   "memory_word": null,
+   "image": "img/mom.svg",
+   "video": "video/blend/mom.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "hat",
+    "log",
+    "pen"
+   ],
+   "audio": "audio/blend/mom.mp3",
+   "audio_en": "audio/en/mom.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "m"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "m"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "mom"
+    ],
+    [
+     "en",
+     "mom!"
+    ],
+    [
+     "zh",
+     "妈妈「摸摸」我的头。"
+    ],
+    [
+     "zh",
+     "妈妈。"
+    ],
+    [
+     "en",
+     "mom"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.19,
+     "ph",
+     "m"
+    ],
+    [
+     2.49,
+     3.16,
+     "ph",
+     "o"
+    ],
+    [
+     3.46,
+     4.07,
+     "ph",
+     "m"
+    ],
+    [
+     4.37,
+     5.01,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.31,
+     6.87,
+     "phf",
+     "m-o-m"
+    ],
+    [
+     7.17,
+     7.77,
+     "en",
+     "mom!"
+    ],
+    [
+     8.07,
+     9.33,
+     "zh",
+     "妈妈「摸摸」我的头。"
+    ],
+    [
+     9.63,
+     10.17,
+     "zh",
+     "妈妈。"
+    ],
+    [
+     10.47,
+     11.04,
+     "en",
+     "mom"
+    ]
+   ],
+   "narration_sec": 11.54
+  },
+  {
+   "id": "B-hot",
+   "word": "hot",
+   "meaning": "烫",
+   "emoji": "♨️",
+   "icon": "img/icons/hot.svg",
+   "unlock_group": 3,
+   "letters": [
+    "h",
+    "o",
+    "t"
+   ],
+   "link": "刚出锅的包子，「好烫」！",
+   "link_full": "刚出锅的包子，「好烫」！",
+   "memory_word": null,
+   "image": "img/hot.svg",
+   "video": "video/blend/hot.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "top",
+    "pen",
+    "tap"
+   ],
+   "audio": "audio/blend/hot.mp3",
+   "audio_en": "audio/en/hot.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "h"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "hot"
+    ],
+    [
+     "en",
+     "hot!"
+    ],
+    [
+     "zh",
+     "刚出锅的包子，「好烫」！"
+    ],
+    [
+     "zh",
+     "烫。"
+    ],
+    [
+     "en",
+     "hot"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.12,
+     "ph",
+     "h"
+    ],
+    [
+     2.42,
+     3.09,
+     "ph",
+     "o"
+    ],
+    [
+     3.39,
+     3.6,
+     "ph",
+     "t"
+    ],
+    [
+     3.9,
+     4.54,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.84,
+     5.93,
+     "phf",
+     "h-o-t"
+    ],
+    [
+     6.23,
+     6.65,
+     "en",
+     "hot!"
+    ],
+    [
+     6.95,
+     8.65,
+     "zh",
+     "刚出锅的包子，「好烫」！"
+    ],
+    [
+     8.95,
+     9.34,
+     "zh",
+     "烫。"
+    ],
+    [
+     9.64,
+     10.04,
+     "en",
+     "hot"
+    ]
+   ],
+   "narration_sec": 10.54
+  },
+  {
+   "id": "B-pot",
+   "word": "pot",
+   "meaning": "汤锅",
+   "emoji": "🍲",
+   "icon": "img/icons/pot.svg",
+   "unlock_group": 3,
+   "letters": [
+    "p",
+    "o",
+    "t"
+   ],
+   "link": "汤锅里「噗」「噗」冒泡泡。",
+   "link_full": "汤锅里「噗」「噗」冒泡泡。",
+   "memory_word": null,
+   "image": "img/pot.svg",
+   "video": "video/blend/pot.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "bug",
+    "net",
+    "dad"
+   ],
+   "audio": "audio/blend/pot.mp3",
+   "audio_en": "audio/en/pot.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "pot"
+    ],
+    [
+     "en",
+     "pot!"
+    ],
+    [
+     "zh",
+     "汤锅里「噗」「噗」冒泡泡。"
+    ],
+    [
+     "zh",
+     "汤锅。"
+    ],
+    [
+     "en",
+     "pot"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.81,
+     "ph",
+     "p"
+    ],
+    [
+     2.11,
+     2.78,
+     "ph",
+     "o"
+    ],
+    [
+     3.08,
+     3.29,
+     "ph",
+     "t"
+    ],
+    [
+     3.59,
+     4.23,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.53,
+     5.29,
+     "phf",
+     "p-o-t"
+    ],
+    [
+     5.59,
+     6.03,
+     "en",
+     "pot!"
+    ],
+    [
+     6.33,
+     8.06,
+     "zh",
+     "汤锅里「噗」「噗」冒泡泡。"
+    ],
+    [
+     8.36,
+     8.93,
+     "zh",
+     "汤锅。"
+    ],
+    [
+     9.23,
+     9.66,
+     "en",
+     "pot"
+    ]
+   ],
+   "narration_sec": 10.16
+  },
+  {
+   "id": "B-top",
+   "word": "top",
+   "meaning": "陀螺",
+   "emoji": "🪀",
+   "icon": "img/icons/top.svg",
+   "unlock_group": 3,
+   "letters": [
+    "t",
+    "o",
+    "p"
+   ],
+   "link": "「陀」螺转呀转！",
+   "link_full": "「陀」螺转呀转！",
+   "memory_word": null,
+   "image": "img/top.svg",
+   "video": "video/blend/top.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "pin",
+    "tap",
+    "pig"
+   ],
+   "audio": "audio/blend/top.mp3",
+   "audio_en": "audio/en/top.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "top"
+    ],
+    [
+     "en",
+     "top!"
+    ],
+    [
+     "zh",
+     "「陀」螺转呀转！"
+    ],
+    [
+     "zh",
+     "陀螺。"
+    ],
+    [
+     "en",
+     "top"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.79,
+     "ph",
+     "t"
+    ],
+    [
+     2.09,
+     2.76,
+     "ph",
+     "o"
+    ],
+    [
+     3.06,
+     3.29,
+     "ph",
+     "p"
+    ],
+    [
+     3.59,
+     4.23,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.53,
+     5.29,
+     "phf",
+     "t-o-p"
+    ],
+    [
+     5.59,
+     6.01,
+     "en",
+     "top!"
+    ],
+    [
+     6.31,
+     7.4,
+     "zh",
+     "「陀」螺转呀转！"
+    ],
+    [
+     7.7,
+     8.27,
+     "zh",
+     "陀螺。"
+    ],
+    [
+     8.57,
+     8.97,
+     "en",
+     "top"
+    ]
+   ],
+   "narration_sec": 9.47
+  },
+  {
+   "id": "B-log",
+   "word": "log",
+   "meaning": "木头",
+   "emoji": "🪵",
+   "icon": "img/icons/log.svg",
+   "unlock_group": 3,
+   "letters": [
+    "l",
+    "o",
+    "g"
+   ],
+   "link": "「搂」着大木头过小河。",
+   "link_full": "「搂」着大木头过小河。",
+   "memory_word": null,
+   "image": "img/log.svg",
+   "video": "video/blend/log.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "bus",
+    "cup",
+    "bug"
+   ],
+   "audio": "audio/blend/log.mp3",
+   "audio_en": "audio/en/log.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "l"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "log"
+    ],
+    [
+     "en",
+     "log!"
+    ],
+    [
+     "zh",
+     "「搂」着大木头过小河。"
+    ],
+    [
+     "zh",
+     "木头。"
+    ],
+    [
+     "en",
+     "log"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.15,
+     "ph",
+     "l"
+    ],
+    [
+     2.45,
+     3.12,
+     "ph",
+     "o"
+    ],
+    [
+     3.42,
+     3.63,
+     "ph",
+     "g"
+    ],
+    [
+     3.93,
+     4.57,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.87,
+     5.99,
+     "phf",
+     "l-o-g"
+    ],
+    [
+     6.29,
+     6.81,
+     "en",
+     "log!"
+    ],
+    [
+     7.11,
+     8.61,
+     "zh",
+     "「搂」着大木头过小河。"
+    ],
+    [
+     8.91,
+     9.42,
+     "zh",
+     "木头。"
+    ],
+    [
+     9.72,
+     10.23,
+     "en",
+     "log"
+    ]
+   ],
+   "narration_sec": 10.73
+  },
+  {
+   "id": "B-fan",
+   "word": "fan",
+   "meaning": "扇子",
+   "emoji": "🪭",
+   "icon": "img/icons/fan.svg",
+   "unlock_group": 3,
+   "letters": [
+    "f",
+    "a",
+    "n"
+   ],
+   "link": "扇子「翻」呀翻，好凉快。",
+   "link_full": "扇子「翻」呀翻，好凉快。",
+   "memory_word": null,
+   "image": "img/fan.svg",
+   "video": "video/blend/fan.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "leg",
+    "tap",
+    "nap"
+   ],
+   "audio": "audio/blend/fan.mp3",
+   "audio_en": "audio/en/fan.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "f"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "fan"
+    ],
+    [
+     "en",
+     "fan!"
+    ],
+    [
+     "zh",
+     "扇子「翻」呀翻，好凉快。"
+    ],
+    [
+     "zh",
+     "扇子。"
+    ],
+    [
+     "en",
+     "fan"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.15,
+     "ph",
+     "f"
+    ],
+    [
+     2.45,
+     3.12,
+     "ph",
+     "a"
+    ],
+    [
+     3.42,
+     4.03,
+     "ph",
+     "n"
+    ],
+    [
+     4.33,
+     4.97,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.27,
+     6.83,
+     "phf",
+     "f-a-n"
+    ],
+    [
+     7.13,
+     7.67,
+     "en",
+     "fan!"
+    ],
+    [
+     7.97,
+     9.84,
+     "zh",
+     "扇子「翻」呀翻，好凉快。"
+    ],
+    [
+     10.14,
+     10.73,
+     "zh",
+     "扇子。"
+    ],
+    [
+     11.03,
+     11.55,
+     "en",
+     "fan"
+    ]
+   ],
+   "narration_sec": 12.05
+  },
+  {
+   "id": "B-leg",
+   "word": "leg",
+   "meaning": "腿",
+   "emoji": "🦵",
+   "icon": "img/icons/leg.svg",
+   "unlock_group": 3,
+   "letters": [
+    "l",
+    "e",
+    "g"
+   ],
+   "link": "跑呀跑，腿都「累个」酸酸的。",
+   "link_full": "跑呀跑，腿都「累个」酸酸的。",
+   "memory_word": null,
+   "image": "img/leg.svg",
+   "video": "video/blend/leg.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "cap",
+    "lip",
+    "tap"
+   ],
+   "audio": "audio/blend/leg.mp3",
+   "audio_en": "audio/en/leg.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "l"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "leg"
+    ],
+    [
+     "en",
+     "leg!"
+    ],
+    [
+     "zh",
+     "跑呀跑，腿都「累个」酸酸的。"
+    ],
+    [
+     "zh",
+     "腿。"
+    ],
+    [
+     "en",
+     "leg"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.15,
+     "ph",
+     "l"
+    ],
+    [
+     2.45,
+     3.12,
+     "ph",
+     "e"
+    ],
+    [
+     3.42,
+     3.63,
+     "ph",
+     "g"
+    ],
+    [
+     3.93,
+     4.57,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.87,
+     6.0,
+     "phf",
+     "l-e-g"
+    ],
+    [
+     6.3,
+     6.72,
+     "en",
+     "leg!"
+    ],
+    [
+     7.02,
+     9.05,
+     "zh",
+     "跑呀跑，腿都「累个」酸酸的。"
+    ],
+    [
+     9.35,
+     9.77,
+     "zh",
+     "腿。"
+    ],
+    [
+     10.07,
+     10.48,
+     "en",
+     "leg"
+    ]
+   ],
+   "narration_sec": 10.98
+  },
+  {
+   "id": "B-lip",
+   "word": "lip",
+   "meaning": "嘴唇",
+   "emoji": "👄",
+   "icon": "img/icons/lip.svg",
+   "unlock_group": 3,
+   "letters": [
+    "l",
+    "i",
+    "p"
+   ],
+   "link": "嘴唇上粘了一「粒」米。",
+   "link_full": "嘴唇上粘了一「粒」米。",
+   "memory_word": null,
+   "image": "img/lip.svg",
+   "video": "video/blend/lip.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "ant",
+    "sun",
+    "log"
+   ],
+   "audio": "audio/blend/lip.mp3",
+   "audio_en": "audio/en/lip.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "l"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "lip"
+    ],
+    [
+     "en",
+     "lip!"
+    ],
+    [
+     "zh",
+     "嘴唇上粘了一「粒」米。"
+    ],
+    [
+     "zh",
+     "嘴唇。"
+    ],
+    [
+     "en",
+     "lip"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.15,
+     "ph",
+     "l"
+    ],
+    [
+     2.45,
+     3.1,
+     "ph",
+     "i"
+    ],
+    [
+     3.4,
+     3.63,
+     "ph",
+     "p"
+    ],
+    [
+     3.93,
+     4.57,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.87,
+     5.99,
+     "phf",
+     "l-i-p"
+    ],
+    [
+     6.29,
+     6.64,
+     "en",
+     "lip!"
+    ],
+    [
+     6.94,
+     8.42,
+     "zh",
+     "嘴唇上粘了一「粒」米。"
+    ],
+    [
+     8.72,
+     9.33,
+     "zh",
+     "嘴唇。"
+    ],
+    [
+     9.63,
+     9.96,
+     "en",
+     "lip"
+    ]
+   ],
+   "narration_sec": 10.46
+  },
+  {
+   "id": "B-bug",
+   "word": "bug",
+   "meaning": "小虫子",
+   "emoji": "🐞",
+   "icon": "img/icons/bug.svg",
+   "unlock_group": 3,
+   "letters": [
+    "b",
+    "u",
+    "g"
+   ],
+   "link": "草地上爬着「八个」小虫子。",
+   "link_full": "草地上爬着「八个」小虫子。",
+   "memory_word": null,
+   "image": "img/bug.svg",
+   "video": "video/blend/bug.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "dog",
+    "mom",
+    "cup"
+   ],
+   "audio": "audio/blend/bug.mp3",
+   "audio_en": "audio/en/bug.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "b"
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "ph",
+     "g"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "bug"
+    ],
+    [
+     "en",
+     "bug!"
+    ],
+    [
+     "zh",
+     "草地上爬着「八个」小虫子。"
+    ],
+    [
+     "zh",
+     "小虫子。"
+    ],
+    [
+     "en",
+     "bug"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.79,
+     "ph",
+     "b"
+    ],
+    [
+     2.09,
+     2.76,
+     "ph",
+     "u"
+    ],
+    [
+     3.06,
+     3.27,
+     "ph",
+     "g"
+    ],
+    [
+     3.57,
+     4.21,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.51,
+     5.27,
+     "phf",
+     "b-u-g"
+    ],
+    [
+     5.57,
+     5.99,
+     "en",
+     "bug!"
+    ],
+    [
+     6.29,
+     8.25,
+     "zh",
+     "草地上爬着「八个」小虫子。"
+    ],
+    [
+     8.55,
+     9.37,
+     "zh",
+     "小虫子。"
+    ],
+    [
+     9.67,
+     10.1,
+     "en",
+     "bug"
+    ]
+   ],
+   "narration_sec": 10.6
+  },
+  {
+   "id": "B-nut",
+   "word": "nut",
+   "meaning": "坚果",
+   "emoji": "🌰",
+   "icon": "img/icons/nut.svg",
+   "unlock_group": 3,
+   "letters": [
+    "n",
+    "u",
+    "t"
+   ],
+   "link": "小松鼠抱着坚果：「拿它」！",
+   "link_full": "小松鼠抱着坚果：「拿它」！",
+   "memory_word": null,
+   "image": "img/nut.svg",
+   "video": "video/blend/nut.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "pan",
+    "fan",
+    "cup"
+   ],
+   "audio": "audio/blend/nut.mp3",
+   "audio_en": "audio/en/nut.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
+     "ph",
+     "u"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "nut"
+    ],
+    [
+     "en",
+     "nut!"
+    ],
+    [
+     "zh",
+     "小松鼠抱着坚果：「拿它」！"
+    ],
+    [
+     "zh",
+     "坚果。"
+    ],
+    [
+     "en",
+     "nut"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.19,
+     "ph",
+     "n"
+    ],
+    [
+     2.49,
+     3.16,
+     "ph",
+     "u"
+    ],
+    [
+     3.46,
+     3.67,
+     "ph",
+     "t"
+    ],
+    [
+     3.97,
+     4.61,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.91,
+     6.08,
+     "phf",
+     "n-u-t"
+    ],
+    [
+     6.38,
+     6.79,
+     "en",
+     "nut!"
+    ],
+    [
+     7.09,
+     9.16,
+     "zh",
+     "小松鼠抱着坚果：「拿它」！"
+    ],
+    [
+     9.46,
+     10.05,
+     "zh",
+     "坚果。"
+    ],
+    [
+     10.35,
+     10.75,
+     "en",
+     "nut"
+    ]
+   ],
+   "narration_sec": 11.25
+  },
+  {
+   "id": "B-six",
+   "word": "six",
+   "meaning": "六",
+   "emoji": "6️⃣",
+   "icon": "img/icons/six.svg",
+   "unlock_group": 4,
+   "letters": [
+    "s",
+    "i",
+    "x"
+   ],
+   "link": "「吸」一口气，数到六。",
+   "link_full": "「吸」一口气，数到六。",
+   "memory_word": null,
+   "image": "img/six.svg",
+   "video": "video/blend/six.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "pen",
+    "hat",
+    "lip"
+   ],
+   "audio": "audio/blend/six.mp3",
+   "audio_en": "audio/en/six.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "s"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "x"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "six"
+    ],
+    [
+     "en",
+     "six!"
+    ],
+    [
+     "zh",
+     "「吸」一口气，数到六。"
+    ],
+    [
+     "zh",
+     "六。"
+    ],
+    [
+     "en",
+     "six"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.15,
+     "ph",
+     "s"
+    ],
+    [
+     2.45,
+     3.1,
+     "ph",
+     "i"
+    ],
+    [
+     3.4,
+     4.2,
+     "ph",
+     "x"
+    ],
+    [
+     4.5,
+     5.14,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.44,
+     6.99,
+     "phf",
+     "s-i-x"
+    ],
+    [
+     7.29,
+     8.02,
+     "en",
+     "six!"
+    ],
+    [
+     8.32,
+     10.0,
+     "zh",
+     "「吸」一口气，数到六。"
+    ],
+    [
+     10.3,
+     10.68,
+     "zh",
+     "六。"
+    ],
+    [
+     10.98,
+     11.72,
+     "en",
+     "six"
+    ]
+   ],
+   "narration_sec": 12.22
+  },
+  {
+   "id": "B-box",
+   "word": "box",
+   "meaning": "盒子",
+   "emoji": "📦",
+   "icon": "img/icons/box.svg",
+   "unlock_group": 4,
+   "letters": [
+    "b",
+    "o",
+    "x"
+   ],
+   "link": "把礼物「包」起来，放进盒子里。",
+   "link_full": "把礼物「包」起来，放进盒子里。",
+   "memory_word": null,
+   "image": "img/box.svg",
+   "video": "video/blend/box.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "ant",
+    "bed",
+    "dog"
+   ],
+   "audio": "audio/blend/box.mp3",
+   "audio_en": "audio/en/box.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "b"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "x"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "box"
+    ],
+    [
+     "en",
+     "box!"
+    ],
+    [
+     "zh",
+     "把礼物「包」起来，放进盒子里。"
+    ],
+    [
+     "zh",
+     "盒子。"
+    ],
+    [
+     "en",
+     "box"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.79,
+     "ph",
+     "b"
+    ],
+    [
+     2.09,
+     2.76,
+     "ph",
+     "o"
+    ],
+    [
+     3.06,
+     3.85,
+     "ph",
+     "x"
+    ],
+    [
+     4.15,
+     4.79,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.09,
+     6.31,
+     "phf",
+     "b-o-x"
+    ],
+    [
+     6.61,
+     7.3,
+     "en",
+     "box!"
+    ],
+    [
+     7.6,
+     9.76,
+     "zh",
+     "把礼物「包」起来，放进盒子里。"
+    ],
+    [
+     10.06,
+     10.63,
+     "zh",
+     "盒子。"
+    ],
+    [
+     10.93,
+     11.61,
+     "en",
+     "box"
+    ]
+   ],
+   "narration_sec": 12.11
+  },
+  {
+   "id": "B-fox",
+   "word": "fox",
+   "meaning": "狐狸",
+   "emoji": "🦊",
+   "icon": "img/icons/fox.svg",
+   "unlock_group": 4,
+   "letters": [
+    "f",
+    "o",
+    "x"
+   ],
+   "link": "狐狸「发」现了一个宝箱！",
+   "link_full": "狐狸「发」现了一个宝箱！",
+   "memory_word": null,
+   "image": "img/fox.svg",
+   "video": "video/blend/fox.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "man",
+    "map",
+    "hot"
+   ],
+   "audio": "audio/blend/fox.mp3",
+   "audio_en": "audio/en/fox.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "f"
+    ],
+    [
+     "ph",
+     "o"
+    ],
+    [
+     "ph",
+     "x"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "fox"
+    ],
+    [
+     "en",
+     "fox!"
+    ],
+    [
+     "zh",
+     "狐狸「发」现了一个宝箱！"
+    ],
+    [
+     "zh",
+     "狐狸。"
+    ],
+    [
+     "en",
+     "fox"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.15,
+     "ph",
+     "f"
+    ],
+    [
+     2.45,
+     3.12,
+     "ph",
+     "o"
+    ],
+    [
+     3.42,
+     4.22,
+     "ph",
+     "x"
+    ],
+    [
+     4.52,
+     5.16,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.46,
+     7.05,
+     "phf",
+     "f-o-x"
+    ],
+    [
+     7.35,
+     8.06,
+     "en",
+     "fox!"
+    ],
+    [
+     8.36,
+     9.83,
+     "zh",
+     "狐狸「发」现了一个宝箱！"
+    ],
+    [
+     10.13,
+     10.67,
+     "zh",
+     "狐狸。"
+    ],
+    [
+     10.97,
+     11.69,
+     "en",
+     "fox"
+    ]
+   ],
+   "narration_sec": 12.19
+  },
+  {
+   "id": "B-van",
+   "word": "van",
+   "meaning": "面包车",
+   "emoji": "🚐",
+   "icon": "img/icons/van.svg",
+   "unlock_group": 4,
+   "letters": [
+    "v",
+    "a",
+    "n"
+   ],
+   "link": "「玩」具面包车，嘀嘀嘀开过来！",
+   "link_full": "「玩」具面包车，嘀嘀嘀开过来！",
+   "memory_word": null,
+   "image": "img/van.svg",
+   "video": "video/blend/van.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "hot",
+    "lip",
+    "nap"
+   ],
+   "audio": "audio/blend/van.mp3",
+   "audio_en": "audio/en/van.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "v"
+    ],
+    [
+     "ph",
+     "a"
+    ],
+    [
+     "ph",
+     "n"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "van"
+    ],
+    [
+     "en",
+     "van!"
+    ],
+    [
+     "zh",
+     "「玩」具面包车，嘀嘀嘀开过来！"
+    ],
+    [
+     "zh",
+     "面包车。"
+    ],
+    [
+     "en",
+     "van"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.22,
+     "ph",
+     "v"
+    ],
+    [
+     2.52,
+     3.19,
+     "ph",
+     "a"
+    ],
+    [
+     3.49,
+     4.1,
+     "ph",
+     "n"
+    ],
+    [
+     4.4,
+     5.04,
+     "zh",
+     "快一点！"
+    ],
+    [
+     5.34,
+     6.97,
+     "phf",
+     "v-a-n"
+    ],
+    [
+     7.27,
+     7.77,
+     "en",
+     "van!"
+    ],
+    [
+     8.07,
+     10.3,
+     "zh",
+     "「玩」具面包车，嘀嘀嘀开过来！"
+    ],
+    [
+     10.6,
+     11.39,
+     "zh",
+     "面包车。"
+    ],
+    [
+     11.69,
+     12.18,
+     "en",
+     "van"
+    ]
+   ],
+   "narration_sec": 12.68
+  },
+  {
+   "id": "B-jet",
+   "word": "jet",
+   "meaning": "喷气飞机",
+   "emoji": "✈️",
+   "icon": "img/icons/jet.svg",
+   "unlock_group": 4,
+   "letters": [
+    "j",
+    "e",
+    "t"
+   ],
+   "link": "飞机来「接」我啦！",
+   "link_full": "飞机来「接」我啦！",
+   "memory_word": null,
+   "image": "img/jet.svg",
+   "video": "video/blend/jet.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "pen",
+    "log",
+    "hot"
+   ],
+   "audio": "audio/blend/jet.mp3",
+   "audio_en": "audio/en/jet.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "j"
+    ],
+    [
+     "ph",
+     "e"
+    ],
+    [
+     "ph",
+     "t"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "jet"
+    ],
+    [
+     "en",
+     "jet!"
+    ],
+    [
+     "zh",
+     "飞机来「接」我啦！"
+    ],
+    [
+     "zh",
+     "喷气飞机。"
+    ],
+    [
+     "en",
+     "jet"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     1.84,
+     "ph",
+     "j"
+    ],
+    [
+     2.14,
+     2.81,
+     "ph",
+     "e"
+    ],
+    [
+     3.11,
+     3.32,
+     "ph",
+     "t"
+    ],
+    [
+     3.62,
+     4.26,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.56,
+     5.35,
+     "phf",
+     "j-e-t"
+    ],
+    [
+     5.65,
+     6.05,
+     "en",
+     "jet!"
+    ],
+    [
+     6.35,
+     7.42,
+     "zh",
+     "飞机来「接」我啦！"
+    ],
+    [
+     7.72,
+     8.64,
+     "zh",
+     "喷气飞机。"
+    ],
+    [
+     8.94,
+     9.32,
+     "en",
+     "jet"
+    ]
+   ],
+   "narration_sec": 9.82
+  },
+  {
+   "id": "B-zip",
+   "word": "zip",
+   "meaning": "拉链",
+   "emoji": "🤐",
+   "icon": "img/icons/zip.svg",
+   "unlock_group": 4,
+   "letters": [
+    "z",
+    "i",
+    "p"
+   ],
+   "link": "拉链「滋——」地拉上。",
+   "link_full": "拉链「滋——」地拉上。",
+   "memory_word": null,
+   "image": "img/zip.svg",
+   "video": "video/blend/zip.mp4",
+   "status": "待审",
+   "source": "本次新写（2026-10-11）；待 Phil 审",
+   "distractors": [
+    "box",
+    "cap",
+    "man"
+   ],
+   "audio": "audio/blend/zip.mp3",
+   "audio_en": "audio/en/zip.mp3",
+   "narration": [
+    [
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     "ph",
+     "z"
+    ],
+    [
+     "ph",
+     "i"
+    ],
+    [
+     "ph",
+     "p"
+    ],
+    [
+     "zh",
+     "快一点！"
+    ],
+    [
+     "phf",
+     "zip"
+    ],
+    [
+     "en",
+     "zip!"
+    ],
+    [
+     "zh",
+     "拉链「滋——」地拉上。"
+    ],
+    [
+     "zh",
+     "拉链。"
+    ],
+    [
+     "en",
+     "zip"
+    ]
+   ],
+   "cue_map": {
+    "tiles": [
+     1,
+     2,
+     3
+    ],
+    "merge": 5,
+    "word": 6,
+    "picture": 7,
+    "meaning": 8
+   },
+   "cues": [
+    [
+     0.2,
+     1.28,
+     "zh",
+     "我们来拼一拼！"
+    ],
+    [
+     1.58,
+     2.2,
+     "ph",
+     "z"
+    ],
+    [
+     2.5,
+     3.15,
+     "ph",
+     "i"
+    ],
+    [
+     3.45,
+     3.68,
+     "ph",
+     "p"
+    ],
+    [
+     3.98,
+     4.62,
+     "zh",
+     "快一点！"
+    ],
+    [
+     4.92,
+     6.08,
+     "phf",
+     "z-i-p"
+    ],
+    [
+     6.38,
+     6.76,
+     "en",
+     "zip!"
+    ],
+    [
+     7.06,
+     8.58,
+     "zh",
+     "拉链「滋——」地拉上。"
+    ],
+    [
+     8.88,
+     9.45,
+     "zh",
+     "拉链。"
+    ],
+    [
+     9.75,
+     10.13,
+     "en",
+     "zip"
+    ]
+   ],
+   "narration_sec": 10.63
   }
  ],
+ "phonics_note": "字母音为真实拼读音片段（audio/phon），来源和许可见 content/phonics_credits.json；中文只用来讲怎么发音，不再用中文字近似发音。",
  "ui_audio": {
   "start": "audio/ui/start.mp3",
   "close": "audio/ui/close.mp3",
@@ -6601,36 +13638,193 @@
   "next": "audio/ui/next.mp3",
   "hello": "audio/ui/hello.mp3",
   "sticker": "audio/ui/sticker.mp3",
-  "letterq": "audio/ui/letterq.mp3"
+  "letterq": "audio/ui/letterq.mp3",
+  "review": "audio/ui/review.mp3",
+  "soundq": "audio/ui/soundq.mp3",
+  "reviewdone": "audio/ui/reviewdone.mp3"
  },
- "ship_candidates": [
-  {
-   "id": "A",
-   "anchor": "湿扑",
-   "picked": true,
-   "line": "ship 听起来像「湿扑」：大船冲进大海，浪花「扑」地打上甲板，船上的人全身都湿啦！",
-   "why": "夸张画面＋动作声，6-7 岁都懂「湿」和「扑」；画面能直接画出来"
+ "phonics_credits": {
+  "a": {
+   "ipa": "æ",
+   "source": "Wikimedia Commons “File:Near-open front unrounded vowel.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Near-open_front_unrounded_vowel.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims)."
   },
-  {
-   "id": "B",
-   "anchor": "嘘～噗",
-   "picked": false,
-   "line": "船长说「嘘～」，大烟囱却「噗」地喷出一团烟——ship！",
-   "why": "拟声好玩，但「噗」离 /ɪp/ 稍远，画面要两步"
+  "e": {
+   "ipa": "ɛ",
+   "source": "Wikimedia Commons “File:Open-mid front unrounded vowel.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Open-mid_front_unrounded_vowel.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims)."
   },
-  {
-   "id": "C",
-   "anchor": "洗盆",
-   "picked": false,
-   "line": "小朋友坐在洗澡盆里划呀划，假装开大船——「洗盆」变成 ship！",
-   "why": "孩子熟悉澡盆，但谐音偏弱，容易记成「盆＝船」"
+  "i": {
+   "ipa": "ɪ",
+   "source": "Wikimedia Commons “File:Near-close near-front unrounded vowel.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Near-close_near-front_unrounded_vowel.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims)."
   },
-  {
-   "id": "D",
-   "anchor": "i 当桅杆（原卡）",
-   "picked": false,
-   "line": "ship 中间的 i 当船上的桅杆",
-   "why": "Phil 已评「不够巧妙」，仅留作对照"
+  "o": {
+   "ipa": "ɑ",
+   "source": "Wikimedia Commons “File:Open back unrounded vowel.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Open_back_unrounded_vowel.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims)."
+  },
+  "u": {
+   "ipa": "ʌ",
+   "source": "Wikimedia Commons “File:Open-mid back unrounded vowel.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Open-mid_back_unrounded_vowel.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "No machine-readable author provided. Denelson83 assumed (based on copyright claims)."
+  },
+  "s": {
+   "ipa": "s",
+   "source": "Wikimedia Commons “File:Voiceless alveolar sibilant.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_sibilant.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "Peter Isotalo"
+  },
+  "z": {
+   "ipa": "z",
+   "source": "Wikimedia Commons “File:Voiced alveolar sibilant.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiced_alveolar_sibilant.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "h": {
+   "ipa": "h",
+   "source": "Wikimedia Commons “File:Voiceless glottal fricative.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiceless_glottal_fricative.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "m": {
+   "ipa": "m",
+   "source": "Wikimedia Commons “File:Bilabial nasal.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "n": {
+   "ipa": "n",
+   "source": "Wikimedia Commons “File:Alveolar nasal.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Alveolar_nasal.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "l": {
+   "ipa": "l",
+   "source": "Wikimedia Commons “File:Alveolar lateral approximant.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Alveolar_lateral_approximant.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "y": {
+   "ipa": "j",
+   "source": "Wikimedia Commons “File:Palatal approximant.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Palatal_approximant.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "w": {
+   "ipa": "w",
+   "source": "Wikimedia Commons “File:Voiced labio-velar approximant.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiced_labio-velar_approximant.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "j": {
+   "ipa": "dʒ",
+   "source": "Wikimedia Commons “File:Voiced palato-alveolar affricate.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiced_palato-alveolar_affricate.ogg",
+   "license": "Public domain",
+   "author": "The original uploader was Octane at English Wikipedia."
+  },
+  "t": {
+   "ipa": "t",
+   "source": "Wikimedia Commons “File:Voiceless alveolar plosive.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_plosive.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "k": {
+   "ipa": "k",
+   "source": "Wikimedia Commons “File:Voiceless velar plosive.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiceless_velar_plosive.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "d": {
+   "ipa": "d",
+   "source": "Wikimedia Commons “File:Voiced alveolar plosive.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiced_alveolar_plosive.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "b": {
+   "ipa": "b",
+   "source": "Wikimedia Commons “File:Voiced bilabial plosive.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiced_bilabial_plosive.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "g": {
+   "ipa": "ɡ",
+   "source": "Wikimedia Commons “File:Voiced velar plosive.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiced_velar_plosive.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "p": {
+   "ipa": "p",
+   "source": "Microsoft Edge TTS en-US-AnaNeural 读 “pan”，截取词首辅音",
+   "url": "",
+   "license": "本项目生成（TTS 输出）",
+   "author": "—"
+  },
+  "f": {
+   "ipa": "f",
+   "source": "Microsoft Edge TTS en-US-AnaNeural 读 “fan”，截取词首辅音",
+   "url": "",
+   "license": "本项目生成（TTS 输出）",
+   "author": "—"
+  },
+  "r": {
+   "ipa": "ɹ",
+   "source": "Microsoft Edge TTS en-US-AnaNeural 读 “red”，截取词首辅音",
+   "url": "",
+   "license": "本项目生成（TTS 输出）",
+   "author": "—"
+  },
+  "v": {
+   "ipa": "v",
+   "source": "Microsoft Edge TTS en-US-AnaNeural 读 “five”，截取词尾辅音",
+   "url": "",
+   "license": "本项目生成（TTS 输出）",
+   "author": "—"
+  },
+  "c": {
+   "ipa": "k",
+   "source": "Wikimedia Commons “File:Voiceless velar plosive.ogg”",
+   "url": "https://commons.wikimedia.org/wiki/File:Voiceless_velar_plosive.ogg",
+   "license": "CC BY-SA 3.0",
+   "author": "见文件页（Commons 未提供机器可读作者）"
+  },
+  "x": {
+   "ipa": "ks",
+   "source": "由 k ＋ s 两段拼接",
+   "url": "",
+   "license": "同 k、s",
+   "author": "—"
+  },
+  "q": {
+   "ipa": "kw",
+   "source": "由 k ＋ w 两段拼接",
+   "url": "",
+   "license": "同 k、w",
+   "author": "—"
   }
- ]
+ }
 }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="钢笔喷出一点墨水"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#F3F7FF"/><ellipse cx="160" cy="218" rx="130" ry="10" fill="#DCE8F7"/><g class="sway"><g transform="translate(55.0 45.0) rotate(0 75.0 75.0) scale(1.5)"><g transform="rotate(-35 50 50)"><rect x="40" y="6" width="20" height="62" rx="5" fill="#2F5DA8"/><rect x="40" y="6" width="20" height="14" rx="5" fill="#1E4589"/><rect x="56" y="12" width="4" height="26" rx="2" fill="#C9DDF2"/><path d="M40 68h20l-10 22z" fill="#E8D6BA"/><path d="M48 84h4l-2 8z" fill="#2B2B2B"/></g></g></g><g class="pulse"><g transform="translate(185.0 125.0) rotate(0 35.0 35.0) scale(0.7)"><path d="M50 20q20 20 20 40a20 20 0 0 1-40 0q0-20 20-40z" fill="#2F5DA8"/><circle cx="20" cy="30" r="6" fill="#2F5DA8"/><circle cx="82" cy="36" r="5" fill="#2F5DA8"/><circle cx="76" cy="16" r="4" fill="#2F5DA8"/></g></g><g class="pulse"><path d="M240 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="215.0" y="18.0" width="70" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="236" y="58.0" width="16" height="6" fill="#fff"/><text x="250" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">喷！</text></g></svg>

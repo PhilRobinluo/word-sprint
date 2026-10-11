@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="叫一声爹，爸爸笑哈哈"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EFF8EA"/><ellipse cx="160" cy="218" rx="130" ry="10" fill="#D8EDC9"/><g class="bob"><g transform="translate(75.0 51.0) rotate(0 85.0 85.0) scale(1.7)"><rect x="10" y="60" width="46" height="34" rx="14" fill="#2EA868"/><circle cx="33" cy="38" r="19" fill="#FFD9B8"/><path d="M14 34q0-18 19-18t19 16q-10-6-19-5t-19 7z" fill="#2B2B2B"/><circle cx="26" cy="38" r="2.6" fill="#2B2B2B"/><circle cx="40" cy="38" r="2.6" fill="#2B2B2B"/><circle cx="27" cy="37" r="1" fill="#fff"/><circle cx="41" cy="37" r="1" fill="#fff"/><path d="M28 47q5 4 10 0" fill="none" stroke="#2B2B2B" stroke-width="2.5" stroke-linecap="round"/><rect x="58" y="70" width="28" height="24" rx="10" fill="#FFC93C"/><circle cx="72" cy="56" r="13" fill="#FFD9B8"/><circle cx="67" cy="55" r="2" fill="#2B2B2B"/><circle cx="77" cy="55" r="2" fill="#2B2B2B"/><circle cx="68" cy="54" r="1" fill="#fff"/><circle cx="78" cy="54" r="1" fill="#fff"/><path d="M60 52q0-12 12-12t12 10q-6-4-12-3t-12 5z" fill="#8A5A3A"/><path d="M56 70l8 2" stroke="#FFD9B8" stroke-width="6" stroke-linecap="round"/></g></g><g class="pulse"><path d="M250 60.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="225.0" y="18.0" width="70" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="246" y="58.0" width="16" height="6" fill="#fff"/><text x="260" y="47.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">爹！</text></g></svg>

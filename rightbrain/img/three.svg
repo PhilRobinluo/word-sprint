@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="大树上站着三只小鸟"><style>
+.bob{animation:bob 2.4s ease-in-out infinite}.bob2{animation:bob 2.4s ease-in-out -1.2s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.sway{animation:sway 3s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.pulse{animation:pl 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes pl{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.spin{animation:sp 12s linear infinite;transform-box:fill-box;transform-origin:50% 50%}
+@keyframes sp{to{transform:rotate(360deg)}}
+.fall{animation:fa 1.2s linear infinite}.f2{animation-delay:-.4s}.f3{animation-delay:-.8s}
+@keyframes fa{from{transform:translateY(-24px);opacity:0}25%{opacity:1}to{transform:translateY(30px);opacity:0}}
+.drift{animation:dr 4s ease-in-out infinite}
+@keyframes dr{0%,100%{transform:translateX(0)}50%{transform:translateX(18px)}}
+.flash{animation:fl 1s steps(2) infinite}
+@keyframes fl{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><rect width="320" height="240" rx="24" fill="#EAF6FF"/><rect x="148" y="120" width="24" height="100" rx="8" fill="#8A5A3A"/><ellipse cx="160" cy="112" rx="110" ry="58" fill="#7BC67E"/><g class="bob"><g transform="translate(81.7 65.0) rotate(0 27.0 27.0) scale(0.54)"><ellipse cx="50" cy="56" rx="26" ry="20" fill="#7FB2E5"/><circle cx="34" cy="40" r="14" fill="#7FB2E5"/><path d="M20 40l-10 3 10 4z" fill="#F2643A"/><circle cx="31" cy="37" r="3" fill="#2B2B2B"/><path d="M48 50q14 14 28 2" fill="#5B97D8"/><path d="M76 56l14-8-4 14z" fill="#5B97D8"/></g></g><g class="bob2"><g transform="translate(133.0 71.0) rotate(0 27.0 27.0) scale(0.54)"><ellipse cx="50" cy="56" rx="26" ry="20" fill="#7FB2E5"/><circle cx="34" cy="40" r="14" fill="#7FB2E5"/><path d="M20 40l-10 3 10 4z" fill="#F2643A"/><circle cx="31" cy="37" r="3" fill="#2B2B2B"/><path d="M48 50q14 14 28 2" fill="#5B97D8"/><path d="M76 56l14-8-4 14z" fill="#5B97D8"/></g></g><g class="bob"><g transform="translate(184.3 65.0) rotate(0 27.0 27.0) scale(0.54)"><ellipse cx="50" cy="56" rx="26" ry="20" fill="#7FB2E5"/><circle cx="34" cy="40" r="14" fill="#7FB2E5"/><path d="M20 40l-10 3 10 4z" fill="#F2643A"/><circle cx="31" cy="37" r="3" fill="#2B2B2B"/><path d="M48 50q14 14 28 2" fill="#5B97D8"/><path d="M76 56l14-8-4 14z" fill="#5B97D8"/></g></g><g class="pulse"><path d="M252 50.0 l-10 16 l22 -14z" fill="#fff" stroke="#2F5DA8" stroke-width="3" stroke-linejoin="round"/><rect x="227.0" y="8.0" width="70" height="44" rx="22.0" fill="#fff" stroke="#2F5DA8" stroke-width="3"/><rect x="248" y="48.0" width="16" height="6" fill="#fff"/><text x="262" y="37.92" text-anchor="middle" font-size="22" font-weight="900" fill="#2F5DA8" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif">树！</text></g><g class=""><g transform="translate(15.0 15.0) rotate(0 25.0 25.0) scale(0.5)"><circle cx="50" cy="44" r="34" fill="#2EA868" opacity=".18"/><text x="50" y="62" text-anchor="middle" font-size="54" font-family="Fredoka,'Baloo 2','Arial Rounded MT Bold',Arial,sans-serif" font-weight="700" fill="#2EA868">3</text><circle cx="36" cy="80" r="4" fill="#2EA868"/><circle cx="50" cy="80" r="4" fill="#2EA868"/><circle cx="64" cy="80" r="4" fill="#2EA868"/></g></g></svg>
