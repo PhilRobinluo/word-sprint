@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>暴风雨灯塔</title>
+<style>html,body{margin:0;height:100%;background:#03060a;overflow:hidden}canvas{display:block;width:100vw;height:100vh}
+#snd{position:fixed;right:16px;bottom:16px;z-index:2;padding:10px 16px;border-radius:22px;border:1px solid #fff3;background:#0008;color:#dfe8f0;font:14px system-ui;backdrop-filter:blur(6px)}
+#t{position:fixed;left:20px;top:16px;color:#cfe0eecc;font:600 20px system-ui;letter-spacing:6px;text-shadow:0 0 12px #000}</style></head><body>
+<canvas id="c"></canvas><div id="t">暴风雨灯塔</div><button id="snd">🔇 开启雷雨声</button>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d');let W,H,D,t=0,flash=0,nextBolt=2,bolt=null;
+function rs(){D=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0)}rs();addEventListener('resize',rs);
+const R=Math.random,mob=innerWidth<700;
+const clouds=[...Array(mob?14:24)].map(()=>({x:R(),y:R()*.45,r:.15+R()*.25,s:.004+R()*.01,a:.25+R()*.35}));
+const drops=[...Array(mob?350:800)].map(()=>({x:R()*1.3,y:R(),l:.02+R()*.03,v:.9+R()*.8}));
+const spray=[];
+function wave(px,layer){return Math.sin(px*.012+t*1.3+layer)*14+Math.sin(px*.031-t*2.1+layer*2)*7+Math.sin(px*.005+t*.6)*20}
+function mkBolt(){let p=[[W*(.15+R()*.7),0]],y=0;while(y<H*.6){y+=20+R()*40;p.push([p[p.length-1][0]+(R()-.5)*60,y])}return p}
+function frame(ts){const dt=Math.min(.05,(ts/1000-t)||.016);t=ts/1000;
+ nextBolt-=dt;if(nextBolt<0){flash=1;bolt=mkBolt();nextBolt=2+R()*6;thunder&&thunder()}flash*=.9;
+ const f=flash>.05?flash*(R()>.3?1:.4):0;
+ let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,`rgb(${10+f*120},${16+f*130},${26+f*150})`);g.addColorStop(1,`rgb(${20+f*60},${30+f*70},${42+f*80})`);x.fillStyle=g;x.fillRect(0,0,W,H);
+ for(const k of clouds){k.x+=k.s*dt*3;if(k.x>1.3)k.x=-.3;const cx=k.x*W,cy=k.y*H,r=k.r*Math.max(W,H);const cg=x.createRadialGradient(cx,cy,0,cx,cy,r);const v=30+f*150;cg.addColorStop(0,`rgba(${v},${v+8},${v+18},${k.a})`);cg.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=cg;x.fillRect(cx-r,cy-r,r*2,r*2)}
+ if(bolt&&flash>.3){x.strokeStyle=`rgba(230,240,255,${flash})`;x.lineWidth=2.5;x.shadowColor='#bcd';x.shadowBlur=25;x.beginPath();bolt.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.stroke();x.shadowBlur=0}
+ // cliff & lighthouse
+ const lx=W*(mob?.68:.72),base=H*.62,lh=H*.3,lw=Math.max(18,H*.035);
+ x.fillStyle=`rgb(${8+f*40},${10+f*45},${14+f*50})`;x.beginPath();x.moveTo(W*.45,H);x.lineTo(W*.52,H*.75);x.lineTo(lx-lw*3,base+8);x.lineTo(lx+lw*2.5,base);x.lineTo(W*.9,H*.7);x.lineTo(W,H*.68);x.lineTo(W,H);x.fill();
+ x.fillStyle=`rgb(${190+f*60},${185+f*60},${175+f*60})`;x.beginPath();x.moveTo(lx-lw,base);x.lineTo(lx-lw*.65,base-lh);x.lineTo(lx+lw*.65,base-lh);x.lineTo(lx+lw,base);x.fill();
+ x.fillStyle='#7a1d1d';for(let i=1;i<4;i++){const y=base-lh*i/4,w=lw*(1-.35*i/4);x.fillRect(lx-w,y,w*2,lh*.07)}
+ const ly=base-lh-lw*.6;x.fillStyle='#222';x.fillRect(lx-lw*.8,base-lh-2,lw*1.6,4);x.fillStyle='#ffe9a8';x.fillRect(lx-lw*.45,ly-lw*.4,lw*.9,lw*.8);x.fillStyle='#1a1a1a';x.beginPath();x.moveTo(lx-lw*.6,ly-lw*.4);x.lineTo(lx,ly-lw*1.1);x.lineTo(lx+lw*.6,ly-lw*.4);x.fill();
+ // beam
+ const ang=t*.9,cs=Math.cos(ang),L=Math.max(W,H)*1.4,sp=.11*(.35+.65*Math.abs(Math.sin(ang)));
+ x.globalCompositeOperation='lighter';
+ const dir=Math.sign(cs)||1,len=L*Math.abs(cs)+40;
+ const bg=x.createLinearGradient(lx,ly,lx+dir*len,ly);bg.addColorStop(0,`rgba(255,235,170,${.55*(.4+.6*Math.abs(cs))})`);bg.addColorStop(1,'rgba(255,235,170,0)');x.fillStyle=bg;
+ x.beginPath();x.moveTo(lx,ly);x.lineTo(lx+dir*len,ly-len*sp);x.lineTo(lx+dir*len,ly+len*sp*.8);x.fill();
+ const hg=x.createRadialGradient(lx,ly,0,lx,ly,lw*4);hg.addColorStop(0,'rgba(255,240,190,.9)');hg.addColorStop(1,'rgba(255,240,190,0)');x.fillStyle=hg;x.fillRect(lx-lw*4,ly-lw*4,lw*8,lw*8);
+ x.globalCompositeOperation='source-over';
+ // sea layers
+ for(let L2=0;L2<3;L2++){const y0=H*(.7+L2*.1);x.fillStyle=`rgba(${6+f*50+L2*4},${16+f*60+L2*6},${24+f*70+L2*8},${.85+L2*.05})`;x.beginPath();x.moveTo(0,H);for(let px=0;px<=W;px+=8){const y=y0+wave(px,L2*1.7)*(1+L2*.4);x.lineTo(px,y);
+  if(px>W*.48&&px<W*.62&&L2==2&&R()<.04)spray.push({x:px,y,vx:(R()+.3)*80,vy:-(150+R()*250),l:1})}x.lineTo(W,H);x.fill();
+  x.strokeStyle=`rgba(200,220,235,${.15+L2*.08})`;x.lineWidth=1.5;x.beginPath();for(let px=0;px<=W;px+=8)x.lineTo(px,y0+wave(px,L2*1.7)*(1+L2*.4));x.stroke()}
+ x.fillStyle='rgba(220,235,245,.5)';for(let i=spray.length-1;i>=0;i--){const s=spray[i];s.vy+=400*dt;s.x+=s.vx*dt;s.y+=s.vy*dt;s.l-=dt*.8;if(s.l<=0||spray.length>400){spray.splice(i,1);continue}x.globalAlpha=s.l;x.beginPath();x.arc(s.x,s.y,2+3*(1-s.l),0,7);x.fill()}x.globalAlpha=1;
+ // rain
+ x.strokeStyle=`rgba(180,200,220,${.35+f*.4})`;x.lineWidth=1;x.beginPath();for(const d of drops){d.y+=d.v*dt*1.4;d.x-=d.v*dt*.35;if(d.y>1){d.y=-.05;d.x=R()*1.3}const px=d.x*W,py=d.y*H;x.moveTo(px,py);x.lineTo(px+d.l*H*.3,py-d.l*H)}x.stroke();
+ // fog + vignette
+ const fg=x.createLinearGradient(0,H*.55,0,H*.8);fg.addColorStop(0,'rgba(120,140,160,0)');fg.addColorStop(.5,'rgba(120,140,160,.12)');fg.addColorStop(1,'rgba(120,140,160,0)');x.fillStyle=fg;x.fillRect(0,H*.5,W,H*.35);
+ const vg=x.createRadialGradient(W/2,H/2,Math.min(W,H)*.3,W/2,H/2,Math.max(W,H)*.75);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.7)');x.fillStyle=vg;x.fillRect(0,0,W,H);
+ requestAnimationFrame(frame)}requestAnimationFrame(frame);
+let ac,thunder=null;const btn=document.getElementById('snd');
+btn.onclick=()=>{if(!ac){ac=new AudioContext();const n=ac.createBuffer(1,ac.sampleRate*2,ac.sampleRate),d=n.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=R()*2-1;
+ const src=ac.createBufferSource();src.buffer=n;src.loop=true;const fl=ac.createBiquadFilter();fl.type='lowpass';fl.frequency.value=1200;const gn=ac.createGain();gn.gain.value=.25;src.connect(fl).connect(gn).connect(ac.destination);src.start();
+ thunder=()=>{const s=ac.createBufferSource();s.buffer=n;const lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=180;const g=ac.createGain(),now=ac.currentTime+.3+R();g.gain.setValueAtTime(0,now);g.gain.linearRampToValueAtTime(1.2,now+.1);g.gain.exponentialRampToValueAtTime(.001,now+3);s.connect(lp).connect(g).connect(ac.destination);s.start(now);s.stop(now+3.2)};btn.textContent='🔊 关闭雷雨声'}
+ else if(ac.state==='running'){ac.suspend();btn.textContent='🔇 开启雷雨声'}else{ac.resume();btn.textContent='🔊 关闭雷雨声'}};
+</script></body></html>
