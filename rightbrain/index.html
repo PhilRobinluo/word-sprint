@@ -222,6 +222,28 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 }
 @media (max-height:700px){.scene{max-width:270px}.letterimg{max-width:230px}.opt{min-height:120px}.opt .pic{font-size:58px;width:76px;height:76px}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* ---------- 兑换码 ---------- */
+.gate{justify-content:center;align-items:center;padding:24px 8px 40px;text-align:center}
+.gate .mascot{width:132px;height:132px;animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.gate h1{margin:10px 0 4px;font-size:28px;font-weight:900}
+.gate .sub{margin:0 0 20px;color:var(--muted);font-size:17px;font-weight:700}
+.gatecard{width:100%;max-width:420px;background:var(--paper);border-radius:var(--r);padding:22px 20px 20px;box-shadow:var(--shadow)}
+.gatecard label{display:block;text-align:left;font-weight:900;font-size:15px;color:var(--muted);margin:0 0 8px 4px}
+.codein{width:100%;height:68px;border-radius:20px;border:3px solid var(--line);background:#FFFBF4;text-align:center;font-family:var(--word-font);font-weight:700;font-size:28px;letter-spacing:3px;color:var(--blue);text-transform:uppercase;outline:none;transition:border-color .15s,box-shadow .15s}
+.codein:focus{border-color:var(--blue);box-shadow:0 0 0 5px var(--blue-l)}
+.codein.bad{border-color:var(--red);animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.gatecard .btn{margin-top:16px}
+.gatemsg{min-height:24px;margin:12px 0 0;font-weight:800;font-size:15px;color:var(--red)}
+.gatemsg.info{color:var(--blue)}
+.gatehelp{max-width:420px;margin:18px auto 0;color:var(--muted);font-size:14px;line-height:1.7}
+.gatehelp b{color:var(--ink);white-space:nowrap}
+.spin{width:22px;height:22px;border-radius:50%;border:3px solid rgba(255,255,255,.5);border-top-color:#fff;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.gatebadges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 18px}
+.gatebadges span{background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 3px 0 var(--line)}
 </style>
 </head>
 <body>
@@ -263,7 +285,7 @@ const KEY = 'rbw.progress.v2', TKEY = 'rbw.trials.v1';
 function load(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } }
 function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
 function P(){ const p = load(KEY, null); return p && p.items ? p : { items: {}, sessions: [], stars: 0, stickers: [], settings: { grade: '一年级', size: 0, muted: false }, override: null }; }
-function setP(fn){ const p = P(); fn(p); save(KEY, p); return p; }
+function setP(fn){ const p = P(); fn(p); save(KEY, p); if (typeof syncSoon === 'function') syncSoon(); return p; }
 
 /* ---------- 图标 ---------- */
 const ICON = {
@@ -694,6 +716,9 @@ function renderParent(){
       <span>错题（明天复习）</span><b>${due.length ? due.map(id => `${esc(label(it(id)))}（${esc(p.items[id].due)}）`).join('、') : '没有'}</b>
       <span>两天内到期复习</span><b>${soon.length ? soon.map(id => esc(label(it(id)))).join('、') : '没有'}</b></div>
       <p class="small">规则：第一次就点对才算记住；点错会马上再看一遍、再考一次，但仍记为错题、明天复习。答对的按 1、3、7、14、30 天间隔自动安排复习；有到期的就先复习（错题先看卡片再考，其余直接考），再学新的。今天是 ${esc(t)}${QS.get('today') ? '（模拟）' : ''}。</p></div>
+      ${(() => { const a = access(); return a ? `<div class="panel"><h2>兑换码与家长报告</h2><div class="kv"><span>兑换码</span><b>${esc(a.code || '')}</b><span>学习期到</span><b>${a.exp ? esc(new Date(a.exp).toLocaleDateString('zh-CN')) : '—'}</b></div>
+        <p class="small">学习记录会自动同步到云端。把下面的报告链接发给家长，打开就能看到最近 7 天的学习情况。</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn blue sm" data-act="copyreport">复制家长报告链接</button><a class="btn ghost sm" style="text-decoration:none" href="${esc(reportUrl())}" target="_blank" rel="noopener">打开报告</a><button class="btn ghost sm" data-act="logout">退出兑换码</button></div></div>` : ''; })()}
       ${weekly(p)}
       <div class="panel"><h2>最近几轮</h2>${ses || '<p class="small">还没有记录。</p>'}</div>
       <div class="panel"><h2>设置</h2>
@@ -814,6 +839,8 @@ $app.addEventListener('click', e => {
     case 'export': download('rightbrain-trials-' + today() + '.json', { exported_at: isoLocal(), version: C.version, records: load(TKEY, []) }); break;
     case 'exportp': download('rightbrain-progress-' + today() + '.json', { exported_at: isoLocal(), version: C.version, progress: P() }); break;
     case 'clearrec': if (confirm('清空所有测试记录？')) { save(TKEY, []); renderParent(); } break;
+    case 'copyreport': syncNow(); (navigator.clipboard ? navigator.clipboard.writeText(reportUrl()) : Promise.reject()).then(() => toast('报告链接已复制'), () => prompt('复制这个链接发给家长', reportUrl())); break;
+    case 'logout': if (confirm('退出后这台设备要重新输入兑换码，学习记录会保留。确定退出？')) { localStorage.removeItem(AKEY); renderGate('已退出，可以输入新的兑换码', true); } break;
     case 'reset': if (confirm('清空孩子的全部进度、星星和贴纸？')) { const s = P().settings; localStorage.removeItem(KEY); setP(p => { p.settings = s; }); renderParent(); } break;
   }
 });
@@ -840,10 +867,104 @@ function confetti(n = 160){
   })(t0);
 }
 
+
+/* ---------- 兑换码 / 云端同步 ---------- */
+const API = 'https://rightbrain-api.philrobin-cloud-mail.workers.dev';
+const AKEY = 'rbw.access.v1', DKEY = 'rbw.device.v1', GRACE = 7 * 864e5;
+function deviceId(){
+  let d = load(DKEY, null);
+  if (!d || !/^[A-Za-z0-9_-]{8,64}$/.test(d)) { const b = new Uint8Array(16); (crypto.getRandomValues ? crypto.getRandomValues(b) : b.forEach((_, i) => b[i] = Math.random() * 256)); d = 'd' + [...b].map(x => x.toString(16).padStart(2, '0')).join(''); save(DKEY, d); }
+  return d;
+}
+const access = () => load(AKEY, null);
+async function apiPost(path, data){
+  if (typeof fetch !== 'function') throw Object.assign(new Error('offline'), { offline: true });
+  let r;
+  try { r = await fetch(API + path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }); }
+  catch (e) { throw Object.assign(new Error('offline'), { offline: true }); }
+  let j = null; try { j = await r.json(); } catch (e) {}
+  if (!j) throw Object.assign(new Error('offline'), { offline: true });
+  if (!j.ok) throw Object.assign(new Error(j.message || '出错了'), { code: j.error, status: r.status });
+  return j;
+}
+const fmtCode = v => { const s = String(v).toUpperCase().replace(/[^A-Z0-9]/g, '').replace(/^RB(?=.{8})/, '').slice(0, 8); return s.length > 4 ? s.slice(0, 4) + '-' + s.slice(4) : s; };
+let started = false;
+function startApp(){ if (started) return; started = true; if (QS.get('parent') === '1') renderParent(); else renderHome(); }
+function renderGate(msg = '', info = false){
+  started = false;
+  show(`<div class="hello">${ICON.mascot}</div>
+    <h1>欢迎来到右脑记单词</h1>
+    <p class="sub">请爸爸妈妈输入兑换码，就能开始啦</p>
+    <div class="gatebadges"><span>🔤 26 个字母</span><span>🧩 40 个拼读词</span><span>🧠 画面记单词</span></div>
+    <form class="gatecard" id="gateform" autocomplete="off">
+      <label for="codein">兑换码</label>
+      <input id="codein" class="codein" inputmode="latin" autocapitalize="characters" spellcheck="false" maxlength="12" placeholder="XXXX-XXXX" aria-describedby="gatemsg" data-focus>
+      <button class="btn primary" id="gatebtn" type="submit">开始学习</button>
+      <p class="gatemsg ${info ? 'info' : ''}" id="gatemsg" role="alert">${esc(msg)}</p>
+    </form>
+    <p class="gatehelp">兑换码在报名后由老师发给你，格式像 <b>RB-AB12-CD34</b>。<br>一个码可以在 <b>2 台</b> 设备上使用，学习记录会自动保存。</p>`, 'gate');
+  const f = document.getElementById('gateform'), inp = document.getElementById('codein'), btn = document.getElementById('gatebtn'), m = document.getElementById('gatemsg');
+  inp.addEventListener('input', () => { inp.value = fmtCode(inp.value); inp.classList.remove('bad'); m.textContent = ''; });
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const raw = inp.value.replace(/-/g, '');
+    if (raw.length !== 8) { inp.classList.remove('bad'); void inp.offsetWidth; inp.classList.add('bad'); m.className = 'gatemsg'; m.textContent = '兑换码是 8 位字母和数字，再看看哦'; return; }
+    btn.disabled = true; btn.innerHTML = '<i class="spin"></i>正在确认…';
+    try {
+      const j = await apiPost('/redeem', { code: raw, device_id: deviceId() });
+      save(AKEY, { token: j.token, code: j.code, exp: Date.parse(j.expires_at), lastOk: Date.now() });
+      toast('兑换成功！学习期到 ' + new Date(j.expires_at).toLocaleDateString('zh-CN'));
+      confetti(120); startApp(); syncSoon(500);
+    } catch (err) {
+      btn.disabled = false; btn.textContent = '开始学习';
+      inp.classList.remove('bad'); void inp.offsetWidth; inp.classList.add('bad'); m.className = 'gatemsg';
+      m.textContent = err.offline ? '网络好像断了，连上网再试一次' : err.message;
+    }
+  });
+}
+async function checkAccess(){
+  const a = access();
+  if (!a || !a.token) return renderGate();
+  const now = Date.now();
+  if (a.exp && a.exp < now) { localStorage.removeItem(AKEY); return renderGate('学习期已结束，请联系老师续期'); }
+  const fresh = now - (a.lastOk || 0) < GRACE;
+  if (fresh) startApp();
+  try {
+    const j = await apiPost('/verify', { token: a.token });
+    save(AKEY, { ...a, exp: Date.parse(j.expires_at), lastOk: Date.now() });
+    if (!fresh) startApp();
+    syncSoon(1500);
+  } catch (err) {
+    if (err.offline) { if (!fresh) renderGate('已经 7 天没联网确认了，请连上网再打开', true); return; }
+    localStorage.removeItem(AKEY); renderGate(err.message);
+  }
+}
+function syncSummary(p){
+  const t = today(), from = addDays(t, -6);
+  const dayOf = s => s.day || (s.at || '').slice(0, 10);
+  const all = (p.sessions || []).filter(s => s.kind !== 'trial');
+  const ses = all.filter(s => dayOf(s) >= from && dayOf(s) <= t);
+  let tries = 0, firstOk = 0; const miss = {};
+  ses.forEach(s => s.ids.forEach(id => { tries++; if (s.res[id] === 'ok') firstOk++; else miss[id] = (miss[id] || 0) + 1; }));
+  const st = stationStats(p);
+  return { days7: new Set(ses.map(dayOf)).size, sessions7: ses.length, fresh7: Object.entries(p.items).filter(([id, v]) => it(id) && v.first >= from && v.first <= t).length,
+    tries7: tries, firstOk7: firstOk, hard: Object.entries(miss).sort((a, b) => b[1] - a[1]).slice(0, 8).filter(([id]) => it(id)).map(([id]) => label(it(id))),
+    totals: ['letter', 'blend', 'word'].map(k => ({ name: st[k].name, seen: st[k].seen, total: st[k].total, ok: st[k].ok })),
+    stars: p.stars || 0, last_study: all.length ? all[all.length - 1].at : null, grade: p.settings && p.settings.grade };
+}
+let syncT = null;
+function syncSoon(ms = 3000){ if (!access()) return; clearTimeout(syncT); syncT = setTimeout(syncNow, ms); }
+async function syncNow(){
+  const a = access(); if (!a || !a.token) return;
+  const p = P();
+  try { await apiPost('/progress', { token: a.token, summary: syncSummary(p), progress: { items: p.items, sessions: (p.sessions || []).slice(-200), stars: p.stars, stickers: p.stickers, settings: p.settings } }); }
+  catch (err) { if (!err.offline && (err.status === 401)) { localStorage.removeItem(AKEY); renderGate(err.message); } }
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && syncT) { clearTimeout(syncT); syncNow(); } });
+function reportUrl(){ const a = access(); return a ? API + '/report?format=html&token=' + encodeURIComponent(a.token) : ''; }
+
 /* ---------- 启动 ---------- */
-loadContent().then(() => {
-  if (QS.get('parent') === '1') renderParent(); else renderHome();
-}).catch(err => { $app.innerHTML = '<p style="padding:20px">内容没加载出来：' + esc(err && err.message) + '</p>'; });
+loadContent().then(checkAccess).catch(err => { $app.innerHTML = '<p style="padding:20px">内容没加载出来：' + esc(err && err.message) + '</p>'; });
 window.__rb = { P, nextSession, buildPath, it, get S(){ return S; } }; // 测试用
 })();
 </script>
