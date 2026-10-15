@@ -887,7 +887,7 @@ async function apiPost(path, data){
   if (!j.ok) throw Object.assign(new Error(j.message || '出错了'), { code: j.error, status: r.status });
   return j;
 }
-const fmtCode = v => { const s = String(v).toUpperCase().replace(/[^A-Z0-9]/g, '').replace(/^RB(?=.{8})/, '').slice(0, 8); return s.length > 4 ? s.slice(0, 4) + '-' + s.slice(4) : s; };
+const fmtCode = v => { let s = String(v).toUpperCase().replace(/[^A-Z0-9]/g, ''); if (s.length > 8 && s.startsWith('RB')) s = s.slice(2); s = s.slice(0, 8); return s.length > 4 ? s.slice(0, 4) + '-' + s.slice(4) : s; };
 let started = false;
 function startApp(){ if (started) return; started = true; if (QS.get('parent') === '1') renderParent(); else renderHome(); }
 function renderGate(msg = '', info = false){
