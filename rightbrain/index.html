@@ -244,6 +244,41 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 @keyframes sp{to{transform:rotate(360deg)}}
 .gatebadges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 18px}
 .gatebadges span{background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 3px 0 var(--line)}
+
+/* ---------- 自由选站 / 单元页 / 速览 ---------- */
+button.stop{width:100%;text-align:left;border-radius:22px;transition:background .15s,transform .12s;font:inherit;color:inherit}
+button.stop:active{transform:scale(.98)}
+button.stop:hover{background:#FFF8EE}
+.stop .chev{flex:none;width:36px;height:36px;border-radius:12px;background:#F6EEE2;display:grid;place-items:center;font-weight:900;color:var(--muted);font-size:20px}
+.stop .rec{position:absolute;right:52px;top:6px;background:var(--orange);color:#fff;font-weight:900;font-size:12px;border-radius:999px;padding:2px 10px}
+.freehint{text-align:center;font-size:14px;color:var(--muted);font-weight:800;margin:8px 0 0}
+.mhead{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.mhead .ic{width:68px;height:68px;border-radius:22px;display:grid;place-items:center;font-size:34px;background:var(--yellow);box-shadow:0 4px 0 #E2A400;font-family:var(--word-font);font-weight:700;flex:none}
+.mhead h1{margin:0;font-size:24px;font-weight:900}.mhead .meta{flex:1;min-width:0}
+.mact{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.mact .btn{min-height:58px;font-size:17px;white-space:nowrap;padding:0 10px;gap:6px}
+.gtitle{font-weight:900;font-size:15px;color:var(--muted);margin:14px 4px 8px}
+.igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:10px}
+.icell{position:relative;background:#fff;border-radius:20px;box-shadow:0 4px 0 var(--line),0 0 0 2px var(--line) inset;min-height:96px;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:transform .12s}
+.icell:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line),0 0 0 2px var(--line) inset}
+.icell .lt{font-family:var(--word-font);font-weight:700;font-size:38px;line-height:1}
+.icell .gi{width:48px;height:48px;object-fit:contain}
+.icell .w{font-family:var(--word-font);font-weight:700;font-size:16px;color:var(--ink);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.icell .st{position:absolute;top:5px;right:6px;width:20px;height:20px;border-radius:50%;font-size:12px;font-weight:900;display:grid;place-items:center;color:#fff}
+.icell .st.ok{background:var(--green)}.icell .st.miss{background:var(--red)}.icell .st.seen{background:#E8D6BC}
+.icell.next{box-shadow:0 4px 0 #E2A400,0 0 0 3px var(--yellow) inset}
+.legend{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--muted);font-weight:800;margin:14px 0 4px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.browse .card{touch-action:pan-y;user-select:none}
+.bnav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
+.bnav .count{font-weight:900;font-size:18px;color:var(--muted);font-family:var(--word-font)}
+.bnav .arrow{width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 5px 0 var(--line);display:grid;place-items:center;font-size:30px;font-weight:900;color:var(--blue)}
+.bnav .arrow[disabled]{opacity:.3}
+.bctrl{display:flex;gap:12px;justify-content:center;margin-top:12px}
+.bbar{height:6px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:12px}.bbar b{display:block;height:100%;background:var(--orange);transition:width .2s}
+.bhint{text-align:center;font-size:13px;color:var(--muted);margin-top:8px;font-weight:700}
+@keyframes inL{from{opacity:0;transform:translateX(40px)}}@keyframes inR{from{opacity:0;transform:translateX(-40px)}}
+.browse .card.fl{animation:inL .25s ease-out}.browse .card.fr{animation:inR .25s ease-out}
 </style>
 </head>
 <body>
@@ -448,6 +483,7 @@ function show(html, cls = ''){
 function muteBtn(){ const m = muted(); return `<button class="ib ${m ? 'off' : ''}" data-act="mute" aria-label="${m ? '打开声音' : '关掉声音'}">${m ? ICON.mute : ICON.speaker}</button>`; }
 function topbar(mid = ''){
   const p = P();
+  if (S && S.from && MODS[S.from] && S.phase !== 'result') mid = `<button class="ib" data-act="quit" aria-label="回到${MODS[S.from].name}">✕</button>` + mid;
   return `<div class="top"><span class="pill" aria-label="星星 ${p.stars} 颗">${ICON.star('#FFC93C')}<span id="starN">${p.stars}</span></span>${mid}${muteBtn()}</div>`;
 }
 function dots(){ if (!S) return ''; return `<div class="dots" aria-label="第 ${S.i + 1} 个，共 ${S.ids.length} 个">${S.ids.map((_, k) => `<i class="${k < S.i ? 'done' : k === S.i ? 'on' : ''}"></i>`).join('')}</div>`; }
@@ -463,10 +499,11 @@ function renderHome(){
     if (k === 'review' && !s.total && cur !== 'review') return '';
     const pct = s.total ? Math.round(s.seen / s.total * 100) : 0;
     const meta = k === 'review' ? `<div class="cnt rvw">今天要复习 ${s.total} 个</div>` : `<div class="prog"><b style="width:${pct}%"></b></div><div class="cnt">${s.seen} / ${s.total}</div>`;
-    return `<div class="stop ${k} ${k === cur ? 'now' : ''} ${done ? 'done' : ''}">
+    const tap = k === 'review' ? 'data-act="go"' : `data-act="module" data-m="${k}"`;
+    return `<button class="stop ${k} ${k === cur ? 'now' : ''} ${done ? 'done' : ''}" ${tap} aria-label="${s.name}${k === cur ? '（推荐）' : ''}">
       <div class="ic" aria-hidden="true">${s.ic}</div>
       <div class="meta"><div class="nm">${s.name}</div>${meta}</div>
-      ${k === cur ? '<span class="here">现在在这里</span>' : ''}</div>`;
+      ${k === cur ? '<span class="rec">推荐</span>' : ''}<span class="chev" aria-hidden="true">›</span></button>`;
   }).join('');
   const prev = nx.ids.map(id => { const x = it(id); return `<span>${x.type === 'letter' ? esc(x.d.letter) : icoHTML(x, 'pv')}</span>`; }).join('');
   const bub = nx.kind === 'review' ? '先来复习一下！' : nx.kind === 'pick' ? '老师选好啦！' : nx.kind === 'free' ? '都学完啦！再玩一次？' : cur === 'letter' ? '去字母小乐园！' : cur === 'blend' ? '来拼小词！' : '来记单词！';
@@ -474,6 +511,7 @@ function renderHome(){
   show(`${topbar(`<button class="ib parentbtn" data-hold="parent" aria-label="家长和老师（按住）">家长<i></i></button>`)}
     <div class="hello">${ICON.mascot}<div class="say-bub">${bub}</div></div>
     <div class="path" aria-label="学习路线">${stops}</div>
+    <p class="freehint">👆 点任意一站，想学哪个就学哪个</p>
     <button class="go pulse" data-act="go" aria-label="开始">${ICON.play}开始</button>
     <div class="preview" aria-label="这次要学">${prev}</div>
     <div class="shelf"><div class="row"><em>我的贴纸</em>${stk || '<span class="small">学会一个就送一张</span>'}</div></div>`);
@@ -484,7 +522,7 @@ function renderHome(){
 function startSession(plan, opts = {}){
   const p = P();
   if (plan.kind === 'pick') setP(q => { q.override = null; });
-  S = { kind: plan.kind, ids: plan.ids.slice(), learnN: plan.learnN ?? plan.ids.length, i: 0, phase: 'learn', res: {}, stars: 0, started: isoLocal(), trial: !!opts.trial, trialName: opts.name || '' };
+  S = { kind: plan.kind, ids: plan.ids.slice(), learnN: plan.learnN ?? plan.ids.length, i: 0, phase: 'learn', res: {}, stars: 0, started: isoLocal(), trial: !!opts.trial, trialName: opts.name || '', from: plan.from || null };
   if (!S.ids.length) { renderHome(); return; }
   if (S.trial) { renderLearn(); return; }
   if (S.kind === 'review' && !S.learnN) { renderClose(ui('review')); return; }
@@ -657,10 +695,67 @@ function finish(){
     <div class="bigstars" aria-label="${okIds.length} 颗星">${stars}</div>
     <div class="stickers" aria-label="新贴纸">${stk}</div>
     ${ids.length - okIds.length ? `<div class="small" style="font-size:16px">灰色的明天再见 👋</div>` : ''}
-    <div style="width:100%;margin-top:auto;padding-top:20px"><button class="btn primary" data-act="home" data-focus tabindex="-1">${ICON.home.replace('#F2643A', '#fff').replace('<svg', '<svg width="28" height="28"')} 回家</button></div></div>`);
+    <div style="width:100%;margin-top:auto;padding-top:20px"><button class="btn primary" data-act="home" data-focus tabindex="-1">${ICON.home.replace('#F2643A', '#fff').replace('<svg', '<svg width="28" height="28"')} ${S.from && MODS[S.from] ? '回到' + MODS[S.from].name : '回家'}</button></div></div>`);
   if (all) confetti(); else if (good) confetti(70);
   say([S.kind === 'review' && good ? ui('reviewdone') : all ? ui('allright') : good ? ui('pass') : ui('notyet'), okIds.length ? ui('sticker') : null]);
 }
+
+
+/* ---------- 单元页：自由选择 ---------- */
+const MODS = { letter: { name: '字母小乐园', ic: 'Aa' }, blend: { name: '拼读小词', ic: '🧩' }, word: { name: '记忆单词', ic: '🧠' } };
+function modIds(m){ const p = P(); return m === 'letter' ? (C.letters || []).map(l => l.id) : m === 'blend' ? (C.blends || []).map(b => b.id) : wordList(p.settings.grade); }
+function modNext(m){
+  const p = P(), size = p.settings.size || 0;
+  for (const st of buildPath(p.settings.grade)) { if (st.station !== m) continue; const f = st.ids.filter(id => !p.items[id] && it(id)); if (f.length) return { kind: 'choose', ids: size ? f.slice(0, size) : f, fresh: true }; }
+  const f = modIds(m).filter(id => !p.items[id] && it(id)); if (f.length) return { kind: 'choose', ids: f.slice(0, size || 4), fresh: true };
+  return { kind: 'choose', ids: shuffle(modIds(m).filter(it)).slice(0, size || 4), fresh: false };
+}
+function cellHTML(id, p, nextSet){
+  const x = it(id); if (!x) return ''; const st = p.items[id];
+  const mark = st ? (st.state === 'ok' ? '<span class="st ok" aria-label="记住了">✓</span>' : st.state === 'miss' ? '<span class="st miss" aria-label="要复习">!</span>' : '<span class="st seen"></span>') : '';
+  const face = x.type === 'letter' ? `<span class="lt" style="color:${esc(x.d.color)}">${esc(x.d.upper)}${esc(x.d.letter)}</span>` : `${icon(x) ? icoHTML(x, 'gi') : `<span class="lt">${esc(pic(x))}</span>`}<span class="w">${esc(x.d.word)}</span>`;
+  return `<button class="icell ${nextSet.has(id) ? 'next' : ''}" data-act="learnone" data-id="${esc(id)}" aria-label="学 ${esc(label(x))}">${mark}${face}</button>`;
+}
+function renderModule(m){
+  S = null; BR = null;
+  const p = P(), st = stationStats(p)[m], ids = modIds(m), nx = modNext(m), nextSet = new Set(nx.fresh ? nx.ids : []);
+  const pct = st.total ? Math.round(st.seen / st.total * 100) : 0;
+  let grid;
+  if (m === 'letter') grid = (C.letter_groups || []).map((g, gi) => `<div class="gtitle">第 ${gi + 1} 组 · ${g.join(' ')}</div><div class="igrid">${g.map(l => cellHTML('L-' + l, p, nextSet)).join('')}</div>`).join('');
+  else if (m === 'blend') { const vs = ['a', 'e', 'i', 'o', 'u'], by = v => ids.filter(id => (it(id).d.letters || [])[1] === v); const rest = ids.filter(id => !vs.includes((it(id).d.letters || [])[1]));
+    grid = vs.map(v => by(v).length ? `<div class="gtitle">短 ${v}</div><div class="igrid">${by(v).map(id => cellHTML(id, p, nextSet)).join('')}</div>` : '').join('') + (rest.length ? `<div class="gtitle">其他</div><div class="igrid">${rest.map(id => cellHTML(id, p, nextSet)).join('')}</div>` : ''); }
+  else grid = `<div class="igrid">${ids.map(id => cellHTML(id, p, nextSet)).join('')}</div>`;
+  show(`${topbar(`<button class="ib" data-act="home" aria-label="回首页">${ICON.home}</button>`)}
+    <div class="mhead"><div class="ic" aria-hidden="true">${MODS[m].ic}</div><div class="meta"><h1>${MODS[m].name}</h1>
+      <div class="prog"><b style="width:${pct}%"></b></div><div class="small" style="font-weight:800">学过 ${st.seen} / ${st.total} · 记住 ${st.ok}</div></div></div>
+    <div class="mact"><button class="btn primary" data-act="modgo" data-m="${m}">${ICON.play.replace('<svg', '<svg width="26" height="26"')}${nx.fresh ? '学新的 ' + nx.ids.length + ' 个' : '随机练练'}</button>
+      <button class="btn blue" data-act="browse" data-m="${m}">👀 速览全部</button></div>
+    <div class="small" style="text-align:center;font-weight:800">点任意一个，马上学它（黄框是推荐的下一组）</div>
+    ${grid}
+    <div class="legend"><span><i style="background:var(--green)"></i>记住了</span><span><i style="background:var(--red)"></i>要复习</span><span><i style="box-shadow:0 0 0 2px var(--yellow) inset;background:#fff"></i>推荐下一组</span></div>`, 'module');
+}
+
+/* ---------- 速览：快速翻卡，不考试、不记进度 ---------- */
+let BR = null;
+function renderBrowse(m, i = 0, dir = 0){
+  const ids = modIds(m).filter(it); i = Math.max(0, Math.min(ids.length - 1, i));
+  BR = { m, ids, i }; S = null;
+  const x = it(ids[i]), saveS = S; S = { trial: true };
+  let card = learnCard(x, false); S = saveS;
+  card = card.replace(/<div class="ctrl">[\s\S]*?<\/div>\s*<\/div>$/, '</div>').replace('class="card learn', `class="card learn ${dir > 0 ? 'fl' : dir < 0 ? 'fr' : ''}`);
+  const vid = videoOf(x);
+  show(`${topbar(`<button class="ib" data-act="module" data-m="${m}" aria-label="回到${MODS[m].name}">✕</button>`)}
+    <div class="narrow">${card}
+      <div class="bctrl"><button class="round" data-act="bsay" aria-label="听讲解">${ICON.replay}</button>${vid ? `<button class="vidbtn" data-act="bvideo">${ICON.film}看动画</button>` : ''}<button class="vidbtn" style="background:var(--blue-l);color:var(--blue);box-shadow:0 4px 0 #C9D8F2" data-act="learnone" data-id="${esc(ids[i])}">✏️ 学这个</button></div>
+      <div class="bnav"><button class="arrow" data-act="bprev" aria-label="上一个" ${i ? '' : 'disabled'}>‹</button><span class="count">${i + 1} / ${ids.length}</span><button class="arrow" data-act="bnext" aria-label="下一个" ${i < ids.length - 1 ? '' : 'disabled'}>›</button></div>
+      <div class="bbar"><b style="width:${(i + 1) / ids.length * 100}%"></b></div>
+      <div class="bhint">${MODS[m].name} · 速览 · 左右滑动或按 ← → 翻页</div></div>`, 'browse');
+  const c = $app.querySelector('.card'); let x0 = null, y0 = null;
+  c.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  c.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) browseStep(dx < 0 ? 1 : -1); }, { passive: true });
+}
+function browseStep(d){ if (!BR) return; const j = BR.i + d; if (j < 0 || j >= BR.ids.length) return; hush(); renderBrowse(BR.m, j, d); }
+document.addEventListener('keydown', e => { if (!BR || !$app.querySelector('.screen.browse') || document.querySelector('.modal')) return; if (e.key === 'ArrowRight') { e.preventDefault(); browseStep(1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); browseStep(-1); } });
 
 /* ---------- 视频弹窗 ---------- */
 function openVideo(src){
@@ -707,7 +802,7 @@ function renderParent(){
     const st = stationStats(p), t = today();
     const due = Object.keys(p.items).filter(id => it(id) && p.items[id].state === 'miss');
     const soon = dueIds(p, addDays(t, 2)).filter(id => p.items[id].state === 'ok');
-    const ses = p.sessions.slice(-8).reverse().map(s => `<div class="rec">${esc(s.at.replace('T', ' ').slice(0, 16))} · ${esc({ new: '新学', review: '复习', pick: '老师选', free: '自由练' }[s.kind] || s.kind)} · ${s.ids.map(id => { const x = it(id); return x ? esc(label(x)) + (s.res[id] === 'ok' ? '✓' : '✗') : ''; }).join(' ')}</div>`).join('');
+    const ses = p.sessions.slice(-8).reverse().map(s => `<div class="rec">${esc(s.at.replace('T', ' ').slice(0, 16))} · ${esc({ new: '新学', review: '复习', pick: '老师选', free: '自由练', choose: '自选' }[s.kind] || s.kind)} · ${s.ids.map(id => { const x = it(id); return x ? esc(label(x)) + (s.res[id] === 'ok' ? '✓' : '✗') : ''; }).join(' ')}</div>`).join('');
     const nx = nextSession();
     body = `<div class="panel"><h2>学习进度</h2><div class="kv">
       ${['letter', 'blend', 'word'].map(k => `<span>${st[k].name}</span><b>学过 ${st[k].seen} / ${st[k].total}，一次答对 ${st[k].ok}</b>`).join('')}
@@ -830,7 +925,16 @@ $app.addEventListener('click', e => {
     case 'next': afterLearn(); break;
     case 'toquiz': renderQuiz(); break;
     case 'qsay': unlockAudio(); say(qPrompt(it(S.ids[S.i])), b); break;
-    case 'home': renderHome(); break;
+    case 'home': if (S && S.from && S.phase === 'result') { const m = S.from; renderModule(m); } else renderHome(); break;
+    case 'module': hush(); renderModule(b.dataset.m); break;
+    case 'quit': { const m = S && S.from; hush(); renderModule(m || 'word'); break; }
+    case 'modgo': { unlockAudio(); const m = b.dataset.m; startSession({ ...modNext(m), from: m }); break; }
+    case 'learnone': { unlockAudio(); const m = BR ? BR.m : ($app.querySelector('.screen.module [data-act=modgo]') || {}).dataset?.m; const id = b.dataset.id; BR = null; startSession({ kind: 'choose', ids: [id], from: m || it(id).type }); break; }
+    case 'browse': unlockAudio(); renderBrowse(b.dataset.m, 0); break;
+    case 'bprev': browseStep(-1); break;
+    case 'bnext': browseStep(1); break;
+    case 'bsay': { unlockAudio(); const x = it(BR.ids[BR.i]); hush(); say(x.d.audio, b); break; }
+    case 'bvideo': { const v = videoOf(it(BR.ids[BR.i])); if (v) openVideo(v); break; }
     case 'parent': renderParent(); break;
     case 'setpick': setP(p => { p.override = { ids: PICKSEL.slice(), at: isoLocal() }; }); toast('好了，下次点「开始」就学这些'); PICKSEL = []; renderParent(); break;
     case 'clearsel': PICKSEL = []; renderParent(); break;
