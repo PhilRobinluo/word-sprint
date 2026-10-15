@@ -12,43 +12,46 @@
 
 ## 生成流程（tools/）
 `build_content.py` → `make_audio.py`（edge-tts 旁白 + audio/phon 拼读音 → 时间轴 cues）→ `node test/raster.mjs`（场景栅格化）→ `make_video.py`（720x1280 动画）→ `node tools/embed-content.mjs`（把内容内置进 index.html）。
-`make_phonics.py` 负责生成 audio/phon/*.mp3 和 content/phonics_credits.json；`icons.py` 生成测验图标；`scenes.py` / `scenes2.py` 生成场景插图。
+`make_phonics.py` 负责生成 audio/phon/*.mp3、audio/lsay/*.mp3 和 content/phonics_credits.json；`icons.py` 生成测验图标；`scenes.py` / `scenes2.py` 生成场景插图。
 测试：`cd test && npm i && node syntax.mjs && node smoke.mjs && node shots.mjs`。
 
-## 拼读音的来源与许可（audio/phon）
-大部分是 Wikimedia Commons 上的 IPA 示例录音，许可 CC BY-SA 3.0。辅音原录音多是「[Ca aCa]」，这里只截取第一个音节里的辅音。
-所有声音都做过截取、去静音和音量归一。持续音（如 s、m）用交叉淡化拼接延长到约 0.45 秒以上。改动后的音频按同样的 CC BY-SA 3.0 授权。
-p / f / r / v 在 Commons 上没找到能干净截出来的录音，改用 Microsoft Edge 在线语音（en-US-AnaNeural）读真实单词后截取：p 和 f 取词首，r 取词首，v 取 five 的词尾。c 和 k 用同一段音。x 由 k＋s 拼接，q 由 k＋w 拼接。
-每个音都做过时长、起音、浊音比例和过零率检查，数据见 content/phonics_credits.json。
+## 字母音（audio/phon、audio/lsay）——2026-10-15 重做
+全部用同一个声音：Microsoft Edge 在线语音 en-US-AnaNeural（和讲解里的英文同一个声音），由 `tools/make_phonics.py` 生成。旧的 Wikimedia Commons IPA 录音已全部弃用。
+- `audio/lsay/<字母>.mp3`：字母名 … 音 … 音 … 关键词（例：B … b … b … bus）。字母卡上的 🔊、答题后的反馈用它。
+- `audio/lsay/<字母>-q.mp3`：音 … 音 … 关键词（不说字母名），字母测验「听声音，是哪个字母？」用它。
+- `audio/phon/<字母>.mp3`：单独的音，拼读小词的字母块和拼读讲解用。每个音都从放慢（-40%）读的完整单词里截出来：不循环、不拉长，爆破音不做淡入，元音最长 220 ms。
+- r、v、w、q、z 单独截出来太短或不带声（z 听着像 s），字母卡、测验和讲解里改成「字母名 + 关键词」，只有拼读字母块还用截出的短音。
+- 响度：组合音频统一到 -16 LUFS（实测 -16.4 ～ -17.4），单音按有声部分 RMS -20 dBFS 对齐，峰值不超过 -1.5 dB。
+- 检查：`python3 tools/phonics_check.py`（whisper 转写 + 响度 + 基频）。许可：本项目生成的 TTS 输出。
 
-| 字母 | 音 | 来源 | 许可 | 作者 |
+| 字母 | 音 | 关键词 | 播放方式 | 单音来源 |
 |---|---|---|---|---|
-| a | /æ/ | [Wikimedia Commons “File:Near-open front unrounded vowel.ogg”](https://commons.wikimedia.org/wiki/File:Near-open_front_unrounded_vowel.ogg) | CC BY-SA 3.0 | No machine-readable author provided. Denelson83 assumed (based on copyright claims). |
-| b | /b/ | [Wikimedia Commons “File:Voiced bilabial plosive.ogg”](https://commons.wikimedia.org/wiki/File:Voiced_bilabial_plosive.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| c | /k/ | [Wikimedia Commons “File:Voiceless velar plosive.ogg”](https://commons.wikimedia.org/wiki/File:Voiceless_velar_plosive.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| d | /d/ | [Wikimedia Commons “File:Voiced alveolar plosive.ogg”](https://commons.wikimedia.org/wiki/File:Voiced_alveolar_plosive.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| e | /ɛ/ | [Wikimedia Commons “File:Open-mid front unrounded vowel.ogg”](https://commons.wikimedia.org/wiki/File:Open-mid_front_unrounded_vowel.ogg) | CC BY-SA 3.0 | No machine-readable author provided. Denelson83 assumed (based on copyright claims). |
-| f | /f/ | Microsoft Edge TTS en-US-AnaNeural 读 “fan”，截取词首辅音 | 本项目生成（TTS 输出） | — |
-| g | /ɡ/ | [Wikimedia Commons “File:Voiced velar plosive.ogg”](https://commons.wikimedia.org/wiki/File:Voiced_velar_plosive.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| h | /h/ | [Wikimedia Commons “File:Voiceless glottal fricative.ogg”](https://commons.wikimedia.org/wiki/File:Voiceless_glottal_fricative.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| i | /ɪ/ | [Wikimedia Commons “File:Near-close near-front unrounded vowel.ogg”](https://commons.wikimedia.org/wiki/File:Near-close_near-front_unrounded_vowel.ogg) | CC BY-SA 3.0 | No machine-readable author provided. Denelson83 assumed (based on copyright claims). |
-| j | /dʒ/ | [Wikimedia Commons “File:Voiced palato-alveolar affricate.ogg”](https://commons.wikimedia.org/wiki/File:Voiced_palato-alveolar_affricate.ogg) | Public domain | The original uploader was Octane at English Wikipedia. |
-| k | /k/ | [Wikimedia Commons “File:Voiceless velar plosive.ogg”](https://commons.wikimedia.org/wiki/File:Voiceless_velar_plosive.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| l | /l/ | [Wikimedia Commons “File:Alveolar lateral approximant.ogg”](https://commons.wikimedia.org/wiki/File:Alveolar_lateral_approximant.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| m | /m/ | [Wikimedia Commons “File:Bilabial nasal.ogg”](https://commons.wikimedia.org/wiki/File:Bilabial_nasal.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| n | /n/ | [Wikimedia Commons “File:Alveolar nasal.ogg”](https://commons.wikimedia.org/wiki/File:Alveolar_nasal.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| o | /ɑ/ | [Wikimedia Commons “File:Open back unrounded vowel.ogg”](https://commons.wikimedia.org/wiki/File:Open_back_unrounded_vowel.ogg) | CC BY-SA 3.0 | No machine-readable author provided. Denelson83 assumed (based on copyright claims). |
-| p | /p/ | Microsoft Edge TTS en-US-AnaNeural 读 “pan”，截取词首辅音 | 本项目生成（TTS 输出） | — |
-| q | /kw/ | 由 k ＋ w 两段拼接 | 同 k、w | — |
-| r | /ɹ/ | Microsoft Edge TTS en-US-AnaNeural 读 “red”，截取词首辅音 | 本项目生成（TTS 输出） | — |
-| s | /s/ | [Wikimedia Commons “File:Voiceless alveolar sibilant.ogg”](https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_sibilant.ogg) | CC BY-SA 3.0 | Peter Isotalo |
-| t | /t/ | [Wikimedia Commons “File:Voiceless alveolar plosive.ogg”](https://commons.wikimedia.org/wiki/File:Voiceless_alveolar_plosive.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| u | /ʌ/ | [Wikimedia Commons “File:Open-mid back unrounded vowel.ogg”](https://commons.wikimedia.org/wiki/File:Open-mid_back_unrounded_vowel.ogg) | CC BY-SA 3.0 | No machine-readable author provided. Denelson83 assumed (based on copyright claims). |
-| v | /v/ | Microsoft Edge TTS en-US-AnaNeural 读 “five”，截取词尾辅音 | 本项目生成（TTS 输出） | — |
-| w | /w/ | [Wikimedia Commons “File:Voiced labio-velar approximant.ogg”](https://commons.wikimedia.org/wiki/File:Voiced_labio-velar_approximant.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| x | /ks/ | 由 k ＋ s 两段拼接 | 同 k、s | — |
-| y | /j/ | [Wikimedia Commons “File:Palatal approximant.ogg”](https://commons.wikimedia.org/wiki/File:Palatal_approximant.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
-| z | /z/ | [Wikimedia Commons “File:Voiced alveolar sibilant.ogg”](https://commons.wikimedia.org/wiki/File:Voiced_alveolar_sibilant.ogg) | CC BY-SA 3.0 | 见文件页（Commons 未提供机器可读作者） |
+| a | /æ/ | apple | 字母名 … 音 … 关键词 | “at” 截 220 ms |
+| b | /b/ | bus | 字母名 … 音 … 关键词 | “bus” 截 70 ms |
+| c | /k/ | cat | 字母名 … 音 … 关键词 | “cat” 截 160 ms |
+| d | /d/ | dog | 字母名 … 音 … 关键词 | “dog” 截 70 ms |
+| e | /ɛ/ | egg | 字母名 … 音 … 关键词 | “egg” 截 220 ms |
+| f | /f/ | fish | 字母名 … 音 … 关键词 | “fan” 截 110 ms |
+| g | /ɡ/ | go | 字母名 … 音 … 关键词 | “go” 截 70 ms |
+| h | /h/ | hat | 字母名 … 音 … 关键词 | “hat” 截 220 ms |
+| i | /ɪ/ | insect | 字母名 … 音 … 关键词 | “it” 截 160 ms |
+| j | /dʒ/ | jet | 字母名 … 音 … 关键词 | “jet” 截 120 ms |
+| k | /k/ | kite | 字母名 … 音 … 关键词 | “kite” 截 190 ms |
+| l | /l/ | leg | 字母名 … 音 … 关键词 | “leg” 截 100 ms |
+| m | /m/ | monkey | 字母名 … 音 … 关键词 | “man” 截 130 ms |
+| n | /n/ | nose | 字母名 … 音 … 关键词 | “nap” 截 130 ms |
+| o | /ɑ/ | octopus | 字母名 … 音 … 关键词 | “octopus” 截 140 ms |
+| p | /p/ | panda | 字母名 … 音 … 关键词 | “pan” 截 150 ms |
+| q | /kw/ | queen | 字母名 + 关键词（单音不够干净） | “queen” 截 60 ms |
+| r | /ɹ/ | red | 字母名 + 关键词（单音不够干净） | “red” 截 60 ms |
+| s | /s/ | snake | 字母名 … 音 … 关键词 | “sun” 截 230 ms |
+| t | /t/ | tiger | 字母名 … 音 … 关键词 | “top” 截 160 ms |
+| u | /ʌ/ | umbrella | 字母名 … 音 … 关键词 | “up” 截 160 ms |
+| v | /v/ | van | 字母名 + 关键词（单音不够干净） | “van” 截 60 ms |
+| w | /w/ | window | 字母名 + 关键词（单音不够干净） | “wet” 截 70 ms |
+| x | /ks/ | box | 字母名 … 音 … 关键词 | “box” 截 300 ms |
+| y | /j/ | yellow | 字母名 … 音 … 关键词 | “yes” 截 130 ms |
+| z | /z/ | zip | 字母名 + 关键词（单音不够干净） | “zip” 截 180 ms |
 
 中文旁白和英文单词播报：Microsoft Edge 在线语音合成（edge-tts；zh-CN-XiaoxiaoNeural、en-US-AnaNeural）。
 插图、图标和动画都是本项目自己画、自己渲染的；英文字体 Fredoka（OFL），中文字体 Noto Sans CJK（OFL），音标字体 DejaVu Sans。
