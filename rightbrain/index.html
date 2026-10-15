@@ -228,7 +228,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 .gate .mascot{width:132px;height:132px;animation:bob 2.6s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-8px)}}
 .gate h1{margin:10px 0 4px;font-size:28px;font-weight:900}
-.gate .sub{margin:0 0 20px;color:var(--muted);font-size:17px;font-weight:700}
+.gate .sub{text-wrap:balance;margin:0 0 20px;color:var(--muted);font-size:17px;font-weight:700}
 .gatecard{width:100%;max-width:420px;background:var(--paper);border-radius:var(--r);padding:22px 20px 20px;box-shadow:var(--shadow)}
 .gatecard label{display:block;text-align:left;font-weight:900;font-size:15px;color:var(--muted);margin:0 0 8px 4px}
 .codein{width:100%;height:68px;border-radius:20px;border:3px solid var(--line);background:#FFFBF4;text-align:center;font-family:var(--word-font);font-weight:700;font-size:28px;letter-spacing:3px;color:var(--blue);text-transform:uppercase;outline:none;transition:border-color .15s,box-shadow .15s}
@@ -1129,7 +1129,7 @@ function renderAuth(msg = '', mode = 'login', info = false){
   started = false;
   const reg = mode === 'register';
   const grades = (C.groups || []).map(g => g.id);
-  show(`${gateHead('请爸爸妈妈先登录账号，学习记录会跟着账号走')}
+  show(`${gateHead('请爸爸妈妈先登录，学习记录跟着账号走')}
     <div class="gatecard authcard">
       <div class="seg" role="tablist"><button type="button" role="tab" aria-selected="${!reg}" class="${reg ? '' : 'on'}" data-auth="login">登录</button><button type="button" role="tab" aria-selected="${reg}" class="${reg ? 'on' : ''}" data-auth="register">注册新账号</button></div>
       <form id="authform" autocomplete="on" novalidate>
