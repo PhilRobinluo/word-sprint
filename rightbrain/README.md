@@ -2,6 +2,14 @@
 
 在线：https://philrobinluo.github.io/word-sprint/rightbrain/ （家长/老师页：长按「家长」1.2 秒，或加 `?parent=1`）
 
+## 访问地址与部署（2026-10-16）
+
+- 正式地址（国内优先用这个）：https://word.luolaoshi.club/ —— Cloudflare Worker `rightbrain-api` 的自定义域名，同一个 Worker 托管网站静态文件和 API（`/api/*`），管理后台 https://word.luolaoshi.club/admin
+- 备用地址：https://philrobinluo.github.io/word-sprint/rightbrain/ （API 走 https://rightbrain-api.philrobin-cloud-mail.workers.dev）；另有 Pages 副本 https://rightbrain.pages.dev/
+- 前端自动选 API：在 word.luolaoshi.club 上用同域 `/api`，其他地方用 workers.dev（`?api=home` 可强制走 word.luolaoshi.club）。
+- 更新网站：把本目录（不含 README）放到 Mac `~/rightbrain-api/site/`，在 `~/rightbrain-api` 里运行 `npx wrangler deploy`；GitHub Pages 照常 push。
+- 账号：家长先注册/登录，再输入兑换码（码绑定到账号，最多 2 台设备）；进度跟着账号同步。学习流程：每组新内容 3 轮（第1轮学+考 → 第2轮换玩法 → 综合测试，错的重考到对）。
+
 ## 内容
 - 字母小乐园：26 个字母，按 phonics 顺序分 4 组（s a t p i n / c k e h r m d / g o u l f b / j z w v y x q）。每个字母有名称、真实拼读音（可点 🔊 再听）、形状故事、中文发音提示和一个看动画按钮。
 - 拼读小词：40 个 CVC 词，5 个短元音都覆盖。学完相应字母组后才解锁。每个词有插图、拼读播报（c · a · t → cat）和拼读动画。
