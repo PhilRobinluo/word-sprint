@@ -13674,6 +13674,13 @@
  ],
  "phonics_note": "字母音全部用同一个声音（Microsoft Edge 在线语音 en-US-AnaNeural，和讲解里的英文同一个声音）：字母卡和测验播「字母名 … 音 … 关键词」，例如 B … b … bus。单独的音都从完整单词里截出来，不循环、不拉长；r、v、w、q、z 单独截出来不够干净，改用「字母名 + 关键词」。",
  "ui_audio": {
+  "pass2": "audio/ui/pass2.mp3",
+  "pass3": "audio/ui/pass3.mp3",
+  "p2case": "audio/ui/p2case.mp3",
+  "p2pic": "audio/ui/p2pic.mp3",
+  "p2miss": "audio/ui/p2miss.mp3",
+  "p3again": "audio/ui/p3again.mp3",
+  "p3done": "audio/ui/p3done.mp3",
   "start": "audio/ui/start.mp3",
   "close": "audio/ui/close.mp3",
   "which": "audio/ui/which.mp3",
