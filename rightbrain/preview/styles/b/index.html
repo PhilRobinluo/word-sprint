@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN" data-style="b">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F1EAFB">
+<meta name="robots" content="noindex">
+<title>样板 B · 糖果乐园风 · 右脑记单词（待审）</title>
+<link rel="icon" href="../assets/icon-b.svg">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h4.5v-5.5h3V20H18V9.5" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-prev" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="var(--sw,2.6)" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="var(--sw,2.6)" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-say" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)" stroke-linecap="round"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="11" rx="3" fill="currentColor"/><path d="M6 11.5a6 6 0 0 0 12 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)" stroke-linecap="round"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.8v12.4a1 1 0 0 0 1.5.86l10-6.2a1 1 0 0 0 0-1.72l-10-6.2A1 1 0 0 0 8 5.8z" fill="currentColor"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+<symbol id="i-game" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="11" rx="5.5" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)"/><path d="M7.5 10.5v4M5.5 12.5h4" stroke="currentColor" stroke-width="var(--sw,2.2)" stroke-linecap="round"/><circle cx="15.5" cy="11.5" r="1.3" fill="currentColor"/><circle cx="18" cy="14" r="1.3" fill="currentColor"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5c3-1 5.5-.8 8 1 2.5-1.8 5-2 8-1V19c-3-1-5.5-.8-8 1-2.5-1.8-5-2-8-1z M12 6.5V20" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)" stroke-linejoin="round"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)"/><path d="M3.5 13h17M12 9v11M12 9c-2-4-6-4-5.5-1.5S11 9 12 9c1 0 5 .5 5.5-1.5S14 5 12 9" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)" stroke-linejoin="round"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="var(--sw,3)" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="var(--sw,2.2)"/></symbol>
+</defs></svg>
+<nav class="review" aria-label="样板导航"><a class="back" href="../">‹ 3 个样板</a><span class="tag-review">B · 糖果乐园风 · 待审</span><span class="tabs"><a href="#home">主页</a><a href="#card">学习卡</a><a href="#quiz">答题</a><a href="#win">答对庆祝</a><a href="#brand">Logo</a></span><span class="others"><a class="sw sw-a" href="../a/">A</a><a class="sw sw-c" href="../c/">C</a></span></nav>
+<main class="stage"><div class="phone" id="app">
+<div class="deco" aria-hidden="true"></div>
+
+<section class="screen" id="home" aria-label="主页">
+  <header class="top" data-in>
+    <span class="brandmark"><img src="../assets/mark-b.svg" alt=""><b>右脑记单词</b></span>
+    <button class="stars chip" data-spring aria-label="我的星星 12 颗"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg><b>12</b></button>
+  </header>
+  <div class="hello" data-in><img class="mascot-sm" src="../assets/art/b-icon.webp" alt=""><div><p class="hi">下午好，小朋友！</p><p class="sub">今天学 5 个新单词，大约 6 分钟</p></div></div>
+  <button class="start big-btn" data-go="card" data-in><span class="play-dot"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span><span class="start-txt"><b>开始今天的学习</b><small>点一下就开始，跟着声音走</small></span></button>
+  <ol class="route" data-in aria-label="学习路线"><li class="done"><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>字母小乐园</li><li class="done"><i><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></i>拼读小词</li><li class="now"><i>3</i>记忆单词</li><li><i>4</i>复习</li></ol>
+  <div class="today" data-in><b>今天要学</b><span class="pics"><img src="../../../img/cat.svg" alt="cat" style="--i:0"><img src="../../../img/ship.svg" alt="ship" style="--i:1"><img src="../../../img/umbrella.svg" alt="umbrella" style="--i:2"><img src="../../../img/apple.svg" alt="apple" style="--i:3"><img src="../../../img/sun.svg" alt="sun" style="--i:4"></span></div>
+  <div class="tiles" data-in>
+    <button class="tile games" data-toast="小游戏大厅：字母气球、听音找图、翻牌配对、拼词小火车">
+      <span class="tile-ic"><svg class="ic" aria-hidden="true"><use href="#i-game"/></svg></span><b>小游戏</b><small>今天还能玩 3 局</small>
+      <span class="mini"><em>A</em><em>b</em><em>c</em></span>
+    </button>
+    <button class="tile album" data-toast="贴纸册：已收集 12 张，还差 20 张">
+      <span class="tile-ic"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><b>贴纸册</b><small>12 / 32 张</small>
+      <span class="stk"><img src="../../../img/stickers/panda.webp" alt="" style="--i:0"><img src="../../../img/stickers/rocket.webp" alt="" style="--i:1"><img src="../../../img/stickers/whale.webp" alt="" style="--i:2"></span>
+    </button>
+  </div>
+  <div class="chest" data-in><span class="chest-ic"><svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg></span><div><b>再得 2 颗星，开礼物宝箱</b><span class="slots"><i class="on"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i><i class="on"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i><i class="on"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i><i class=""><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i><i class=""><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i></span></div></div>
+</section>
+
+<section class="screen" id="card" aria-label="学习卡">
+  <header class="bar">
+    <button class="icon-btn" data-go="home" data-back aria-label="回主页"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></button>
+    <div class="prog" aria-label="第 2 个，共 5 个"><i style="--p:40%"></i></div>
+    <span class="count"><b>2</b>/5</span>
+    <button class="speed chip" data-speed aria-label="语速"><small>语速</small><b>1×</b></button>
+  </header>
+  <div class="card-body" data-word>
+    <figure class="pic" data-in><img src="../../../img/cat.svg" alt="小猫"></figure>
+    <div class="info">
+      <div class="word-row" data-in><h1 class="word" lang="en">cat</h1><button class="say" data-audio="en/cat.mp3" aria-label="听读音"><svg class="ic" aria-hidden="true"><use href="#i-say"/></svg></button></div>
+      <p class="ipa" data-in><span lang="en">/kæt/</span><b>小猫</b></p>
+      <div class="hook" data-in><span class="tag">谐音</span><p class="slogan">咔！它！</p><p class="hook-txt">cat 听起来像「咔，它！」：小猫「咔」地一扑，按住了小老鼠——就是它，小猫！</p></div>
+    </div>
+  </div>
+  <footer class="ctrl">
+    <button class="round-btn" data-prev aria-label="上一个"><svg class="ic" aria-hidden="true"><use href="#i-prev"/></svg></button>
+    <button class="mic-btn" data-mic><span class="rings"></span><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg><b>跟我念</b></button>
+    <button class="round-btn next" data-next aria-label="下一个"><svg class="ic" aria-hidden="true"><use href="#i-next"/></svg></button>
+  </footer>
+</section>
+
+<section class="screen" id="quiz" aria-label="答题">
+  <header class="bar">
+    <button class="icon-btn" data-go="home" data-back aria-label="回主页"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></button>
+    <div class="prog" aria-label="第 3 题，共 5 题"><i style="--p:60%"></i></div>
+    <span class="count"><b>3</b>/5</span>
+    <button class="speed chip" data-speed aria-label="语速"><small>语速</small><b>1×</b></button>
+  </header>
+  <div class="ask" data-in><button class="say big" data-audio="en/cat.mp3" aria-label="再听一遍"><svg class="ic" aria-hidden="true"><use href="#i-say"/></svg></button><p>听一听，哪个是 <b lang="en">cat</b>？</p></div>
+  <div class="opts" data-answer="cat"><button class="opt" data-ans="dog" style="--i:0"><img src="../../../img/dog.svg" alt="dog"></button><button class="opt" data-ans="cat" style="--i:1"><img src="../../../img/cat.svg" alt="cat"></button><button class="opt" data-ans="duck" style="--i:2"><img src="../../../img/duck.svg" alt="duck"></button><button class="opt" data-ans="fish" style="--i:3"><img src="../../../img/fish.svg" alt="fish"></button></div>
+  <p class="hint-line" data-in>点一张图片</p>
+</section>
+
+<section class="screen" id="win" aria-label="答对庆祝">
+  <div class="rays" aria-hidden="true"></div>
+  <div class="burst" aria-hidden="true"></div>
+  <div class="win-body">
+    <div class="cheer-blob"><img class="mascot-big" src="../assets/art/b-cheer.webp" alt="小脑袋跳起来欢呼"></div>
+    <h2 class="praise"><span>哎呀，宝贝你真棒，</span><span>一下子就答对了！</span></h2>
+    <div class="earned" aria-label="得到 3 颗星"><i><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i><i><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i><i><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></i></div>
+    <p class="plus">+1 颗星 · 再得 1 颗就能开宝箱</p>
+  </div>
+  <button class="big-btn cont" data-go="card" data-back>下一个<span class="play-dot sm"><svg class="ic" aria-hidden="true"><use href="#i-next"/></svg></span></button>
+</section>
+
+<section class="screen" id="brand" aria-label="Logo 和图标">
+  <header class="bar"><button class="icon-btn" data-go="home" data-back aria-label="回主页"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></button><h2 class="bar-title">Logo · 图标 · 配色（待审）</h2></header>
+  <div class="brand-logo" data-in><img src="../assets/logo-b.svg" alt="右脑记单词 logo"></div>
+  <div class="brand-row" data-in>
+    <div class="homescreen"><span class="app"><img src="../assets/icon-b.svg" alt=""><small>右脑记单词</small></span><span class="app ghost"></span><span class="app ghost"></span><span class="app ghost"></span></div>
+    <div class="hero-wrap"><img class="hero" src="../assets/art/b-hero.webp" alt="logo 原画"><small>AI 原画（box 上生成）→ 重绘成矢量 SVG</small></div>
+  </div>
+  <div class="sizes" data-in><img src="../assets/icon-b.svg" alt="" style="width:96px"><img src="../assets/icon-b.svg" alt="" style="width:64px"><img src="../assets/icon-b.svg" alt="" style="width:40px"><img src="../assets/icon-b.svg" alt="" style="width:24px"></div>
+  <ul class="palette" data-in><li><i style="background:#F1EAFB"></i><b>薰衣草底</b><code>#F1EAFB</code></li><li><i style="background:#FFF8FC"></i><b>软糖卡片</b><code>#FFF8FC</code></li><li><i style="background:#2E2457"></i><b>葡萄墨</b><code>#2E2457</code></li><li><i style="background:#FF7AA8"></i><b>草莓粉</b><code>#FF7AA8</code></li><li><i style="background:#6FD3A0"></i><b>薄荷绿</b><code>#6FD3A0</code></li><li><i style="background:#FFD25E"></i><b>柠檬黄</b><code>#FFD25E</code></li></ul>
+  <p class="fonts" data-in>中文：站酷快乐体（ZCOOL KuaiLe）· 英文：Fredoka（圆润、单层 a）</p>
+  <p class="fonts" data-in>像一款可爱的手游：软糖色、果冻立体按钮、处处弹一弹。</p>
+</section>
+
+<div class="toast" role="status" aria-live="polite"></div>
+</div></main>
+<script>window.RB_WORDS=[{"w": "cat", "zh": "小猫", "ipa": "/kæt/", "img": "cat", "tag": "谐音", "slogan": "咔！它！", "hook": "cat 听起来像「咔，它！」：小猫「咔」地一扑，按住了小老鼠——就是它，小猫！"}, {"w": "ship", "zh": "大船", "ipa": "/ʃɪp/", "img": "ship", "tag": "谐音", "slogan": "湿！扑！", "hook": "ship 听起来像「湿扑」：大船冲进大海，浪花「扑」地打上甲板，船上的人全身都湿啦！"}, {"w": "umbrella", "zh": "雨伞", "ipa": "/ʌmˈbrelə/", "img": "umbrella", "tag": "谐音", "slogan": "俺不来了！", "hook": "umbrella 读起来像「俺不来了」：下雨天躲在伞下朝朋友喊——头顶撑着的那把伞就是雨伞。"}];window.RB_PRAISE="praise/first01.mp3";</script>
+<script src="../assets/mock.js"></script>
+</body>
+</html>

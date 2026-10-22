@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F4F0E9">
+<title>右脑记单词 · 3 个新视觉样板（待审）</title>
+<link rel="icon" href="assets/icon-c.svg">
+<style>
+@font-face{font-family:"RB-C-zh";src:url(assets/fonts/c-zh.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"RB-C-zh";src:url(assets/fonts/c-zh-b.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"RB-C-en";src:url(assets/fonts/c-en.woff2) format("woff2");font-weight:400 800;font-display:swap}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F4F0E9;color:#1E2A30;font:500 16px/1.55 "RB-C-zh","PingFang SC",system-ui,sans-serif;padding:28px 18px 60px}
+h1{font-size:1.7rem;font-weight:700;letter-spacing:.02em}
+.lead{color:#56646B;margin:6px 0 22px;max-width:46rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:1240px}
+.card{display:flex;flex-direction:column;border-radius:28px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(30,42,48,.06),0 14px 34px -16px rgba(30,42,48,.3);transition:transform .25s cubic-bezier(.3,1.4,.5,1),box-shadow .25s}
+.card:hover{transform:translateY(-4px)}
+.card:active{transform:scale(.98)}
+.card .shot{aspect-ratio:390/600;overflow:hidden;position:relative}
+.card .shot img{width:100%;height:auto;display:block}
+.card .meta{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px}
+.card .logo{height:54px;width:auto;align-self:flex-start}
+.card h2{font-size:1.25rem;font-weight:700;display:flex;align-items:center;gap:10px}
+.card h2 em{font:700 .8rem/1 "RB-C-en",sans-serif;font-style:normal;padding:5px 9px;border-radius:99px;background:rgba(30,42,48,.08)}
+.card p{color:#4C5A61;font-size:.95rem}
+.go{margin-top:4px;font-weight:700}
+.a{background:#F5ECDC}.b{background:#F1EAFB}.c{background:#FFFCF7}
+.a .go{color:#82311E}.b .go{color:#6B2A7A}.c .go{color:#1F5E66}
+.note{margin-top:26px;color:#56646B;font-size:.9rem;max-width:46rem}
+.note b{color:#1E2A30}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<h1>右脑记单词 · 3 个新视觉样板</h1>
+<p class="lead">每个样板都有新 logo、App 图标、主页、学习卡、答题、答对庆祝 5 页，点进去可以直接点按钮、答题、看动画。都保留护眼规则：不用纯白、不刺眼、文字对比度够、不闪烁。<b>全部待审</b>，挑一个（或混搭）后再改正式网站。</p>
+<div class="grid">
+<a class="card a" href="a/"><div class="shot"><img src="assets/thumb-a.webp" alt="样板 A 主页截图"></div><div class="meta"><img class="logo" src="assets/logo-a.svg" alt=""><h2><em>A</em>暖纸绘本风</h2><p>像一本暖色绘本：纸张纹理、手绘线条、水彩小脑袋，安静温柔。</p><span class="go">打开样板 A ›</span></div></a>
+<a class="card b" href="b/"><div class="shot"><img src="assets/thumb-b.webp" alt="样板 B 主页截图"></div><div class="meta"><img class="logo" src="assets/logo-b.svg" alt=""><h2><em>B</em>糖果乐园风</h2><p>像一款可爱的手游：软糖色、果冻立体按钮、处处弹一弹。</p><span class="go">打开样板 B ›</span></div></a>
+<a class="card c" href="c/"><div class="shot"><img src="assets/thumb-c.webp" alt="样板 C 主页截图"></div><div class="meta"><img class="logo" src="assets/logo-c.svg" alt=""><h2><em>C</em>干净高级风</h2><p>像顶级付费儿童 App：大留白、精致字体、克制配色、细腻动效。</p><span class="go">打开样板 C ›</span></div></a>
+</div>
+<p class="note">样板里的单词图片、记忆法、夸奖语都取自现有网站；logo 先在 box 上用 AI 画原画，再重绘成矢量 SVG。手机上点页面顶部的「主页 / 学习卡 / 答题 / 答对庆祝 / Logo」可以切页。</p>
+</body>
+</html>
