@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>夸奖与庆祝预览（待审）· 右脑记单词</title><meta name="robots" content="noindex">
+<style>
+:root{--bg:#F6EEDC;--paper:#FFF9EE;--ink:#3D3229;--muted:#6F6253;--line:#E7D9C1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:16px 14px 60px;max-width:760px;margin:auto}
+h1{font-size:24px;margin:4px 0}h2{font-size:18px;margin:22px 0 8px}p{color:var(--muted);margin:4px 0 10px}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;font-weight:800;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:14px;padding:10px 14px;cursor:pointer}
+button.big{background:#F2643A;border-color:#F2643A;color:#fff}
+.grp{background:var(--paper);border-radius:16px;padding:10px 12px;margin:8px 0}
+.grp b{display:block;margin-bottom:4px}.ln{display:flex;gap:8px;align-items:center;padding:4px 0;border-top:1px dashed var(--line)}
+.ln button{padding:4px 10px;border-radius:999px;font-size:14px}.ln code{color:var(--muted);font-size:12px}
+.stk{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:8px}.stk div{text-align:center;font-size:12px;color:var(--muted)}.stk img{width:100%}
+label{display:inline-flex;gap:6px;align-items:center;margin-right:12px}
+</style></head><body>
+<h1>🎉 夸奖与庆祝预览 <span style="font-size:15px;color:#B5651D">待审</span></h1>
+<p>点按钮看效果。网站里答对 / 连对 / 全对 / 完成挑战时就是这样。所有语音、动画、贴纸图都是「待审」，Phil 老师可以挑、改、换成自己的声音。</p>
+<label><input type="checkbox" id="snd" checked> 音效</label><label><input type="checkbox" id="voice" checked> 配夸奖语音</label>
+<h2>庆祝套路（4 种轮换）</h2>
+<div class="row" id="routines"></div>
+<h2>连对升级</h2>
+<div class="row"><button data-tier="ok">答对（普通）</button><button data-tier="streak3">🔥 连对 3 题（烟花）</button><button data-tier="streak5">🌈 连对 5 题（彩虹 + 大烟花）</button><button data-tier="all" class="big">🏆 全部答对 / 颁奖（金杯）</button></div>
+<h2>礼物宝箱</h2>
+<div class="row"><button id="chest" class="big">🎁 开一个宝箱（普通贴纸）</button><button id="chest2">✨ 开一个宝箱（闪光稀有款）</button></div>
+<h2>夸奖语音文案表</h2><p id="cnt"></p><div id="lines"></div>
+<h2>贴纸（32 张，✨ 为闪光稀有款）</h2><div class="stk" id="stk"></div>
+<script src="../celebrate.js"></script>
+<script>
+const $ = s => document.querySelector(s); let PR = null, ST = [];
+const pick = g => { const l = PR && PR.groups[g] ? PR.groups[g].lines.length : 0; return l ? `../audio/praise/${g}${String(1 + Math.floor(Math.random() * l)).padStart(2, '0')}.mp3` : null; };
+const playV = u => { if (u && $('#voice').checked) { const a = new Audio(u); setTimeout(() => a.play().catch(() => {}), 250); } };
+const SFX = { ok: 'sparkle', streak3: 'cheer', streak5: 'big', all: 'big' };
+const GROUP = { ok: 'first', streak3: 'streak3', streak5: 'streak5', all: 'all' };
+$('#routines').innerHTML = RBC.routines.map(r => `<button data-r="${r}">${{ confetti: '🎊 彩带 + 拍手', stars: '⭐ 星星雨 + 转圈', balloons: '🎈 气球 + 挥手', bubbles: '🫧 泡泡 + 蹦跳' }[r]}</button>`).join('');
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.r) { playV(pick('first')); RBC.celebrate({ routine: b.dataset.r, sfx: '../audio/sfx/sparkle.mp3', sound: $('#snd').checked }); }
+  if (b.dataset.tier) { const t = b.dataset.tier; playV(pick(GROUP[t])); RBC.celebrate({ tier: t, sfx: `../audio/sfx/${SFX[t]}.mp3`, sound: $('#snd').checked }); }
+  if (b.id === 'chest' || b.id === 'chest2') { const pool = ST.filter(s => s.shiny === (b.id === 'chest2')); const s = pool[Math.floor(Math.random() * pool.length)];
+    RBC.chest({ sticker: { ...s, img: '../' + s.img }, sfx: '../audio/sfx/chest.mp3', sound: $('#snd').checked, onOpen: () => playV(pick(s.shiny ? 'shiny' : 'gift')) }); }
+  if (b.dataset.a) new Audio(b.dataset.a).play().catch(() => {});
+});
+fetch('../content/praise.json').then(r => r.json()).then(j => { PR = j; let n = 0;
+  $('#lines').innerHTML = Object.entries(j.groups).map(([g, d]) => `<div class="grp"><b>${d.name}（${d.lines.length} 句）</b>${d.lines.map((t, i) => { n++; const k = g + String(i + 1).padStart(2, '0'); return `<div class="ln"><button data-a="../audio/praise/${k}.mp3">▶</button><span>${t}</span><code>${k}</code></div>`; }).join('')}</div>`).join('')
+   + Object.entries(j.repeat_prompts).map(([g, d]) => `<div class="grp"><b>跟读引导：${g}</b>${d.lines.map((t, i) => `<div class="ln"><button data-a="../audio/repeat/rp_${g}${i + 1}.mp3">▶</button><span>${t}</span><code>rp_${g}${i + 1}</code></div>`).join('')}</div>`).join('');
+  $('#cnt').textContent = `共 ${n} 句夸奖 / 鼓励 / 礼物语音（另有跟读引导 ${Object.values(j.repeat_prompts).reduce((a, d) => a + d.lines.length, 0)} 句），按场景随机、不重复。`; });
+fetch('../content/stickers.json').then(r => r.json()).then(j => { ST = j.stickers;
+  $('#stk').innerHTML = ST.map(s => `<div><div class="${s.shiny ? 'shiny' : ''}" style="--m:url('../${s.img}')"><img src="../${s.img}" alt=""></div>${s.shiny ? '✨' : ''}${s.name}</div>`).join(''); RBC.ensureCSS(); });
+</script></body></html>

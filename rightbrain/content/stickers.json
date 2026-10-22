@@ -1,0 +1,230 @@
+{
+ "note": "收藏贴纸（待审）。来源：box 上的 AI 生图，两张 4×4 套图切出（content/art-candidates/stickers-*.jpg）。shiny＝闪光稀有款。完成一个挑战必得一张：先发还没有的，普通款优先，每收齐 5 张普通款解锁一张闪光款；不抽卡、不重复。",
+ "status": "待审",
+ "stickers": [
+  {
+   "id": "cat",
+   "name": "小猫",
+   "kind": "animal",
+   "img": "img/stickers/cat.webp",
+   "shiny": false
+  },
+  {
+   "id": "puppy",
+   "name": "小狗",
+   "kind": "animal",
+   "img": "img/stickers/puppy.webp",
+   "shiny": false
+  },
+  {
+   "id": "panda",
+   "name": "熊猫",
+   "kind": "animal",
+   "img": "img/stickers/panda.webp",
+   "shiny": true
+  },
+  {
+   "id": "bunny",
+   "name": "小兔",
+   "kind": "animal",
+   "img": "img/stickers/bunny.webp",
+   "shiny": false
+  },
+  {
+   "id": "fox",
+   "name": "狐狸",
+   "kind": "animal",
+   "img": "img/stickers/fox.webp",
+   "shiny": false
+  },
+  {
+   "id": "owl",
+   "name": "猫头鹰",
+   "kind": "animal",
+   "img": "img/stickers/owl.webp",
+   "shiny": false
+  },
+  {
+   "id": "penguin",
+   "name": "企鹅",
+   "kind": "animal",
+   "img": "img/stickers/penguin.webp",
+   "shiny": false
+  },
+  {
+   "id": "lion",
+   "name": "狮子",
+   "kind": "animal",
+   "img": "img/stickers/lion.webp",
+   "shiny": true
+  },
+  {
+   "id": "elephant",
+   "name": "大象",
+   "kind": "animal",
+   "img": "img/stickers/elephant.webp",
+   "shiny": false
+  },
+  {
+   "id": "frog",
+   "name": "青蛙",
+   "kind": "animal",
+   "img": "img/stickers/frog.webp",
+   "shiny": false
+  },
+  {
+   "id": "duck",
+   "name": "小鸭",
+   "kind": "animal",
+   "img": "img/stickers/duck.webp",
+   "shiny": false
+  },
+  {
+   "id": "bear",
+   "name": "小熊",
+   "kind": "animal",
+   "img": "img/stickers/bear.webp",
+   "shiny": false
+  },
+  {
+   "id": "monkey",
+   "name": "猴子",
+   "kind": "animal",
+   "img": "img/stickers/monkey.webp",
+   "shiny": false
+  },
+  {
+   "id": "tiger",
+   "name": "小老虎",
+   "kind": "animal",
+   "img": "img/stickers/tiger.webp",
+   "shiny": false
+  },
+  {
+   "id": "koala",
+   "name": "考拉",
+   "kind": "animal",
+   "img": "img/stickers/koala.webp",
+   "shiny": false
+  },
+  {
+   "id": "whale",
+   "name": "鲸鱼",
+   "kind": "animal",
+   "img": "img/stickers/whale.webp",
+   "shiny": true
+  },
+  {
+   "id": "apple",
+   "name": "苹果",
+   "kind": "thing",
+   "img": "img/stickers/apple.webp",
+   "shiny": false
+  },
+  {
+   "id": "banana",
+   "name": "香蕉",
+   "kind": "thing",
+   "img": "img/stickers/banana.webp",
+   "shiny": false
+  },
+  {
+   "id": "strawberry",
+   "name": "草莓",
+   "kind": "thing",
+   "img": "img/stickers/strawberry.webp",
+   "shiny": false
+  },
+  {
+   "id": "watermelon",
+   "name": "西瓜",
+   "kind": "thing",
+   "img": "img/stickers/watermelon.webp",
+   "shiny": false
+  },
+  {
+   "id": "icecream",
+   "name": "冰淇淋",
+   "kind": "thing",
+   "img": "img/stickers/icecream.webp",
+   "shiny": false
+  },
+  {
+   "id": "cupcake",
+   "name": "纸杯蛋糕",
+   "kind": "thing",
+   "img": "img/stickers/cupcake.webp",
+   "shiny": false
+  },
+  {
+   "id": "donut",
+   "name": "甜甜圈",
+   "kind": "thing",
+   "img": "img/stickers/donut.webp",
+   "shiny": false
+  },
+  {
+   "id": "carrot",
+   "name": "胡萝卜",
+   "kind": "thing",
+   "img": "img/stickers/carrot.webp",
+   "shiny": false
+  },
+  {
+   "id": "rocket",
+   "name": "火箭",
+   "kind": "thing",
+   "img": "img/stickers/rocket.webp",
+   "shiny": true
+  },
+  {
+   "id": "rainbow",
+   "name": "彩虹",
+   "kind": "thing",
+   "img": "img/stickers/rainbow.webp",
+   "shiny": true
+  },
+  {
+   "id": "star",
+   "name": "星星",
+   "kind": "thing",
+   "img": "img/stickers/star.webp",
+   "shiny": false
+  },
+  {
+   "id": "sun",
+   "name": "太阳",
+   "kind": "thing",
+   "img": "img/stickers/sun.webp",
+   "shiny": false
+  },
+  {
+   "id": "moon",
+   "name": "月亮",
+   "kind": "thing",
+   "img": "img/stickers/moon.webp",
+   "shiny": false
+  },
+  {
+   "id": "cloud",
+   "name": "云朵",
+   "kind": "thing",
+   "img": "img/stickers/cloud.webp",
+   "shiny": false
+  },
+  {
+   "id": "balloon",
+   "name": "气球",
+   "kind": "thing",
+   "img": "img/stickers/balloon.webp",
+   "shiny": false
+  },
+  {
+   "id": "crown",
+   "name": "皇冠",
+   "kind": "thing",
+   "img": "img/stickers/crown.webp",
+   "shiny": true
+  }
+ ]
+}

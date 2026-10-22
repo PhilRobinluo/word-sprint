@@ -13444,5 +13444,351 @@
    "license": "本项目生成（TTS 输出）",
    "author": "—"
   }
- }
+ },
+ "praise": {
+  "first": [
+   "audio/praise/first01.mp3",
+   "audio/praise/first02.mp3",
+   "audio/praise/first03.mp3",
+   "audio/praise/first04.mp3",
+   "audio/praise/first05.mp3",
+   "audio/praise/first06.mp3",
+   "audio/praise/first07.mp3",
+   "audio/praise/first08.mp3"
+  ],
+  "fast": [
+   "audio/praise/fast01.mp3",
+   "audio/praise/fast02.mp3",
+   "audio/praise/fast03.mp3",
+   "audio/praise/fast04.mp3",
+   "audio/praise/fast05.mp3",
+   "audio/praise/fast06.mp3"
+  ],
+  "comeback": [
+   "audio/praise/comeback01.mp3",
+   "audio/praise/comeback02.mp3",
+   "audio/praise/comeback03.mp3",
+   "audio/praise/comeback04.mp3",
+   "audio/praise/comeback05.mp3",
+   "audio/praise/comeback06.mp3",
+   "audio/praise/comeback07.mp3"
+  ],
+  "streak3": [
+   "audio/praise/streak301.mp3",
+   "audio/praise/streak302.mp3",
+   "audio/praise/streak303.mp3",
+   "audio/praise/streak304.mp3",
+   "audio/praise/streak305.mp3",
+   "audio/praise/streak306.mp3"
+  ],
+  "streak5": [
+   "audio/praise/streak501.mp3",
+   "audio/praise/streak502.mp3",
+   "audio/praise/streak503.mp3",
+   "audio/praise/streak504.mp3",
+   "audio/praise/streak505.mp3",
+   "audio/praise/streak506.mp3"
+  ],
+  "all": [
+   "audio/praise/all01.mp3",
+   "audio/praise/all02.mp3",
+   "audio/praise/all03.mp3",
+   "audio/praise/all04.mp3",
+   "audio/praise/all05.mp3",
+   "audio/praise/all06.mp3"
+  ],
+  "repeat": [
+   "audio/praise/repeat01.mp3",
+   "audio/praise/repeat02.mp3",
+   "audio/praise/repeat03.mp3",
+   "audio/praise/repeat04.mp3",
+   "audio/praise/repeat05.mp3",
+   "audio/praise/repeat06.mp3"
+  ],
+  "round": [
+   "audio/praise/round01.mp3",
+   "audio/praise/round02.mp3",
+   "audio/praise/round03.mp3",
+   "audio/praise/round04.mp3",
+   "audio/praise/round05.mp3",
+   "audio/praise/round06.mp3"
+  ],
+  "encourage": [
+   "audio/praise/encourage01.mp3",
+   "audio/praise/encourage02.mp3",
+   "audio/praise/encourage03.mp3",
+   "audio/praise/encourage04.mp3",
+   "audio/praise/encourage05.mp3",
+   "audio/praise/encourage06.mp3"
+  ],
+  "gift": [
+   "audio/praise/gift01.mp3",
+   "audio/praise/gift02.mp3",
+   "audio/praise/gift03.mp3"
+  ],
+  "shiny": [
+   "audio/praise/shiny01.mp3",
+   "audio/praise/shiny02.mp3"
+  ]
+ },
+ "repeat_audio": {
+  "intro": [
+   "audio/repeat/rp_intro1.mp3",
+   "audio/repeat/rp_intro2.mp3",
+   "audio/repeat/rp_intro3.mp3"
+  ],
+  "louder": [
+   "audio/repeat/rp_louder1.mp3",
+   "audio/repeat/rp_louder2.mp3"
+  ],
+  "again": [
+   "audio/repeat/rp_again1.mp3",
+   "audio/repeat/rp_again2.mp3"
+  ],
+  "skip": [
+   "audio/repeat/rp_skip1.mp3"
+  ],
+  "tap": [
+   "audio/repeat/rp_tap1.mp3"
+  ],
+  "mic": [
+   "audio/repeat/rp_mic1.mp3"
+  ],
+  "exact": [
+   "audio/repeat/rp_exact1.mp3",
+   "audio/repeat/rp_exact2.mp3"
+  ]
+ },
+ "sfx": {
+  "sparkle": "audio/sfx/sparkle.mp3",
+  "cheer": "audio/sfx/cheer.mp3",
+  "big": "audio/sfx/big.mp3",
+  "chest": "audio/sfx/chest.mp3"
+ },
+ "sticker_set": [
+  {
+   "id": "cat",
+   "name": "小猫",
+   "kind": "animal",
+   "img": "img/stickers/cat.webp",
+   "shiny": false
+  },
+  {
+   "id": "puppy",
+   "name": "小狗",
+   "kind": "animal",
+   "img": "img/stickers/puppy.webp",
+   "shiny": false
+  },
+  {
+   "id": "panda",
+   "name": "熊猫",
+   "kind": "animal",
+   "img": "img/stickers/panda.webp",
+   "shiny": true
+  },
+  {
+   "id": "bunny",
+   "name": "小兔",
+   "kind": "animal",
+   "img": "img/stickers/bunny.webp",
+   "shiny": false
+  },
+  {
+   "id": "fox",
+   "name": "狐狸",
+   "kind": "animal",
+   "img": "img/stickers/fox.webp",
+   "shiny": false
+  },
+  {
+   "id": "owl",
+   "name": "猫头鹰",
+   "kind": "animal",
+   "img": "img/stickers/owl.webp",
+   "shiny": false
+  },
+  {
+   "id": "penguin",
+   "name": "企鹅",
+   "kind": "animal",
+   "img": "img/stickers/penguin.webp",
+   "shiny": false
+  },
+  {
+   "id": "lion",
+   "name": "狮子",
+   "kind": "animal",
+   "img": "img/stickers/lion.webp",
+   "shiny": true
+  },
+  {
+   "id": "elephant",
+   "name": "大象",
+   "kind": "animal",
+   "img": "img/stickers/elephant.webp",
+   "shiny": false
+  },
+  {
+   "id": "frog",
+   "name": "青蛙",
+   "kind": "animal",
+   "img": "img/stickers/frog.webp",
+   "shiny": false
+  },
+  {
+   "id": "duck",
+   "name": "小鸭",
+   "kind": "animal",
+   "img": "img/stickers/duck.webp",
+   "shiny": false
+  },
+  {
+   "id": "bear",
+   "name": "小熊",
+   "kind": "animal",
+   "img": "img/stickers/bear.webp",
+   "shiny": false
+  },
+  {
+   "id": "monkey",
+   "name": "猴子",
+   "kind": "animal",
+   "img": "img/stickers/monkey.webp",
+   "shiny": false
+  },
+  {
+   "id": "tiger",
+   "name": "小老虎",
+   "kind": "animal",
+   "img": "img/stickers/tiger.webp",
+   "shiny": false
+  },
+  {
+   "id": "koala",
+   "name": "考拉",
+   "kind": "animal",
+   "img": "img/stickers/koala.webp",
+   "shiny": false
+  },
+  {
+   "id": "whale",
+   "name": "鲸鱼",
+   "kind": "animal",
+   "img": "img/stickers/whale.webp",
+   "shiny": true
+  },
+  {
+   "id": "apple",
+   "name": "苹果",
+   "kind": "thing",
+   "img": "img/stickers/apple.webp",
+   "shiny": false
+  },
+  {
+   "id": "banana",
+   "name": "香蕉",
+   "kind": "thing",
+   "img": "img/stickers/banana.webp",
+   "shiny": false
+  },
+  {
+   "id": "strawberry",
+   "name": "草莓",
+   "kind": "thing",
+   "img": "img/stickers/strawberry.webp",
+   "shiny": false
+  },
+  {
+   "id": "watermelon",
+   "name": "西瓜",
+   "kind": "thing",
+   "img": "img/stickers/watermelon.webp",
+   "shiny": false
+  },
+  {
+   "id": "icecream",
+   "name": "冰淇淋",
+   "kind": "thing",
+   "img": "img/stickers/icecream.webp",
+   "shiny": false
+  },
+  {
+   "id": "cupcake",
+   "name": "纸杯蛋糕",
+   "kind": "thing",
+   "img": "img/stickers/cupcake.webp",
+   "shiny": false
+  },
+  {
+   "id": "donut",
+   "name": "甜甜圈",
+   "kind": "thing",
+   "img": "img/stickers/donut.webp",
+   "shiny": false
+  },
+  {
+   "id": "carrot",
+   "name": "胡萝卜",
+   "kind": "thing",
+   "img": "img/stickers/carrot.webp",
+   "shiny": false
+  },
+  {
+   "id": "rocket",
+   "name": "火箭",
+   "kind": "thing",
+   "img": "img/stickers/rocket.webp",
+   "shiny": true
+  },
+  {
+   "id": "rainbow",
+   "name": "彩虹",
+   "kind": "thing",
+   "img": "img/stickers/rainbow.webp",
+   "shiny": true
+  },
+  {
+   "id": "star",
+   "name": "星星",
+   "kind": "thing",
+   "img": "img/stickers/star.webp",
+   "shiny": false
+  },
+  {
+   "id": "sun",
+   "name": "太阳",
+   "kind": "thing",
+   "img": "img/stickers/sun.webp",
+   "shiny": false
+  },
+  {
+   "id": "moon",
+   "name": "月亮",
+   "kind": "thing",
+   "img": "img/stickers/moon.webp",
+   "shiny": false
+  },
+  {
+   "id": "cloud",
+   "name": "云朵",
+   "kind": "thing",
+   "img": "img/stickers/cloud.webp",
+   "shiny": false
+  },
+  {
+   "id": "balloon",
+   "name": "气球",
+   "kind": "thing",
+   "img": "img/stickers/balloon.webp",
+   "shiny": false
+  },
+  {
+   "id": "crown",
+   "name": "皇冠",
+   "kind": "thing",
+   "img": "img/stickers/crown.webp",
+   "shiny": true
+  }
+ ]
 }
