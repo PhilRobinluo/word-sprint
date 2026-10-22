@@ -21,6 +21,18 @@ html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-fa
 body{background:radial-gradient(600px 400px at 110% -10%,#FFE2C2 0,transparent 60%),radial-gradient(500px 380px at -20% 110%,#DCEBFF 0,transparent 60%),var(--bg);background-attachment:fixed;-webkit-user-select:none;user-select:none}
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;touch-action:manipulation}
 button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+/* 回主页：除登录页和主页外始终固定在左上角，比视频弹窗还靠上 */
+.homefab{position:fixed;z-index:95;top:max(10px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));width:64px;height:64px;border-radius:20px;background:#fff;border:3px solid #FFD2BD;box-shadow:0 4px 0 #F5C3AA,0 8px 18px rgba(60,30,10,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;color:#E2552B;font-weight:900;font-size:13px;line-height:1.1;transition:transform .12s}
+.homefab svg{width:32px;height:32px}
+.homefab:active{transform:translateY(3px);box-shadow:0 1px 0 #F5C3AA}
+.homefab[hidden]{display:none}
+body.hasfab .app>.screen>.top:first-child{padding-left:70px}
+@media (max-width:520px){ /* 手机竖屏：给左上角按钮让位，轮次条只写当前这一轮，其余缩成小圆点 */
+  body.hasfab .top .passbar span:not(.on){font-size:0;padding:0;width:12px;height:12px;border-radius:50%;background:#EADBC5;box-shadow:none}
+  body.hasfab .top .passbar span.done:not(.on){background:var(--yellow)}
+  body.hasfab .top .passbar i{width:6px}
+  body.hasfab .top .pill{padding:0 10px;height:46px}
+}
 [tabindex="-1"]:focus{outline:none}
 .app{max-width:560px;margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom));min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 .top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;margin-bottom:10px}
@@ -431,9 +443,10 @@ function blendUnlocked(p, b){ return (b.letters || []).every(l => p.items['L-' +
 function nextSession(){
   const p = P(), t = today(), size = p.settings.size || 0;
   if (p.override && p.override.ids && p.override.ids.length) return { kind: 'pick', ids: p.override.ids.filter(it).slice(0, 8), station: it(p.override.ids[0])?.type || 'word' };
-  const due = dueIds(p, t).sort((a, b) => (p.items[a].state === 'miss' ? 0 : 1) - (p.items[b].state === 'miss' ? 0 : 1) || (p.items[a].due < p.items[b].due ? -1 : 1));
+  const weak = id => p.items[id].state !== 'ok';   // 错题和中途离开没考完的，先看卡再考
+  const due = dueIds(p, t).sort((a, b) => (weak(a) ? 0 : 1) - (weak(b) ? 0 : 1) || (p.items[a].due < p.items[b].due ? -1 : 1));
   const reviewedToday = (p.sessions || []).some(s => s.kind === 'review' && (s.day || (s.at || '').slice(0, 10)) === t);
-  if (due.length && (!reviewedToday || p.items[due[0]].state === 'miss')) { const ids = due.slice(0, size || 5); return { kind: 'review', ids, learnN: ids.filter(id => p.items[id].state === 'miss').length, station: 'review' }; }
+  if (due.length && (!reviewedToday || weak(due[0]))) { const ids = due.slice(0, size || 5); return { kind: 'review', ids, learnN: ids.filter(weak).length, station: 'review' }; }
   for (const st of buildPath(p.settings.grade)) {
     let fresh = st.ids.filter(id => !p.items[id] && it(id));
     if (st.station === 'blend') fresh = fresh.filter(id => blendUnlocked(p, it(id).d));
@@ -508,14 +521,67 @@ function syncCard(card, cues){
 }
 
 /* ---------- 屏幕 ---------- */
-let S = null;
+let S = null, ROUTE = 'home';
 function show(html, cls = ''){
-  clearTimers(); hush(); closeVideo();
+  clearTimers(); hush(); closeVideo(true);
+  const key = cls === 'gate' ? null : S ? 'session' : ROUTE;
+  homeFab(key && key !== 'home');
   document.querySelectorAll('.tapme').forEach(e => e.remove());
   $app.innerHTML = `<section class="screen ${cls}">${html}</section>`;
   const h = $app.querySelector('[data-focus]'); if (h) h.focus({ preventScroll: true });
   window.scrollTo(0, 0);
+  if (key) syncRoute(key); else HIST = [];
 }
+/* ---------- 回主页按钮 + 返回键 ----------
+   HIST 记着本页面压进浏览器历史的每一层（home / module:x / browse:x / parent / session / video），
+   手机或浏览器的返回键退回上一层；点「回主页」直接退到最底层。 */
+let HIST = [], HNONCE = 0, POPSKIP = 0;
+const LASTBR = {};
+function syncRoute(key){
+  const top = HIST.length - 1;
+  if (top >= 0 && HIST[top] === key) return;
+  try {
+    if (top < 0) { HNONCE = Date.now(); history.replaceState({ rb: 0, n: HNONCE }, ''); HIST = [key]; return; }
+    const j = HIST.lastIndexOf(key);
+    if (j >= 0) { HIST.length = j + 1; POPSKIP++; history.go(j - top); return; }
+    history.pushState({ rb: HIST.length, n: HNONCE }, ''); HIST.push(key);
+  } catch (e) {}
+}
+let FAB = null;
+function homeFab(on){
+  if (!FAB) {
+    FAB = document.createElement('button'); FAB.id = 'homefab'; FAB.className = 'homefab'; FAB.type = 'button'; FAB.setAttribute('aria-label', '回主页');
+    FAB.innerHTML = ICON.home.replace('#F2643A', '#E2552B') + '<span>主页</span>';
+    FAB.addEventListener('click', goHome);
+    document.body.appendChild(FAB);
+  }
+  FAB.hidden = !on; document.body.classList.toggle('hasfab', !!on);
+}
+// 中途离开：把已经看过的新卡记成「学过」（今天进复习），测验没答完的不算错
+function savePartial(){
+  if (!S || S.trial || S.phase === 'result' || !S.ids) return;
+  const seen = S.phase === 'learn' && !S.relink ? S.ids.slice(0, Math.min(S.learnN, S.i + (S.cardStarted ? 1 : 0))) : S.ids.slice(0, S.learnN);
+  const p = P(), t = today(), fresh = seen.filter(id => !p.items[id] && it(id));
+  if (fresh.length) setP(q => { fresh.forEach(id => { if (!q.items[id]) q.items[id] = { n: 0, first: t, last: t, state: 'seen', box: 0, due: t, misses: 0 }; }); });
+}
+function leaveSession(){ savePartial(); hush(); closeVideo(true); }
+function goHome(){ leaveSession(); renderHome(); if (typeof syncSoon === 'function') syncSoon(800); }
+window.addEventListener('popstate', e => {
+  if (POPSKIP > 0) { POPSKIP--; return; }
+  if (!HIST.length) return;   // 登录页
+  const st = e.state;
+  if (!st || st.n !== HNONCE || !(st.rb < HIST.length)) { leaveSession(); HIST = []; renderHome(); return; }
+  const key = HIST[st.rb]; HIST.length = st.rb + 1;
+  const hadVideo = !!document.querySelector('.modal');
+  closeVideo(true);
+  if (key === 'session' && S) { if (!hadVideo) { leaveSession(); renderHome(); } return; }
+  leaveSession();
+  if (key.startsWith('module:')) renderModule(key.slice(7));
+  else if (key.startsWith('browse:')) renderBrowse(key.slice(7), LASTBR[key.slice(7)] || 0);
+  else if (key === 'parent') renderParent();
+  else renderHome();
+});
+window.addEventListener('pagehide', savePartial);
 function muteBtn(){ const m = muted(); return `<button class="ib ${m ? 'off' : ''}" data-act="mute" aria-label="${m ? '打开声音' : '关掉声音'}">${m ? ICON.mute : ICON.speaker}</button>`; }
 function topbar(mid = ''){
   const p = P();
@@ -531,7 +597,7 @@ function dots(){ if (!S) return ''; const list = S.phase === 'learn' && !S.relin
 
 /* 首页 */
 function renderHome(){
-  S = null;
+  S = null; ROUTE = 'home';
   const p = P(), st = stationStats(p), nx = nextSession();
   const cur = nx.station;
   const order = ['review', 'letter', 'blend', 'word'];
@@ -819,7 +885,7 @@ function cellHTML(id, p, nextSet){
   return `<button class="icell ${nextSet.has(id) ? 'next' : ''}" data-act="learnone" data-id="${esc(id)}" aria-label="学 ${esc(label(x))}">${mark}${face}</button>`;
 }
 function renderModule(m){
-  S = null; BR = null;
+  S = null; BR = null; ROUTE = 'module:' + m;
   const p = P(), st = stationStats(p)[m], ids = modIds(m), nx = modNext(m), nextSet = new Set(nx.fresh ? nx.ids : []);
   const pct = st.total ? Math.round(st.seen / st.total * 100) : 0;
   let grid;
@@ -827,7 +893,7 @@ function renderModule(m){
   else if (m === 'blend') { const vs = ['a', 'e', 'i', 'o', 'u'], by = v => ids.filter(id => (it(id).d.letters || [])[1] === v); const rest = ids.filter(id => !vs.includes((it(id).d.letters || [])[1]));
     grid = vs.map(v => by(v).length ? `<div class="gtitle">短 ${v}</div><div class="igrid">${by(v).map(id => cellHTML(id, p, nextSet)).join('')}</div>` : '').join('') + (rest.length ? `<div class="gtitle">其他</div><div class="igrid">${rest.map(id => cellHTML(id, p, nextSet)).join('')}</div>` : ''); }
   else grid = `<div class="igrid">${ids.map(id => cellHTML(id, p, nextSet)).join('')}</div>`;
-  show(`${topbar(`<button class="ib" data-act="home" aria-label="回首页">${ICON.home}</button>`)}
+  show(`${topbar()}
     <div class="mhead"><div class="ic" aria-hidden="true">${MODS[m].ic}</div><div class="meta"><h1>${MODS[m].name}</h1>
       <div class="prog"><b style="width:${pct}%"></b></div><div class="small" style="font-weight:800">学过 ${st.seen} / ${st.total} · 记住 ${st.ok}</div></div></div>
     <div class="mact"><button class="btn primary" data-act="modgo" data-m="${m}">${ICON.play.replace('<svg', '<svg width="26" height="26"')}${nx.fresh ? '学新的 ' + nx.ids.length + ' 个' : '随机练练'}</button>
@@ -841,7 +907,7 @@ function renderModule(m){
 let BR = null;
 function renderBrowse(m, i = 0, dir = 0){
   const ids = modIds(m).filter(it); i = Math.max(0, Math.min(ids.length - 1, i));
-  BR = { m, ids, i }; S = null;
+  BR = { m, ids, i }; S = null; ROUTE = 'browse:' + m; LASTBR[m] = i;
   const x = it(ids[i]), saveS = S; S = { trial: true };
   let card = learnCard(x, false); S = saveS;
   card = card.replace(/<div class="ctrl">[\s\S]*?<\/div>\s*<\/div>$/, '</div>').replace('class="card learn', `class="card learn ${dir > 0 ? 'fl' : dir < 0 ? 'fr' : ''}`);
@@ -861,17 +927,21 @@ document.addEventListener('keydown', e => { if (!BR || !$app.querySelector('.scr
 
 /* ---------- 视频弹窗 ---------- */
 function openVideo(src){
-  hush(); closeVideo();
+  hush(); closeVideo(true);
   const m = document.createElement('div'); m.className = 'modal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-label', '看动画');
   m.innerHTML = `<video src="${esc(src)}" playsinline controls autoplay preload="auto"></video><button class="x" aria-label="关掉">✕</button>`;
   document.body.appendChild(m);
   const v = m.querySelector('video'); v.muted = muted();
-  m.querySelector('.x').onclick = closeVideo;
+  m.querySelector('.x').onclick = () => closeVideo();
   m.addEventListener('click', e => { if (e.target === m) closeVideo(); });
-  v.addEventListener('ended', () => setTimeout(closeVideo, 600));
+  v.addEventListener('ended', () => setTimeout(() => { if (m.isConnected) closeVideo(); }, 600));
   try { const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); } catch (e) {}
+  syncRoute('video');   // 返回键先关动画
 }
-function closeVideo(){ document.querySelectorAll('.modal').forEach(m => { const v = m.querySelector('video'); if (v) { try { v.pause(); } catch (e) {} v.removeAttribute('src'); } m.remove(); }); if (S && S.phase === 'learn') enableNext(); }
+function closeVideo(quiet){
+  const open = document.querySelector('.modal');
+  if (open && !quiet && HIST[HIST.length - 1] === 'video') { HIST.pop(); POPSKIP++; try { history.back(); } catch (e) { POPSKIP--; } }
+  document.querySelectorAll('.modal').forEach(m => { const v = m.querySelector('video'); if (v) { try { v.pause(); } catch (e) {} v.removeAttribute('src'); } m.remove(); }); if (S && S.phase === 'learn') enableNext(); }
 
 /* ---------- 家长 / 老师 ---------- */
 let PTAB = 'progress', PICKF = 'letter', PICKSEL = [];
@@ -896,7 +966,7 @@ function weekly(p){
     <span>本周容易错</span><b>${hard.length ? hard.map(([id, n]) => esc(label(it(id))) + (n > 1 ? '×' + n : '')).join('、') : '没有'}</b></div></div>`;
 }
 function renderParent(){
-  S = null; hush();
+  S = null; hush(); ROUTE = 'parent';
   const p = P();
   const tabs = [['progress', '进度'], ['pick', '选内容'], ['trial', '10 秒测试'], ['content', '内容审稿']].map(([k, n]) => `<button class="${PTAB === k ? 'on' : ''}" data-ptab="${k}">${n}</button>`).join('');
   let body = '';
@@ -969,7 +1039,7 @@ function renderParent(){
       <div class="panel"><h2>声音来源与许可（credits）</h2><p class="small">字母音、中文旁白和英文播报全部由 Microsoft Edge 在线语音合成（edge-tts；英文 en-US-AnaNeural，中文 zh-CN-XiaoxiaoNeural）。字母单音从完整单词里截取，并统一响度；不再使用以前的 IPA 示例录音。</p><div class="credits"><table><thead><tr><th>音</th><th>来源</th><th>许可</th><th>作者</th></tr></thead><tbody>${credits}</tbody></table></div></div>
       <p class="small">内容版本 ${esc(C.version)} · 读取自 ${esc(C._from)}</p>`;
   }
-  show(`<div class="top"><button class="btn ghost sm" data-act="home">← 回孩子页</button><b>家长 / 老师</b>${muteBtn()}</div>
+  show(`<div class="top"><b>家长 / 老师</b>${muteBtn()}</div>
     <div class="tabs">${tabs}</div>${body}`, 'narrow');
 }
 
@@ -1035,7 +1105,7 @@ $app.addEventListener('click', e => {
     case 'passgo': renderQuiz(); break;
     case 'home': if (S && S.from && S.phase === 'result') { const m = S.from; renderModule(m); } else renderHome(); break;
     case 'module': hush(); renderModule(b.dataset.m); break;
-    case 'quit': { const m = S && S.from; hush(); renderModule(m || 'word'); break; }
+    case 'quit': { const m = S && S.from; leaveSession(); renderModule(m || 'word'); break; }
     case 'modgo': { unlockAudio(); const m = b.dataset.m; startSession({ ...modNext(m), from: m }); break; }
     case 'learnone': { unlockAudio(); const m = BR ? BR.m : ($app.querySelector('.screen.module [data-act=modgo]') || {}).dataset?.m; const id = b.dataset.id; BR = null; startSession({ kind: 'choose', ids: [id], from: m || it(id).type }); break; }
     case 'browse': unlockAudio(); renderBrowse(b.dataset.m, 0); break;
@@ -1087,6 +1157,7 @@ function confetti(n = 160){
 const API_WORKERS = 'https://rightbrain-api.philrobin-cloud-mail.workers.dev';
 const API = location.hostname === 'word.luolaoshi.club' ? location.origin + '/api' : (QS.get('api') === 'home' ? 'https://word.luolaoshi.club/api' : API_WORKERS);
 const API_HOME = API;
+const SAME_ORIGIN_API = location.hostname === 'word.luolaoshi.club';
 const UKEY = 'rbw.auth.v1', DKEY = 'rbw.device.v1', GRACE = 7 * 864e5;
 const OLD_AKEY = 'rbw.access.v1';
 function deviceId(){
@@ -1107,6 +1178,8 @@ async function apiCall(path, data, method){
   let j = null; try { j = await r.json(); } catch (e) {}
   if (!j) throw Object.assign(new Error('offline'), { offline: true });
   if (!j.ok) throw Object.assign(new Error(j.message || '出错了'), { code: j.error, status: r.status });
+  // 滑动续期：服务器换了新 token（365 天）就存下来，同一设备一直不用重新登录
+  if (j.token && !/^\/auth\//.test(path)) { const x = auth(); if (x && x.token) { x.token = j.token; save(UKEY, x); } }
   return j;
 }
 const apiPost = (path, data) => apiCall(path, data || {});
@@ -1143,7 +1216,7 @@ function renderAuth(msg = '', mode = 'login', info = false){
         <p class="gatemsg ${info ? 'info' : ''}" id="gatemsg" role="alert">${esc(msg)}</p>
       </form>
     </div>
-    <p class="gatehelp">${reg ? '注册后输入老师发的兑换码，就能开始学习。<br>换手机、换平板时用同一个账号登录，进度会自动同步。' : '还没有账号？点上面的 <b>注册新账号</b>。<br>忘记密码可以联系老师重设一个临时密码。'}</p>`, 'gate');
+    <p class="gatehelp">${reg ? '注册后输入老师发的兑换码，就能开始学习。<br>换手机、换平板时用同一个账号登录，进度会自动同步。' : '登录一次，这台设备 <b>一年内</b> 打开就能直接学，不用再登录。<br>还没有账号？点上面的 <b>注册新账号</b>。忘记密码可以联系老师重设。'}</p>`, 'gate');
   document.querySelectorAll('[data-auth]').forEach(b => b.onclick = () => renderAuth('', b.dataset.auth));
   const f = document.getElementById('authform'), m = document.getElementById('gatemsg'), btn = document.getElementById('aubtn');
   const L = document.getElementById('aulogin'), W = document.getElementById('aupw'), N = document.getElementById('aunick'), G = document.getElementById('augrade');
@@ -1242,14 +1315,19 @@ async function afterLogin(interactive){
 }
 async function checkAccess(){
   localStorage.removeItem(OLD_AKEY);   // 旧版“只用兑换码”的登录状态不再使用
-  const a = auth();
-  if (!a || !a.token) return renderAuth();
+  let a = auth();
+  if (!a || !a.token) {
+    // 本机记录被清掉（例如浏览器清理了存储）：同域时用服务器的登录 cookie 自动恢复，不用重新输密码
+    if (!SAME_ORIGIN_API) return renderAuth();
+    try { const j = await apiCall('/me'); if (!j.token) return renderAuth(); saveMe(j, j.token); a = auth(); }
+    catch (e) { return renderAuth(); }
+  }
   const now = Date.now();
   const okLocal = a.ent && a.ent.active && Date.parse(a.ent.expires_at) > now && now - (a.lastOk || 0) < GRACE;
   if (okLocal) startApp();
   try {
     const j = await apiCall('/me');
-    const n = saveMe(j);
+    const n = saveMe(j, j.token);
     if (!n.ent.active) { started = false; return renderGate(n.ent.codes.length ? '学习期已结束，请输入新的兑换码续期' : '', n.ent.codes.length > 0); }
     await pullProgress();
     if (!okLocal) startApp(); else if (S == null && !document.querySelector('.modal') && document.querySelector('.parentbtn')) renderHome();
@@ -1282,7 +1360,7 @@ async function syncNow(){
 }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && syncT) { clearTimeout(syncT); syncNow(); } });
 function reportUrl(){ const a = auth(); return a && a.rk ? API_HOME + '/report?format=html&r=' + encodeURIComponent(a.rk) : ''; }
-function logout(){ syncNow(); localStorage.removeItem(UKEY); const p = load(KEY, null); if (p && p.owner) localStorage.removeItem(KEY); S = null; renderAuth('已退出。学习记录保存在账号里，下次登录会自动恢复。', 'login', true); }
+function logout(){ syncNow(); apiPost('/auth/logout').catch(() => {}); localStorage.removeItem(UKEY); const p = load(KEY, null); if (p && p.owner) localStorage.removeItem(KEY); S = null; renderAuth('已退出。学习记录保存在账号里，下次登录会自动恢复。', 'login', true); }
 
 /* ---------- 启动 ---------- */
 loadContent().then(checkAccess).catch(err => { $app.innerHTML = '<p style="padding:20px">内容没加载出来：' + esc(err && err.message) + '</p>'; });
