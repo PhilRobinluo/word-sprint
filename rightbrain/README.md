@@ -24,6 +24,12 @@
 - **安卓 App**：https://word.luolaoshi.club/admin/rightbrain-admin.apk （WebView 外壳，内容远程加载；源码和签名说明在 rightbrain-api/android，不在本仓库）。
 - 部署：照旧把本目录拷到 Mac `~/rightbrain-api/site/` 再 `npx wrangler deploy`。本目录的 `sw.js` 已盖好版本号（源码里是模板，用 `tools/stamp_sw.py` 按页面和媒体文件内容生成），每次改页面都要重新盖，否则老用户不会自动更新。
 
+## 2026-10-22 第二批（标「待审」的请 Phil 过目）
+
+- **字母只读字母名**：A /eɪ/、B /biː/ … W /ˈdʌbəl.juː/、Z /ziː/，不再读拼读音。点字母听发音 / 字母卡 / 测验题干 / 字母动画旁白都改了；组合改成「字母名 + 关键词」（如 “A, apple”）；拼读音只留在「拼读小词」。生成：`tools/make_letter_names.py`（en-US-AnaNeural，按英文拼写 "bee" "see" … 念；A / H / I 改用 "A." "H!" "I!"，因为 "ay" 会被念成 /aɪ/），去首尾静音、-16 LUFS；本地 faster-whisper 回听结果在 `content/letter_names_check.json`。26 个字母动画按新旁白重做。试听页：`/preview/letters.html`（免登录）。**待审**。
+- **字母 p 新插图**：`img/letters/p.webp`（36 KB，去掉奶油底色）。来源：box 上的 AI 生图，Phil 已选定第 3 版（原图 `content/art-candidates/p-bubble-3.jpg`）。p 的动画重做：大泡泡从圈里慢慢吹出来、变大、飘走。**待审**。
+- **错了就重教**：任何一轮（第1/2轮、综合测试、复习、一键开始）答错 → 温和鼓励 →「这个我们再学一遍」重看卡片和讲解 → 换题型再考，答对才算过；一轮结束时错过的词整体再考一遍（「还差 N 个要再练一下」），全对才进下一轮（最多补考 2 次）；一轮错一半以上整轮重学；同一个词连错 3 次给提示（只剩 2 个选项、正确答案发光），记为薄弱词（家长页可见，当天和下次复习优先），靠提示答对不算「记住」。新语音 relearn / hintme / redo / redook / passrelearn **待审**。
+
 ## 内容
 - 字母小乐园：26 个字母，按 phonics 顺序分 4 组（s a t p i n / c k e h r m d / g o u l f b / j z w v y x q）。每个字母有名称、真实拼读音（可点 🔊 再听）、形状故事、中文发音提示和一个看动画按钮。
 - 拼读小词：40 个 CVC 词，5 个短元音都覆盖。学完相应字母组后才解锁。每个词有插图、拼读播报（c · a · t → cat）和拼读动画。

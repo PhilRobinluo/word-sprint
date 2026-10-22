@@ -1,10 +1,10 @@
 // 右脑记单词 · 离线秒开（service worker）
 // 页面：先走网络（3 秒没回就用缓存），保证总是新版；音频 / 动画 / 图片：先用缓存，没有再下载并存起来。
 // 不碰 /api、/admin、报告页、跨域请求 —— 登录状态和学习记录永远直接走服务器。
-const VERSION = 'af4d5dbdda';          // tools/stamp_sw.py 按页面内容自动生成
-const MEDIA_VERSION = '7728d8fe2c';      // 按音视频/图片文件清单生成：文件不变，缓存就一直留着
+const VERSION = '2bd6d302e1';          // tools/stamp_sw.py 按页面内容自动生成
+const MEDIA_VERSION = 'd56f0a1b1d';      // 按音视频/图片文件清单生成：文件不变，缓存就一直留着
 const CORE = 'rb-core-' + VERSION, MEDIA = 'rb-media-' + MEDIA_VERSION;
-const PRECACHE = {"core": ["./", "manifest.webmanifest"], "media": ["assets/wechat-qr.png", "audio/ui/again.mp3", "audio/ui/allright.mp3", "audio/ui/close.mp3", "audio/ui/done.mp3", "audio/ui/great1.mp3", "audio/ui/great2.mp3", "audio/ui/great3.mp3", "audio/ui/hello.mp3", "audio/ui/letterq.mp3", "audio/ui/limit.mp3", "audio/ui/next.mp3", "audio/ui/notyet.mp3", "audio/ui/p2case.mp3", "audio/ui/p2miss.mp3", "audio/ui/p2pic.mp3", "audio/ui/p3again.mp3", "audio/ui/p3done.mp3", "audio/ui/pass.mp3", "audio/ui/pass2.mp3", "audio/ui/pass3.mp3", "audio/ui/rest.mp3", "audio/ui/rest_done.mp3", "audio/ui/retry.mp3", "audio/ui/review.mp3", "audio/ui/reviewdone.mp3", "audio/ui/rounddone.mp3", "audio/ui/roundnext.mp3", "audio/ui/soundq.mp3", "audio/ui/start.mp3", "audio/ui/sticker.mp3", "audio/ui/tryok.mp3", "audio/ui/which.mp3", "icons/apple-touch-icon.png", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png"]};
+const PRECACHE = {"core": ["./", "manifest.webmanifest"], "media": ["assets/wechat-qr.png", "audio/ui/again.mp3", "audio/ui/allright.mp3", "audio/ui/close.mp3", "audio/ui/done.mp3", "audio/ui/great1.mp3", "audio/ui/great2.mp3", "audio/ui/great3.mp3", "audio/ui/hello.mp3", "audio/ui/hintme.mp3", "audio/ui/letterq.mp3", "audio/ui/limit.mp3", "audio/ui/next.mp3", "audio/ui/notyet.mp3", "audio/ui/p2case.mp3", "audio/ui/p2miss.mp3", "audio/ui/p2pic.mp3", "audio/ui/p3again.mp3", "audio/ui/p3done.mp3", "audio/ui/pass.mp3", "audio/ui/pass2.mp3", "audio/ui/pass3.mp3", "audio/ui/passrelearn.mp3", "audio/ui/redo.mp3", "audio/ui/redook.mp3", "audio/ui/relearn.mp3", "audio/ui/rest.mp3", "audio/ui/rest_done.mp3", "audio/ui/retry.mp3", "audio/ui/review.mp3", "audio/ui/reviewdone.mp3", "audio/ui/rounddone.mp3", "audio/ui/roundnext.mp3", "audio/ui/soundq.mp3", "audio/ui/start.mp3", "audio/ui/sticker.mp3", "audio/ui/tryok.mp3", "audio/ui/which.mp3", "icons/apple-touch-icon.png", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png"]};
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CORE).then(c => c.addAll(PRECACHE.core)).then(() => caches.open(MEDIA)).then(c => Promise.all(PRECACHE.media.map(u => c.match(u).then(hit => hit || c.add(u).catch(() => {}))))).then(() => self.skipWaiting()));
 });

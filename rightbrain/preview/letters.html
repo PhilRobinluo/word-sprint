@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>字母名试听（待审）· 右脑记单词</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#F6EEDC;--paper:#FFF9EE;--ink:#3D3229;--muted:#6F6253;--line:#E7D9C1}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 -apple-system,"PingFang SC","Noto Sans SC",sans-serif;padding:16px 14px 40px}
+h1{font-size:24px;margin:4px 0 2px}p{margin:4px 0 10px;color:var(--muted)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.bar button{font:inherit;font-weight:800;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
+.bar button.on{background:#2F5DA8;border-color:#2F5DA8;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+.k{position:relative;border:0;border-radius:20px;background:var(--paper);box-shadow:0 3px 0 var(--line);padding:10px 4px 8px;cursor:pointer;color:var(--ink);font:inherit;text-align:center;transition:transform .12s}
+.k:active,.k.play{transform:scale(.94)}.k.play{outline:4px solid #FFC93C}
+.k b{display:block;font:900 46px/1 "Fredoka","Arial Rounded MT Bold",system-ui,sans-serif}
+.k b small{font-size:30px;opacity:.75;margin-left:2px}
+.k i{display:block;font-style:normal;font-size:15px;color:var(--muted);font-family:"DejaVu Sans","Lucida Sans Unicode",sans-serif}
+.k em{display:block;font-style:normal;font-size:13px;color:var(--muted)}
+.k .st{position:absolute;top:6px;right:8px;font-size:12px}
+.note{margin-top:18px;background:var(--paper);border-radius:16px;padding:12px 14px;font-size:15px;color:var(--muted)}
+.note b{color:var(--ink)}
+</style></head><body>
+<h1>🔤 字母名试听 <span style="font-size:15px;color:#B5651D">待审</span></h1>
+<p>点一个字母就读。现在网站里「点字母听发音」、字母卡、字母测验题干、字母动画里单独念字母，用的都是这里的读音（只读字母名，不读拼读音）。</p>
+<div class="bar" role="group" aria-label="听哪一种">
+  <button class="on" data-m="name">只读字母名</button><button data-m="say">字母名 + 关键词</button><button data-m="all">▶ 26 个连着听</button>
+</div>
+<div class="grid" id="g"></div>
+<div class="note" id="note"></div>
+<script>
+const L = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const IPA = ['/eɪ/','/biː/','/siː/','/diː/','/iː/','/ɛf/','/dʒiː/','/eɪtʃ/','/aɪ/','/dʒeɪ/','/keɪ/','/ɛl/','/ɛm/','/ɛn/','/oʊ/','/piː/','/kjuː/','/ɑːr/','/ɛs/','/tiː/','/juː/','/viː/','/ˈdʌbəl.juː/','/ɛks/','/waɪ/','/ziː/'];
+const KW = {};
+let mode = 'name', CHECK = {};
+const a = new Audio(); a.preload = 'auto';
+const g = document.getElementById('g');
+g.innerHTML = L.map((c, k) => `<button class="k" data-c="${c}" aria-label="${c.toUpperCase()}"><span class="st" data-st="${c}"></span><b>${c.toUpperCase()}<small>${c}</small></b><i>${IPA[k]}</i><em data-kw="${c}"></em></button>`).join('');
+function src(c){ return mode === 'say' ? `../audio/lsay/${c}.mp3` : `../audio/en/L-${c}.mp3`; }
+function play(c){ return new Promise(r => { document.querySelectorAll('.k.play').forEach(e => e.classList.remove('play')); const b = g.querySelector(`[data-c="${c}"]`); b.classList.add('play'); a.src = src(c) + '?v=2'; a.onended = a.onerror = () => { b.classList.remove('play'); r(); }; a.play().catch(r); }); }
+let run = 0;
+g.addEventListener('click', e => { const b = e.target.closest('.k'); if (b) { run++; play(b.dataset.c); } });
+document.querySelector('.bar').addEventListener('click', async e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.m === 'all') { const me = ++run; for (const c of L) { if (me !== run) return; await play(c); await new Promise(r => setTimeout(r, 450)); } return; }
+  mode = b.dataset.m; document.querySelectorAll('.bar button[data-m=name],.bar button[data-m=say]').forEach(x => x.classList.toggle('on', x === b));
+});
+fetch('../content/letter_names_check.json').then(r => r.json()).then(j => {
+  let ok = 0;
+  j.results.forEach(x => { const c = x.letter.toLowerCase(); CHECK[c] = x; if (x.name_ok) ok++; const s = document.querySelector(`[data-st="${c}"]`); s.textContent = x.name_ok ? '✓' : '?'; s.title = '机器听成：' + x.heard.join(' / '); });
+  document.getElementById('note').innerHTML = `<b>机器回听核对</b>（本地 whisper ${j.model}，三种听法任一听成该字母名即 ✓）：${ok}/26 通过。标「?」的是童声短音机器不好认（如 Z 常被听成 C、R 听成 Ah），请 Phil 老师亲耳确认；需要换读法或自己录音告诉我们就行。<br>声音：${j.voice}（${j.rate}），统一约 -16 LUFS，已去首尾静音。`;
+}).catch(() => {});
+fetch('../content/words.json').then(r => r.json()).then(C => C.letters.forEach(l => { const e = document.querySelector(`[data-kw="${l.letter}"]`); if (e) e.textContent = l.keyword; })).catch(() => {});
+</script></body></html>

@@ -1,0 +1,397 @@
+{
+ "model": "small.en",
+ "voice": "en-US-AnaNeural",
+ "rate": "-12%",
+ "results": [
+  {
+   "letter": "A",
+   "tts_text": "A.",
+   "ipa": "/eɪ/",
+   "heard": [
+    "Hey!",
+    "Bae, bae, bae.",
+    "Day, day, day."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "Hey, Apple!",
+   "keyword_ok": true,
+   "sec": 0.41,
+   "lufs": -16.5
+  },
+  {
+   "letter": "B",
+   "tts_text": "bee",
+   "ipa": "/biː/",
+   "heard": [
+    "B",
+    "B, B, B.",
+    "B.  B."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "B plus.",
+   "keyword_ok": false,
+   "sec": 0.43,
+   "lufs": -16.7
+  },
+  {
+   "letter": "C",
+   "tts_text": "see",
+   "ipa": "/siː/",
+   "heard": [
+    "See.",
+    "C. C. C.",
+    "See, see, see."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "C cat",
+   "keyword_ok": true,
+   "sec": 0.53,
+   "lufs": -16.6
+  },
+  {
+   "letter": "D",
+   "tts_text": "dee",
+   "ipa": "/diː/",
+   "heard": [
+    "D",
+    "D, D, D.",
+    "d-d-d"
+   ],
+   "name_ok": true,
+   "heard_name_kw": "dee da",
+   "keyword_ok": false,
+   "sec": 0.43,
+   "lufs": -16.6
+  },
+  {
+   "letter": "E",
+   "tts_text": "ee",
+   "ipa": "/iː/",
+   "heard": [
+    "Be.",
+    "EB, EB, EB.",
+    "ee, ee, ee."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "The egg.",
+   "keyword_ok": true,
+   "sec": 0.53,
+   "lufs": -16.7
+  },
+  {
+   "letter": "F",
+   "tts_text": "ef",
+   "ipa": "/ɛf/",
+   "heard": [
+    "EF",
+    "Df, Df, Df",
+    "Df, Df, Df."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "Fish",
+   "keyword_ok": true,
+   "sec": 0.62,
+   "lufs": -16.5
+  },
+  {
+   "letter": "G",
+   "tts_text": "jee",
+   "ipa": "/dʒiː/",
+   "heard": [
+    "G the",
+    "g, g, g.",
+    "qi, qi, qi."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "Gee, go!",
+   "keyword_ok": true,
+   "sec": 0.5,
+   "lufs": -16.4
+  },
+  {
+   "letter": "H",
+   "tts_text": "H!",
+   "ipa": "/eɪtʃ/",
+   "heard": [
+    "Each.",
+    "H. H. H.",
+    "H. H. H."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "each hat.",
+   "keyword_ok": true,
+   "sec": 0.65,
+   "lufs": -16.4
+  },
+  {
+   "letter": "I",
+   "tts_text": "I!",
+   "ipa": "/aɪ/",
+   "heard": [
+    "I",
+    "I  I  I",
+    "Aye, aye, aye."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "I didn't set.",
+   "keyword_ok": false,
+   "sec": 0.41,
+   "lufs": -16.7
+  },
+  {
+   "letter": "J",
+   "tts_text": "jay",
+   "ipa": "/dʒeɪ/",
+   "heard": [
+    "J",
+    "J, J, J.",
+    "J, J, J."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "J. Chat.",
+   "keyword_ok": false,
+   "sec": 0.53,
+   "lufs": -16.5
+  },
+  {
+   "letter": "K",
+   "tts_text": "kay",
+   "ipa": "/keɪ/",
+   "heard": [
+    "K.",
+    "K, K, K.",
+    "K, K, K."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "K. Kite.",
+   "keyword_ok": true,
+   "sec": 0.48,
+   "lufs": -16.6
+  },
+  {
+   "letter": "L",
+   "tts_text": "el",
+   "ipa": "/ɛl/",
+   "heard": [
+    "PEL",
+    "Pow,",
+    "Pow., pow, pow"
+   ],
+   "name_ok": true,
+   "heard_name_kw": "L. Live.",
+   "keyword_ok": false,
+   "sec": 0.46,
+   "lufs": -16.7
+  },
+  {
+   "letter": "M",
+   "tts_text": "em",
+   "ipa": "/ɛm/",
+   "heard": [
+    "10",
+    "can, can, can.",
+    "10  10"
+   ],
+   "name_ok": false,
+   "heard_name_kw": "10. Monkey",
+   "keyword_ok": true,
+   "sec": 0.5,
+   "lufs": -16.6
+  },
+  {
+   "letter": "N",
+   "tts_text": "en",
+   "ipa": "/ɛn/",
+   "heard": [
+    "pen",
+    "10, 10, 10.",
+    "ten, ten, ten."
+   ],
+   "name_ok": false,
+   "heard_name_kw": "Pen, nose.",
+   "keyword_ok": true,
+   "sec": 0.48,
+   "lufs": -16.6
+  },
+  {
+   "letter": "O",
+   "tts_text": "oh",
+   "ipa": "/oʊ/",
+   "heard": [
+    "Oh!",
+    "Oh, oh, oh.",
+    "Oh, oh, oh."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "Oh! Octopus!",
+   "keyword_ok": true,
+   "sec": 0.38,
+   "lufs": -16.7
+  },
+  {
+   "letter": "P",
+   "tts_text": "pee",
+   "ipa": "/piː/",
+   "heard": [
+    "Pee!",
+    "P. P. P.",
+    "Pee. Pee. Pee."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "P-Panda",
+   "keyword_ok": true,
+   "sec": 0.46,
+   "lufs": -16.7
+  },
+  {
+   "letter": "Q",
+   "tts_text": "cue",
+   "ipa": "/kjuː/",
+   "heard": [
+    "",
+    "",
+    "pew, pew, pew."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "Q. Queen.",
+   "keyword_ok": true,
+   "sec": 0.55,
+   "lufs": -16.4
+  },
+  {
+   "letter": "R",
+   "tts_text": "ar",
+   "ipa": "/ɑːr/",
+   "heard": [
+    "Yeah.",
+    "Yeah, yeah, yeah.",
+    "Yeah, yeah, yeah."
+   ],
+   "name_ok": false,
+   "heard_name_kw": "Yeah, red.",
+   "keyword_ok": true,
+   "sec": 0.55,
+   "lufs": -16.6
+  },
+  {
+   "letter": "S",
+   "tts_text": "ess",
+   "ipa": "/ɛs/",
+   "heard": [
+    "Yes.",
+    "Bess, Bess, Bess.",
+    "Bess, Bess, Bess."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "S. Snee.",
+   "keyword_ok": false,
+   "sec": 0.55,
+   "lufs": -16.4
+  },
+  {
+   "letter": "T",
+   "tts_text": "tee",
+   "ipa": "/tiː/",
+   "heard": [
+    "T",
+    "qi qi qi",
+    "qi, qi, qi."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "T. Tiger",
+   "keyword_ok": true,
+   "sec": 0.48,
+   "lufs": -16.7
+  },
+  {
+   "letter": "U",
+   "tts_text": "you",
+   "ipa": "/juː/",
+   "heard": [
+    "you",
+    "you you, you, you, you",
+    "You. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U. U"
+   ],
+   "name_ok": true,
+   "heard_name_kw": "You, Umbrella!",
+   "keyword_ok": true,
+   "sec": 0.48,
+   "lufs": -16.7
+  },
+  {
+   "letter": "V",
+   "tts_text": "vee",
+   "ipa": "/viː/",
+   "heard": [
+    "a",
+    ".-",
+    "and"
+   ],
+   "name_ok": false,
+   "heard_name_kw": ", and",
+   "keyword_ok": false,
+   "sec": 0.46,
+   "lufs": -16.7
+  },
+  {
+   "letter": "W",
+   "tts_text": "double you",
+   "ipa": "/ˈdʌbəl.juː/",
+   "heard": [
+    "I",
+    "a",
+    "W  W  W  W"
+   ],
+   "name_ok": true,
+   "heard_name_kw": "",
+   "keyword_ok": false,
+   "sec": 0.82,
+   "lufs": -16.6
+  },
+  {
+   "letter": "X",
+   "tts_text": "ex",
+   "ipa": "/ɛks/",
+   "heard": [
+    "",
+    "F F  Bex! Bex!",
+    "Backs. Backs. B, B, Backs. Backs. Backs. Backs the B, Backs. Backs. Backs. the Backs."
+   ],
+   "name_ok": true,
+   "heard_name_kw": "X. Box.",
+   "keyword_ok": true,
+   "sec": 0.62,
+   "lufs": -16.9
+  },
+  {
+   "letter": "Y",
+   "tts_text": "why",
+   "ipa": "/waɪ/",
+   "heard": [
+    "... Why?",
+    "I'm going to show you how",
+    "Y, Y, Y"
+   ],
+   "name_ok": true,
+   "heard_name_kw": "Y, yellow",
+   "keyword_ok": true,
+   "sec": 0.5,
+   "lufs": -16.7
+  },
+  {
+   "letter": "Z",
+   "tts_text": "zee",
+   "ipa": "/ziː/",
+   "heard": [
+    "engineer.com",
+    "See",
+    "See."
+   ],
+   "name_ok": false,
+   "heard_name_kw": "C. Sip.",
+   "keyword_ok": false,
+   "sec": 0.5,
+   "lufs": -16.5
+  }
+ ]
+}
