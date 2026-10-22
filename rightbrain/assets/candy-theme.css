@@ -1,0 +1,75 @@
+/* 糖果乐园风 · 罗老师 · 小页面共用主题（由 preview/redesign/theme-embed.css 生成，待审） */
+
+/* ===== Style B 糖果乐园风 · 罗老师（待审）===== */
+@font-face{font-family:"RB-B-zh";src:url(fonts-b/zh.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"RB-B-en";src:url(fonts-b/en.woff2) format("woff2");font-weight:300 700;font-display:swap}
+:root{
+  /* 糖果乐园 · 护眼默认（略降饱和，对比 ≥4.5，无纯白） */
+  --bg:#F1EAFB; --paper:#FFF8FC; --paper2:#F7F0FF; --ink:#2E2457; --muted:#564A86;
+  --orange:#FF7AA8; --orange-d:#D9558A; --blue:#5A9FE0; --blue-l:#DDEEFD; --blue-d:#3F86C4; --blue-t:#2D6CA6;
+  --yellow:#FFD25E; --green:#6FD3A0; --green-l:#DDF5E8; --red:#E45A8C; --red-l:#FFE1EC; --pink:#FF7AA8;
+  --line:#E0D3F3; --shadow:0 8px 0 #E0D3F3,0 14px 24px -14px rgba(46,36,87,.3);
+  --glow1:#FFE1EC; --glow2:#DDF5E8;
+  --word-font:"RB-B-en","Fredoka",ui-rounded,system-ui,sans-serif;
+  --zh-font:"RB-B-zh","Yuanti SC",system-ui,sans-serif;
+  /* 罗老师场景槽 · 换文件即可换形象 */
+  --mascot-greet:url("mascots/greet.webp");
+  --mascot-cheer:url("mascots/cheer.webp");
+  --mascot-encourage:url("mascots/encourage.webp");
+  --mascot-teach:url("mascots/teach.webp");
+  --mascot-chest:url("mascots/chest.webp");
+  --mascot-game:url("mascots/game.webp");
+  --mascot-rest:url("mascots/rest.webp");
+  --mascot-sleep:url("mascots/sleep.webp");
+}
+/* 更护眼：再降饱和（家长页「简洁」或 data-eye=calm） */
+html[data-eye=calm],html[data-fx=calm]{
+  --bg:#F2EEF6; --paper:#FAF7FC; --paper2:#F4F0F8; --ink:#322A4A; --muted:#5A5270;
+  --orange:#E892B0; --orange-d:#C47494; --blue:#6A9BC4; --blue-l:#E4EEF6; --blue-d:#4E7FA8; --blue-t:#3E6A8E;
+  --yellow:#E8C878; --green:#7CBC9A; --green-l:#E4F0EA; --red:#D07A94; --red-l:#F5E6EC; --pink:#E892B0;
+  --line:#DDD6E8; --glow1:#F0E6EE; --glow2:#E4EEE8;
+}
+html[data-theme=dark]{
+  color-scheme:dark;
+  --bg:#1E1830; --paper:#2A2340; --paper2:#322A4A; --ink:#F4EEFF; --muted:#B9AED8;
+  --orange:#FF8FB8; --orange-d:#C9487A; --blue:#7CC0F5; --blue-l:#2A3A55; --blue-d:#4A93D1; --blue-t:#A8D4F8;
+  --yellow:#FFD86B; --green:#7FE0B0; --green-l:#1F3A30; --red:#FF8FB1; --red-l:#4A2A38; --pink:#FF8FB8;
+  --line:#3E3558; --shadow:0 8px 0 #161022,0 14px 28px rgba(0,0,0,.45); --glow1:#2E2040; --glow2:#1A2830;
+}
+html[data-theme=dark] img{filter:brightness(.92) saturate(.95)}
+html[data-theme=dark] .mascot,html[data-theme=dark] .rbc .masc{filter:none}
+body{background:
+  radial-gradient(90px 90px at 12% 8%,rgba(255,210,94,.28),transparent 70%),
+  radial-gradient(130px 130px at 96% 18%,rgba(124,192,245,.22),transparent 70%),
+  radial-gradient(150px 150px at 4% 78%,rgba(111,211,160,.2),transparent 70%),
+  radial-gradient(170px 170px at 100% 96%,rgba(255,122,168,.18),transparent 70%),
+  var(--bg); font-family:var(--zh-font); letter-spacing:.02em}
+.btn.primary{background:linear-gradient(180deg,#FF93BA,var(--orange));color:#2E1A3E;box-shadow:inset 0 -4px 0 rgba(217,85,138,.3),0 8px 0 var(--orange-d);border-radius:28px;position:relative;overflow:hidden}
+.btn.primary::before{content:"";position:absolute;left:18px;right:18px;top:5px;height:10px;border-radius:99px;background:rgba(255,255,255,.32);pointer-events:none}
+.btn.primary:active{transform:translateY(5px);box-shadow:inset 0 -2px 0 rgba(217,85,138,.3),0 2px 0 var(--orange-d)}
+.btn.blue{background:linear-gradient(180deg,#9AD0F8,var(--blue));color:#12304D;box-shadow:inset 0 -4px 0 rgba(63,134,196,.35),0 8px 0 var(--blue-d);border-radius:28px}
+.btn.ghost{background:var(--paper);border-radius:24px;box-shadow:0 5px 0 var(--line)}
+.go{background:linear-gradient(180deg,#FF93BA,var(--orange));box-shadow:0 8px 0 var(--orange-d),0 16px 28px rgba(217,85,138,.45);color:#2E1A3E}
+.go.gamesentry{background:linear-gradient(180deg,#9AD0F8,var(--blue));box-shadow:0 8px 0 var(--blue-d)}
+.pill,.ib,.path,.albumbtn,.acell,.anext,.say-bub,.rp-tgt,.rp-skip,.homefab{border-radius:24px;box-shadow:0 5px 0 var(--line)}
+.homefab{border-color:#FFB6D0;color:#C2366F;box-shadow:0 4px 0 #F5A0C0,0 8px 18px rgba(46,36,87,.14)}
+.stop .ic{border-radius:22px;background:var(--paper2);box-shadow:0 4px 0 var(--line)}
+.stop.now .ic{background:var(--yellow);box-shadow:0 4px 0 #E0A82E}
+.stop.done .ic{background:var(--green-l);box-shadow:0 4px 0 #3FAE7A}
+.prog{background:#E8DFF5}.prog b{background:linear-gradient(90deg,var(--yellow),var(--orange))}
+img.mascot,.mascot{width:88px;height:88px;object-fit:contain;object-position:center bottom;background:transparent!important;border-radius:0!important;box-shadow:none!important;filter:none}
+.gate .mascot,.gate img.mascot{width:150px;height:150px}
+.say-bub:before{border-right-color:var(--paper)}
+.review-banner{position:sticky;top:0;z-index:100;display:flex;gap:10px;align-items:center;justify-content:space-between;padding:8px 14px;background:#3A2E6E;color:#F4EEFF;font-size:13px;font-weight:700}
+.review-banner a{color:#FFD25E;text-decoration:none}
+.rbc .masc{width:170px;height:170px;object-fit:contain;animation:rbcin .5s cubic-bezier(.2,1.5,.4,1) both,rbcjump .52s .1s cubic-bezier(.3,0,.3,1) 3}
+.rbc.r-stars .masc{animation:rbcin .5s cubic-bezier(.2,1.5,.4,1) both,rbcspin .9s .1s cubic-bezier(.4,0,.2,1) 1,rbcjump .5s 1s 2}
+.rbc.r-wave .masc{animation:rbcin .5s cubic-bezier(.2,1.5,.4,1) both,rbcsway .6s .1s ease-in-out 3}
+.rbc{background:radial-gradient(circle at 50% 46%,rgba(255,248,252,.95) 0,rgba(241,234,251,.82) 40%,rgba(241,234,251,.4) 70%)}
+.rbc .word{color:#FF7AA8;-webkit-text-stroke:3px #fff;text-shadow:0 6px 0 rgba(150,60,100,.2);font-family:var(--zh-font)}
+.rbc .badge{background:linear-gradient(180deg,#FF93BA,#FF7AA8);box-shadow:0 4px 0 #D9558A;color:#2E1A3E}
+.rbc .badge.gold{background:linear-gradient(180deg,#FFE08A,#FFD25E);box-shadow:0 4px 0 #E0A82E;color:#3D2A00}
+.brand-top{display:flex;align-items:center;gap:8px}
+.brand-top img.logo-mark{height:52px;width:auto}
+.brand-top .wm{height:44px;width:auto;max-width:62vw}
+@media (prefers-reduced-motion:reduce){img.mascot,.mascot,.rbc .masc{animation:none!important}}
