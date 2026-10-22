@@ -6,6 +6,8 @@
 <meta name="theme-color" content="#F1EAFB">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="preload" as="image" href="assets/mascots/greet.webp">
 <link rel="icon" type="image/png" href="icons/favicon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -563,11 +565,39 @@ img.mascot,.mascot{width:88px;height:88px;object-fit:contain;object-position:cen
 .qcard .mascot[data-mascot=encourage]{margin:4px auto 10px}
 .card .luo-teach{width:110px;height:110px;margin:0 auto 6px;display:block}
 .review-banner{font-family:var(--zh-font)}
+
+/* ===== 罗老师加载动画（糖果风，待审）===== */
+.rb-splash{min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;font-family:var(--zh-font,inherit);color:var(--muted,#564A86);opacity:0;animation:rbIn .35s ease-out .15s forwards}
+.rb-splash .luo{position:relative;width:132px;height:150px;display:flex;align-items:flex-end;justify-content:center}
+.rb-splash .luo::before{content:"";position:absolute;left:50%;bottom:-4px;width:86px;height:14px;margin-left:-43px;border-radius:50%;background:rgba(110,70,160,.16);animation:rbShadow 1.3s ease-in-out infinite}
+.rb-splash .luo img{position:relative;width:96px;height:auto;max-height:150px;transform-origin:50% 100%;animation:rbHop 1.3s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(201,72,122,.18))}
+.rb-splash .dots{display:flex;gap:9px}
+.rb-splash .dots i{width:12px;height:12px;border-radius:50%;background:#FF7FA8;box-shadow:inset 0 -3px 0 rgba(0,0,0,.08),inset 0 2px 0 rgba(255,255,255,.6);animation:rbDot 1.05s ease-in-out infinite}
+.rb-splash .dots i:nth-child(2){background:#FFD25E;animation-delay:.15s}
+.rb-splash .dots i:nth-child(3){background:#7ED9B0;animation-delay:.3s}
+.rb-splash .dots i:nth-child(4){background:#8EC5FF;animation-delay:.45s}
+.rb-splash p{margin:0;font-size:17px;letter-spacing:1px}
+@keyframes rbIn{to{opacity:1}}
+@keyframes rbHop{0%,100%{transform:translateY(0) scale(1,1)}12%{transform:translateY(0) scale(1.04,.96)}45%{transform:translateY(-16px) scale(.97,1.03)}78%{transform:translateY(0) scale(1.03,.97)}}
+@keyframes rbShadow{0%,100%,12%,78%{transform:scale(1);opacity:1}45%{transform:scale(.72);opacity:.55}}
+@keyframes rbDot{0%,100%{transform:translateY(0);opacity:.55}40%{transform:translateY(-7px);opacity:1}}
+@keyframes rbBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+/* 护眼 / 少动：不跳，只轻轻呼吸，糖豆慢慢亮 */
+html[data-eye=calm] .rb-splash .luo img,html[data-fx=calm] .rb-splash .luo img{animation:rbBreath 3.2s ease-in-out infinite}
+html[data-eye=calm] .rb-splash .luo::before,html[data-fx=calm] .rb-splash .luo::before{animation:none}
+html[data-eye=calm] .rb-splash .dots i,html[data-fx=calm] .rb-splash .dots i{animation-duration:2.4s;filter:saturate(.7)}
+@media (prefers-reduced-motion:reduce){.rb-splash .luo img,.rb-splash .luo::before{animation:none}.rb-splash .dots i{animation:rbFade 2.4s ease-in-out infinite}}
+@keyframes rbFade{0%,100%{opacity:.45}50%{opacity:1}}
+/* 按钮里的小转圈 → 棒棒糖旋涡 */
+.spin{display:inline-block;vertical-align:-4px;margin-right:6px;width:20px;height:20px;border:0;border-radius:50%;background:conic-gradient(#FF7FA8 0 25%,#FFD25E 0 50%,#7ED9B0 0 75%,#8EC5FF 0);-webkit-mask:radial-gradient(circle,transparent 4px,#000 5px);mask:radial-gradient(circle,transparent 4px,#000 5px);box-shadow:0 0 0 2px rgba(255,255,255,.7);animation:sp 1.1s linear infinite}
+html[data-eye=calm] .spin,html[data-fx=calm] .spin{animation-duration:2.4s;filter:saturate(.7)}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:3s}}
 </style>
 </head>
 <body>
 <div class="review-banner" role="note"><span>糖果乐园风 · 罗老师 · 待审</span><a href="preview/mascots/">形象</a><a href="preview/styles/">样板</a></div>
-<div class="app" id="app"><noscript>需要打开 JavaScript 才能使用。</noscript></div>
+<div class="app" id="app"><div class="rb-splash" role="status" aria-live="polite"><div class="luo"><img src="assets/mascots/greet.webp" alt="罗老师" width="96" height="173" decoding="async" fetchpriority="high"></div><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div><p>罗老师来啦…</p></div><noscript>需要打开 JavaScript 才能使用。</noscript></div>
+<script>try{var s=(JSON.parse(localStorage.getItem('rbw.progress.v2')||'{}').settings||{});if(s.fx==='calm')document.documentElement.dataset.eye='calm';}catch(e){}</script>
 <canvas id="confetti" hidden></canvas>
 <audio id="voice" preload="auto" playsinline></audio>
 
