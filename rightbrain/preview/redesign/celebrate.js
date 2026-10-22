@@ -71,7 +71,7 @@
 `;
   function ensureCSS() { if (!D.getElementById('rbc-css')) { const s = D.createElement('style'); s.id = 'rbc-css'; s.textContent = css; D.head.appendChild(s); } }
   // 吉祥物（和网站现有小橙同款：黄色圆身子 + 小耳朵），加了手臂、眨眼、张嘴
-  const MASCOT_SRC = (() => { try { const v = getComputedStyle(document.documentElement).getPropertyValue('--mascot-src-cheer').trim(); if (v) return v; } catch (e) {} return 'preview/redesign/assets/mascots/cheer.webp'; })();
+  const MASCOT_SRC = (() => { try { const v = getComputedStyle(document.documentElement).getPropertyValue('--mascot-src-cheer').trim().replace(/^["']|["']$/g,''); if (v) return v; } catch (e) {} return 'preview/redesign/assets/mascots/cheer.webp'; })();
   const MASCOT = `<img class="masc" data-mascot="cheer" src="${MASCOT_SRC}" alt="罗老师" width="170" height="170"/>`;
   const TROPHY = `<svg class="trophy" viewBox="0 0 100 100" aria-hidden="true"><path d="M30 14h40v18c0 16-9 26-20 26S30 48 30 32z" fill="#FFC93C" stroke="#B87A00" stroke-width="3"/><path d="M30 20H18c0 14 6 20 14 20M70 20h12c0 14-6 20-14 20" fill="none" stroke="#F2A900" stroke-width="5"/><rect x="44" y="58" width="12" height="14" fill="#F2A900"/><rect x="32" y="72" width="36" height="12" rx="4" fill="#9C6ADE" stroke="#6A44A8" stroke-width="3"/><path d="M42 26l4 8 9 1-6 6 2 9-9-5-8 5 2-9-6-6 9-1z" fill="#fff" opacity=".85"/></svg>`;
   const RAINBOW = `<svg class="rainbow" viewBox="0 0 200 100" aria-hidden="true">${['#FF8FB1', '#FF8A3D', '#FFC93C', '#7BD389', '#7BB8F0', '#B79CF0'].map((c, i) => `<path d="M${10 + i * 7} 100a${90 - i * 7} ${90 - i * 7} 0 0 1 ${180 - i * 14} 0" fill="none" stroke="${c}" stroke-width="7"/>`).join('')}</svg>`;
@@ -145,7 +145,7 @@
   function chest(o = {}) {
     const s = o.sticker || {}, ov = overlay('dim');
     ov.style.cursor = 'default';
-    const chestLuo = (() => { try { const v = getComputedStyle(document.documentElement).getPropertyValue('--mascot-src-chest').trim(); if (v) return v; } catch (e) {} return 'preview/redesign/assets/mascots/chest.webp'; })();
+    const chestLuo = (() => { try { const v = getComputedStyle(document.documentElement).getPropertyValue('--mascot-src-chest').trim().replace(/^["']|["']$/g,''); if (v) return v; } catch (e) {} return 'preview/redesign/assets/mascots/chest.webp'; })();
     ov.innerHTML = `<canvas></canvas><div class="stage"><img class="masc" data-mascot="chest" src="${chestLuo}" alt="罗老师" style="width:140px;height:140px;margin-bottom:4px"/><div class="hint">🎁 点一下宝箱！</div><div class="chestbox idle"><div class="rays"></div>${CHEST}<div class="gift ${s.shiny ? 'shiny' : ''}" style="--m:url('${s.img || ''}')"><img src="${s.img || ''}" alt=""></div></div>
       <div class="gname">${s.shiny ? '✨ 闪光稀有款：' : '新贴纸：'}${s.name || ''}</div><button class="gbtn" type="button">收进贴纸册 📒</button></div>`;
     const box = ov.querySelector('.chestbox'), btn = ov.querySelector('.gbtn');

@@ -19,7 +19,7 @@
 .rbc .word span{display:inline-block;animation:rbcpop .62s cubic-bezier(.2,1.6,.4,1) both}
 .rbc .badge{font:900 22px/1 system-ui,"PingFang SC",sans-serif;color:#fff;background:linear-gradient(180deg,#FF8A3D,#F2643A);padding:10px 18px;border-radius:999px;box-shadow:0 4px 0 #C94E2A;animation:rbcbadge .7s .25s cubic-bezier(.2,1.7,.4,1) both}
 .rbc .badge.gold{background:linear-gradient(180deg,#FFD45C,#F2A900);box-shadow:0 4px 0 #B87A00;color:#5A3A00}
-.rbc .masc{width:150px;height:150px;animation:rbcin .5s cubic-bezier(.2,1.5,.4,1) both}
+.rbc .masc{width:170px;height:170px;object-fit:contain;animation:rbcin .5s cubic-bezier(.2,1.5,.4,1) both,rbcjump .52s .1s cubic-bezier(.3,0,.3,1) 3}
 .rbc .masc .body{transform-origin:50% 92%;animation:rbcjump .52s .1s cubic-bezier(.3,0,.3,1) 3}
 .rbc.r-stars .masc .body{animation:rbcspin .9s .1s cubic-bezier(.4,0,.2,1) 1,rbcjump .5s 1s 2}
 .rbc.r-wave .masc .body{animation:rbcsway .6s .1s ease-in-out 3}
@@ -71,12 +71,8 @@
 `;
   function ensureCSS() { if (!D.getElementById('rbc-css')) { const s = D.createElement('style'); s.id = 'rbc-css'; s.textContent = css; D.head.appendChild(s); } }
   // 吉祥物（和网站现有小橙同款：黄色圆身子 + 小耳朵），加了手臂、眨眼、张嘴
-  const MASCOT = `<svg class="masc" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="95" rx="24" ry="4" fill="#000" opacity=".08"/>
-<g class="body"><path class="armL" d="M28 62q-12 2-16-8" fill="none" stroke="#F2A900" stroke-width="7" stroke-linecap="round"/><path class="armR" d="M72 62q12 2 16-8" fill="none" stroke="#F2A900" stroke-width="7" stroke-linecap="round"/>
-<path d="M22 58c0-22 12-40 28-40s28 18 28 40-12 32-28 32-28-10-28-32z" fill="#FFC93C"/><path d="M36 20l-6-14 14 9M64 20l6-14-14 9" fill="#FFC93C"/>
-<g class="eye"><circle cx="40" cy="50" r="9" fill="#fff"/><circle cx="42" cy="52" r="4.5" fill="#2A2A3A"/><circle cx="43.5" cy="50" r="1.5" fill="#fff"/></g>
-<g class="eye"><circle cx="60" cy="50" r="9" fill="#fff"/><circle cx="62" cy="52" r="4.5" fill="#2A2A3A"/><circle cx="63.5" cy="50" r="1.5" fill="#fff"/></g>
-<path class="mouth" d="M41 65q9 11 18 0z" fill="#C94E2A"/><circle cx="31" cy="63" r="5" fill="#FF8FB1" opacity=".6"/><circle cx="69" cy="63" r="5" fill="#FF8FB1" opacity=".6"/></g></svg>`;
+  const MASCOT_SRC = (() => { try { const v = getComputedStyle(document.documentElement).getPropertyValue('--mascot-src-cheer').trim().replace(/^["']|["']$/g,''); if (v) return v; } catch (e) {} return 'assets/mascots/cheer.webp'; })();
+  const MASCOT = `<img class="masc" data-mascot="cheer" src="${MASCOT_SRC}" alt="罗老师" width="170" height="170"/>`;
   const TROPHY = `<svg class="trophy" viewBox="0 0 100 100" aria-hidden="true"><path d="M30 14h40v18c0 16-9 26-20 26S30 48 30 32z" fill="#FFC93C" stroke="#B87A00" stroke-width="3"/><path d="M30 20H18c0 14 6 20 14 20M70 20h12c0 14-6 20-14 20" fill="none" stroke="#F2A900" stroke-width="5"/><rect x="44" y="58" width="12" height="14" fill="#F2A900"/><rect x="32" y="72" width="36" height="12" rx="4" fill="#9C6ADE" stroke="#6A44A8" stroke-width="3"/><path d="M42 26l4 8 9 1-6 6 2 9-9-5-8 5 2-9-6-6 9-1z" fill="#fff" opacity=".85"/></svg>`;
   const RAINBOW = `<svg class="rainbow" viewBox="0 0 200 100" aria-hidden="true">${['#FF8FB1', '#FF8A3D', '#FFC93C', '#7BD389', '#7BB8F0', '#B79CF0'].map((c, i) => `<path d="M${10 + i * 7} 100a${90 - i * 7} ${90 - i * 7} 0 0 1 ${180 - i * 14} 0" fill="none" stroke="${c}" stroke-width="7"/>`).join('')}</svg>`;
   const CHEST = `<svg viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="110" rx="40" ry="6" fill="#000" opacity=".1"/>
@@ -149,7 +145,8 @@
   function chest(o = {}) {
     const s = o.sticker || {}, ov = overlay('dim');
     ov.style.cursor = 'default';
-    ov.innerHTML = `<canvas></canvas><div class="stage"><div class="hint">🎁 点一下宝箱！</div><div class="chestbox idle"><div class="rays"></div>${CHEST}<div class="gift ${s.shiny ? 'shiny' : ''}" style="--m:url('${s.img || ''}')"><img src="${s.img || ''}" alt=""></div></div>
+    const chestLuo = (() => { try { const v = getComputedStyle(document.documentElement).getPropertyValue('--mascot-src-chest').trim().replace(/^["']|["']$/g,''); if (v) return v; } catch (e) {} return 'assets/mascots/chest.webp'; })();
+    ov.innerHTML = `<canvas></canvas><div class="stage"><img class="masc" data-mascot="chest" src="${chestLuo}" alt="罗老师" style="width:140px;height:140px;margin-bottom:4px"/><div class="hint">🎁 点一下宝箱！</div><div class="chestbox idle"><div class="rays"></div>${CHEST}<div class="gift ${s.shiny ? 'shiny' : ''}" style="--m:url('${s.img || ''}')"><img src="${s.img || ''}" alt=""></div></div>
       <div class="gname">${s.shiny ? '✨ 闪光稀有款：' : '新贴纸：'}${s.name || ''}</div><button class="gbtn" type="button">收进贴纸册 📒</button></div>`;
     const box = ov.querySelector('.chestbox'), btn = ov.querySelector('.gbtn');
     return new Promise(res => {
