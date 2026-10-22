@@ -1,5 +1,5 @@
 {
- "note": "全站语音清单，共 261 条。换 Phil 克隆声音时照表重生成；文件名不变，页面不用改。",
+ "note": "全站语音清单，共 261 条。换 Phil 克隆声音时照表重生成；文件名不变，页面不用改。 2026-10-22 起全站换成 Phil 克隆声：OmniVoice 本地生成（/workspace/voice-local/phil_units.py → tools/make_phil_audio.py），旧 edge-tts 文件备份在 /workspace/rightbrain-voice-backup/edge-tts-2026-10-22/。待审。",
  "count": 261,
  "lines": [
   {
@@ -32,7 +32,8 @@
      "床。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/eye.mp3",
@@ -64,7 +65,8 @@
      "眼睛。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/ship.mp3",
@@ -96,7 +98,8 @@
      "大船。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/umbrella.mp3",
@@ -128,7 +131,8 @@
      "雨伞。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/toothbrush.mp3",
@@ -160,7 +164,8 @@
      "牙刷。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/cat.mp3",
@@ -192,7 +197,8 @@
      "小猫。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/dog.mp3",
@@ -224,7 +230,8 @@
      "小狗。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/apple.mp3",
@@ -256,7 +263,8 @@
      "苹果。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/sun.mp3",
@@ -288,7 +296,8 @@
      "太阳。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/fish.mp3",
@@ -320,7 +329,8 @@
      "鱼。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/egg.mp3",
@@ -352,7 +362,8 @@
      "鸡蛋。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/cake.mp3",
@@ -384,7 +395,8 @@
      "蛋糕。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/panda.mp3",
@@ -416,7 +428,8 @@
      "熊猫。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/tiger.mp3",
@@ -448,7 +461,8 @@
      "老虎。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/clap.mp3",
@@ -480,7 +494,8 @@
      "拍手。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/catch.mp3",
@@ -512,7 +527,8 @@
      "接住。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/window.mp3",
@@ -544,7 +560,8 @@
      "窗户。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/rainbow.mp3",
@@ -576,7 +593,8 @@
      "彩虹。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/raincoat.mp3",
@@ -608,7 +626,8 @@
      "雨衣。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/snowman.mp3",
@@ -640,7 +659,8 @@
      "雪人。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/notebook.mp3",
@@ -672,7 +692,8 @@
      "笔记本。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/dessert.mp3",
@@ -704,7 +725,8 @@
      "甜点。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/library.mp3",
@@ -736,7 +758,8 @@
      "图书馆。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/strong.mp3",
@@ -768,7 +791,8 @@
      "强壮的。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/one.mp3",
@@ -800,7 +824,8 @@
      "一。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/two.mp3",
@@ -832,7 +857,8 @@
      "二。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/three.mp3",
@@ -864,7 +890,8 @@
      "三。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/four.mp3",
@@ -896,7 +923,8 @@
      "四。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/five.mp3",
@@ -928,7 +956,8 @@
      "五。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/seven.mp3",
@@ -960,7 +989,8 @@
      "七。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/eight.mp3",
@@ -992,7 +1022,8 @@
      "八。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/nine.mp3",
@@ -1024,7 +1055,8 @@
      "九。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/yellow.mp3",
@@ -1056,7 +1088,8 @@
      "黄色。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/green.mp3",
@@ -1088,7 +1121,8 @@
      "绿色。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/blue.mp3",
@@ -1120,7 +1154,8 @@
      "蓝色。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/nose.mp3",
@@ -1152,7 +1187,8 @@
      "鼻子。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/ear.mp3",
@@ -1184,7 +1220,8 @@
      "耳朵。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/hand.mp3",
@@ -1216,7 +1253,8 @@
      "手。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/monkey.mp3",
@@ -1248,7 +1286,8 @@
      "猴子。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/duck.mp3",
@@ -1280,7 +1319,8 @@
      "鸭子。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/banana.mp3",
@@ -1312,7 +1352,8 @@
      "香蕉。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/narr/orange.mp3",
@@ -1344,7 +1385,8 @@
      "橙子。"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/s.mp3",
@@ -1388,7 +1430,8 @@
      "snake"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/a.mp3",
@@ -1432,7 +1475,8 @@
      "apple"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/t.mp3",
@@ -1476,7 +1520,8 @@
      "tiger"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/p.mp3",
@@ -1520,7 +1565,8 @@
      "panda"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/i.mp3",
@@ -1564,7 +1610,8 @@
      "insect"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/n.mp3",
@@ -1608,7 +1655,8 @@
      "nose"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/c.mp3",
@@ -1652,7 +1700,8 @@
      "cat"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/k.mp3",
@@ -1696,7 +1745,8 @@
      "kite"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/e.mp3",
@@ -1740,7 +1790,8 @@
      "egg"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/h.mp3",
@@ -1784,7 +1835,8 @@
      "hat"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/r.mp3",
@@ -1828,7 +1880,8 @@
      "red"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/m.mp3",
@@ -1872,7 +1925,8 @@
      "monkey"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/d.mp3",
@@ -1916,7 +1970,8 @@
      "dog"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/g.mp3",
@@ -1960,7 +2015,8 @@
      "go"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/o.mp3",
@@ -2004,7 +2060,8 @@
      "octopus"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/u.mp3",
@@ -2048,7 +2105,8 @@
      "umbrella"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/l.mp3",
@@ -2092,7 +2150,8 @@
      "leg"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/f.mp3",
@@ -2136,7 +2195,8 @@
      "fish"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/b.mp3",
@@ -2180,7 +2240,8 @@
      "bus"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/j.mp3",
@@ -2224,7 +2285,8 @@
      "jet"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/z.mp3",
@@ -2268,7 +2330,8 @@
      "zip"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/w.mp3",
@@ -2312,7 +2375,8 @@
      "window"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/v.mp3",
@@ -2356,7 +2420,8 @@
      "van"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/y.mp3",
@@ -2400,7 +2465,8 @@
      "yellow"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/x.mp3",
@@ -2444,7 +2510,8 @@
      "box"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/letters/q.mp3",
@@ -2488,7 +2555,8 @@
      "queen"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/sit.mp3",
@@ -2536,7 +2604,8 @@
      "sit"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/pan.mp3",
@@ -2584,7 +2653,8 @@
      "pan"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/pin.mp3",
@@ -2632,7 +2702,8 @@
      "pin"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/ant.mp3",
@@ -2680,7 +2751,8 @@
      "ant"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/tap.mp3",
@@ -2728,7 +2800,8 @@
      "tap"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/nap.mp3",
@@ -2776,7 +2849,8 @@
      "nap"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/cat.mp3",
@@ -2824,7 +2898,8 @@
      "cat"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/hat.mp3",
@@ -2872,7 +2947,8 @@
      "hat"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/man.mp3",
@@ -2920,7 +2996,8 @@
      "man"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/hen.mp3",
@@ -2968,7 +3045,8 @@
      "hen"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/pen.mp3",
@@ -3016,7 +3094,8 @@
      "pen"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/ten.mp3",
@@ -3064,7 +3143,8 @@
      "ten"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/red.mp3",
@@ -3112,7 +3192,8 @@
      "red"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/bed.mp3",
@@ -3160,7 +3241,8 @@
      "bed"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/dad.mp3",
@@ -3208,7 +3290,8 @@
      "dad"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/map.mp3",
@@ -3256,7 +3339,8 @@
      "map"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/net.mp3",
@@ -3304,7 +3388,8 @@
      "net"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/cap.mp3",
@@ -3352,7 +3437,8 @@
      "cap"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/dog.mp3",
@@ -3400,7 +3486,8 @@
      "dog"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/sun.mp3",
@@ -3448,7 +3535,8 @@
      "sun"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/pig.mp3",
@@ -3496,7 +3584,8 @@
      "pig"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/bus.mp3",
@@ -3544,7 +3633,8 @@
      "bus"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/cup.mp3",
@@ -3592,7 +3682,8 @@
      "cup"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/bag.mp3",
@@ -3640,7 +3731,8 @@
      "bag"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/mom.mp3",
@@ -3688,7 +3780,8 @@
      "mom"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/hot.mp3",
@@ -3736,7 +3829,8 @@
      "hot"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/pot.mp3",
@@ -3784,7 +3878,8 @@
      "pot"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/top.mp3",
@@ -3832,7 +3927,8 @@
      "top"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/log.mp3",
@@ -3880,7 +3976,8 @@
      "log"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/fan.mp3",
@@ -3928,7 +4025,8 @@
      "fan"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/leg.mp3",
@@ -3976,7 +4074,8 @@
      "leg"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/lip.mp3",
@@ -4024,7 +4123,8 @@
      "lip"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/bug.mp3",
@@ -4072,7 +4172,8 @@
      "bug"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/nut.mp3",
@@ -4120,7 +4221,8 @@
      "nut"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/six.mp3",
@@ -4168,7 +4270,8 @@
      "six"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/box.mp3",
@@ -4216,7 +4319,8 @@
      "box"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/fox.mp3",
@@ -4264,7 +4368,8 @@
      "fox"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/van.mp3",
@@ -4312,7 +4417,8 @@
      "van"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/jet.mp3",
@@ -4360,7 +4466,8 @@
      "jet"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/blend/zip.mp3",
@@ -4408,273 +4515,274 @@
      "zip"
     ]
    ],
-   "note": "zh＝中文 Xiaoxiao；en＝英文 Ana；nm＝字母名；ph/phf＝拼读音（录音，不是 TTS）"
+   "note": "zh/en/nm＝Phil 克隆声（OmniVoice，本地生成）；ph/phf＝拼读音（录音，不是 TTS）",
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/start.mp3",
    "kind": "引导语",
    "key": "start",
    "text": "我们开始吧！听一听，看一看。",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/close.mp3",
    "kind": "引导语",
    "key": "close",
    "text": "好啦，图片藏起来啦！考考你！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/which.mp3",
    "kind": "引导语",
    "key": "which",
    "text": "哪个是它？点一点！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/great1.mp3",
    "kind": "引导语",
    "key": "great1",
    "text": "真棒！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/great2.mp3",
    "kind": "引导语",
    "key": "great2",
    "text": "答对啦！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/great3.mp3",
    "kind": "引导语",
    "key": "great3",
    "text": "太厉害了！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/again.mp3",
    "kind": "引导语",
    "key": "again",
    "text": "哎呀，再看一遍哦。",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/retry.mp3",
    "kind": "引导语",
    "key": "retry",
    "text": "再试一次！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/tryok.mp3",
    "kind": "引导语",
    "key": "tryok",
    "text": "这次对啦！明天再见它！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/allright.mp3",
    "kind": "引导语",
    "key": "allright",
    "text": "全对啦！你真厉害！送你一颗大星星！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/pass.mp3",
    "kind": "引导语",
    "key": "pass",
    "text": "真棒！今天的小目标完成啦！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/notyet.mp3",
    "kind": "引导语",
    "key": "notyet",
    "text": "没关系，明天我们再来！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/done.mp3",
    "kind": "引导语",
    "key": "done",
    "text": "今天的单词都学完啦，明天见！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/next.mp3",
    "kind": "引导语",
    "key": "next",
    "text": "下一个！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/hello.mp3",
    "kind": "引导语",
    "key": "hello",
    "text": "你好呀！点一点大按钮，我们开始学单词！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/sticker.mp3",
    "kind": "引导语",
    "key": "sticker",
    "text": "送你一张小贴纸！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/letterq.mp3",
    "kind": "引导语",
    "key": "letterq",
    "text": "听一听，点一点，是哪个字母？",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/pass2.mp3",
    "kind": "引导语",
    "key": "pass2",
    "text": "第二轮！换个玩法，再考考你！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/pass3.mp3",
    "kind": "引导语",
    "key": "pass3",
    "text": "综合大挑战！全部混在一起，看你记住了没有！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/p2case.mp3",
    "kind": "引导语",
    "key": "p2case",
    "text": "这个大写字母，小写是哪个？",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/p2pic.mp3",
    "kind": "引导语",
    "key": "p2pic",
    "text": "看图片，是哪个单词？",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/p2miss.mp3",
    "kind": "引导语",
    "key": "p2miss",
    "text": "缺了哪个字母？点一点！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/p3again.mp3",
    "kind": "引导语",
    "key": "p3again",
    "text": "这个等会儿再考你一次！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/p3done.mp3",
    "kind": "引导语",
    "key": "p3done",
    "text": "全部过关！都记住啦！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/review.mp3",
    "kind": "引导语",
    "key": "review",
    "text": "我们先来复习一下！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/soundq.mp3",
    "kind": "引导语",
    "key": "soundq",
    "text": "听声音，是哪个字母？",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/reviewdone.mp3",
    "kind": "引导语",
    "key": "reviewdone",
    "text": "复习完啦，记得真牢！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/rest.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "rest",
    "text": "学了好一会儿啦，我们休息一下！抬起头，看看窗外远远的地方，看看绿绿的树。我们一起数到二十！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/rest_done.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "rest_done",
    "text": "休息好啦！我们继续学吧！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/limit.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "limit",
    "text": "今天学得真棒！今天的学习时间到啦，我们明天再见！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/roundnext.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "roundnext",
    "text": "复习完啦！接下来，我们学新的！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/rounddone.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "rounddone",
    "text": "这一轮学完啦！你真棒！想再来一轮吗？",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/relearn.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "relearn",
    "text": "没关系！这个我们再学一遍。",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/hintme.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "hintme",
    "text": "我来帮帮你，答案就在这两个里面哦！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/redo.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "redo",
    "text": "还有几个要再练一下，加油！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/redook.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "redook",
    "text": "都练会啦！我们往下走！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/passrelearn.mp3",
    "kind": "休息 / 一轮 / 重教",
    "key": "passrelearn",
    "text": "错的有点多，没关系，我们把这一轮再学一遍！",
-   "voice": "calm"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/praise/first01.mp3",
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first01",
    "text": "哎呀，宝贝你真棒，一下子就答对了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4682,7 +4790,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first02",
    "text": "一眼就认出来啦，你看得真仔细！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4690,7 +4798,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first03",
    "text": "哇，想都没想就点对了，记得好牢！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4698,7 +4806,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first04",
    "text": "答对啦！刚才认真听，就是有用！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4706,7 +4814,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first05",
    "text": "叮咚！完全正确，给你点个大大的赞！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4714,7 +4822,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first06",
    "text": "对啦对啦！你的小耳朵真灵！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4722,7 +4830,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first07",
    "text": "漂亮！这个你已经会了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4730,7 +4838,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "first08",
    "text": "好厉害，第一下就找到了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4738,7 +4846,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "fast01",
    "text": "哇，好快呀！像小火箭一样，嗖！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4746,7 +4854,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "fast02",
    "text": "这么快就答对了，老师都还没眨眼呢！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4754,7 +4862,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "fast03",
    "text": "闪电速度！你反应真快！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4762,7 +4870,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "fast04",
    "text": "又快又对，太帅了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4770,7 +4878,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "fast05",
    "text": "嗖的一下就点对了，你是速度小冠军！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4778,7 +4886,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "fast06",
    "text": "快得像风一样，还一点都没错！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4786,7 +4894,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback01",
    "text": "上次没记住，这次全记住了，进步太大了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4794,7 +4902,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback02",
    "text": "刚才错了没关系，你又学了一遍，现在会啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4802,7 +4910,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback03",
    "text": "看，再学一遍就记住了，你真肯用功！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4810,7 +4918,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback04",
    "text": "哇，你把它打败啦！刚才的小难题现在难不倒你了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4818,7 +4926,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback05",
    "text": "这就叫越学越会！老师为你骄傲！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4826,7 +4934,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback06",
    "text": "错了不怕，再来就对，你真勇敢！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4834,7 +4942,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "comeback07",
    "text": "坚持就是胜利！这次答得真漂亮！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4842,7 +4950,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak301",
    "text": "连对三题！你停不下来啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4850,7 +4958,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak302",
    "text": "三连对！手感越来越好了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4858,7 +4966,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak303",
    "text": "一、二、三，全对！继续保持！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4866,7 +4974,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak304",
    "text": "三题都对啦，你今天状态超好！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4874,7 +4982,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak305",
    "text": "连续三个都对，专心的小朋友最棒！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4882,7 +4990,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak306",
    "text": "三连胜！小星星排着队来找你啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4890,7 +4998,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak501",
    "text": "哇！连对五题！你是超级小冠军！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4898,7 +5006,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak502",
    "text": "五连对！烟花放起来！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4906,7 +5014,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak503",
    "text": "五个全对，这股认真劲儿太了不起了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4914,7 +5022,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak504",
    "text": "连对五题！老师要给你鼓掌啦，啪啪啪！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4922,7 +5030,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak505",
    "text": "五连胜！你今天是学习小超人！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4930,7 +5038,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "streak506",
    "text": "一口气对了五个，彩虹都为你出来啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4938,7 +5046,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "all01",
    "text": "天哪，全对！你是单词小天才！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4946,7 +5054,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "all02",
    "text": "一个都没错！金杯送给你！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4954,7 +5062,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "all03",
    "text": "全部答对！你每一题都那么认真，太棒了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4962,7 +5070,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "all04",
    "text": "满分！满分！今天的你闪闪发光！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4970,7 +5078,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "all05",
    "text": "全对通关！老师要把这个好消息告诉爸爸妈妈！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4978,7 +5086,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "all06",
    "text": "百分之百正确！你是今天的小明星！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4986,7 +5094,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "repeat01",
    "text": "念得好响亮！老师在这边都听见啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -4994,7 +5102,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "repeat02",
    "text": "声音真好听，再大声的小喇叭都比不上你！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5002,7 +5110,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "repeat03",
    "text": "嗯！听到啦，念得清清楚楚！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5010,7 +5118,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "repeat04",
    "text": "张大嘴巴念，真棒！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5018,7 +5126,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "repeat05",
    "text": "你一开口，单词就记住一大半啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5026,7 +5134,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "repeat06",
    "text": "跟读小能手就是你！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5034,7 +5142,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "round01",
    "text": "颁奖啦！今天的学习小冠军，就是你！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5042,7 +5150,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "round02",
    "text": "这一轮完成啦！你一直坚持到最后，真了不起！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5050,7 +5158,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "round03",
    "text": "挑战成功！给自己鼓鼓掌吧！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5058,7 +5166,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "round04",
    "text": "又学完一轮！你的小脑袋里又多了好几个新朋友！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5066,7 +5174,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "round05",
    "text": "完成任务！今天的你比昨天更厉害！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5074,7 +5182,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "round06",
    "text": "一轮学完，一个都没落下，太棒啦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5082,7 +5190,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "encourage01",
    "text": "没关系，再试一次，你可以的！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5090,7 +5198,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "encourage02",
    "text": "差一点点哦，我们再看一遍！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5098,7 +5206,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "encourage03",
    "text": "没关系，学新东西都会错一下下！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5106,7 +5214,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "encourage04",
    "text": "别着急，慢慢来，老师陪着你！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5114,7 +5222,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "encourage05",
    "text": "错了也很好，这样我们就知道要多练哪个啦！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5122,7 +5230,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "encourage06",
    "text": "加油，下一次一定行！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5130,7 +5238,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "gift01",
    "text": "送给你一个小礼物！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5138,7 +5246,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "gift02",
    "text": "叮！宝箱打开啦，是一张新贴纸！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5146,7 +5254,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "gift03",
    "text": "完成挑战，奖励一张贴纸，收好哦！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5154,7 +5262,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "shiny01",
    "text": "哇！是闪闪发光的稀有贴纸！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5162,7 +5270,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "shiny02",
    "text": "闪光款！这张特别特别珍贵！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5170,7 +5278,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_intro1",
    "text": "小朋友，跟我一起念一遍！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5178,7 +5286,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_intro2",
    "text": "轮到你啦，跟我念！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5186,7 +5294,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_intro3",
    "text": "张开小嘴巴，跟我一起念！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5194,7 +5302,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_louder1",
    "text": "大声一点，再来一次！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5202,7 +5310,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_louder2",
    "text": "老师没听清哦，大声一点，再来一次！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5210,7 +5318,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_again1",
    "text": "差一点点，再听一遍，跟我念！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5218,7 +5326,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_again2",
    "text": "再来一次，你可以的！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5226,7 +5334,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_skip1",
    "text": "没关系，我们下次再念，继续往下学！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5234,7 +5342,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_tap1",
    "text": "念完了，就点一下大按钮！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5242,7 +5350,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_mic1",
    "text": "爸爸妈妈，请点「允许」使用麦克风，这样小朋友就能跟读啦！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5250,7 +5358,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_exact1",
    "text": "哇！一模一样，你念得太准了！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5258,7 +5366,7 @@
    "kind": "夸奖 / 跟读 / 礼物",
    "key": "rp_exact2",
    "text": "完全正确！你是发音小明星！",
-   "voice": "hype",
+   "voice": "omnivoice-phil",
    "status": "待审"
   },
   {
@@ -5266,189 +5374,189 @@
    "kind": "字母名",
    "key": "a",
    "text": "A.",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-b.mp3",
    "kind": "字母名",
    "key": "b",
    "text": "bee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-c.mp3",
    "kind": "字母名",
    "key": "c",
    "text": "see",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-d.mp3",
    "kind": "字母名",
    "key": "d",
    "text": "dee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-e.mp3",
    "kind": "字母名",
    "key": "e",
    "text": "ee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-f.mp3",
    "kind": "字母名",
    "key": "f",
    "text": "ef",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-g.mp3",
    "kind": "字母名",
    "key": "g",
    "text": "jee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-h.mp3",
    "kind": "字母名",
    "key": "h",
    "text": "H!",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-i.mp3",
    "kind": "字母名",
    "key": "i",
    "text": "I!",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-j.mp3",
    "kind": "字母名",
    "key": "j",
    "text": "jay",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-k.mp3",
    "kind": "字母名",
    "key": "k",
    "text": "kay",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-l.mp3",
    "kind": "字母名",
    "key": "l",
    "text": "el",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-m.mp3",
    "kind": "字母名",
    "key": "m",
    "text": "em",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-n.mp3",
    "kind": "字母名",
    "key": "n",
    "text": "en",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-o.mp3",
    "kind": "字母名",
    "key": "o",
    "text": "oh",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-p.mp3",
    "kind": "字母名",
    "key": "p",
    "text": "pee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-q.mp3",
    "kind": "字母名",
    "key": "q",
    "text": "cue",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-r.mp3",
    "kind": "字母名",
    "key": "r",
    "text": "ar",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-s.mp3",
    "kind": "字母名",
    "key": "s",
    "text": "ess",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-t.mp3",
    "kind": "字母名",
    "key": "t",
    "text": "tee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-u.mp3",
    "kind": "字母名",
    "key": "u",
    "text": "you",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-v.mp3",
    "kind": "字母名",
    "key": "v",
    "text": "vee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-w.mp3",
    "kind": "字母名",
    "key": "w",
    "text": "double you",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-x.mp3",
    "kind": "字母名",
    "key": "x",
    "text": "ex",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-y.mp3",
    "kind": "字母名",
    "key": "y",
    "text": "why",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/en/L-z.mp3",
    "kind": "字母名",
    "key": "z",
    "text": "zee",
-   "voice": "en-US-AnaNeural -12%"
+   "voice": "omnivoice-phil"
   },
   {
    "file": "audio/ui/g_hello.mp3",
    "kind": "小游戏引导语",
    "key": "g_hello",
    "text": "来玩小游戏吧！选一个你喜欢的！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5457,7 +5565,7 @@
    "kind": "小游戏引导语",
    "key": "g_balloon",
    "text": "听好字母名字，戳破那个气球！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5466,7 +5574,7 @@
    "kind": "小游戏引导语",
    "key": "g_listen",
    "text": "听一听是哪个词，点对的图片！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5475,7 +5583,7 @@
    "kind": "小游戏引导语",
    "key": "g_memory",
    "text": "翻开卡片，把一对一对找出来！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5484,7 +5592,7 @@
    "kind": "小游戏引导语",
    "key": "g_train",
    "text": "把字母放到小火车上，拼出这个词！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5493,7 +5601,7 @@
    "kind": "小游戏引导语",
    "key": "g_whack",
    "text": "字母跳出来啦！快点点对的字母！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5502,7 +5610,7 @@
    "kind": "小游戏引导语",
    "key": "g_wrong",
    "text": "再听一遍，找找对的！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5511,7 +5619,7 @@
    "kind": "小游戏引导语",
    "key": "g_again",
    "text": "再试一次！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5520,7 +5628,7 @@
    "kind": "小游戏引导语",
    "key": "g_done",
    "text": "小游戏通关啦！你真棒！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5529,7 +5637,7 @@
    "kind": "小游戏引导语",
    "key": "g_hint",
    "text": "是这个哦！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5538,7 +5646,7 @@
    "kind": "小游戏引导语",
    "key": "g_pop",
    "text": "砰！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5547,7 +5655,7 @@
    "kind": "小游戏引导语",
    "key": "g_match",
    "text": "配成一对啦！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5556,7 +5664,7 @@
    "kind": "小游戏引导语",
    "key": "g_next",
    "text": "下一题！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5565,7 +5673,7 @@
    "kind": "小游戏引导语",
    "key": "g_pick",
    "text": "点一下你想玩的游戏！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5574,7 +5682,7 @@
    "kind": "小游戏引导语",
    "key": "g_locked",
    "text": "先学完今天的内容，再来玩小游戏哦！点「去学习」！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   },
@@ -5583,7 +5691,7 @@
    "kind": "小游戏引导语",
    "key": "g_cap",
    "text": "今天的小游戏玩够啦！看看远处，让眼睛休息一下，明天再玩！",
-   "voice": "calm",
+   "voice": "omnivoice-phil",
    "status": "待审",
    "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   }
