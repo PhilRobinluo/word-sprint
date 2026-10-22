@@ -578,7 +578,7 @@ img.mascot,.mascot{width:88px;height:88px;object-fit:contain;object-position:cen
 .rb-splash .dots i:nth-child(2){background:#FFD25E;animation-delay:.15s}
 .rb-splash .dots i:nth-child(3){background:#7ED9B0;animation-delay:.3s}
 .rb-splash .dots i:nth-child(4){background:#8EC5FF;animation-delay:.45s}
-.rb-splash p{margin:0;font-size:17px;letter-spacing:1px}
+.rb-splash .rb-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 @keyframes rbIn{to{opacity:1}}
 @keyframes rbHop{0%,100%{transform:translateY(0) scale(1,1)}12%{transform:translateY(0) scale(1.04,.96)}45%{transform:translateY(-16px) scale(.97,1.03)}78%{transform:translateY(0) scale(1.03,.97)}}
 @keyframes rbShadow{0%,100%,12%,78%{transform:scale(1);opacity:1}45%{transform:scale(.72);opacity:.55}}
@@ -598,7 +598,7 @@ html[data-eye=calm] .spin,html[data-fx=calm] .spin{animation-duration:2.4s;filte
 </head>
 <body>
 <div class="review-banner" role="note"><span>糖果乐园风预览 · 罗老师 · 全部待审</span><a href="preview/styles/">‹ 样板</a><a href="preview/mascots/">形象</a></div>
-<div class="app" id="app"><div class="rb-splash" role="status" aria-live="polite"><div class="luo"><img src="preview/redesign/assets/mascots/greet.webp" alt="罗老师" width="96" height="173" decoding="async" fetchpriority="high"></div><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div><p>罗老师来啦…</p></div><noscript>需要打开 JavaScript 才能使用。</noscript></div>
+<div class="app" id="app"><div class="rb-splash" role="status" aria-live="polite" aria-label="加载中"><div class="luo"><img src="preview/redesign/assets/mascots/greet.webp" alt="罗老师" width="96" height="173" decoding="async" fetchpriority="high"></div><div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="rb-sr">加载中</span></div><noscript>需要打开 JavaScript 才能使用。</noscript></div>
 <script>try{var s=(JSON.parse(localStorage.getItem('rbw.progress.v2')||'{}').settings||{});if(s.fx==='calm')document.documentElement.dataset.eye='calm';}catch(e){}</script>
 <canvas id="confetti" hidden></canvas>
 <audio id="voice" preload="auto" playsinline></audio>
