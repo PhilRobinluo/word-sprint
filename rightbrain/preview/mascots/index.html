@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F1EAFB">
+<title>罗老师 · 8 个场景形象（待审）</title>
+<style>
+@font-face{font-family:"RB-M";src:url(m-zh.woff2) format("woff2");font-display:swap}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F1EAFB;color:#2E2457;font:17px/1.5 "RB-M","PingFang SC",system-ui,sans-serif;padding:24px 16px 60px;letter-spacing:.02em}
+h1{font-size:1.9rem;color:#B42E64;text-shadow:0 3px 0 #FFE1EC;font-weight:400}
+.lead{color:#564A86;margin:6px 0 20px;max-width:44rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;max-width:1200px}
+figure{position:relative;background:#FFF8FC;border-radius:28px;padding:14px 14px 16px;box-shadow:0 6px 0 #E0D3F3,0 14px 24px -14px rgba(46,36,87,.35);display:flex;flex-direction:column;align-items:center;gap:8px;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+figure:hover{transform:translateY(-4px)}
+.art{width:100%;aspect-ratio:1;display:grid;place-items:center;border-radius:22px;background:radial-gradient(circle at 50% 60%,#FFE9F2 0,#EEE6FB 70%)}
+.art img{max-width:92%;max-height:92%;object-fit:contain;animation:bob 3s ease-in-out infinite}
+figure:nth-child(2n) .art img{animation-delay:-1.4s}
+@keyframes bob{50%{transform:translateY(-6px)}}
+figcaption{text-align:center}
+figcaption b{display:block;font-size:1.2rem;font-weight:400}
+figcaption small{color:#564A86;font-size:.9rem}
+.no{position:absolute;top:10px;left:10px;width:34px;height:34px;border-radius:50%;background:#FF7AA8;color:#2E1A3E;display:grid;place-items:center;font-size:1rem;box-shadow:0 3px 0 #D9558A}
+.tag{position:absolute;top:12px;right:12px;font-size:.75rem;padding:3px 9px;border-radius:99px;background:#FFF2C9;color:#3D2A00}
+.note{margin-top:22px;color:#564A86;font-size:.92rem;max-width:44rem}
+@media (prefers-reduced-motion:reduce){.art img,figure{animation:none;transition:none}}
+</style>
+</head>
+<body>
+<h1>罗老师 · 8 个场景形象</h1>
+<p class="lead">同一个罗老师，在网站不同地方换不同动作，孩子会觉得罗老师一直陪着他。都是透明底，放在糖果风页面上的效果就是下面这样。全部待审：哪张不像、哪张要改，告诉我编号就行。</p>
+<div class="grid">
+<figure><span class="no">1</span><span class="tag">待审</span><div class="art"><img src="1-greet.webp" alt="罗老师挥手打招呼"></div><figcaption><b>打招呼</b><small>主页 · 欢迎回来</small></figcaption></figure>
+<figure><span class="no">2</span><span class="tag">待审</span><div class="art"><img src="2-cheer.webp" alt="罗老师跳起来欢呼"></div><figcaption><b>欢呼庆祝</b><small>答对了 · 连对</small></figcaption></figure>
+<figure><span class="no">3</span><span class="tag">待审</span><div class="art"><img src="3-encourage.webp" alt="罗老师竖大拇指鼓励"></div><figcaption><b>温柔鼓励</b><small>答错重教 · 再试一次</small></figcaption></figure>
+<figure><span class="no">4</span><span class="tag">待审</span><div class="art"><img src="4-teach.webp" alt="罗老师举着灯泡讲故事"></div><figcaption><b>讲记忆故事</b><small>学习卡 · 记忆法</small></figcaption></figure>
+<figure><span class="no">5</span><span class="tag">待审</span><div class="art"><img src="5-chest.webp" alt="罗老师打开礼物宝箱"></div><figcaption><b>开宝箱</b><small>礼物宝箱 · 贴纸</small></figcaption></figure>
+<figure><span class="no">6</span><span class="tag">待审</span><div class="art"><img src="6-game.webp" alt="罗老师拿着气球和手柄"></div><figcaption><b>玩游戏</b><small>小游戏大厅</small></figcaption></figure>
+<figure><span class="no">7</span><span class="tag">待审</span><div class="art"><img src="7-rest.webp" alt="罗老师伸懒腰休息眼睛"></div><figcaption><b>休息眼睛</b><small>护眼休息提醒</small></figcaption></figure>
+<figure><span class="no">8</span><span class="tag">待审</span><div class="art"><img src="8-sleep.webp" alt="罗老师抱着枕头说晚安"></div><figcaption><b>晚安（可选）</b><small>今天学完了 · 明天见</small></figcaption></figure>
+</div>
+<p class="note">用 Phil 选定的第 1 版（挥手）做参考，在 box 上生成，脸和发型保持一致，衣服和道具按场景换。原图里底部的文字已经去掉，界面里只叫「罗老师」。</p>
+</body>
+</html>
