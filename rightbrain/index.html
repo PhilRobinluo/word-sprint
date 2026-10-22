@@ -2968,7 +2968,7 @@ function syncSoon(ms = 3000){ if (!access()) return; clearTimeout(syncT); syncT 
 async function syncNow(){
   const a = access(); if (!a || !a.token) return;
   const p = P(); if (p.owner && a.user && p.owner !== a.user.id) return;
-  try { await apiPost('/progress', { summary: syncSummary(p), progress: { items: p.items, sessions: (p.sessions || []).slice(-200), stars: p.stars, stickers: p.stickers, album: p.album || null, settings: p.settings } }); save('rbw.synced', Date.now()); }
+  try { await apiPost('/progress', { summary: syncSummary(p), progress: { items: p.items, sessions: (p.sessions || []).slice(-200), stars: p.stars, stickers: p.stickers, album: p.album || null, games: p.games || null, settings: p.settings } }); save('rbw.synced', Date.now()); }
   catch (err) { if (!err.offline && err.status === 401) { localStorage.removeItem(UKEY); renderAuth(err.message, 'login'); } else if (!err.offline && err.code === 'no_entitlement') { const x = auth(); if (x) { x.ent = { ...x.ent, active: false }; save(UKEY, x); } } }
 }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && syncT) { clearTimeout(syncT); syncNow(); } });
