@@ -133,7 +133,8 @@
     let to; const cap = new Promise(r => { to = setTimeout(() => { if (H.hush) H.hush(); r(false); }, 4000 * l.length + 500); });
     return Promise.race([H.say(l), cap]).finally(() => clearTimeout(to));
   }
-  function cut() { if (H.hush) H.hush(); }   // 孩子一点就先停掉正在念的引导语
+  function cut() { if (G) G.tapped = true; if (H.hush) H.hush(); }
+  function intro(list) { const g = G, r = g && g.round; if (g) g.tapped = false; later(() => { if (G === g && G.round === r && !G.tapped) say(list); }, 300); }   // 孩子一点就先停掉正在念的引导语
   function praise(g) { return H.praise(g); }
   function later(fn, ms) { return H.later(fn, ms); }
   function content() { return H.content(); }
@@ -322,7 +323,7 @@
     shell(`<div class="g-prompt">听！戳破这个字母的气球
       <button class="speak" data-act="greplay" aria-label="再听一遍">🔊 再听</button></div>
       <div class="g-sky" aria-label="气球天空">${balloons}</div>`, 'balloon');
-    later(() => say([ui('g_balloon'), letterAudio(ans)]), 300);
+    intro([ui('g_balloon'), letterAudio(ans)]);
   }
   async function tapBalloon(i, el) {
     if (!G || G.id !== 'balloon' || locked) return;
@@ -365,7 +366,7 @@
     shell(`<div class="g-prompt">听！哪个是它？
       <button class="speak" data-act="greplay" aria-label="再听一遍">🔊 再听</button></div>
       <div class="g-opts">${btns}</div>`, 'listen');
-    later(() => say([ui('g_listen'), wordAudio(ans)]), 300);
+    intro([ui('g_listen'), wordAudio(ans)]);
   }
   async function tapListen(i, el) {
     if (!G || G.id !== 'listen' || locked) return;
@@ -442,7 +443,7 @@
     shell(`<div class="g-prompt">翻开卡片，找出一对！
       ${first ? '' : ''}</div>
       <div class="g-board">${tiles}</div>`, 'memory');
-    if (first) later(() => say([ui('g_memory')]), 300);
+    if (first) intro([ui('g_memory')]);
   }
   async function tapFlip(i) {
     if (!G || G.id !== 'memory' || locked) return;
@@ -527,7 +528,7 @@
         <div class="g-cars"><span class="g-engine" aria-hidden="true">🚂</span>${slots}</div>
         <div class="g-pool">${chips}</div>
       </div>`, 'train');
-    if (first) later(() => say([ui('g_train')].concat(phonSeq(b))), 300);
+    if (first) intro([ui('g_train')].concat(phonSeq(b)));
   }
   async function tapChip(i, el) {
     if (!G || G.id !== 'train' || locked) return;
@@ -597,8 +598,8 @@
     later(() => {
       // pop remaining moles up
       D.querySelectorAll('.g-mole:not(.up)').forEach((m, k) => later(() => m.classList.add('up'), 80 + k * 60));
-      say([ui('g_whack'), letterAudio(ans)]);
     }, 280);
+    intro([ui('g_whack'), letterAudio(ans)]);
   }
   async function tapWhack(i, el) {
     if (!G || G.id !== 'whack' || locked) return;
