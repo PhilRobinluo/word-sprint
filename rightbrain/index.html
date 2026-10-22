@@ -2600,7 +2600,7 @@ $app.addEventListener('click', e => {
   if (b.parentElement && b.parentElement.dataset.pickf != null) { PICKF = b.dataset.v; renderParent(); return; }
   if (b.parentElement && b.parentElement.dataset.set) { const k = b.parentElement.dataset.set, v = b.dataset.v; setP(p => { p.settings[k] = ['size', 'breakMin', 'dailyMin', 'gameCap'].includes(k) ? +v : v; p.settings.at = Date.now(); }); if (k === 'theme') applyTheme(); renderParent(); return; }
   switch (act) {
-    case 'games': case 'globby': case 'gstart': case 'greplay': case 'gballoon': case 'glisten': case 'gflip': case 'gchip': case 'gwhack':
+    case 'games': case 'globby': case 'gstart': case 'glearn': case 'greplay': case 'gballoon': case 'glisten': case 'gflip': case 'gchip': case 'gwhack':
       if (window.RBG && RBG.handle(act, b)) break;
       break;
     case 'go': unlockAudio(); startRound(); break;
