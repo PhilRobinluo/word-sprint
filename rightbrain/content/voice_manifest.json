@@ -1,6 +1,6 @@
 {
- "note": "全站语音清单：换 Phil 本人声音时按此逐条重生成。夸奖类跑 tools/make_voice.py；引导语 tools/make_audio.py；休息/重教 tools/make_eye_audio.py；字母名 tools/make_letter_names.py；讲解旁白 tools/make_audio.py（ONLY=letters/words/blends）。",
- "count": 245,
+ "note": "全站语音清单，共 261 条。换 Phil 克隆声音时照表重生成；文件名不变，页面不用改。",
+ "count": 261,
  "lines": [
   {
    "file": "audio/narr/bed.mp3",
@@ -5442,6 +5442,150 @@
    "key": "z",
    "text": "zee",
    "voice": "en-US-AnaNeural -12%"
+  },
+  {
+   "file": "audio/ui/g_hello.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_hello",
+   "text": "来玩小游戏吧！选一个你喜欢的！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_balloon.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_balloon",
+   "text": "听好字母名字，戳破那个气球！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_listen.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_listen",
+   "text": "听一听是哪个词，点对的图片！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_memory.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_memory",
+   "text": "翻开卡片，把一对一对找出来！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_train.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_train",
+   "text": "把字母放到小火车上，拼出这个词！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_whack.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_whack",
+   "text": "字母跳出来啦！快点点对的字母！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_wrong.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_wrong",
+   "text": "再听一遍，找找对的！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_again.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_again",
+   "text": "再试一次！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_done.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_done",
+   "text": "小游戏通关啦！你真棒！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_hint.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_hint",
+   "text": "是这个哦！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_pop.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_pop",
+   "text": "砰！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_match.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_match",
+   "text": "配成一对啦！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_next.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_next",
+   "text": "下一题！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_pick.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_pick",
+   "text": "点一下你想玩的游戏！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_locked.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_locked",
+   "text": "先学完今天的内容，再来玩小游戏哦！点「去学习」！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
+  },
+  {
+   "file": "audio/ui/g_cap.mp3",
+   "kind": "小游戏引导语",
+   "key": "g_cap",
+   "text": "今天的小游戏玩够啦！看看远处，让眼睛休息一下，明天再玩！",
+   "voice": "calm",
+   "status": "待审",
+   "note": "2026-10-22 小游戏新写；待 Phil 审；临时 Xiaoxiao，以后换 Phil 克隆声"
   }
  ]
 }

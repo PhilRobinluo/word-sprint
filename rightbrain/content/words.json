@@ -1,7 +1,7 @@
 {
  "deck": "右脑记单词",
  "version": "starter-42-20261011",
- "updated": "2026-10-11",
+ "updated": "2026-10-22",
  "note": "字段沿用项目 words.json 写法（hook/cue/boundary/prereq/scene/method/basis/review_status）。status：已认可＝Phil 本人有通过记录；待审＝没有。slogan＝卡片口号；narration＝播报脚本（en 段用 en-US-AnaNeural，zh 段用 zh-CN-XiaoxiaoNeural）；distractors＝测验里的 3 个干扰词（用它们的图）；emoji＝测验选项图。",
  "groups": [
   {
@@ -13259,7 +13259,23 @@
   "letterq": "audio/ui/letterq.mp3",
   "review": "audio/ui/review.mp3",
   "soundq": "audio/ui/soundq.mp3",
-  "reviewdone": "audio/ui/reviewdone.mp3"
+  "reviewdone": "audio/ui/reviewdone.mp3",
+  "g_hello": "audio/ui/g_hello.mp3",
+  "g_balloon": "audio/ui/g_balloon.mp3",
+  "g_listen": "audio/ui/g_listen.mp3",
+  "g_memory": "audio/ui/g_memory.mp3",
+  "g_train": "audio/ui/g_train.mp3",
+  "g_whack": "audio/ui/g_whack.mp3",
+  "g_wrong": "audio/ui/g_wrong.mp3",
+  "g_again": "audio/ui/g_again.mp3",
+  "g_done": "audio/ui/g_done.mp3",
+  "g_hint": "audio/ui/g_hint.mp3",
+  "g_pop": "audio/ui/g_pop.mp3",
+  "g_match": "audio/ui/g_match.mp3",
+  "g_next": "audio/ui/g_next.mp3",
+  "g_pick": "audio/ui/g_pick.mp3",
+  "g_locked": "audio/ui/g_locked.mp3",
+  "g_cap": "audio/ui/g_cap.mp3"
  },
  "phonics_credits": {
   "a": {
