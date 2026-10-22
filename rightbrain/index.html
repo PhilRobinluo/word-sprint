@@ -3,26 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#FFF6E9">
+<meta name="theme-color" content="#F6EEDC">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="右脑记单词">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23F2643A%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial%22 font-weight=%22bold%22%3Ea%3C/text%3E%3C/svg%3E">
 <title>右脑记单词 · 字母小乐园</title>
 <style>
 :root{
-  --bg:#FFF6E9; --paper:#FFFFFF; --ink:#2A2A3A; --muted:#7A7468;
-  --orange:#F2643A; --orange-d:#D94E25; --blue:#2F5DA8; --blue-l:#E6EEFB; --blue-d:#1E4589;
-  --yellow:#FFC93C; --green:#2EA868; --green-l:#E3F6EA; --red:#E5484D; --red-l:#FDE8E8; --pink:#FF8FB1;
-  --line:#F0E4D2; --shadow:0 10px 30px rgba(140,90,30,.12),0 2px 6px rgba(140,90,30,.08);
+  /* 护眼配色（默认）：暖米黄纸张底、深灰褐文字、低饱和蓝；正文对比度 ≥ 4.5 */
+  --bg:#F6EEDC; --paper:#FFF9EE; --paper2:#FBF2E2; --ink:#3D3229; --muted:#6F6253;
+  --orange:#E8603A; --orange-d:#C9572F; --blue:#3E6290; --blue-l:#E7ECF2; --blue-d:#2D4A70; --blue-t:#3E6290;
+  --yellow:#F5C04A; --green:#3A9A66; --green-l:#E4F1E6; --red:#D2524F; --red-l:#F8E6E1; --pink:#E98FA8;
+  --line:#EADCC4; --shadow:0 10px 30px rgba(120,80,30,.10),0 2px 6px rgba(120,80,30,.07);
+  --glow1:#F4DDBF; --glow2:#E6E3D3;
   --r:28px;
   --word-font:"Fredoka","Baloo 2",ui-rounded,"SF Pro Rounded","Arial Rounded MT Bold","Nunito","Varela Round",system-ui,sans-serif;
   --zh-font:"PingFang SC","HarmonyOS Sans SC","Noto Sans CJK SC","Microsoft YaHei",system-ui,sans-serif;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--zh-font);font-size:16px;line-height:1.5}
-body{background:radial-gradient(600px 400px at 110% -10%,#FFE2C2 0,transparent 60%),radial-gradient(500px 380px at -20% 110%,#DCEBFF 0,transparent 60%),var(--bg);background-attachment:fixed;-webkit-user-select:none;user-select:none}
+body{background:radial-gradient(600px 400px at 110% -10%,var(--glow1) 0,transparent 60%),radial-gradient(500px 380px at -20% 110%,var(--glow2) 0,transparent 60%),var(--bg);background-attachment:fixed;-webkit-user-select:none;user-select:none}
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;touch-action:manipulation}
 button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 /* 回主页：除登录页和主页外始终固定在左上角，比视频弹窗还靠上 */
-.homefab{position:fixed;z-index:95;top:max(10px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));width:64px;height:64px;border-radius:20px;background:#fff;border:3px solid #FFD2BD;box-shadow:0 4px 0 #F5C3AA,0 8px 18px rgba(60,30,10,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;color:#E2552B;font-weight:900;font-size:13px;line-height:1.1;transition:transform .12s}
+.homefab{position:fixed;z-index:95;top:max(10px,env(safe-area-inset-top));left:max(10px,env(safe-area-inset-left));width:64px;height:64px;border-radius:20px;background:var(--paper);border:3px solid #FFD2BD;box-shadow:0 4px 0 #F5C3AA,0 8px 18px rgba(60,30,10,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;color:#E2552B;font-weight:900;font-size:13px;line-height:1.1;transition:transform .12s}
 .homefab svg{width:32px;height:32px}
 .homefab:active{transform:translateY(3px);box-shadow:0 1px 0 #F5C3AA}
 .homefab[hidden]{display:none}
@@ -36,9 +44,9 @@ body.hasfab .app>.screen>.top:first-child{padding-left:70px}
 [tabindex="-1"]:focus{outline:none}
 .app{max-width:560px;margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 16px max(20px,env(safe-area-inset-bottom));min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 .top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;margin-bottom:10px}
-.pill{display:inline-flex;align-items:center;gap:6px;height:48px;padding:0 14px;border-radius:999px;background:#fff;box-shadow:0 3px 0 var(--line);font-weight:900;font-size:20px;font-family:var(--word-font)}
+.pill{display:inline-flex;align-items:center;gap:6px;height:48px;padding:0 14px;border-radius:999px;background:var(--paper);box-shadow:0 3px 0 var(--line);font-weight:900;font-size:20px;font-family:var(--word-font)}
 .pill svg{width:26px;height:26px}
-.ib{width:52px;height:52px;border-radius:18px;background:#fff;box-shadow:0 3px 0 var(--line);display:grid;place-items:center;font-size:24px;flex:none;transition:transform .12s}
+.ib{width:52px;height:52px;border-radius:18px;background:var(--paper);box-shadow:0 3px 0 var(--line);display:grid;place-items:center;font-size:24px;flex:none;transition:transform .12s}
 .ib:active{transform:translateY(2px)}
 .ib.off{opacity:.55}
 .ib svg{width:26px;height:26px}
@@ -52,7 +60,7 @@ body.hasfab .app>.screen>.top:first-child{padding-left:70px}
 .btn:active{transform:translateY(3px)}
 .btn.primary{background:var(--orange);color:#fff;box-shadow:0 6px 0 var(--orange-d)}
 .btn.blue{background:var(--blue);color:#fff;box-shadow:0 6px 0 var(--blue-d)}
-.btn.ghost{background:#fff;color:var(--ink);box-shadow:0 5px 0 var(--line)}
+.btn.ghost{background:var(--paper);color:var(--ink);box-shadow:0 5px 0 var(--line)}
 .btn svg{width:30px;height:30px;flex:none}
 .btn.sm{min-height:48px;font-size:16px;border-radius:16px;padding:0 14px;width:auto}
 .btn[disabled]{opacity:.4;pointer-events:none}
@@ -65,7 +73,7 @@ h2{font-size:22px;margin:0 0 8px;font-weight:900}
 /* 首页：小路 */
 .hello{display:flex;align-items:center;gap:12px;margin:2px 0 10px}
 .mascot{width:76px;height:76px;flex:none;animation:bob 2.6s ease-in-out infinite}
-.say-bub{background:#fff;border-radius:22px;padding:12px 16px;font-weight:900;font-size:20px;box-shadow:var(--shadow);position:relative}
+.say-bub{background:var(--paper);border-radius:22px;padding:12px 16px;font-weight:900;font-size:20px;box-shadow:var(--shadow);position:relative}
 .say-bub:before{content:"";position:absolute;left:-10px;top:24px;border:10px solid transparent;border-right-color:#fff;border-left:0}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .path{background:var(--paper);border-radius:var(--r);box-shadow:var(--shadow);padding:14px 14px 10px;display:flex;flex-direction:column;gap:0}
@@ -82,9 +90,26 @@ h2{font-size:22px;margin:0 0 8px;font-weight:900}
 .stop .here{position:absolute;right:6px;top:6px;background:var(--orange);color:#fff;font-weight:900;font-size:13px;border-radius:999px;padding:2px 10px}
 .go{margin:18px auto 6px;width:156px;height:156px;border-radius:50%;background:var(--orange);color:#fff;box-shadow:0 8px 0 var(--orange-d),0 14px 30px rgba(242,100,58,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:24px;font-weight:900;gap:2px}
 .go svg{width:64px;height:64px}
+.go.big{width:min(78vw,300px);height:auto;min-height:150px;border-radius:40px;padding:18px 16px;margin:14px auto 8px;gap:4px}
+.go.big svg{width:58px;height:58px}
+.go .gl{font-size:34px;letter-spacing:2px;line-height:1.1}
+.go .gh{font-size:16px;font-weight:800;opacity:.92;background:rgba(255,255,255,.18);border-radius:999px;padding:3px 12px}
+.a2hs .wxtip{background:var(--yellow-l, #FFF3CF);border-radius:14px;padding:10px 12px;margin:8px 0;font-size:15px;color:var(--ink)}
+.a2steps{display:grid;gap:10px;margin-top:8px}
+.a2steps>div{background:var(--bg);border-radius:14px;padding:10px 12px}
+.a2steps h3{font-size:15px;margin:0 0 4px}
+.a2steps ol{margin:0;padding-left:20px;font-size:15px;line-height:1.7}
+.ico-share{width:20px;height:20px;vertical-align:-4px;color:var(--blue)}
+html[data-theme=dark] .a2hs .wxtip{background:#4A3B22}
+.pathh{font-size:15px;color:var(--muted);text-align:center;margin:18px 0 8px;font-weight:800}
+.rstats{display:flex;justify-content:center;gap:14px;margin:12px 0 6px}
+.rstats div{background:var(--paper);border-radius:20px;box-shadow:0 4px 0 var(--line);padding:10px 16px;min-width:84px;display:flex;flex-direction:column;align-items:center}
+.rstats b{font-size:34px;font-weight:900;color:var(--orange);display:flex;align-items:center;gap:4px;line-height:1.1}
+.rstats span{font-size:14px;color:var(--muted);font-weight:800}
+.rbtns{width:100%;margin-top:auto;padding-top:18px;display:flex;flex-direction:column;gap:10px}
 .go:active{transform:translateY(4px);box-shadow:0 4px 0 var(--orange-d)}
 .preview{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
-.preview span{min-width:52px;height:52px;border-radius:16px;background:#fff;box-shadow:0 3px 0 var(--line);display:grid;place-items:center;font-size:28px;padding:0 8px;font-family:var(--word-font);font-weight:700;color:var(--blue)}
+.preview span{min-width:52px;height:52px;border-radius:16px;background:var(--paper);box-shadow:0 3px 0 var(--line);display:grid;place-items:center;font-size:28px;padding:0 8px;font-family:var(--word-font);font-weight:700;color:var(--blue)}
 .shelf{margin-top:auto;padding-top:14px}
 .shelf .row{display:flex;gap:6px;overflow:hidden;align-items:center;font-size:26px;min-height:40px}
 .shelf .row em{font-style:normal;font-size:14px;color:var(--muted);font-weight:800;margin-right:4px;white-space:nowrap}
@@ -97,13 +122,23 @@ h2{font-size:22px;margin:0 0 8px;font-weight:900}
 .rv{transition:opacity .35s,transform .45s cubic-bezier(.2,.9,.3,1.4)}
 .card.sync .rv:not(.on){opacity:.12;transform:scale(.92)}
 .bigword{font-family:var(--word-font);font-weight:700;color:var(--orange);letter-spacing:1px;line-height:1.05;white-space:nowrap}
-.scene{width:100%;max-width:340px;aspect-ratio:4/3;margin:8px auto 4px;border-radius:22px;background:#FFFCF6;display:grid;place-items:center;overflow:hidden}
+.scene{width:100%;max-width:340px;aspect-ratio:4/3;margin:8px auto 4px;border-radius:22px;background:var(--paper2);display:grid;place-items:center;overflow:hidden}
 .scene img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
 .scene.png img{width:86%;height:96%}
 .scene .emo{font-size:130px;line-height:1}
 .slogan{text-wrap:balance;font-size:26px;font-weight:900;color:var(--blue);line-height:1.3;margin:6px 4px 0}
 .meaning{font-size:40px;font-weight:900;color:var(--orange);margin:4px 0 0;letter-spacing:4px}
-.ctrl{display:flex;gap:12px;align-items:center;justify-content:center;width:100%;margin-top:14px}
+.ctrl{display:flex;gap:12px;align-items:center;justify-content:center;width:100%;margin-top:14px;flex-wrap:wrap}
+/* 小步快进：上一步 / 下一步 / 倍速 */
+.pbar{display:flex;gap:10px;justify-content:center;align-items:center;flex-basis:100%;width:100%}
+.pb{height:52px;min-width:52px;border-radius:18px;background:var(--paper);box-shadow:0 0 0 2px var(--line) inset,0 3px 0 var(--line);font-weight:900;font-size:17px;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 14px;transition:transform .12s}
+.pb:active{transform:translateY(2px)}
+.pb .gl{font-size:22px;line-height:1}
+.pb.fwd{background:#FFF3D6;box-shadow:0 0 0 2px #F6D58A inset,0 3px 0 #EBC566;flex:1;max-width:190px}
+.pb.rate{min-width:64px;font-family:var(--word-font);color:var(--blue)}
+.pb.rate.fast{background:var(--blue);color:#fff;box-shadow:0 3px 0 #22457E}
+.modal .pbar{position:relative;margin-top:12px;max-width:420px}
+.modal{flex-direction:column}
 .round{width:64px;height:64px;border-radius:50%;background:var(--blue-l);display:grid;place-items:center;flex:none;transition:transform .15s}
 .round svg{width:30px;height:30px}
 .round:active{transform:scale(.92)}
@@ -127,7 +162,7 @@ h2{font-size:22px;margin:0 0 8px;font-weight:900}
 .badge .en{font-family:var(--word-font);font-weight:600}
 .tiles{display:flex;justify-content:center;gap:14px;margin:12px 0 4px;transition:gap .6s cubic-bezier(.2,.9,.3,1.3)}
 .tiles.merge{gap:0}
-.tile{width:84px;height:100px;border-radius:22px;background:#fff;box-shadow:0 5px 0 var(--line),0 0 0 3px var(--line) inset;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--word-font);font-weight:700;font-size:58px;line-height:1;color:var(--blue);transition:all .5s}
+.tile{width:84px;height:100px;border-radius:22px;background:var(--paper);box-shadow:0 5px 0 var(--line),0 0 0 3px var(--line) inset;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--word-font);font-weight:700;font-size:58px;line-height:1;color:var(--blue);transition:all .5s}
 .tile small{font-family:var(--zh-font);font-size:15px;color:var(--muted);font-weight:800;margin-top:4px}
 .tile.lit{background:var(--yellow);color:#fff;transform:translateY(-8px);box-shadow:0 5px 0 #E2A400}
 .tiles.merge .tile{border-radius:0;box-shadow:0 5px 0 var(--line);background:#FFF5D6;color:var(--orange)}
@@ -149,12 +184,12 @@ h2{font-size:22px;margin:0 0 8px;font-weight:900}
 .qspk.playing{animation:ring 1s infinite}
 .qword{font-family:var(--word-font);font-weight:700;color:var(--blue);white-space:nowrap}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.opt{min-height:150px;border-radius:26px;background:#fff;box-shadow:0 6px 0 var(--line),0 0 0 3px var(--line) inset;transition:transform .12s,background .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 6px}
+.opt{min-height:150px;border-radius:26px;background:var(--paper);box-shadow:0 6px 0 var(--line),0 0 0 3px var(--line) inset;transition:transform .12s,background .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 6px}
 .opt .pic{font-size:72px;line-height:1.05;width:96px;height:96px;object-fit:contain;display:block}
 .opt .pic.t{display:grid;place-items:center}
 .preview span .pv{width:40px;height:40px;object-fit:contain;display:block}
 .ipa{font-family:"DejaVu Sans","Lucida Sans Unicode","Arial Unicode MS","Segoe UI",sans-serif;font-weight:700}
-.tip{margin:8px auto 0;max-width:340px;background:#FFF8EC;border-radius:16px;padding:8px 12px;font-size:16px;font-weight:700;color:#7A5A2E;text-align:center;line-height:1.45}
+.tip{margin:8px auto 0;max-width:340px;background:var(--paper2);border-radius:16px;padding:8px 12px;font-size:16px;font-weight:700;color:#7A5A2E;text-align:center;line-height:1.45}
 button.badge{border:0;cursor:pointer}
 button.tile{border:0;cursor:pointer;padding:0}
 .stop.review .ic{background:#E7F0FF}
@@ -182,38 +217,38 @@ button.tile{border:0;cursor:pointer;padding:0}
 .bigstars svg{width:56px;height:56px;animation:starpop .5s backwards}
 @keyframes starpop{from{transform:scale(0) rotate(-40deg)}to{transform:none}}
 .stickers{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;margin:16px 0}
-.stk{width:84px;height:84px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px #fff,0 0 0 8px var(--yellow),0 8px 18px rgba(0,0,0,.12);display:grid;place-items:center;font-size:46px;animation:stick .6s backwards;font-family:var(--word-font);font-weight:700;color:var(--blue)}
+.stk{width:84px;height:84px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 5px #fff,0 0 0 8px var(--yellow),0 8px 18px rgba(0,0,0,.12);display:grid;place-items:center;font-size:46px;animation:stick .6s backwards;font-family:var(--word-font);font-weight:700;color:var(--blue)}
 .stk.miss{filter:grayscale(1);opacity:.5;box-shadow:0 0 0 5px #fff,0 0 0 8px #E0D3C0}
 @keyframes stick{from{transform:scale(2) rotate(30deg);opacity:0}to{transform:none;opacity:1}}
 .rtitle{font-size:32px;font-weight:900;margin:8px 0 0}
 
 /* 视频弹窗 */
 .modal{position:fixed;inset:0;z-index:80;background:rgba(20,20,35,.82);display:flex;align-items:center;justify-content:center;padding:16px;animation:enter .25s}
-.modal video{max-width:100%;max-height:calc(100dvh - 120px);aspect-ratio:9/16;border-radius:24px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.modal .x{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;width:60px;height:60px;border-radius:50%;background:#fff;font-size:30px;font-weight:900;display:grid;place-items:center}
+.modal video{max-width:100%;max-height:calc(100dvh - 190px);aspect-ratio:9/16;border-radius:24px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.modal .x{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;width:60px;height:60px;border-radius:50%;background:var(--paper);font-size:30px;font-weight:900;display:grid;place-items:center}
 .tapme{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--blue);color:#fff;font-weight:900;font-size:20px;border-radius:999px;padding:14px 22px;box-shadow:0 6px 0 var(--blue-d)}
 
 /* 家长/老师 */
 .panel{background:var(--paper);border-radius:22px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
 .tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px}
-.tabs button{flex:none;height:44px;border-radius:14px;padding:0 14px;background:#fff;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:15px}
+.tabs button{flex:none;height:44px;border-radius:14px;padding:0 14px;background:var(--paper);box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:15px}
 .tabs button.on{background:var(--blue);color:#fff;box-shadow:none}
 .seg{display:flex;gap:8px;flex-wrap:wrap}
-.seg button{min-height:44px;border-radius:14px;padding:0 14px;background:#FFFBF4;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:15px}
+.seg button{min-height:44px;border-radius:14px;padding:0 14px;background:var(--paper2);box-shadow:0 0 0 2px var(--line) inset;font-weight:800;font-size:15px}
 .seg button.on{background:var(--blue-l);box-shadow:0 0 0 3px var(--blue) inset;color:var(--blue)}
 .pick{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.pick button{min-height:44px;border-radius:14px;padding:0 12px;background:#FFFBF4;box-shadow:0 0 0 2px var(--line) inset;font-weight:700;font-size:15px;display:flex;align-items:center;gap:4px}
+.pick button{min-height:44px;border-radius:14px;padding:0 12px;background:var(--paper2);box-shadow:0 0 0 2px var(--line) inset;font-weight:700;font-size:15px;display:flex;align-items:center;gap:4px}
 .pick button b{font-family:var(--word-font);font-weight:600;font-size:17px;color:var(--blue)}
 .pick button.on{background:var(--green-l);box-shadow:0 0 0 3px var(--green) inset}
 .pick button.seen:after{content:"✓";color:var(--green);font-weight:900;margin-left:2px}
 .lst{display:flex;flex-direction:column;gap:10px}
-.lst article{border:2px solid var(--line);border-radius:16px;padding:10px 12px;background:#FFFCF7;font-size:14px}
+.lst article{border:2px solid var(--line);border-radius:16px;padding:10px 12px;background:var(--paper2);font-size:14px}
 .lst h3{margin:0 0 4px;font-family:var(--word-font);font-weight:600;font-size:20px;color:var(--blue);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .lst p{margin:3px 0}
 .st{font-family:var(--zh-font);font-size:12px;border-radius:999px;padding:2px 9px;font-weight:800}
 .st.ok{background:var(--green-l);color:var(--green)}.st.wait{background:#FFF0E0;color:#B8601E}.st.ph{background:#EEE;color:#666}
 .kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:15px}
-.field input{height:48px;border-radius:14px;border:2px solid var(--line);padding:0 12px;font-size:17px;font-family:inherit;background:#FFFBF4;width:100%}
+.field input{height:48px;border-radius:14px;border:2px solid var(--line);padding:0 12px;font-size:17px;font-family:inherit;background:var(--paper2);width:100%}
 .count{font-family:var(--word-font);font-weight:700;font-size:64px;color:var(--orange);line-height:1}
 .timer{position:absolute;left:0;top:0;height:7px;background:var(--yellow);width:0}
 .timer.run{animation:fill var(--secs,10s) linear forwards}
@@ -243,7 +278,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 .gate .sub{text-wrap:balance;margin:0 0 20px;color:var(--muted);font-size:17px;font-weight:700}
 .gatecard{width:100%;max-width:420px;background:var(--paper);border-radius:var(--r);padding:22px 20px 20px;box-shadow:var(--shadow)}
 .gatecard label{display:block;text-align:left;font-weight:900;font-size:15px;color:var(--muted);margin:0 0 8px 4px}
-.codein{width:100%;height:68px;border-radius:20px;border:3px solid var(--line);background:#FFFBF4;text-align:center;font-family:var(--word-font);font-weight:700;font-size:28px;letter-spacing:3px;color:var(--blue);text-transform:uppercase;outline:none;transition:border-color .15s,box-shadow .15s}
+.codein{width:100%;height:68px;border-radius:20px;border:3px solid var(--line);background:var(--paper2);text-align:center;font-family:var(--word-font);font-weight:700;font-size:28px;letter-spacing:3px;color:var(--blue);text-transform:uppercase;outline:none;transition:border-color .15s,box-shadow .15s}
 .codein:focus{border-color:var(--blue);box-shadow:0 0 0 5px var(--blue-l)}
 .codein.bad{border-color:var(--red);animation:shake .35s}
 @keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
@@ -255,11 +290,11 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 .spin{width:22px;height:22px;border-radius:50%;border:3px solid rgba(255,255,255,.5);border-top-color:#fff;animation:sp .8s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
 .gatebadges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 18px}
-.gatebadges span{background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 3px 0 var(--line)}
+.gatebadges span{background:var(--paper);border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 3px 0 var(--line)}
 
 /* ---------- 三轮学习 ---------- */
 .passbar{display:flex;align-items:center;justify-content:center;gap:4px;margin:0 0 6px;flex-wrap:nowrap}
-.passbar span{font-size:13px;font-weight:900;color:var(--muted);background:#fff;border-radius:999px;padding:3px 10px;box-shadow:0 2px 0 var(--line);white-space:nowrap;transition:all .25s}
+.passbar span{font-size:13px;font-weight:900;color:var(--muted);background:var(--paper);border-radius:999px;padding:3px 10px;box-shadow:0 2px 0 var(--line);white-space:nowrap;transition:all .25s}
 .passbar span.on{background:var(--orange);color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.12);transform:scale(1.06)}
 .passbar span.done{color:var(--green,#3BB273)}
 .passbar i{width:10px;height:3px;border-radius:2px;background:var(--line)}
@@ -276,14 +311,14 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:40}
 .wordopt{min-height:84px}
 .wordopt .w{font-family:var(--word-font);font-weight:700;color:var(--blue)}
 .passintro .passitems{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px;max-width:360px}
-.passintro .passitems span{background:#fff;border-radius:14px;padding:6px 14px;font-family:var(--word-font);font-weight:700;font-size:20px;box-shadow:0 3px 0 var(--line)}
+.passintro .passitems span{background:var(--paper);border-radius:14px;padding:6px 14px;font-family:var(--word-font);font-weight:700;font-size:20px;box-shadow:0 3px 0 var(--line)}
 
 /* ---------- 账号 ---------- */
 .authcard{padding-top:14px}
 .seg{display:flex;background:var(--bg,#FFF3E0);border-radius:999px;padding:5px;margin:0 0 16px;gap:4px}
 .seg button{flex:1;border:0;background:transparent;border-radius:999px;padding:11px 8px;font:inherit;font-weight:900;font-size:16px;color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
-.seg button.on{background:#fff;color:var(--blue);box-shadow:0 3px 0 var(--line)}
-.fin{width:100%;height:54px;border-radius:16px;border:3px solid var(--line);background:#FFFBF4;padding:0 14px;font:inherit;font-size:17px;font-weight:700;color:var(--ink);outline:none;margin:0 0 14px;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+.seg button.on{background:var(--paper);color:var(--blue);box-shadow:0 3px 0 var(--line)}
+.fin{width:100%;height:54px;border-radius:16px;border:3px solid var(--line);background:var(--paper2);padding:0 14px;font:inherit;font-size:17px;font-weight:700;color:var(--ink);outline:none;margin:0 0 14px;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
 select.fin{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:32px}
 .fin:focus{border-color:var(--blue);box-shadow:0 0 0 5px var(--blue-l)}
 .fin.bad{border-color:var(--red);animation:shake .35s}
@@ -292,11 +327,36 @@ select.fin{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 5
 .whoami{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 14px;padding:10px 14px;background:var(--blue-l);border-radius:14px;font-weight:800;font-size:15px;color:var(--ink);text-align:left}
 .whoami span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .linkbtn{border:0;background:none;color:var(--blue);font:inherit;font-weight:900;font-size:15px;cursor:pointer;white-space:nowrap;padding:4px}
+/* 入口：两个大按钮 + 领码 */
+.startcard{display:flex;flex-direction:column;gap:14px;padding:18px}
+.bigchoice{display:flex;align-items:center;gap:16px;width:100%;min-height:92px;border-radius:24px;padding:12px 20px;text-align:left;font:inherit;color:#fff;cursor:pointer;transition:transform .12s}
+.bigchoice:active{transform:translateY(3px)}
+.bigchoice .em{font-size:40px;line-height:1}
+.bigchoice b{display:block;font-size:24px;font-weight:900;line-height:1.2}
+.bigchoice small{display:block;font-size:17px;font-weight:800;opacity:.92}
+.bigchoice.open{background:var(--orange);box-shadow:0 6px 0 #C94E2A}
+.bigchoice.login{background:var(--blue);box-shadow:0 6px 0 #22457E}
+.askcard{margin-top:14px;padding:16px 18px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.askcard .asktxt{margin:0;font-weight:800;color:var(--muted)}
+.btn.askbtn{width:100%;min-height:62px;background:#2AAE67;color:#fff;box-shadow:0 5px 0 #1E8A50;font-size:19px;font-weight:900;margin:0}
+.trylink{font-size:16px;padding:8px}
+.backlink{display:block;margin:-6px 0 6px -6px;font-size:16px}
+.gatecard .gh{margin:0 0 14px;font-size:22px;font-weight:900;text-align:left}
+.codeok{background:#E3F6EA;color:#1E7A48;border-radius:16px;padding:12px 14px;margin:0 0 16px;font-weight:800;text-align:left}
+.codeok small{display:block;font-size:14px;color:#2E8B57;font-weight:700}
+.qrmodal{position:fixed;inset:0;z-index:120;background:rgba(20,20,35,.72);display:flex;align-items:center;justify-content:center;padding:18px;animation:enter .25s}
+.qrbox{width:100%;max-width:380px;background:var(--paper);border-radius:28px;padding:22px 20px 20px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.qrbox h2{margin:0 0 12px;font-size:22px;font-weight:900}
+.qrbox img{width:100%;max-width:280px;aspect-ratio:1;border-radius:16px;display:block;margin:0 auto;background:var(--paper);-webkit-user-select:auto;user-select:auto;-webkit-touch-callout:default}
+.qrbox .qrsay{margin:14px 0 4px;font-size:19px;font-weight:900;color:var(--ink)}
+.qrbox .qrtip{margin:0 0 14px;font-size:13px;color:var(--muted)}
+.trialtag{background:#E3F6EA;color:#1E7A48;font-weight:900;border-radius:999px;padding:6px 14px;font-size:15px}
+.trialend{display:flex;flex-direction:column;align-items:center;gap:8px;margin:14px auto 0;max-width:420px;width:100%;text-align:center}
 
 /* ---------- 自由选站 / 单元页 / 速览 ---------- */
 button.stop{width:100%;text-align:left;border-radius:22px;transition:background .15s,transform .12s;font:inherit;color:inherit}
 button.stop:active{transform:scale(.98)}
-button.stop:hover{background:#FFF8EE}
+button.stop:hover{background:var(--paper2)}
 .stop .chev{flex:none;width:36px;height:36px;border-radius:12px;background:#F6EEE2;display:grid;place-items:center;font-weight:900;color:var(--muted);font-size:20px}
 .stop .rec{position:absolute;right:52px;top:6px;background:var(--orange);color:#fff;font-weight:900;font-size:12px;border-radius:999px;padding:2px 10px}
 .freehint{text-align:center;font-size:14px;color:var(--muted);font-weight:800;margin:8px 0 0}
@@ -307,7 +367,7 @@ button.stop:hover{background:#FFF8EE}
 .mact .btn{min-height:58px;font-size:17px;white-space:nowrap;padding:0 10px;gap:6px}
 .gtitle{font-weight:900;font-size:15px;color:var(--muted);margin:14px 4px 8px}
 .igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:10px}
-.icell{position:relative;background:#fff;border-radius:20px;box-shadow:0 4px 0 var(--line),0 0 0 2px var(--line) inset;min-height:96px;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:transform .12s}
+.icell{position:relative;background:var(--paper);border-radius:20px;box-shadow:0 4px 0 var(--line),0 0 0 2px var(--line) inset;min-height:96px;padding:8px 4px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:transform .12s}
 .icell:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line),0 0 0 2px var(--line) inset}
 .icell .lt{font-family:var(--word-font);font-weight:700;font-size:38px;line-height:1}
 .icell .gi{width:48px;height:48px;object-fit:contain}
@@ -320,13 +380,46 @@ button.stop:hover{background:#FFF8EE}
 .browse .card{touch-action:pan-y;user-select:none}
 .bnav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
 .bnav .count{font-weight:900;font-size:18px;color:var(--muted);font-family:var(--word-font)}
-.bnav .arrow{width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 5px 0 var(--line);display:grid;place-items:center;font-size:30px;font-weight:900;color:var(--blue)}
+.bnav .arrow{width:64px;height:64px;border-radius:50%;background:var(--paper);box-shadow:0 5px 0 var(--line);display:grid;place-items:center;font-size:30px;font-weight:900;color:var(--blue)}
 .bnav .arrow[disabled]{opacity:.3}
 .bctrl{display:flex;gap:12px;justify-content:center;margin-top:12px}
 .bbar{height:6px;border-radius:6px;background:var(--line);overflow:hidden;margin-top:12px}.bbar b{display:block;height:100%;background:var(--orange);transition:width .2s}
 .bhint{text-align:center;font-size:13px;color:var(--muted);margin-top:8px;font-weight:700}
 @keyframes inL{from{opacity:0;transform:translateX(40px)}}@keyframes inR{from{opacity:0;transform:translateX(-40px)}}
 .browse .card.fl{animation:inL .25s ease-out}.browse .card.fr{animation:inR .25s ease-out}
+/* 夜间暗色：暖色深底（不是纯黑） */
+html[data-theme=dark]{color-scheme:dark;
+  --bg:#2A231C; --paper:#372E25; --paper2:#3F352A; --ink:#EDE1CC; --muted:#C2B39C;
+  --orange:#D9653F; --orange-d:#A84B2D; --blue:#4D6C96; --blue-l:#3A4352; --blue-d:#384F6E; --blue-t:#9DB5D8;
+  --yellow:#E2B04A; --green:#4E9A6E; --green-l:#2F4436; --red:#D46A62; --red-l:#4A302C; --pink:#C77C92;
+  --line:#4C4135; --shadow:0 10px 30px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.2); --glow1:#3A2D20; --glow2:#2E2B24}
+html[data-theme=dark] img{filter:brightness(.88) saturate(.9)}
+html[data-theme=dark] .vidbtn{background:#4A3A2C;color:#F0BFA0;box-shadow:0 4px 0 #2E241B}
+html[data-theme=dark] .linkbtn,html[data-theme=dark] .codein,html[data-theme=dark] .gatemsg.info,html[data-theme=dark] .pb.rate{color:var(--blue-t)}
+html[data-theme=dark] .pb.fwd{background:#4A3F27;box-shadow:0 0 0 2px #6B5A33 inset,0 3px 0 #2E2618}
+html[data-theme=dark] .pb.rate.fast{color:#fff}
+html[data-theme=dark] .tip{background:#40352A;color:#E8CFA8}
+html[data-theme=dark] .homefab{background:var(--paper);border-color:#6A4C3A;box-shadow:0 4px 0 #1E1813,0 8px 18px rgba(0,0,0,.3);color:#F0A37E}
+html[data-theme=dark] .seg{background:#2F271F}
+html[data-theme=dark] .dots i,html[data-theme=dark] .passbar i{background:#5A4D3E}
+html[data-theme=dark] .codeok{background:var(--green-l);color:#BFE3CB}
+html[data-theme=dark] .trialtag{background:var(--green-l);color:#BFE3CB}
+/* 用眼休息 / 每日收工 */
+.screen.rest{align-items:center;justify-content:center;text-align:center;padding:20px 8px 40px}
+.restscene{position:relative;width:min(320px,82vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 70%,#CFE3C4 0,#E6EFD9 45%,var(--paper) 72%);display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow)}
+html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3E5040 0,#33402F 45%,var(--paper) 72%)}
+.restscene .far{position:absolute;bottom:22%;font-size:46px;animation:farfloat 4s ease-in-out infinite}
+.restscene .far.t2{left:22%;font-size:34px;animation-delay:-1.3s}.restscene .far.t3{right:20%;font-size:30px;animation-delay:-2.6s}
+.restscene .eyes{position:absolute;top:20%;font-size:58px;animation:look 3s ease-in-out infinite}
+.restscene .cnt{position:absolute;bottom:6%;font-family:var(--word-font);font-weight:700;font-size:44px;color:var(--ink);background:var(--paper);border-radius:999px;min-width:84px;padding:0 14px;box-shadow:0 3px 0 var(--line)}
+@keyframes farfloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.04)}}
+@keyframes look{0%,100%{transform:translateX(-14px)}50%{transform:translateX(14px)}}
+.rest h1{margin:18px 0 6px;font-size:28px;font-weight:900}.rest .sub{margin:0 0 18px;color:var(--muted);font-size:18px;font-weight:800}
+.rest .btn{max-width:340px}
+.restring{width:100%;max-width:340px;height:12px;border-radius:99px;background:var(--line);overflow:hidden;margin:0 auto 16px}.restring b{display:block;height:100%;background:var(--green);width:0;transition:width 1s linear}
+.unlock{max-width:340px;margin:14px auto 0;background:var(--paper);border-radius:22px;padding:16px;box-shadow:var(--shadow)}
+.unlock .q{font-family:var(--word-font);font-size:30px;font-weight:700;margin:4px 0 10px}
+.unlock input{width:100%;height:58px;border-radius:16px;border:3px solid var(--line);background:var(--paper2);font:inherit;font-size:26px;text-align:center;color:var(--ink);outline:none}
 </style>
 </head>
 <body>
@@ -386,13 +479,12 @@ const ICON = {
 /* ---------- 内容 ---------- */
 let C = null; const ITEMS = new Map();
 async function loadContent(){
+  // 秒开：直接用页面里内置的那份（和 content/words.json 由测试保证一致），不再多等一次网络
   try {
-    const r = await fetch('content/words.json', { cache: 'no-store' });
-    if (!r.ok) throw new Error(r.status);
-    C = await r.json(); C._from = 'content/words.json';
-  } catch (e) {
     const raw = document.getElementById('fallback-content').textContent.replace('/*CONTENT-START*/', '').replace('/*CONTENT-END*/', '');
-    C = JSON.parse(raw); C._from = '内置副本';
+    C = JSON.parse(raw); C._from = '内置（与 content/words.json 同步）';
+  } catch (e) {
+    const r = await fetch('content/words.json'); C = await r.json(); C._from = 'content/words.json';
   }
   ITEMS.clear();
   (C.letters || []).forEach(l => ITEMS.set(l.id, { type: 'letter', id: l.id, d: l }));
@@ -440,6 +532,26 @@ function stationStats(p){
   return { letter: mk(L, '字母小乐园', 'Aa'), blend: mk(B, '拼读小词', '🧩'), word: mk(W, '记忆单词', '🧠'), review: { name: '复习', ic: '🔁', total: due.length, seen: 0, ok: 0, due } };
 }
 function blendUnlocked(p, b){ return (b.letters || []).every(l => p.items['L-' + l]); }
+function newPlan(p){
+  const size = p.settings.size || 0;
+  for (const st of buildPath(p.settings.grade)) {
+    let fresh = st.ids.filter(id => !p.items[id] && it(id));
+    if (st.station === 'blend') fresh = fresh.filter(id => blendUnlocked(p, it(id).d));
+    if (fresh.length) return { kind: 'new', ids: size ? fresh.slice(0, size) : fresh, station: st.station, g: st.g };
+  }
+  return null;
+}
+/* 一键开始：一轮约 5 分钟 = 先复习（到期 / 没考完的）+ 再接着路线学新的 */
+function planRound(){
+  const first = nextSession(), parts = [first];
+  if (first.kind === 'review') { const n = newPlan(P()); if (n) parts.push(n); }
+  return parts;
+}
+function roundHint(parts){
+  return parts.map(x => x.kind === 'review' ? `复习 ${x.ids.length} 个` : x.kind === 'new' ? `新学 ${x.ids.length} 个` : x.kind === 'pick' ? `老师选的 ${x.ids.length} 个` : `再练 ${x.ids.length} 个`).join(' + ');
+}
+let ROUND = null;
+function startRound(){ const parts = planRound(); ROUND = { left: parts.length > 1 ? ['new'] : [], done: [] }; startSession(parts[0]); }
 function nextSession(){
   const p = P(), t = today(), size = p.settings.size || 0;
   if (p.override && p.override.ids && p.override.ids.length) return { kind: 'pick', ids: p.override.ids.filter(it).slice(0, 8), station: it(p.override.ids[0])?.type || 'word' };
@@ -468,6 +580,9 @@ function play(src){
     curFin = fin;
     A.onended = () => fin(true); A.onerror = () => fin(false);
     try { A.src = src; } catch (e) { fin(false); return; }
+    applyRate(A);
+    const sk = NEXT_SEEK; NEXT_SEEK = 0;
+    if (sk) { const go = () => { try { A.currentTime = sk; } catch (e) {} }; go(); A.addEventListener('loadedmetadata', go, { once: true }); }
     to = setTimeout(() => fin(false), 30000);
     let pr; try { pr = A.play(); } catch (e) { fin(false); return; }
     if (!pr || typeof pr.then !== 'function') { fin(false); return; } // 没有真正的音频（如测试环境）
@@ -483,7 +598,8 @@ async function say(list, btn){ // 依次播放；被新的播放打断就返回 
 }
 function hush(){ seqTok++; markBtn(null); if (curFin) curFin(false); try { A.pause(); } catch (e) {} }
 function markBtn(b){ if (playingBtn) playingBtn.classList.remove('playing'); playingBtn = b || null; if (b) b.classList.add('playing'); }
-function ui(k){ return C.ui_audio && C.ui_audio[k]; }
+const EYE_UI = { rest: 'audio/ui/rest.mp3', rest_done: 'audio/ui/rest_done.mp3', limit: 'audio/ui/limit.mp3', roundnext: 'audio/ui/roundnext.mp3', rounddone: 'audio/ui/rounddone.mp3' };
+function ui(k){ return (C.ui_audio && C.ui_audio[k]) || EYE_UI[k]; }
 function unlockAudio(){ // 必须在点击里同步调用：iOS 只有手势里的 play() 才放行
   if (unlocked) return;
   try { A.muted = true; A.src = ui('next') || ''; const pr = A.play(); if (pr && pr.then) pr.then(() => { A.pause(); A.muted = false; unlocked = true; }).catch(() => { A.muted = false; }); else A.muted = false; } catch (e) { A.muted = false; }
@@ -520,17 +636,120 @@ function syncCard(card, cues){
   return showAll;
 }
 
+/* ---------- 护眼配色 / 用眼休息提醒 / 每日学习时长 ---------- */
+const mqDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+function applyTheme(){
+  const t = (P().settings || {}).theme || 'light', dark = t === 'dark' || (t === 'auto' && mqDark && mqDark.matches);
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  const m = document.querySelector('meta[name=theme-color]'); if (m) m.setAttribute('content', dark ? '#2A231C' : '#F6EEDC');
+}
+if (mqDark && mqDark.addEventListener) mqDark.addEventListener('change', applyTheme);
+const BREAK_DEF = 15, REST_SEC = +QS.get('restsec') || 20;
+const eyeSet = () => { const st = P().settings || {}; return { brk: st.breakMin ?? BREAK_DEF, daily: st.dailyMin ?? 0 }; };
+function usage(){ const u = load('rbw.usage', null), t = today(); return u && u.day === t ? u : { day: t, ms: 0, since: 0, extra: 0 }; }
+function addUsage(ms){ const u = usage(); u.ms += ms; u.since += ms; save('rbw.usage', u); }
+// 只在真的在学（学习/测验/速览，页面在前台）时计时
+const studying = () => document.visibilityState !== 'hidden' && !$app.querySelector('.screen.rest') && ((S && !S.trial && S.phase !== 'result') || (BR && $app.querySelector('.screen.browse')));
+setInterval(() => { if (studying()) addUsage(5000); }, 5000);
+function eyeDue(){
+  const e = eyeSet(), u = usage();
+  if (e.daily && u.ms >= (e.daily + (u.extra || 0)) * 60000) return 'limit';
+  if (e.brk && u.since >= e.brk * 60000) return 'rest';
+  return null;
+}
+// 在两张卡 / 两道题之间检查：到点就先休息或收工，休息完接着原来的地方（不打断正在答的题）
+function eyeGate(cont){ const d = eyeDue(); if (!d) return false; if (d === 'rest') renderRest(cont); else renderLimit(cont); return true; }
+function renderRest(cont){
+  const sec = REST_SEC;
+  show(`${topbar()}<div class="restscene" aria-hidden="true"><span class="eyes">👀</span><span class="far t2">🌳</span><span class="far">🏔️</span><span class="far t3">🌲</span><span class="cnt" id="restn">${sec}</span></div>
+    <h1>休息一下！</h1><p class="sub">抬起头，看看窗外远远的地方</p>
+    <div class="restring" aria-hidden="true"><b id="restbar"></b></div>
+    <button class="btn primary" data-act="restgo" id="restgo" hidden>${ICON.arrow} 继续学习</button>`, 'rest');
+  REST_CONT = cont;
+  say([ui('rest')]);
+  let n = sec;
+  const tick = () => { n--; const c = document.getElementById('restn'), bar = document.getElementById('restbar'); if (!c) return; c.textContent = Math.max(0, n); bar.style.width = ((sec - n) / sec * 100) + '%';
+    if (n > 0) { later(tick, 1000); return; }
+    const u = usage(); u.since = 0; save('rbw.usage', u);
+    const g = document.getElementById('restgo'); g.hidden = false; g.classList.add('pulse'); say([ui('rest_done')]); };
+  later(tick, 1000);
+}
+let REST_CONT = null, LIMIT_Q = null;
+function renderLimit(cont){
+  REST_CONT = cont;
+  const u = usage();
+  show(`<div class="restscene" aria-hidden="true"><span class="eyes">🌙</span><span class="far t2">⭐</span><span class="far">🏠</span><span class="far t3">⭐</span></div>
+    <h1>今天学完啦！</h1><p class="sub">今天学了 ${Math.round(u.ms / 60000)} 分钟，明天再见 👋</p>
+    <button class="btn primary" data-act="limithome">${ICON.home.replace('#F2643A', '#fff').replace('<svg', '<svg width="28" height="28"')} 好的，明天见</button>
+    <button class="linkbtn" data-act="limitunlock" style="margin-top:16px">家长：再学 15 分钟</button><div id="unlockbox"></div>`, 'rest limit');
+  say([ui('limit')]);
+}
+function limitUnlockBox(){
+  const a = 11 + Math.floor(Math.random() * 30), b = 11 + Math.floor(Math.random() * 30); LIMIT_Q = a + b;
+  const box = document.getElementById('unlockbox'); if (!box) return;
+  box.innerHTML = `<form class="unlock" id="unlockform"><div class="small">家长验证：算一算</div><div class="q">${a} + ${b} = ?</div><input id="unlockin" inputmode="numeric" autocomplete="off" aria-label="答案"><button class="btn primary sm" style="margin-top:10px">解锁 15 分钟</button><p class="gatemsg" id="unlockmsg"></p></form>`;
+  const f = document.getElementById('unlockform'), inp = document.getElementById('unlockin'); inp.focus();
+  f.addEventListener('submit', e => { e.preventDefault();
+    if (+inp.value.trim() !== LIMIT_Q) { shake(inp); document.getElementById('unlockmsg').textContent = '不对哦，请爸爸妈妈来算'; return; }
+    const u = usage(); u.extra = (u.extra || 0) + 15; u.since = 0; save('rbw.usage', u); toast('已延长 15 分钟');
+    const c = REST_CONT; REST_CONT = null; if (c) c(); else renderHome(); });
+}
+
+/* ---------- 小步快进：按旁白句子（视频分镜和旁白用同一条时间轴）跳 ---------- */
+const RATES = [1, 1.5, 2];
+let RATE = RATES.includes(+load('rbw.rate', 1)) ? +load('rbw.rate', 1) : 1;
+function applyRate(m){ if (!m) return; try { m.defaultPlaybackRate = RATE; m.playbackRate = RATE; m.preservesPitch = true; m.webkitPreservesPitch = true; m.mozPreservesPitch = true; } catch (e) {} }
+function cycleRate(){ RATE = RATES[(RATES.indexOf(RATE) + 1) % RATES.length]; save('rbw.rate', RATE); applyRate(A); document.querySelectorAll('.modal video').forEach(applyRate); document.querySelectorAll('[data-act=prate],[data-vact=prate]').forEach(b => { b.textContent = rateLabel(); b.classList.toggle('fast', RATE > 1); }); toast('播放速度 ' + rateLabel()); }
+const rateLabel = () => RATE + '×';
+// 分段表：每句旁白开头是一个节拍；太短的句子（不到 1.2 秒）并到前一段里。没有分段信息就每 4 秒一段
+function stepsOf(x){
+  const cues = (x && x.d && x.d.cues) || [], out = [0];
+  cues.forEach(c => { const t = Math.max(0, c[0] - 0.1); if (t - out[out.length - 1] >= 1.2) out.push(+t.toFixed(2)); });
+  return out;
+}
+function nextStep(steps, t, dur){
+  if (steps.length < 2) { const n = t + 4; return dur && n >= dur - 0.3 ? null : n; }
+  const n = steps.find(s => s > t + 0.3); return n == null ? null : n;
+}
+function prevStep(steps, t){
+  if (steps.length < 2) return Math.max(0, t - 4);
+  let k = -1; steps.forEach((s, i) => { if (s <= t + 0.05) k = i; });
+  if (k < 0) return 0;
+  return t - steps[k] > 1.2 ? steps[k] : steps[Math.max(0, k - 1)];
+}
+const pbarHTML = (pre = 'act') => `<div class="pbar"><button type="button" class="pb" data-${pre}="pprev" aria-label="上一步"><span class="gl">⏮</span>上一步</button><button type="button" class="pb fwd" data-${pre}="pnext" aria-label="下一步">下一步<span class="gl">⏭</span></button><button type="button" class="pb rate ${RATE > 1 ? 'fast' : ''}" data-${pre}="prate" aria-label="播放速度">${rateLabel()}</button></div>`;
+let NEXT_SEEK = 0;   // 下一次 play() 从这里开始
+const narrSrc = x => x && [].concat(x.d.audio || [])[0];
+const isPlaying = src => !!src && !A.paused && (A.currentSrc || A.src || '').endsWith(src);
+// 学习卡 / 速览里的讲解：播放中按句子跳；没在播时「下一步」进入下一环节，「上一步」从最后一句重听
+function narrStep(dir){
+  const learn = S && S.phase === 'learn' && !S.trial, x = learn ? it(learnId()) : BR ? it(BR.ids[BR.i]) : null; if (!x) return;
+  const src = narrSrc(x), steps = stepsOf(x);
+  if (isPlaying(src)) {
+    const t = A.currentTime || 0, dur = isFinite(A.duration) ? A.duration : null;
+    const to = dir > 0 ? nextStep(steps, t, dur) : prevStep(steps, t);
+    if (to == null) { hush(); if (learn) { if (S.reveal) S.reveal(); afterLearn(); } else browseStep(1); return; }
+    try { A.currentTime = to; } catch (e) {}
+    return;
+  }
+  if (learn && !S.cardStarted && dir > 0) { hush(); startNarr(); return; }   // 开场白还在说：直接开始讲这张卡
+  if (dir > 0) { hush(); if (learn) afterLearn(); else browseStep(1); return; }
+  // 上一步：从最后一句重新讲
+  unlockAudio(); hush(); NEXT_SEEK = steps[steps.length - 1] || 0;
+  if (learn) startNarr(); else say(x.d.audio, $app.querySelector('[data-act=bsay]'));
+}
+
 /* ---------- 屏幕 ---------- */
 let S = null, ROUTE = 'home';
 function show(html, cls = ''){
-  clearTimers(); hush(); closeVideo(true);
-  const key = cls === 'gate' ? null : S ? 'session' : ROUTE;
-  homeFab(key && key !== 'home');
+  clearTimers(); hush(); closeVideo(true); closeQR();
+  const key = cls === 'gate' ? 'auth:' + AUTHMODE : (S || /^rest/.test(cls)) ? 'session' : ROUTE;   // 休息页 / 收工页算在「学习中」这一层
+  homeFab(key !== 'home' && !key.startsWith('auth:'));
   document.querySelectorAll('.tapme').forEach(e => e.remove());
   $app.innerHTML = `<section class="screen ${cls}">${html}</section>`;
   const h = $app.querySelector('[data-focus]'); if (h) h.focus({ preventScroll: true });
   window.scrollTo(0, 0);
-  if (key) syncRoute(key); else HIST = [];
+  syncRoute(key);
 }
 /* ---------- 回主页按钮 + 返回键 ----------
    HIST 记着本页面压进浏览器历史的每一层（home / module:x / browse:x / parent / session / video），
@@ -565,13 +784,17 @@ function savePartial(){
   if (fresh.length) setP(q => { fresh.forEach(id => { if (!q.items[id]) q.items[id] = { n: 0, first: t, last: t, state: 'seen', box: 0, due: t, misses: 0 }; }); });
 }
 function leaveSession(){ savePartial(); hush(); closeVideo(true); }
-function goHome(){ leaveSession(); renderHome(); if (typeof syncSoon === 'function') syncSoon(800); }
+function goHome(){ leaveSession(); if (TRIAL || !access()) { TRIAL = false; renderAuth(); return; } renderHome(); if (typeof syncSoon === 'function') syncSoon(800); }
 window.addEventListener('popstate', e => {
   if (POPSKIP > 0) { POPSKIP--; return; }
-  if (!HIST.length) return;   // 登录页
+  if (!HIST.length) return;
   const st = e.state;
-  if (!st || st.n !== HNONCE || !(st.rb < HIST.length)) { leaveSession(); HIST = []; renderHome(); return; }
+  const fallback = () => { leaveSession(); HIST = []; if (access()) renderHome(); else if (auth() && auth().token) renderGate(); else renderAuth(); };
+  if (!st || st.n !== HNONCE || !(st.rb < HIST.length)) return fallback();
   const key = HIST[st.rb]; HIST.length = st.rb + 1;
+  // 没登录（或没学习权限）时只在入口页、试看之间来回
+  if (key.startsWith('auth:')) { closeQR(); closeVideo(true); if (access()) { HIST = []; renderHome(); } else if (key === 'auth:gate') renderGate(); else renderAuth('', key.slice(5)); return; }
+  if (!access() && !(TRIAL && key.startsWith('browse:'))) { closeVideo(true); return fallback(); }
   const hadVideo = !!document.querySelector('.modal');
   closeVideo(true);
   if (key === 'session' && S) { if (!hadVideo) { leaveSession(); renderHome(); } return; }
@@ -598,7 +821,9 @@ function dots(){ if (!S) return ''; const list = S.phase === 'learn' && !S.relin
 /* 首页 */
 function renderHome(){
   S = null; ROUTE = 'home';
-  const p = P(), st = stationStats(p), nx = nextSession();
+  if (SW_RELOAD) later(swReloadIfIdle, 50);
+  ROUND = null;
+  const p = P(), st = stationStats(p), parts = planRound(), nx = parts[0];
   const cur = nx.station;
   const order = ['review', 'letter', 'blend', 'word'];
   const stops = order.map(k => {
@@ -606,27 +831,29 @@ function renderHome(){
     if (k === 'review' && !s.total && cur !== 'review') return '';
     const pct = s.total ? Math.round(s.seen / s.total * 100) : 0;
     const meta = k === 'review' ? `<div class="cnt rvw">今天要复习 ${s.total} 个</div>` : `<div class="prog"><b style="width:${pct}%"></b></div><div class="cnt">${s.seen} / ${s.total}</div>`;
-    const tap = k === 'review' ? 'data-act="go"' : `data-act="module" data-m="${k}"`;
+    const tap = k === 'review' ? 'data-act="review1"' : `data-act="module" data-m="${k}"`;
     return `<button class="stop ${k} ${k === cur ? 'now' : ''} ${done ? 'done' : ''}" ${tap} aria-label="${s.name}${k === cur ? '（推荐）' : ''}">
       <div class="ic" aria-hidden="true">${s.ic}</div>
       <div class="meta"><div class="nm">${s.name}</div>${meta}</div>
       ${k === cur ? '<span class="rec">推荐</span>' : ''}<span class="chev" aria-hidden="true">›</span></button>`;
   }).join('');
-  const prev = nx.ids.map(id => { const x = it(id); return `<span>${x.type === 'letter' ? esc(x.d.letter) : icoHTML(x, 'pv')}</span>`; }).join('');
+  const prev = parts.flatMap(x => x.ids).slice(0, 10).map(id => { const x = it(id); return `<span>${x.type === 'letter' ? esc(x.d.letter) : icoHTML(x, 'pv')}</span>`; }).join('');
   const bub = nx.kind === 'review' ? '先来复习一下！' : nx.kind === 'pick' ? '老师选好啦！' : nx.kind === 'free' ? '都学完啦！再玩一次？' : cur === 'letter' ? '去字母小乐园！' : cur === 'blend' ? '来拼小词！' : '来记单词！';
   const stk = (p.stickers || []).slice(-12).reverse().map(s => `<span>${esc(s)}</span>`).join('');
   show(`${topbar(`<button class="ib parentbtn" data-hold="parent" aria-label="家长和老师（按住）">家长<i></i></button>`)}
     <div class="hello">${ICON.mascot}<div class="say-bub">${bub}</div></div>
+    <button class="go big pulse" data-act="go" aria-label="开始学习：${roundHint(parts)}">${ICON.play}<span class="gl">开始学习</span><small class="gh">${roundHint(parts)}</small></button>
+    <div class="preview" aria-label="这一轮要学">${prev}</div>
+    <h2 class="pathh">或者自己选一站</h2>
     <div class="path" aria-label="学习路线">${stops}</div>
     <p class="freehint">👆 点任意一站，想学哪个就学哪个</p>
-    <button class="go pulse" data-act="go" aria-label="开始">${ICON.play}开始</button>
-    <div class="preview" aria-label="这次要学">${prev}</div>
     <div class="shelf"><div class="row"><em>我的贴纸</em>${stk || '<span class="small">学会一个就送一张</span>'}</div></div>`);
   if (unlocked) later(() => say(ui('hello')), 400);
 }
 
 /* 开始一轮 */
 function startSession(plan, opts = {}){
+  if (!opts.trial && eyeGate(() => startSession(plan, opts))) return;
   const p = P();
   if (plan.kind === 'pick') setP(q => { q.override = null; });
   S = { kind: plan.kind, ids: plan.ids.slice(), learnN: plan.learnN ?? plan.ids.length, i: 0, phase: 'learn', res: {}, stars: 0, started: isoLocal(), trial: !!opts.trial, trialName: opts.name || '', from: plan.from || null };
@@ -645,7 +872,8 @@ function learnCard(x, relink){
   const ctrl = `<div class="ctrl">
       <button class="round" data-act="replay" aria-label="再听一遍">${ICON.replay}</button>
       ${vid ? `<button class="vidbtn" data-act="video">${ICON.film}看动画</button>` : ''}
-      ${S.trial ? '' : `<button class="next" data-act="next" aria-label="下一步" disabled>${ICON.arrow}</button>`}
+      ${S.trial ? '' : `<button class="next" data-act="next" aria-label="下一个" disabled>${ICON.arrow}</button>`}
+      ${S.trial ? '' : pbarHTML()}
     </div>`;
   const tag = relink ? '<div class="relink">👀 再看一遍</div>' : '';
   if (x.type === 'letter') {
@@ -690,10 +918,11 @@ function startNarr(){
   const x = it(learnId()), card = $app.querySelector('.card'); if (!card) return;
   const showAll = syncCard(card, x.d.cues);
   const btn = card.querySelector('[data-act="replay"]');
-  say(x.d.audio, btn).then(() => { showAll(); enableNext(); });
+  say(x.d.audio, btn).then(() => { if (!card.isConnected) return; showAll(); enableNext(); });   // 跳到下一张后，旧卡的旁白收尾不能去点亮新卡的按钮
 }
 function enableNext(){ const n = $app.querySelector('.next'); if (n && n.disabled) { n.disabled = false; n.classList.add('pulse'); } }
 function afterLearn(){
+  if (!S.trial && eyeGate(afterLearn)) return;
   if (S.relink) { S.relink = false; renderQuiz(true); return; }
   S.i++;
   if (S.i < S.learnN) { renderLearn(true); const i0 = S.i; say(ui('next')).then(() => { if (S && S.phase === 'learn' && S.i === i0 && !S.cardStarted) startNarr(); }); return; }
@@ -832,7 +1061,7 @@ function answer(k, el){
   S.res[x.id] = 'miss';
   say(x.d.audio_en).then(ok => later(nextQ, ok ? 1200 : 2000));
 }
-function nextQ(){ S.i++; if (S.i < S.q.length) renderQuiz(); else nextPass(); }
+function nextQ(){ if (!S.trial && eyeGate(nextQ)) return; S.i++; if (S.i < S.q.length) renderQuiz(); else nextPass(); }
 
 /* 结果 */
 function finish(){
@@ -852,6 +1081,12 @@ function finish(){
     p.sessions.push({ at: isoLocal(), day: t, kind: S.kind, ids, res, stars: S.stars, ...(S.multi ? { passes: [S.res, S.res2, S.res3] } : {}) });
     if (p.sessions.length > 200) p.sessions = p.sessions.slice(-200);
   });
+  if (ROUND && !S.trial) {
+    ROUND.done.push({ kind: S.kind, ids: ids.slice(), ok: okIds.slice(), stars: S.stars });
+    S.phase = 'result';
+    if (ROUND.left.length && newPlan(P())) { ROUND.left.shift(); renderRoundNext(); return; }
+    renderRoundDone(); return;
+  }
   const all = okIds.length === ids.length, good = okIds.length >= Math.ceil(ids.length * 0.6);
   const stars = ids.map((id, k) => `<span style="animation-delay:${k * 0.15}s;display:inline-block">${ICON.star(res[id] === 'ok' ? '#FFC93C' : '#E9DCC8')}</span>`).join('');
   const stk = ids.map((id, k) => `<span class="stk ${res[id] === 'ok' ? '' : 'miss'}" style="animation-delay:${0.4 + k * 0.18}s">${esc(pic(it(id)))}</span>`).join('');
@@ -868,6 +1103,44 @@ function finish(){
   say([S.kind === 'review' && good ? ui('reviewdone') : all ? ui(S.multi ? 'p3done' : 'allright') : good ? ui('pass') : ui('notyet'), okIds.length ? ui('sticker') : null]);
 }
 
+/* 一轮里：复习完 → 自动接着学新的 */
+function renderRoundNext(){
+  const d = ROUND.done[ROUND.done.length - 1], n = newPlan(P());
+  show(`${topbar()}<div class="result narrow roundnext">
+    ${ICON.mascot.replace('class="mascot"', 'class="mascot" style="width:110px;height:110px"')}
+    <div class="rtitle">复习完啦！</div>
+    <p class="sub">记住 ${d.ok.length} / ${d.ids.length} 个，接下来学新的 🎉</p>
+    <div class="preview">${n.ids.map(id => { const x = it(id); return `<span>${x.type === 'letter' ? esc(x.d.letter) : icoHTML(x, 'pv')}</span>`; }).join('')}</div>
+    <div style="width:100%;margin-top:auto;padding-top:20px"><button class="btn primary pulse" data-act="roundgo" data-focus tabindex="-1">${ICON.arrow} 学新的</button></div></div>`, 'roundnext');
+  const tok = ++ROUND_TOK;
+  say([ui('roundnext')]).then(() => later(() => { if (tok === ROUND_TOK && $app.querySelector('.screen.roundnext')) { const n2 = newPlan(P()); if (n2) startSession(n2); } }, 900));
+}
+let ROUND_TOK = 0;
+function renderRoundDone(){
+  ROUND_TOK++;
+  const done = (ROUND && ROUND.done) || [], p = P();
+  const rv = done.filter(x => x.kind === 'review'), nw = done.filter(x => x.kind !== 'review');
+  const nRv = rv.reduce((a, x) => a + x.ids.length, 0), nNw = nw.reduce((a, x) => a + x.ids.length, 0);
+  const okIds = done.flatMap(x => x.ok), allIds = done.flatMap(x => x.ids), stars = done.reduce((a, x) => a + (x.stars || 0), 0);
+  const stk = allIds.map((id, k) => `<span class="stk ${okIds.includes(id) ? '' : 'miss'}" style="animation-delay:${0.4 + k * 0.12}s">${esc(pic(it(id)))}</span>`).join('');
+  const mins = Math.max(1, Math.round(usage().ms / 60000));
+  show(`${topbar()}<div class="result narrow rounddone">
+    ${ICON.mascot.replace('class="mascot"', 'class="mascot" style="width:110px;height:110px"')}
+    <div class="rtitle">这一轮完成啦！</div>
+    <div class="rstats">
+      ${nRv ? `<div><b>${nRv}</b><span>复习</span></div>` : ''}
+      ${nNw ? `<div><b>${nNw}</b><span>${nw.some(x => x.kind === 'new') ? '新学' : '练习'}</span></div>` : ''}
+      <div><b>${ICON.star('#FFC93C').replace('<svg', '<svg width="30" height="30"')}${stars}</b><span>星星</span></div>
+    </div>
+    <div class="stickers" aria-label="这一轮的贴纸">${stk}</div>
+    ${allIds.length - okIds.length ? `<div class="small" style="font-size:16px">灰色的明天再见 👋</div>` : ''}
+    <p class="small">今天一共学了 ${mins} 分钟 · 一共 ${p.stars || 0} 颗星</p>
+    <div class="rbtns"><button class="btn primary" data-act="go" data-focus tabindex="-1">${ICON.play.replace('<svg', '<svg width="28" height="28"')} 再来一轮</button>
+    <button class="btn ghost" data-act="home">${ICON.home.replace('<svg', '<svg width="26" height="26"')} 回主页</button></div></div>`, 'rounddone');
+  ROUND = null;
+  if (okIds.length === allIds.length) confetti(); else confetti(70);
+  say([ui('rounddone'), okIds.length ? ui('sticker') : null]);
+}
 
 /* ---------- 单元页：自由选择 ---------- */
 const MODS = { letter: { name: '字母小乐园', ic: 'Aa' }, blend: { name: '拼读小词', ic: '🧩' }, word: { name: '记忆单词', ic: '🧠' } };
@@ -905,33 +1178,47 @@ function renderModule(m){
 
 /* ---------- 速览：快速翻卡，不考试、不记进度 ---------- */
 let BR = null;
+let TRIAL = false;   // 没账号时的试看：只看前 6 个字母，不记进度
+const TRIAL_IDS = () => (C.letters || []).slice(0, 6).map(l => l.id);
 function renderBrowse(m, i = 0, dir = 0){
-  const ids = modIds(m).filter(it); i = Math.max(0, Math.min(ids.length - 1, i));
+  const ids = (TRIAL ? TRIAL_IDS() : modIds(m)).filter(it); i = Math.max(0, Math.min(ids.length - 1, i));
   BR = { m, ids, i }; S = null; ROUTE = 'browse:' + m; LASTBR[m] = i;
   const x = it(ids[i]), saveS = S; S = { trial: true };
   let card = learnCard(x, false); S = saveS;
   card = card.replace(/<div class="ctrl">[\s\S]*?<\/div>\s*<\/div>$/, '</div>').replace('class="card learn', `class="card learn ${dir > 0 ? 'fl' : dir < 0 ? 'fr' : ''}`);
   const vid = videoOf(x);
-  show(`${topbar(`<button class="ib" data-act="module" data-m="${m}" aria-label="回到${MODS[m].name}">✕</button>`)}
+  show(`${topbar(TRIAL ? '<span class="trialtag">免费试看</span>' : `<button class="ib" data-act="module" data-m="${m}" aria-label="回到${MODS[m].name}">✕</button>`)}
     <div class="narrow">${card}
-      <div class="bctrl"><button class="round" data-act="bsay" aria-label="听讲解">${ICON.replay}</button>${vid ? `<button class="vidbtn" data-act="bvideo">${ICON.film}看动画</button>` : ''}<button class="vidbtn" style="background:var(--blue-l);color:var(--blue);box-shadow:0 4px 0 #C9D8F2" data-act="learnone" data-id="${esc(ids[i])}">✏️ 学这个</button></div>
+      <div class="bctrl"><button class="round" data-act="bsay" aria-label="听讲解">${ICON.replay}</button>${vid ? `<button class="vidbtn" data-act="bvideo">${ICON.film}看动画</button>` : ''}${TRIAL ? '' : `<button class="vidbtn" style="background:var(--blue-l);color:var(--blue);box-shadow:0 4px 0 #C9D8F2" data-act="learnone" data-id="${esc(ids[i])}">✏️ 学这个</button>`}</div>
+      ${pbarHTML()}
       <div class="bnav"><button class="arrow" data-act="bprev" aria-label="上一个" ${i ? '' : 'disabled'}>‹</button><span class="count">${i + 1} / ${ids.length}</span><button class="arrow" data-act="bnext" aria-label="下一个" ${i < ids.length - 1 ? '' : 'disabled'}>›</button></div>
       <div class="bbar"><b style="width:${(i + 1) / ids.length * 100}%"></b></div>
-      <div class="bhint">${MODS[m].name} · 速览 · 左右滑动或按 ← → 翻页</div></div>`, 'browse');
+      <div class="bhint">${TRIAL ? '免费试看 6 个字母 · 左右滑动翻页' : MODS[m].name + ' · 速览 · 左右滑动或按 ← → 翻页'}</div>
+      ${TRIAL ? `<div class="trialend">${i === ids.length - 1 ? '<b>想学全部 26 个字母、40 个拼读词和记忆单词？</b>' : ''}${askBtn()}<button type="button" class="linkbtn" data-act="trialexit">我有兑换码 / 已有账号 ›</button></div>` : ''}</div>`, 'browse');
   const c = $app.querySelector('.card'); let x0 = null, y0 = null;
   c.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
   c.addEventListener('touchend', e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) browseStep(dx < 0 ? 1 : -1); }, { passive: true });
 }
-function browseStep(d){ if (!BR) return; const j = BR.i + d; if (j < 0 || j >= BR.ids.length) return; hush(); renderBrowse(BR.m, j, d); }
+function browseStep(d){ if (!BR) return; if (!TRIAL && eyeGate(() => browseStep(d))) return; const j = BR.i + d; if (j < 0 || j >= BR.ids.length) return; hush(); renderBrowse(BR.m, j, d); }
 document.addEventListener('keydown', e => { if (!BR || !$app.querySelector('.screen.browse') || document.querySelector('.modal')) return; if (e.key === 'ArrowRight') { e.preventDefault(); browseStep(1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); browseStep(-1); } });
 
 /* ---------- 视频弹窗 ---------- */
-function openVideo(src){
+function openVideo(src, item){
   hush(); closeVideo(true);
   const m = document.createElement('div'); m.className = 'modal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-label', '看动画');
-  m.innerHTML = `<video src="${esc(src)}" playsinline controls autoplay preload="auto"></video><button class="x" aria-label="关掉">✕</button>`;
+  m.innerHTML = `<video src="${esc(src)}" playsinline controls autoplay preload="auto"></video><button class="x" aria-label="关掉">✕</button>${pbarHTML('vact')}`;
   document.body.appendChild(m);
-  const v = m.querySelector('video'); v.muted = muted();
+  const v = m.querySelector('video'); v.muted = muted(); applyRate(v);
+  v.addEventListener('loadedmetadata', () => applyRate(v));
+  const steps = stepsOf(item);
+  m.querySelector('.pbar').addEventListener('click', e => {
+    const b = e.target.closest('[data-vact]'); if (!b) return; e.stopPropagation();
+    if (b.dataset.vact === 'prate') { cycleRate(); return; }
+    const t = v.currentTime || 0, dur = isFinite(v.duration) ? v.duration : null;
+    const to = b.dataset.vact === 'pnext' ? nextStep(steps, t, dur) : prevStep(steps, t);
+    if (to == null || (dur && to >= dur - 0.2)) { closeVideo(); return; }   // 跳到末尾：和放完一样，关掉进入下一步
+    try { v.currentTime = to; if (v.paused) { const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); } } catch (e) {}
+  });
   m.querySelector('.x').onclick = () => closeVideo();
   m.addEventListener('click', e => { if (e.target === m) closeVideo(); });
   v.addEventListener('ended', () => setTimeout(() => { if (m.isConnected) closeVideo(); }, 600));
@@ -992,6 +1279,21 @@ function renderParent(){
         <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn blue sm" data-act="copyreport">复制家长报告链接</button><a class="btn ghost sm" style="text-decoration:none" href="${esc(reportUrl())}" target="_blank" rel="noopener">打开报告</a><button class="btn ghost sm" data-act="syncnow">立即同步</button><button class="btn ghost sm" data-act="redeemmore">续期 / 再输兑换码</button><button class="btn ghost sm" data-act="logout">退出登录</button></div></div>`; })()}
       ${weekly(p)}
       <div class="panel"><h2>最近几轮</h2>${ses || '<p class="small">还没有记录。</p>'}</div>
+      ${isStandalone() ? '' : `<div class="panel a2hs"><h2>📲 添加到手机桌面</h2>
+        <p class="small" style="margin-top:0">加到桌面后像 App 一样全屏打开，点开就能学，常用的声音和动画会存在手机里，下次打开更快。</p>
+        ${INSTALL_EVT ? '<button class="btn primary sm" data-act="install">一键添加到桌面</button>' : ''}
+        ${inWeChat() ? '<div class="wxtip">现在是在<b>微信里</b>打开的：先点右上角 <b>···</b>，选「<b>在浏览器打开</b>」，再按下面的步骤添加。</div>' : ''}
+        <div class="a2steps">
+          <div><h3>iPhone / iPad（Safari）</h3><ol><li>用 <b>Safari</b> 打开本页</li><li>点底部的分享按钮 <svg class="ico-share" viewBox="0 0 24 24" aria-label="分享"><path d="M12 3v12M7 8l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 11v9h14v-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></li><li>往下找「<b>添加到主屏幕</b>」，点「添加」</li></ol></div>
+          <div><h3>安卓（Chrome / 华为 / 小米 / vivo 等浏览器）</h3><ol><li>用手机浏览器打开本页</li><li>点右上角或底部的菜单 <b>⋮</b> / <b>≡</b></li><li>选「<b>添加到主屏幕</b>」或「<b>添加到桌面</b>」</li></ol></div>
+          <div><h3>在微信里</h3><ol><li>点右上角 <b>···</b></li><li>选「<b>在浏览器打开</b>」</li><li>再按上面 iPhone / 安卓 的步骤</li></ol></div>
+        </div></div>`}
+      ${(() => { const e = eyeSet(), th = p.settings.theme || 'light', u = usage(); const sg = (k, cur, opts) => `<div class="seg" data-set="${k}">${opts.map(([v, n]) => `<button class="${String(cur) === String(v) ? 'on' : ''}" data-v="${v}">${n}</button>`).join('')}</div>`;
+        return `<div class="panel eyepanel"><h2>护眼与学习时长</h2>
+        <p class="small" style="margin:0 0 6px">配色</p>${sg('theme', th, [['light', '护眼浅色'], ['dark', '夜间暗色'], ['auto', '跟随系统']])}
+        <p class="small" style="margin:12px 0 6px">用眼休息提醒：累计学多久，提醒看远处 20 秒</p>${sg('breakMin', e.brk, [[10, '10 分钟'], [15, '15 分钟'], [20, '20 分钟'], [0, '关闭']])}
+        <p class="small" style="margin:12px 0 6px">每天学多久（分钟；到时间温和收工，家长可解锁延长）</p>${sg('dailyMin', e.daily, [[15, '15'], [20, '20'], [30, '30'], [45, '45'], [0, '不限']])}
+        <p class="small">今天已学 <b>${Math.round(u.ms / 60000)}</b> 分钟。设置跟着账号同步到孩子的其他设备。</p></div>`; })()}
       <div class="panel"><h2>设置</h2>
         <p class="small" style="margin:0 0 6px">记忆单词用哪一组</p>
         <div class="seg" data-set="grade">${(C.groups || []).map(g => `<button class="${p.settings.grade === g.id ? 'on' : ''}" data-v="${esc(g.id)}">${esc(g.label)}</button>`).join('')}</div>
@@ -1087,18 +1389,27 @@ $app.addEventListener('click', e => {
   if (b.dataset.ptab) { PTAB = b.dataset.ptab; renderParent(); return; }
   if (b.dataset.pick) { const id = b.dataset.pick; PICKSEL = PICKSEL.includes(id) ? PICKSEL.filter(x => x !== id) : PICKSEL.concat(id).slice(-8); renderParent(); return; }
   if (b.parentElement && b.parentElement.dataset.pickf != null) { PICKF = b.dataset.v; renderParent(); return; }
-  if (b.parentElement && b.parentElement.dataset.set) { const k = b.parentElement.dataset.set, v = b.dataset.v; setP(p => { p.settings[k] = k === 'size' ? +v : v; }); renderParent(); return; }
+  if (b.parentElement && b.parentElement.dataset.set) { const k = b.parentElement.dataset.set, v = b.dataset.v; setP(p => { p.settings[k] = ['size', 'breakMin', 'dailyMin'].includes(k) ? +v : v; p.settings.at = Date.now(); }); if (k === 'theme') applyTheme(); renderParent(); return; }
   switch (act) {
-    case 'go': unlockAudio(); startSession(nextSession()); break;
+    case 'go': unlockAudio(); startRound(); break;
+    case 'review1': unlockAudio(); startSession(nextSession()); break;
+    case 'roundgo': { const n = newPlan(P()); if (n) startSession(n); else renderRoundDone(); break; }
     case 'mute': {
       const m = !muted(); setP(p => { p.settings.muted = m; });
       if (m) { hush(); if (S && S.reveal) S.reveal(); const c = $app.querySelector('.card'); if (c) { c.classList.remove('sync'); c.querySelectorAll('.rv').forEach(x => x.classList.add('on')); } enableNext(); }
       b.outerHTML = muteBtn(); break;
     }
     case 'replay': unlockAudio(); startNarr(); break;
+    case 'pnext': unlockAudio(); narrStep(1); break;
+    case 'pprev': unlockAudio(); narrStep(-1); break;
+    case 'prate': cycleRate(); break;
+    case 'restgo': { unlockAudio(); const c = REST_CONT; REST_CONT = null; if (c) c(); else renderHome(); break; }
+    case 'limithome': hush(); leaveSession(); renderHome(); break;
+    case 'limitunlock': limitUnlockBox(); break;
+    case 'install': if (INSTALL_EVT) { INSTALL_EVT.prompt(); INSTALL_EVT.userChoice.finally(() => { INSTALL_EVT = null; renderParent(); }); } break;
     case 'lsay': { unlockAudio(); const x = S ? it(curId()) : BR ? it(BR.ids[BR.i]) : null; if (x && x.d.say) { hush(); say([x.d.say], b); } break; }
     case 'phon': { unlockAudio(); const src = phonOf(b.dataset.ch); if (src) { hush(); say([src], b); } break; }
-    case 'video': { const x = it(curId()); const v = videoOf(x); if (v) openVideo(v); break; }
+    case 'video': { const x = it(curId()); const v = videoOf(x); if (v) openVideo(v, x); break; }
     case 'next': afterLearn(); break;
     case 'toquiz': renderQuiz(); break;
     case 'qsay': unlockAudio(); say(qPrompt(it(curId()), S.q[S.i].t), b); break;
@@ -1109,10 +1420,13 @@ $app.addEventListener('click', e => {
     case 'modgo': { unlockAudio(); const m = b.dataset.m; startSession({ ...modNext(m), from: m }); break; }
     case 'learnone': { unlockAudio(); const m = BR ? BR.m : ($app.querySelector('.screen.module [data-act=modgo]') || {}).dataset?.m; const id = b.dataset.id; BR = null; startSession({ kind: 'choose', ids: [id], from: m || it(id).type }); break; }
     case 'browse': unlockAudio(); renderBrowse(b.dataset.m, 0); break;
+    case 'askcode': openQR(); break;
+    case 'trial0': unlockAudio(); TRIAL = true; renderBrowse('letter', 0); break;
+    case 'trialexit': TRIAL = false; renderAuth(); break;
     case 'bprev': browseStep(-1); break;
     case 'bnext': browseStep(1); break;
     case 'bsay': { unlockAudio(); const x = it(BR.ids[BR.i]); hush(); say(x.d.audio, b); break; }
-    case 'bvideo': { const v = videoOf(it(BR.ids[BR.i])); if (v) openVideo(v); break; }
+    case 'bvideo': { const x = it(BR.ids[BR.i]); const v = videoOf(x); if (v) openVideo(v, x); break; }
     case 'parent': renderParent(); break;
     case 'setpick': setP(p => { p.override = { ids: PICKSEL.slice(), at: isoLocal() }; }); toast('好了，下次点「开始」就学这些'); PICKSEL = []; renderParent(); break;
     case 'clearsel': PICKSEL = []; renderParent(); break;
@@ -1197,59 +1511,122 @@ function gateHead(sub){
   return `<div class="hello">${ICON.mascot}</div><h1>欢迎来到右脑记单词</h1><p class="sub">${sub}</p>
     <div class="gatebadges"><span>🔤 26 个字母</span><span>🧩 40 个拼读词</span><span>🧠 画面记单词</span></div>`;
 }
-// 登录 / 注册
-function renderAuth(msg = '', mode = 'login', info = false){
-  started = false;
-  const reg = mode === 'register';
+// 找 Phil 老师领兑换码：弹窗显示微信二维码（换图只要替换 assets/wechat-qr.png）
+const QR_IMG = 'assets/wechat-qr.png';
+const askBtn = (cls = '') => `<button type="button" class="btn askbtn ${cls}" data-act="askcode">💬 找 Phil 老师领兑换码</button>`;
+function openQR(){
+  hush(); closeQR();
+  const m = document.createElement('div'); m.className = 'qrmodal'; m.setAttribute('role', 'dialog'); m.setAttribute('aria-label', '找 Phil 老师领兑换码');
+  m.innerHTML = `<div class="qrbox"><h2>找 Phil 老师领兑换码</h2><img src="${QR_IMG}?v=${esc(C.version || '')}" alt="Phil 老师的微信二维码"><p class="qrsay">扫码加 Phil 老师微信，领取兑换码</p>
+    <p class="qrtip">在手机上看？长按图片保存，再用微信「扫一扫」从相册选这张图</p><button type="button" class="btn primary" data-qrclose>知道了</button></div>`;
+  m.addEventListener('click', e => { if (e.target === m || e.target.closest('[data-qrclose]')) closeQR(); });
+  document.body.appendChild(m);
+}
+function closeQR(){ document.querySelectorAll('.qrmodal').forEach(m => m.remove()); }
+// 没账号的入口：开通（先输码）/ 登录 / 先看看
+let AUTHCODE = null;   // 已验证有效的兑换码 { code, plan_days, access_until }
+function renderAuth(msg = '', mode = 'start', info = false){
+  started = false; TRIAL = false;
+  if (mode === 'open' && !AUTHCODE) mode = 'code';
+  AUTHMODE = mode;
   const grades = (C.groups || []).map(g => g.id);
-  show(`${gateHead('请爸爸妈妈先登录，学习记录跟着账号走')}
-    <div class="gatecard authcard">
-      <div class="seg" role="tablist"><button type="button" role="tab" aria-selected="${!reg}" class="${reg ? '' : 'on'}" data-auth="login">登录</button><button type="button" role="tab" aria-selected="${reg}" class="${reg ? 'on' : ''}" data-auth="register">注册新账号</button></div>
-      <form id="authform" autocomplete="on" novalidate>
-        <label for="aulogin">邮箱或用户名</label>
-        <input id="aulogin" class="fin" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="64" placeholder="例如 mama@qq.com" data-focus>
-        <label for="aupw">密码</label>
-        <input id="aupw" class="fin" type="password" name="password" autocomplete="${reg ? 'new-password' : 'current-password'}" maxlength="128" placeholder="${reg ? '至少 6 位' : '输入密码'}">
-        ${reg ? `<div class="frow"><div><label for="aunick">孩子昵称</label><input id="aunick" class="fin" maxlength="20" placeholder="例如 小米"></div>
-          <div><label for="augrade">年级</label><select id="augrade" class="fin">${grades.map(g => `<option>${esc(g)}</option>`).join('')}</select></div></div>` : ''}
-        <button class="btn primary" id="aubtn" type="submit">${reg ? '注册并继续' : '登录'}</button>
-        <p class="gatemsg ${info ? 'info' : ''}" id="gatemsg" role="alert">${esc(msg)}</p>
+  const back = `<button type="button" class="linkbtn backlink" data-auth="start">‹ 返回</button>`;
+  const note = `<p class="gatemsg ${info ? 'info' : ''}" id="gatemsg" role="alert">${esc(msg)}</p>`;
+  let body = '';
+  if (mode === 'start') {
+    body = `<div class="gatecard authcard startcard">
+        <button type="button" class="bigchoice open" data-auth="code"><span class="em" aria-hidden="true">🎟️</span><span><b>我有兑换码</b><small>开通账号</small></span></button>
+        <button type="button" class="bigchoice login" data-auth="login"><span class="em" aria-hidden="true">👤</span><span><b>已有账号</b><small>登录</small></span></button>
+        ${note}
+      </div>
+      <div class="gatecard askcard">${askBtn()}<button type="button" class="linkbtn trylink" data-act="trial0">👀 先免费看看 6 个字母</button></div>`;
+  } else if (mode === 'code') {
+    body = `<form class="gatecard" id="codeform" autocomplete="off" novalidate>${back}
+        <h2 class="gh">输入兑换码</h2>
+        <input id="codein" class="codein" inputmode="latin" autocapitalize="characters" spellcheck="false" maxlength="12" placeholder="XXXX-XXXX" aria-label="兑换码" data-focus>
+        <button class="btn primary" id="codebtn" type="submit">下一步</button>${note}
       </form>
-    </div>
-    <p class="gatehelp">${reg ? '注册后输入老师发的兑换码，就能开始学习。<br>换手机、换平板时用同一个账号登录，进度会自动同步。' : '登录一次，这台设备 <b>一年内</b> 打开就能直接学，不用再登录。<br>还没有账号？点上面的 <b>注册新账号</b>。忘记密码可以联系老师重设。'}</p>`, 'gate');
+      <div class="gatecard askcard"><p class="asktxt">还没有兑换码？</p>${askBtn()}</div>`;
+  } else if (mode === 'open') {
+    body = `<form class="gatecard authcard" id="authform" autocomplete="on" novalidate>${back}
+        <div class="codeok">✅ 兑换码 <b>${esc(AUTHCODE.code)}</b> 可以用<small>学习期 ${AUTHCODE.plan_days} 天</small></div>
+        <label for="aulogin">登录名（以后用它登录）</label>
+        <input id="aulogin" class="fin" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="64" placeholder="例如 xiaomi 或 mama@qq.com" data-focus>
+        <label for="aupw">密码</label>
+        <input id="aupw" class="fin" type="password" name="password" autocomplete="new-password" maxlength="128" placeholder="至少 6 位">
+        <div class="frow"><div><label for="aunick">孩子昵称</label><input id="aunick" class="fin" maxlength="20" placeholder="例如 小米"></div>
+          <div><label for="augrade">年级</label><select id="augrade" class="fin">${grades.map(g => `<option>${esc(g)}</option>`).join('')}</select></div></div>
+        <button class="btn primary" id="aubtn" type="submit">开通并开始学习</button>${note}
+      </form>
+      <p class="gatehelp">登录名和密码请记好。登录一次，这台设备 <b>一年内</b> 打开就能直接学。</p>`;
+  } else {
+    body = `<form class="gatecard authcard" id="authform" autocomplete="on" novalidate>${back}
+        <h2 class="gh">登录</h2>
+        <label for="aulogin">登录名</label>
+        <input id="aulogin" class="fin" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="64" placeholder="开通时设置的登录名" data-focus>
+        <label for="aupw">密码</label>
+        <input id="aupw" class="fin" type="password" name="password" autocomplete="current-password" maxlength="128" placeholder="输入密码">
+        <button class="btn primary" id="aubtn" type="submit">登录</button>${note}
+      </form>
+      <p class="gatehelp">登录一次，这台设备 <b>一年内</b> 打开就能直接学。<br>忘记密码？找 Phil 老师重设。</p>`;
+  }
+  show(`${gateHead(mode === 'start' ? '爸爸妈妈先开通账号，学习记录跟着账号走' : mode === 'code' ? '输入 Phil 老师给你的兑换码' : mode === 'open' ? '设置登录名和密码，马上开始学' : '欢迎回来')}${body}`, 'gate');
   document.querySelectorAll('[data-auth]').forEach(b => b.onclick = () => renderAuth('', b.dataset.auth));
-  const f = document.getElementById('authform'), m = document.getElementById('gatemsg'), btn = document.getElementById('aubtn');
+  const m = document.getElementById('gatemsg');
+  if (mode === 'code') {
+    const f = document.getElementById('codeform'), inp = document.getElementById('codein'), btn = document.getElementById('codebtn');
+    inp.addEventListener('input', () => { inp.value = fmtCode(inp.value); inp.classList.remove('bad'); m.textContent = ''; });
+    f.addEventListener('submit', async e => {
+      e.preventDefault();
+      const raw = inp.value.replace(/-/g, '');
+      if (raw.length !== 8) { shake(inp); m.className = 'gatemsg'; m.textContent = '兑换码是 8 位字母和数字，再看看哦'; return; }
+      btn.disabled = true; btn.innerHTML = '<i class="spin"></i>正在核对…';
+      try { const j = await apiPost('/code/check', { code: raw }); AUTHCODE = { code: j.code, plan_days: j.plan_days, access_until: j.access_until }; renderAuth('', 'open'); }
+      catch (err) {
+        btn.disabled = false; btn.textContent = '下一步'; shake(inp); m.className = 'gatemsg';
+        m.innerHTML = err.offline ? '网络好像断了，连上网再试一次' : esc(err.message) + (err.code === 'code_used' ? ' <button type="button" class="linkbtn" data-auth="login">去登录 ›</button>' : '');
+        m.querySelectorAll('[data-auth]').forEach(b => b.onclick = () => renderAuth('', 'login'));
+      }
+    });
+    return;
+  }
+  if (mode === 'start') return;
+  const f = document.getElementById('authform'), btn = document.getElementById('aubtn');
   const L = document.getElementById('aulogin'), W = document.getElementById('aupw'), N = document.getElementById('aunick'), G = document.getElementById('augrade');
-  const lastLogin = load('rbw.lastlogin', ''); if (!reg && lastLogin) { L.value = lastLogin; W.setAttribute('data-focus', ''); }
+  const reg = mode === 'open', label = reg ? '开通并开始学习' : '登录';
+  const lastLogin = load('rbw.lastlogin', ''); if (!reg && lastLogin) { L.value = lastLogin; W.setAttribute('data-focus', ''); W.focus({ preventScroll: true }); }
   if (G) G.value = (P().settings && P().settings.grade) || grades[0];
   [L, W, N].forEach(x => x && x.addEventListener('input', () => { x.classList.remove('bad'); m.textContent = ''; }));
   f.addEventListener('submit', async e => {
     e.preventDefault();
     const login = L.value.trim().toLowerCase(), pw = W.value;
     const bad = (el, t) => { shake(el); m.className = 'gatemsg'; m.textContent = t; el.focus(); };
-    if (!/^[a-z0-9._@+-]{3,64}$/.test(login)) return bad(L, '账号用 3 位以上的字母、数字或邮箱');
+    if (!/^[a-z0-9._@+-]{3,64}$/.test(login)) return bad(L, '登录名用 3 位以上的字母、数字或邮箱');
     if (pw.length < (reg ? 6 : 1)) return bad(W, reg ? '密码至少 6 位' : '请输入密码');
     if (reg && !N.value.trim()) return bad(N, '请填写孩子的昵称');
-    btn.disabled = true; btn.innerHTML = '<i class="spin"></i>' + (reg ? '正在注册…' : '正在登录…');
+    btn.disabled = true; btn.innerHTML = '<i class="spin"></i>' + (reg ? '正在开通…' : '正在登录…');
     try {
-      const j = await apiPost(reg ? '/auth/register' : '/auth/login', reg ? { login, password: pw, nickname: N.value.trim(), grade: G.value } : { login, password: pw });
+      const j = await apiPost(reg ? '/auth/register' : '/auth/login', reg ? { code: AUTHCODE.code, device_id: deviceId(), login, password: pw, nickname: N.value.trim(), grade: G.value } : { login, password: pw });
       save('rbw.lastlogin', login);
       saveMe(j, j.token);
-      if (reg) setP(p => { p.settings.grade = G.value; });
-      await afterLogin(true);
+      if (reg) { setP(p => { p.settings.grade = G.value; }); AUTHCODE = null; toast('开通成功！学习期到 ' + new Date(j.entitlement.expires_at).toLocaleDateString('zh-CN')); confetti(120); }
+      HIST = [];   // 登录后从主页重新开始记返回层级
+      await afterLogin(!reg);
     } catch (err) {
-      btn.disabled = false; btn.textContent = reg ? '注册并继续' : '登录';
+      btn.disabled = false; btn.textContent = label;
       m.className = 'gatemsg'; m.textContent = err.offline ? '网络好像断了，连上网再试一次' : err.message;
-      if (err.code === 'login_taken') { shake(L); } else if (err.code === 'bad_credentials') shake(W);
+      if (err.code === 'login_taken') shake(L); else if (err.code === 'bad_credentials') shake(W);
+      else if (reg && ['code_used', 'revoked', 'expired', 'invalid_code', 'device_limit'].includes(err.code)) { AUTHCODE = null; renderAuth(err.message, 'code'); }
     }
   });
 }
+let AUTHMODE = 'start';
 // 输入兑换码（已登录、还没有学习权限）
 function renderGate(msg = '', info = false){
-  started = false;
+  started = false; AUTHMODE = 'gate'; TRIAL = false;
   const a = auth(); if (!a || !a.token) return renderAuth(msg, 'login', info);
   const u = a.user || {};
-  show(`${gateHead(`你好，${esc(u.nickname || '')}的家长！输入兑换码就能开始啦`)}
+  show(`${gateHead(`你好，${esc(u.nickname || '')}的家长！` + (a.ent && a.ent.codes && a.ent.codes.length ? '学习期到了，输入新的兑换码就能接着学' : '输入兑换码就能开始学习'))}
     <form class="gatecard" id="gateform" autocomplete="off">
       <div class="whoami"><span>👤 ${esc(u.login || '')}</span><button type="button" class="linkbtn" data-act="logout">换个账号</button></div>
       <label for="codein">兑换码</label>
@@ -1257,7 +1634,8 @@ function renderGate(msg = '', info = false){
       <button class="btn primary" id="gatebtn" type="submit">激活并开始学习</button>
       <p class="gatemsg ${info ? 'info' : ''}" id="gatemsg" role="alert">${esc(msg)}</p>
     </form>
-    <p class="gatehelp">兑换码在报名后由老师发给你，格式像 <b>RB-AB12-CD34</b>。<br>激活后绑定到这个账号，最多 <b>2 台</b> 设备登录学习，进度自动同步。</p>`, 'gate');
+    <div class="gatecard askcard"><p class="asktxt">还没有新的兑换码？</p>${askBtn()}</div>
+    <p class="gatehelp">新码的学习期会接着现在的往后加。</p>`, 'gate');
   const f = document.getElementById('gateform'), inp = document.getElementById('codein'), btn = document.getElementById('gatebtn'), m = document.getElementById('gatemsg');
   inp.addEventListener('input', () => { inp.value = fmtCode(inp.value); inp.classList.remove('bad'); m.textContent = ''; });
   f.addEventListener('submit', async e => {
@@ -1272,7 +1650,7 @@ function renderGate(msg = '', info = false){
       confetti(120); await pullProgress(); startApp(); syncSoon(500);
     } catch (err) {
       btn.disabled = false; btn.textContent = '激活并开始学习';
-      if (err.status === 401) { localStorage.removeItem(UKEY); return renderAuth(err.message); }
+      if (err.status === 401) { localStorage.removeItem(UKEY); return renderAuth(err.message, 'login'); }
       shake(inp); m.className = 'gatemsg';
       m.textContent = err.offline ? '网络好像断了，连上网再试一次' : err.message;
     }
@@ -1292,7 +1670,8 @@ function mergeProgress(local, remote){
   out.sessions = (local.sessions || []).concat((remote.sessions || []).filter(s => !seen.has(s.at))).sort((a, b) => (a.at || '') < (b.at || '') ? -1 : 1).slice(-400);
   out.stars = Math.max(local.stars || 0, remote.stars || 0);
   out.stickers = [...new Set([...(local.stickers || []), ...(remote.stickers || [])])];
-  if (remote.settings) out.settings = { ...remote.settings, ...(local.owner ? local.settings : {}), muted: (local.settings || {}).muted };
+  // 设置跟账号走：两边都有就用后改的那份（声音开关只看本机）
+  if (remote.settings) { const ls = local.settings || {}, rs = remote.settings, localNewer = local.owner && (ls.at || 0) >= (rs.at || 0); out.settings = localNewer ? { ...rs, ...ls } : { ...ls, ...rs }; out.settings.muted = ls.muted; }
   return out;
 }
 async function pullProgress(){
@@ -1304,7 +1683,7 @@ async function pullProgress(){
   const base = local && local.items && !other ? local : { items: {}, sessions: [], stars: 0, stickers: [], settings: { grade: a.user.grade || '一年级', size: 0, muted: false }, override: null };
   const merged = mergeProgress(base, remote);
   merged.owner = a.user.id;
-  save(KEY, merged);
+  save(KEY, merged); applyTheme();
 }
 async function afterLogin(interactive){
   const a = auth();
@@ -1334,7 +1713,7 @@ async function checkAccess(){
     syncSoon(1500);
   } catch (err) {
     if (err.offline) { if (!okLocal) { if (a.ent && a.ent.active) renderAuth('已经 7 天没联网确认了，请连上网再打开', 'login', true); else renderAuth('网络好像断了，连上网再试一次', 'login', true); } return; }
-    if (err.status === 401) { localStorage.removeItem(UKEY); return renderAuth(err.message); }
+    if (err.status === 401) { localStorage.removeItem(UKEY); return renderAuth(err.message, 'login'); }
   }
 }
 function syncSummary(p){
@@ -1356,15 +1735,28 @@ async function syncNow(){
   const a = access(); if (!a || !a.token) return;
   const p = P(); if (p.owner && a.user && p.owner !== a.user.id) return;
   try { await apiPost('/progress', { summary: syncSummary(p), progress: { items: p.items, sessions: (p.sessions || []).slice(-200), stars: p.stars, stickers: p.stickers, settings: p.settings } }); save('rbw.synced', Date.now()); }
-  catch (err) { if (!err.offline && err.status === 401) { localStorage.removeItem(UKEY); renderAuth(err.message); } else if (!err.offline && err.code === 'no_entitlement') { const x = auth(); if (x) { x.ent = { ...x.ent, active: false }; save(UKEY, x); } } }
+  catch (err) { if (!err.offline && err.status === 401) { localStorage.removeItem(UKEY); renderAuth(err.message, 'login'); } else if (!err.offline && err.code === 'no_entitlement') { const x = auth(); if (x) { x.ent = { ...x.ent, active: false }; save(UKEY, x); } } }
 }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden' && syncT) { clearTimeout(syncT); syncNow(); } });
 function reportUrl(){ const a = auth(); return a && a.rk ? API_HOME + '/report?format=html&r=' + encodeURIComponent(a.rk) : ''; }
-function logout(){ syncNow(); apiPost('/auth/logout').catch(() => {}); localStorage.removeItem(UKEY); const p = load(KEY, null); if (p && p.owner) localStorage.removeItem(KEY); S = null; renderAuth('已退出。学习记录保存在账号里，下次登录会自动恢复。', 'login', true); }
+function logout(){ syncNow(); apiPost('/auth/logout').catch(() => {}); localStorage.removeItem(UKEY); const p = load(KEY, null); if (p && p.owner) localStorage.removeItem(KEY); S = null; HIST = []; renderAuth('已退出。学习记录保存在账号里，下次登录会自动恢复。', 'login', true); }
 
 /* ---------- 启动 ---------- */
+applyTheme();
+/* ---------- 秒开：PWA（离线缓存 + 添加到主屏幕） ---------- */
+let INSTALL_EVT = null, SW_RELOAD = false;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); INSTALL_EVT = e; });
+const isStandalone = () => (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+const inWeChat = () => /MicroMessenger/i.test(navigator.userAgent);
+// 新版本上线：新的 service worker 接管后自动刷新；正在学的时候不打断，回到主页时再刷新
+function swReloadIfIdle(){ if (SW_RELOAD && S == null && !document.querySelector('.modal') && !$app.querySelector('.screen.rest')) { SW_RELOAD = false; location.reload(); } }
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === '127.0.0.1') && !QS.has('nosw')) {
+  const had = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (had) { SW_RELOAD = true; swReloadIfIdle(); } });
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(r => { document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') r.update().catch(() => {}); }); }).catch(() => {}));
+}
 loadContent().then(checkAccess).catch(err => { $app.innerHTML = '<p style="padding:20px">内容没加载出来：' + esc(err && err.message) + '</p>'; });
-window.__rb = { P, nextSession, buildPath, it, get S(){ return S; } }; // 测试用
+window.__rb = { P, nextSession, buildPath, it, get S(){ return S; }, addUsage, usage, stepsOf, nextStep, prevStep }; // 测试用
 })();
 </script>
 </body>
