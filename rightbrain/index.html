@@ -868,7 +868,14 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
   function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
   function pick(a, n) { return shuffle(a).slice(0, n); }
   function ui(k) { return H.ui(k); }
-  function say(list) { return H.say([].concat(list).filter(Boolean)); }
+  // 播放一串语音；每条最多等 4 秒（防止某条卡住让孩子干等），超时就停掉往下走
+  function say(list) {
+    const l = [].concat(list).filter(Boolean);
+    if (!l.length) return Promise.resolve(true);
+    let to; const cap = new Promise(r => { to = setTimeout(() => { if (H.hush) H.hush(); r(false); }, 4000 * l.length + 500); });
+    return Promise.race([H.say(l), cap]).finally(() => clearTimeout(to));
+  }
+  function cut() { if (H.hush) H.hush(); }   // 孩子一点就先停掉正在念的引导语
   function praise(g) { return H.praise(g); }
   function later(fn, ms) { return H.later(fn, ms); }
   function content() { return H.content(); }
@@ -998,8 +1005,8 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
 
   async function onWrong(replayList) {
     G.streak = 0; G.misses++;
-    const enc = praise('encourage') || ui('g_wrong') || ui('again');
-    await say([enc, ui('g_wrong')].concat(replayList || []).filter(Boolean));
+    // 温和、短：「再听一遍，找找对的！」+ 目标读音（同时正确答案在发光），不超过 3 秒左右
+    await say([ui('g_wrong') || ui('again')].concat(replayList || []).filter(Boolean));
   }
 
   async function finish() {
@@ -1063,7 +1070,7 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
     if (!G || G.id !== 'balloon' || locked) return;
     const o = G.data.opts[i];
     if (!o) return;
-    locked = true;
+    locked = true; cut();
     if (o.L.letter === G.data.cur.letter) {
       el.classList.add('popping'); markRight(idOf('letter', o.L));
       await onRight([ui('g_pop'), letterAudio(o.L)]);
@@ -1106,7 +1113,7 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
     if (!G || G.id !== 'listen' || locked) return;
     const w = G.data.opts[i];
     if (!w) return;
-    locked = true;
+    locked = true; cut();
     const btns = [...D.querySelectorAll('.g-opt')];
     if (w.word === G.data.cur.word) {
       el.classList.add('right'); markRight(idOf(G.data.cur._t || 'word', G.data.cur));
@@ -1183,6 +1190,7 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
     if (!G || G.id !== 'memory' || locked) return;
     if (G.data.open.includes(i) || G.data.matched.has(G.data.tiles[i].pair)) return;
     if (G.data.open.length >= 2) return;
+    cut();
     G.data.open.push(i);
     renderMemory(false);
     const t = G.data.tiles[i];
@@ -1269,7 +1277,7 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
     const ch = G.data.pool[i];
     const pos = G.data.filled.length;
     const expect = G.data.need[pos];
-    locked = true;
+    locked = true; cut();
     if (ch === expect) {
       G.data.filled.push(ch);
       G.data.used.add(i);
@@ -1338,7 +1346,7 @@ html[data-theme=dark] .restscene{background:radial-gradient(circle at 50% 70%,#3
     if (!G || G.id !== 'whack' || locked) return;
     const L = G.data.holes[i];
     if (!L) return;
-    locked = true;
+    locked = true; cut();
     const mole = el.querySelector('.g-mole');
     if (L.letter === G.data.cur.letter) {
       if (mole) mole.classList.add('boom'); markRight(idOf('letter', L));
