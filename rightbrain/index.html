@@ -1714,11 +1714,11 @@ const EYE_UI = { rest: 'audio/ui/rest.mp3', rest_done: 'audio/ui/rest_done.mp3',
 };
 function ui(k){ return (C.ui_audio && C.ui_audio[k]) || EYE_UI[k]; }
 
-/* ---------- 跟读（2026-10-22）：老师念 → 大麦克风 → 孩子念；出声就夸，没声音提示大声一点，两次没声音温和往下走 ---------- */
+/* ---------- 跟读（2026-10-22）：老师念 → 大麦克风 → 孩子念；出声后默认自动回放自己的声音再夸，没声音提示大声一点，两次没声音温和往下走 ---------- */
 let RP = null, RP_MODE = null, RP_ASR_OFF = false; const RP_LOG = [];
 const rpOn = () => P().settings.repeat !== 'off' && !muted() && !(S && S.trial) && !!window.RBR;
 function rpLine(g){ const l = (C.repeat_audio || {})[g] || []; return l.length ? l[Math.floor(Math.random() * l.length)] : null; }
-function rpTarget(x){ return x.type === 'letter' ? { text: x.d.upper + ' ' + x.d.letter, say: x.d.letter, model: x.d.audio_en, type: 'letter' } : { text: x.d.word, say: x.d.word, model: x.d.audio_en, type: x.type, pic: pic(x) }; }
+function rpTarget(x){ return x.type === 'letter' ? { text: x.d.upper + ' ' + x.d.letter, say: x.d.letter, model: x.d.audio_en, type: 'letter' } : { text: x.d.word, say: x.d.word, model: x.d.audio_en, type: x.type, img: x.d.image || x.d.icon || null, emo: x.d.emoji || '' }; }
 const MIC_SVG = '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="17" y="5" width="14" height="24" rx="7" fill="currentColor"/><path d="M11 22a13 13 0 0 0 26 0M24 35v7M17 42h14" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg>';
 const MIC_GUIDE = `<svg class="rp-guide-art" viewBox="0 0 300 200" aria-hidden="true"><rect x="70" y="8" width="160" height="184" rx="22" fill="#fff" stroke="#E7D9C1" stroke-width="4"/><rect x="88" y="44" width="124" height="96" rx="14" fill="#F6EEDF"/><circle cx="150" cy="70" r="15" fill="#FF8A3D"/><rect x="145" y="60" width="10" height="16" rx="5" fill="#fff"/><text x="150" y="104" text-anchor="middle" font-size="12" fill="#6B5A44">想使用麦克风</text><rect x="94" y="114" width="54" height="20" rx="8" fill="#E9E1D3"/><text x="121" y="128" text-anchor="middle" font-size="11" fill="#9A8B75">不允许</text><rect x="152" y="114" width="54" height="20" rx="8" fill="#3BAA5C"/><text x="179" y="128" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">允许</text><g class="rp-finger"><circle cx="196" cy="150" r="20" fill="#FFC93C" opacity=".35"/><text x="190" y="170" font-size="36">👆</text></g></svg>`;
 function rpClose(){ const R = RP; if (!R) return; RP = null; R.cancelled = true; try { R.mic && R.mic.close(); } catch (e) {} if (R.url) URL.revokeObjectURL(R.url); R.ov.remove(); RP_LOG.push({ ev: 'close' }); if (R.res) R.res('cancel'); }
@@ -1733,7 +1733,7 @@ function runRepeat(x){
   const t = rpTarget(x); if (!t.model) return Promise.resolve('off');
   rpClose();
   const ov = document.createElement('div'); ov.className = 'rp model'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-label', '跟读');
-  ov.innerHTML = `<div class="rp-card"><div class="rp-tgt">${t.pic ? `<img src="${esc(t.pic)}" alt="">` : ''}<b>${esc(t.text)}</b></div>
+  ov.innerHTML = `<div class="rp-card"><div class="rp-tgt">${t.img ? `<img src="${esc(t.img)}" alt="">` : (t.emo ? `<span class="rp-emo" style="font-size:56px;line-height:1">${esc(t.emo)}</span>` : '')}<b>${esc(t.text)}</b></div>
     <div class="rp-mic"><i></i><i></i><span>${MIC_SVG}</span></div><div class="rp-st"></div><div class="rp-act"></div>
     <button class="rp-skip" type="button">跳过 ›</button></div>`;
   document.body.appendChild(ov);
@@ -1745,8 +1745,8 @@ function runRepeat(x){
     if (b.classList.contains('rp-skip')) rpFinish(R, 'skip');
     else if (b.dataset.rp === 'tap') { R.tapped && R.tapped(); }
     else if (b.dataset.rp === 'model') { say([t.model]); }
-    else if (b.dataset.rp === 'self' && R.url) { R.hold = true; b.classList.add('playing'); say([R.url]).then(() => { b.classList.remove('playing'); if (alive()) rpState(R, 'heard', R.msg, `<button class="btn ghost sm" data-rp="self">🎧 再听一次</button><button class="btn primary sm" data-rp="go">继续 ›</button>`); }); }
-    else if (b.dataset.rp === 'go') rpFinish(R, R.result || 'heard');
+    else if (b.dataset.rp === 'self' && R.url) { R.hold = true; if (R._autoGo) { clearTimeout(R._autoGo); R._autoGo = null; } b.classList.add('playing'); say([R.url]).then(() => { b.classList.remove('playing'); if (alive()) rpState(R, 'heard', R.msg, `<button class="btn ghost sm" data-rp="self">🎧 再听一次</button><button class="btn primary sm" data-rp="go">继续 ›</button>`); }); }
+    else if (b.dataset.rp === 'go') { if (R._autoGo) { clearTimeout(R._autoGo); R._autoGo = null; } rpFinish(R, R.result || 'heard'); }
     else if (b.dataset.rp === 'guide') { R.guided && R.guided(true); }
   });
   (async () => {
@@ -1798,9 +1798,17 @@ function runRepeat(x){
         mic.close();
         if (r.blob && r.blob.size > 0) R.url = URL.createObjectURL(r.blob);
         R.result = exact ? 'exact' : 'heard'; R.msg = exact ? '念得真准！⭐' : '听到啦！念得真响亮 ⭐';
-        rpState(R, 'heard', R.msg, R.url ? '<button class="btn ghost sm" data-rp="self">🎧 听听我自己</button>' : '');
+        // 默认自动回放刚录的声音，让孩子听到自己；没有录音就跳过
+        if (R.url) {
+          rpState(R, 'heard selfplay', '听听你自己！🎧', '<button class="btn ghost sm" data-rp="self">🎧 再听一次</button>');
+          await say([R.url]); if (!alive()) return;
+        }
+        rpState(R, 'heard', R.msg, R.url ? '<button class="btn ghost sm" data-rp="self">🎧 再听一次</button><button class="btn primary sm" data-rp="go">继续 ›</button>' : '');
         await say([praise(exact ? 'exact' : 'repeat') || rpLine('exact')]); if (!alive()) return;
-        await new Promise(res => setTimeout(res, R.url ? 1600 : 500)); if (!alive() || R.hold) return;
+        if (!R.url) { await new Promise(res => setTimeout(res, 500)); if (alive()) rpFinish(R, R.result); return; }
+        // 有录音：给一点时间点「再听一次」；点了会 hold，等他自己点「继续」
+        await new Promise(res => { R._autoGo = setTimeout(res, 2200); });
+        if (!alive() || R.hold) return;
         rpFinish(R, R.result); return;
       }
       if (++R.sil >= 2) { mic.close(); rpState(R, 'gentle', '没关系，下次再念 😊'); await say([rpLine('skip')]); if (alive()) rpFinish(R, 'silent'); return; }
